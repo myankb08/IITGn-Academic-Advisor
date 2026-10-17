@@ -42,14 +42,39 @@ def al_pick(pool, k, seed):
     return sorted(order, key=lambda p: -p["score"])[:k]
 
 
+def al_stratified_pick(pool, k, seed):
+    """Same score, but the budget is shared evenly across intents (round robin over per-intent rankings).
+    Added after the first run showed plain top-k drawing every pick from one intent."""
+    rng = random.Random(seed)
+    order = list(pool)
+    rng.shuffle(order)
+    ranked = {}
+    for p in sorted(order, key=lambda p: -p["score"]):
+        ranked.setdefault(p["intent"], []).append(p)
+    queues = [ranked[i] for i in sorted(ranked)]
+    picked = []
+    while len(picked) < min(k, len(pool)):
+        for q in queues:
+            if q and len(picked) < k:
+                picked.append(q.pop(0))
+    return picked
+
+
 def random_pick(pool, k, seed):
     return random.Random(seed).sample(pool, min(k, len(pool)))
+
+
+STRATEGIES = (("active_learning", al_pick), ("active_learning_stratified", al_stratified_pick),
+              ("random", random_pick))
+LABELS = {"active_learning": "AL (disagreement, top-k)", "active_learning_stratified": "AL stratified by intent (added later)",
+          "random": "random (5 seeds)"}
+COLORS = {"active_learning": "#1f6feb", "active_learning_stratified": "#d4722b", "random": "#999999"}
 
 
 def run(pool, budgets, seeds):
     rows = []
     for k in budgets:
-        for name, fn in (("active_learning", al_pick), ("random", random_pick)):
+        for name, fn in STRATEGIES:
             per_seed = [metrics(fn(pool, k, s), pool) for s in seeds]
             row = {"budget": k, "strategy": name, "n_seeds": len(seeds)}
             for m in METRICS:
@@ -64,13 +89,12 @@ def plot(rows, path):
     fig, axes = plt.subplots(1, 3, figsize=(13, 3.8))
     panels = [("failures_captured", "Share of base-model failures captured"),
               ("failure_types_covered", "Share of failure types covered"),
-              ("programmes_covered", "Distinct programmes covered")]
+              ("intents_covered", "Distinct intents covered (of 3)")]
     for ax, (m, title) in zip(axes, panels):
-        for name, color in (("active_learning", "#1f6feb"), ("random", "#999999")):
+        for name, _ in STRATEGIES:
             pts = [r for r in rows if r["strategy"] == name]
             xs, ys, sd = [r["budget"] for r in pts], [r[m] for r in pts], [r[f"{m}_sd"] for r in pts]
-            ax.errorbar(xs, ys, yerr=sd, marker="o", capsize=3, color=color,
-                        label="AL (disagreement)" if name == "active_learning" else "random (5 seeds)")
+            ax.errorbar(xs, ys, yerr=sd, marker="o", capsize=3, color=COLORS[name], label=LABELS[name])
         ax.set_title(title, fontsize=10)
         ax.set_xlabel("labelling budget (pairs)")
         ax.grid(alpha=0.3)
@@ -92,7 +116,9 @@ def write_summary(rows, pool, pool_note, path):
     for r in rows:
         lines.append(f"| {r['budget']} | {r['strategy']} | {r['failures_captured']:.2f} (sd {r['failures_captured_sd']:.2f}) | "
                      f"{r['failure_types_covered']:.2f} | {r['programmes_covered']:.1f} | {r['intents_covered']:.1f} |")
-    lines += ["", "Random is the mean over the 5 seeds in seeds.active_learning; AL uses the same seeds only to "
+    lines += ["", "active_learning_stratified was added after the first run, which showed plain top-k drawing every "
+              "pick from remaining_core; the original strategy and its numbers are kept unchanged.",
+              "", "Random is the mean over the 5 seeds in seeds.active_learning; AL uses the same seeds only to "
               "break ties. A budget at or above the number of failures lets AL capture all of them, so the "
               "interesting comparison is at budgets below that number.", ""]
     path.write_text("\n".join(lines))
