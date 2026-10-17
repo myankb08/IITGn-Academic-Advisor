@@ -32,6 +32,7 @@ It takes about 3 minutes.
    - `MTech-CSE`
    - `MTech-AI`
    - `MTech-EE`
+   - `MTech-ICDT`
    - `Other`
 
 3. **Stream** (Multiple choice, required)
@@ -40,13 +41,11 @@ It takes about 3 minutes.
    - `Theory`
    - `Power Engineering & Control Systems`
    - `Signal Processing & Machine Learning`
-   - `Integrated Circuit Design & Technology`
    - `Not decided / not applicable`
 
 4. **Track** (Multiple choice, required)
    - `Thesis`
    - `Coursework`
-   - `Not decided`
 
 5. **Current semester** (Multiple choice, required)
    - `1`
