@@ -1,0 +1,10 @@
+{
+ "backend": "kaggle-transformers",
+ "hf_repo": "Qwen/Qwen2.5-1.5B-Instruct",
+ "hf_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+ "torch": "2.11.0+cu128",
+ "transformers": "5.16.1",
+ "cuda": "12.8",
+ "gpu": "Tesla T4",
+ "python": "3.13.15"
+}

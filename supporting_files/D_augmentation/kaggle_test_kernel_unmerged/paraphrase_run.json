@@ -1,0 +1,65 @@
+{
+ "input": "data/processed/queries.jsonl",
+ "output": "data/processed/queries_para.jsonl",
+ "n_pairs": 600,
+ "per_intent": {
+  "elective_recommendation": 200,
+  "eligibility": 200,
+  "remaining_core": 200
+ },
+ "prompt_ids": [
+  "paraphrase_query_v1",
+  "paraphrase_justification_v1"
+ ],
+ "num_predict": {
+  "query": 96,
+  "justification": 160
+ },
+ "seed": 205,
+ "temperature": 0.7,
+ "only_splits": "test",
+ "limit": null,
+ "split_files_found": true,
+ "per_split": {
+  "programme_holdout": {
+   "rows": 82,
+   "complete": 0
+  },
+  "test": {
+   "rows": 102,
+   "complete": 102
+  },
+  "train": {
+   "rows": 336,
+   "complete": 0
+  },
+  "val": {
+   "rows": 80,
+   "complete": 0
+  }
+ },
+ "para_query_done": 102,
+ "para_justification_done": 102,
+ "empty_para_query": 0,
+ "empty_para_justification": 0,
+ "seconds_this_run": {
+  "query": 163.4,
+  "justification": 267.7
+ },
+ "wall_seconds": 431.3,
+ "model": "qwen2.5:1.5b",
+ "model_digest": "hf:Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+ "gguf_blob": null,
+ "backend": {
+  "backend": "kaggle-transformers",
+  "hf_repo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "hf_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.16.1",
+  "gpu": "Tesla T4"
+ },
+ "new_calls": 172,
+ "cache_hits": 32,
+ "llm_seconds": 431.1,
+ "mean_seconds_per_call": 2.51
+}
