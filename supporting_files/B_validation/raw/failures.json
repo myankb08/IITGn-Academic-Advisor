@@ -1,0 +1,508 @@
+{
+ "V02": [
+  {
+   "id": "req-hss",
+   "code": null
+  },
+  {
+   "id": "req-thesis_units",
+   "code": null
+  },
+  {
+   "id": "req-project_courses",
+   "code": null
+  },
+  {
+   "id": "tt-r401",
+   "code": "FP 602 (MA)"
+  },
+  {
+   "id": "tt-r402",
+   "code": "FP 602 (CG)"
+  },
+  {
+   "id": "tt-r403",
+   "code": "FP 602 (CH)"
+  }
+ ],
+ "V03": [
+  {
+   "id": "tt-r64",
+   "code": "CS 329",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r66",
+   "code": "ES 678",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r113",
+   "code": "CS 329",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r181",
+   "code": "FP 601",
+   "credits": 2.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r185",
+   "code": "PE 600",
+   "credits": 0.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r212",
+   "code": "ES 621",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r236",
+   "code": "ES 604",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r237",
+   "code": "ES 662",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r241",
+   "code": "CS 435",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r243",
+   "code": "CS 610",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r244",
+   "code": "CS 612",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r245",
+   "code": "CS 613",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r246",
+   "code": "CS 614",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r247",
+   "code": "CS 619",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r248",
+   "code": "CS 620",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r249",
+   "code": "ES 666",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r250",
+   "code": "ES 667",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r251",
+   "code": "CS 691-XVII",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r252",
+   "code": "CS 622",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r253",
+   "code": "CS 691-XVIII",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r254",
+   "code": "CS 623",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r266",
+   "code": "ES 679",
+   "credits": 5.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r267",
+   "code": "EE 617",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r268",
+   "code": "EE 644",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r269",
+   "code": "EE 648",
+   "credits": 5.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r271",
+   "code": "EE 671",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r272",
+   "code": "ES 616",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r273",
+   "code": "ES 626",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r274",
+   "code": "EE 651",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r275",
+   "code": "ES 657",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r276",
+   "code": "EE 659",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r277",
+   "code": "EE 663",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r278",
+   "code": "EE 664",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r279",
+   "code": "ES 666",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r280",
+   "code": "ES 668",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r281",
+   "code": "ES 675",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r282",
+   "code": "EE 639",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r283",
+   "code": "EE 662",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r284",
+   "code": "EE 691-VII",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r288",
+   "code": "ES 607",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r290",
+   "code": "ES 656",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r291",
+   "code": "ES 621",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r294",
+   "code": "ES 646",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r394",
+   "code": "ES 606",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r395",
+   "code": "ES 673",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r400",
+   "code": "FP 602",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r401",
+   "code": "FP 602 (MA)",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r402",
+   "code": "FP 602 (CG)",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  },
+  {
+   "id": "tt-r403",
+   "code": "FP 602 (CH)",
+   "credits": 4.0,
+   "problem": "type float, not int"
+  }
+ ],
+ "V05": [
+  {
+   "id": "req-writing",
+   "field": "title_raw"
+  },
+  {
+   "id": "req-aarohan",
+   "field": "title_raw"
+  },
+  {
+   "id": "req-physical_education",
+   "field": "title_raw"
+  },
+  {
+   "id": "req-hss",
+   "field": "code_raw"
+  },
+  {
+   "id": "req-hss",
+   "field": "title_raw"
+  },
+  {
+   "id": "req-thesis_units",
+   "field": "code_raw"
+  },
+  {
+   "id": "req-thesis_units",
+   "field": "title_raw"
+  },
+  {
+   "id": "req-project_courses",
+   "field": "code_raw"
+  },
+  {
+   "id": "req-project_courses",
+   "field": "title_raw"
+  }
+ ],
+ "V06": [
+  {
+   "code": "CS 618",
+   "source": "Revised CSE MTech Course Structure [2025-26].pdf",
+   "ids": [
+    "struct-008",
+    "struct-013"
+   ]
+  },
+  {
+   "code": "CS 329",
+   "source": "Timetable, Sem-I, 2026-27.xlsx",
+   "ids": [
+    "tt-r113",
+    "tt-r64"
+   ]
+  },
+  {
+   "code": "ES 621",
+   "source": "Timetable, Sem-I, 2026-27.xlsx",
+   "ids": [
+    "tt-r212",
+    "tt-r291"
+   ]
+  },
+  {
+   "code": "ES 666",
+   "source": "Timetable, Sem-I, 2026-27.xlsx",
+   "ids": [
+    "tt-r249",
+    "tt-r279"
+   ]
+  },
+  {
+   "code": "FP 602",
+   "source": "Timetable, Sem-I, 2026-27.xlsx",
+   "ids": [
+    "tt-r400",
+    "tt-r401",
+    "tt-r402",
+    "tt-r403"
+   ]
+  }
+ ],
+ "V07": [
+  {
+   "id": "struct-013",
+   "duplicate_of": "struct-008"
+  },
+  {
+   "id": "tt-r113",
+   "duplicate_of": "tt-r64"
+  },
+  {
+   "id": "tt-r279",
+   "duplicate_of": "tt-r249"
+  },
+  {
+   "id": "tt-r291",
+   "duplicate_of": "tt-r212"
+  }
+ ],
+ "V08": [
+  {
+   "id": "struct-003",
+   "code": "CS 613",
+   "title": "NLP",
+   "timetable_title": "Natural Language Processing",
+   "ratio": 20.0,
+   "kind": "different wording or abbreviation"
+  },
+  {
+   "id": "struct-020",
+   "code": "CS 614",
+   "title": "Advanced Algrithms",
+   "timetable_title": "Advanced Algorithms",
+   "ratio": 97.3,
+   "kind": "typo"
+  },
+  {
+   "id": "ee-power-04",
+   "code": "EE 648",
+   "title": "Dynamic Behaviour of Electric Machinery",
+   "timetable_title": "Dynamic Behaviour of Electric Machines",
+   "ratio": 96.1,
+   "kind": "typo"
+  },
+  {
+   "id": "ee-signal-20",
+   "code": "ES 675",
+   "title": "Photonics - Principles and Applications",
+   "timetable_title": "Photonics – Principles and Applications",
+   "ratio": 97.4,
+   "kind": "typo"
+  },
+  {
+   "id": "ee-integrated-05",
+   "code": "EE 651",
+   "title": "Analog CMOS IC Design",
+   "timetable_title": "CMOS Analog IC Design",
+   "ratio": 76.2,
+   "kind": "different wording or abbreviation"
+  }
+ ],
+ "V09": [
+  {
+   "id": "struct-012",
+   "title": "Artificial Intelligence,"
+  },
+  {
+   "id": "struct-022",
+   "title": "Nature-inspired computing,"
+  },
+  {
+   "id": "tt-r248",
+   "title": "Incentives and Machine learning "
+  },
+  {
+   "id": "tt-r395",
+   "title": "NeuroAI: Neuroscience & Artificial Intelligence "
+  }
+ ],
+ "V10": [
+  {
+   "codes": [
+    "ES 678",
+    "ES 654"
+   ],
+   "titles": [
+    "Machine Learning",
+    "Machine Learning"
+   ],
+   "ratio": 100.0
+  },
+  {
+   "codes": [
+    "ES 417",
+    "ES 668"
+   ],
+   "titles": [
+    "5G and Beyond",
+    "5G and Beyond"
+   ],
+   "ratio": 100.0
+  }
+ ]
+}

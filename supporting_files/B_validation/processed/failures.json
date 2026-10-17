@@ -1,0 +1,26 @@
+{
+ "V10": [
+  {
+   "codes": [
+    "ES 417",
+    "ES 668"
+   ],
+   "titles": [
+    "5G and Beyond",
+    "5G and Beyond"
+   ],
+   "ratio": 100.0
+  },
+  {
+   "codes": [
+    "ES 654",
+    "ES 678"
+   ],
+   "titles": [
+    "Machine Learning",
+    "Machine Learning"
+   ],
+   "ratio": 100.0
+  }
+ ]
+}

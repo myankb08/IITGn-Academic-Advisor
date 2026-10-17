@@ -123,3 +123,7 @@ final_decision, final_category, final_edit (str | null), decided_by ("agreement"
 ## Metadata (`data/metadata.csv`)
 One row per sample in raw and processed layers:
 `sample_id, layer, artifact, source, source_doc, source_page, source_url, collected_at_utc, collector, tool, tool_version, content_sha256`.
+
+## Validation (Part B, `src/validate/`)
+- `data/interim/corrupted/` (made by `src.validate.corrupt`, seed `seeds.validation_corruption`): copies of `courses.json`, `rules.json`, `students.jsonl`, `queries.jsonl`, `splits/*.csv`, `labels/audited.jsonl` with injected faults, plus `faults.json`: `{seed, faults: [{fault_id, description, check_id, match}], not_injected: [{fault, reason}]}`. A fault counts as caught when its check fails and every `match` token appears in that check's failures.
+- `supporting_files/B_validation/<stage>/` for stage `raw | processed | corrupted`: `results.csv` and `results.md` with `check_id, description, requirement, target, status (pass | fail | warn | skip), passed, n_failures, examples, note`, `failures.json` (all failures per check), and for `corrupted` also `faults_caught.json`. `before_after.md` is built from these by `src.validate.before_after`.

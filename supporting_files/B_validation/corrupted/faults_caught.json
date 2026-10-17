@@ -1,0 +1,157 @@
+[
+ {
+  "fault_id": "F01",
+  "description": "prerequisite cycle EE 691-VII <-> EE 633",
+  "check_id": "V12",
+  "match": [
+   "EE 691-VII",
+   "EE 633"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F02",
+  "description": "unknown prerequisite ZZ 901 on CS 691-XIV",
+  "check_id": "V11",
+  "match": [
+   "ZZ 901"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F03",
+  "description": "transcript prerequisite violation: S0002 took ES 417 before its (injected) prerequisite CS 610",
+  "check_id": "V18",
+  "match": [
+   "S0002",
+   "PREREQ"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F04",
+  "description": "duplicate course code ES 604",
+  "check_id": "V06",
+  "match": [
+   "ES 604"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F05",
+  "description": "total_min_credits changed from 82 to 80",
+  "check_id": "V13",
+  "match": [
+   "total_min_credits",
+   "80"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F06",
+  "description": "below-600 cap breach: S0148 gets CS 329, CS 434, CS 435",
+  "check_id": "V19",
+  "match": [
+   "S0148",
+   "BELOW_600_CAP"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F07",
+  "description": "synth_transcripts --inject-violations DUPLICATE_COURSE on S0004",
+  "check_id": "V20",
+  "match": [
+   "S0004"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F08",
+  "description": "synth_transcripts --inject-violations UNKNOWN_CODE on S0007",
+  "check_id": "V20",
+  "match": [
+   "S0007"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F09",
+  "description": "synth_transcripts --inject-violations NOT_OFFERED_IN_TERM on S0017",
+  "check_id": "V20",
+  "match": [
+   "S0017"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F10",
+  "description": "synth_transcripts --inject-violations CREDIT_MISMATCH on S0019",
+  "check_id": "V20",
+  "match": [
+   "S0019"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F11",
+  "description": "synth_transcripts --inject-violations NOT_OFFERED_IN_PARITY on S0060",
+  "check_id": "V20",
+  "match": [
+   "S0060"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F12",
+  "description": "gold_json of Q0198 flipped eligible",
+  "check_id": "V22",
+  "match": [
+   "Q0198"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F13",
+  "description": "gold answer marker appended to Q0082 query_text",
+  "check_id": "V23",
+  "match": [
+   "Q0082"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F14",
+  "description": "student S0149-R copied into train (data/splits)",
+  "check_id": "V25",
+  "match": [
+   "S0149-R"
+  ],
+  "check_status": "fail",
+  "caught": true
+ },
+ {
+  "fault_id": "F15",
+  "description": "label R1-FXQ0086 final_decision 'maybe' (copy of the Part C fixture)",
+  "check_id": "V24",
+  "match": [
+   "R1-FXQ0086",
+   "maybe"
+  ],
+  "check_status": "fail",
+  "caught": true
+ }
+]

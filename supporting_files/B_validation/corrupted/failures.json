@@ -1,0 +1,234 @@
+{
+ "V06": [
+  {
+   "code": "ES 604",
+   "source": "courses.json",
+   "ids": [
+    "ES 604",
+    "ES 604"
+   ]
+  }
+ ],
+ "V08": [
+  {
+   "id": "ES 604",
+   "code": "ES 604",
+   "title": "Engineering Optimization (copy)",
+   "timetable_title": "Engineering Optimization",
+   "ratio": 87.3,
+   "kind": "typo"
+  }
+ ],
+ "V10": [
+  {
+   "codes": [
+    "ES 417",
+    "ES 668"
+   ],
+   "titles": [
+    "5G and Beyond",
+    "5G and Beyond"
+   ],
+   "ratio": 100.0
+  },
+  {
+   "codes": [
+    "ES 654",
+    "ES 678"
+   ],
+   "titles": [
+    "Machine Learning",
+    "Machine Learning"
+   ],
+   "ratio": 100.0
+  }
+ ],
+ "V11": [
+  {
+   "id": "CS 691-XIV",
+   "unknown_prerequisite": "ZZ 901"
+  }
+ ],
+ "V12": [
+  {
+   "cycle": [
+    "EE 633",
+    "EE 691-VII"
+   ]
+  }
+ ],
+ "V13": [
+  {
+   "rule": "total_min_credits",
+   "value": 80,
+   "expected": 82
+  }
+ ],
+ "V18": [
+  {
+   "id": "S0002",
+   "injected": "PREREQ_SAME_OR_LATER_TERM",
+   "violations": [
+    "PREREQ_SAME_OR_LATER_TERM ES 417 s1: prerequisite CS 610 passed in semester 1"
+   ]
+  },
+  {
+   "id": "S0018",
+   "injected": null,
+   "violations": [
+    "PREREQ_MISSING EE 691-VII s2: prerequisite EE 633 never passed"
+   ]
+  },
+  {
+   "id": "S0031",
+   "injected": null,
+   "violations": [
+    "PREREQ_MISSING CS 691-XIV s1: prerequisite ZZ 901 never passed"
+   ]
+  },
+  {
+   "id": "S0039",
+   "injected": null,
+   "violations": [
+    "PREREQ_MISSING CS 691-XIV s2: prerequisite ZZ 901 never passed"
+   ]
+  },
+  {
+   "id": "S0044",
+   "injected": null,
+   "violations": [
+    "PREREQ_MISSING EE 691-VII s1: prerequisite EE 633 never passed"
+   ]
+  },
+  {
+   "id": "S0079",
+   "injected": null,
+   "violations": [
+    "PREREQ_MISSING EE 633 s2: prerequisite EE 691-VII never passed"
+   ]
+  }
+ ],
+ "V19": [
+  {
+   "id": "S0148",
+   "injected": "BELOW_600_CAP",
+   "violations": [
+    "BELOW_600_CAP  sNone: below-600 courses over cap: CS 431, CS 434"
+   ]
+  }
+ ],
+ "V20": [
+  {
+   "id": "S0004",
+   "injected": "DUPLICATE_COURSE",
+   "violations": [
+    "DUPLICATE_COURSE CS 610 s2: already passed in semester 1",
+    "NOT_OFFERED_IN_PARITY CS 610 s2: Revised CSE MTech Course Structure [2025-26].pdf p1: 1. CS 610 (Algorithms) is a compulsory course for all streams (Offered in Odd semester). || Timetable, Sem-I, 2026-27.xlsx row 243: listed in 2026-27 Sem-I"
+   ]
+  },
+  {
+   "id": "S0007",
+   "injected": "UNKNOWN_CODE",
+   "violations": [
+    "UNKNOWN_CODE ZZ 999 s1: code not in courses.json"
+   ]
+  },
+  {
+   "id": "S0017",
+   "injected": "NOT_OFFERED_IN_TERM",
+   "violations": [
+    "NOT_OFFERED_IN_TERM CS 431 s3: Timetable, Sem-I, 2026-27.xlsx: CS 431 is not listed for 2026-27 Sem-I"
+   ]
+  },
+  {
+   "id": "S0019",
+   "injected": "CREDIT_MISMATCH",
+   "violations": [
+    "CREDIT_MISMATCH EE 651 s1: transcript 5 vs catalog 4"
+   ]
+  },
+  {
+   "id": "S0060",
+   "injected": "NOT_OFFERED_IN_PARITY",
+   "violations": [
+    "NOT_OFFERED_IN_PARITY CS 610 s2: Revised CSE MTech Course Structure [2025-26].pdf p1: 1. CS 610 (Algorithms) is a compulsory course for all streams (Offered in Odd semester). || Timetable, Sem-I, 2026-27.xlsx row 243: listed in 2026-27 Sem-I"
+   ]
+  }
+ ],
+ "V22": [
+  {
+   "id": "Q0007",
+   "intent": "remaining_core",
+   "keys_differ": [
+    "coursework",
+    "discipline_specified",
+    "electives",
+    "own_basket",
+    "total"
+   ]
+  },
+  {
+   "id": "Q0023",
+   "intent": "remaining_core",
+   "keys_differ": [
+    "below_600",
+    "coursework",
+    "discipline_specified",
+    "electives",
+    "own_basket",
+    "reason_codes",
+    "total"
+   ]
+  },
+  {
+   "id": "Q0079",
+   "intent": "remaining_core",
+   "keys_differ": [
+    "below_600",
+    "coursework",
+    "discipline_specified",
+    "electives",
+    "own_basket",
+    "reason_codes",
+    "total"
+   ]
+  },
+  {
+   "id": "Q0198",
+   "intent": "eligibility",
+   "keys_differ": [
+    "eligible"
+   ]
+  },
+  {
+   "id": "Q0294",
+   "intent": "elective_recommendation",
+   "keys_differ": [
+    "gaps_before",
+    "recommendations"
+   ]
+  }
+ ],
+ "V23": [
+  {
+   "id": "Q0082",
+   "field": "query_text",
+   "marker": "answer marker",
+   "match": "Answer:"
+  }
+ ],
+ "V24": [
+  {
+   "id": "R1-FXQ0086",
+   "field": "final_decision",
+   "value": "maybe"
+  }
+ ],
+ "V25": [
+  {
+   "split": "test",
+   "column": "student_id",
+   "value": "S0149-R"
+  }
+ ]
+}
