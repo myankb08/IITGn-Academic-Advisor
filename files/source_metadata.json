@@ -1,0 +1,165 @@
+{
+  "preserved_at_utc": "2026-10-15T13:43:19.567499+00:00",
+  "path_base": "files/",
+  "note": "Original user-supplied documents and relevant official source snapshots retained for the user-led RAG/SFT project. Entries record provenance, not current policy applicability.",
+  "sources": [
+    {
+      "path": "Adv17_Courses and Credit System.pdf",
+      "sha256": "50f37b33c17783670ad12cd27873dbedb196dd93aefd88c0a19c401c924b4758",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv24_Norms For Pass_Fail_Option_And_Substitution_Of_Courses.pdf",
+      "sha256": "5a84d41f1976ff1d2025547e2db21f9645ea95dbb33585188effc25a9e4b0672",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv42_Norms_for_Early_Admit_MTech_programme.pdf",
+      "sha256": "d0b71e42cfed5b80502e0198bac42919275b5578fb2aa256b2895db3d6985a36",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv5_NormsforMTechProgramme.pdf",
+      "sha256": "2bfe6db25b4477492ca135772dc11b2bf1a10538b2d687c0c45be97f301c123d",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv60_Norms for Proficiency Transcript.pdf",
+      "sha256": "1f0b0cc974600f6ff72e1dc68e26cd29500e6a23c893c721cf0d903670097d17",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv8_AdmissionforM.TechonPart-TimeBasis.pdf",
+      "sha256": "aaf4a03c6cc7ac012dac6789905d2392704fa9fa6edd0cf7d0f82b4dee8b57f2",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv_05_Honour_Code_of_the_students.pdf",
+      "sha256": "d2e07668b89236767bf9c6a23ad181b48dea1e959a07d48b14ea3e205a13d9e6",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Adv_08_Norms_on_Physical_Education_Course.pdf",
+      "sha256": "2a96a4178388bbd3357a8bb3ee72d968d4af9ac27c4c6740ac31e8c39360f530",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Revised CSE MTech Course Structure [2025-26].pdf",
+      "sha256": "be156f7fd05d82b042df91a525556c0ea11ea95e5bc3f254bb573edc452a39fa",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "Timetable, Sem-I, 2026-27.xlsx",
+      "sha256": "a56504096b5081283c78036540951d91777866a47df9a42ff56eb3363bdb930a",
+      "provided_by": "user",
+      "original_url": null,
+      "original_download_time": null,
+      "local_ingested_at_utc": "2026-10-15T08:05:09.978920+00:00"
+    },
+    {
+      "path": "collected_sources/IITGN_course_catalogue.html",
+      "source_id": "institute_catalogue_http",
+      "title": "IITGN course catalogue",
+      "url": "https://iitgn.ac.in/academics/courses",
+      "final_url": "https://iitgn.ac.in/academics/courses",
+      "collected_at": "2026-10-09T06:40:31+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "653eba3fa8d530d1f003ff75fef0faa50fe7c9849373bc65890a9e40561d32b5",
+      "representation": "original_http_body"
+    },
+    {
+      "path": "collected_sources/IITGN_MTech_programmes.html",
+      "source_id": "institute_mtech_http",
+      "title": "IITGN MTech programmes",
+      "url": "https://iitgn.ac.in/academics/mtech",
+      "final_url": "https://iitgn.ac.in/academics/mtech",
+      "collected_at": "2026-10-09T06:40:31+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "cb9cc2ff53e110a7e137d39f58866103eec348bf1d4a0d448b398365fd88527c",
+      "representation": "original_http_body"
+    },
+    {
+      "path": "collected_sources/IITGN_CSE_AI_MTech_overview.html",
+      "source_id": "cse_mtech_http",
+      "title": "CSE department MTech overview",
+      "url": "https://cse.iitgn.ac.in/academics/mtech/",
+      "final_url": "https://cse.iitgn.ac.in/academics/mtech/",
+      "collected_at": "2026-10-09T06:40:31+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "abb0b90ab9fe9b540185d895114b10f2c6b78dda0bcc460d9c7bf6d2f4bf01a9",
+      "representation": "original_http_body"
+    },
+    {
+      "path": "collected_sources/IITGN_CSE_course_catalogue.html",
+      "source_id": "cse_catalogue_http",
+      "title": "CSE department course catalogue",
+      "url": "https://cse.iitgn.ac.in/academics/courses/",
+      "final_url": "https://cse.iitgn.ac.in/academics/courses/",
+      "collected_at": "2026-10-09T06:40:32+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "bdf87a0d64f674ecc838da34bebf7c371cffed2291027383ad27096a6611a53a",
+      "representation": "original_http_body"
+    },
+    {
+      "path": "collected_sources/IITGN_MTech_admissions_2025-26.pdf",
+      "source_id": "admissions_2025_pdf",
+      "title": "MTech admissions 2025-26",
+      "url": "https://iitgn.ac.in/assets/pdfs/MTech-202526.pdf",
+      "final_url": "https://iitgn.ac.in/assets/pdfs/MTech-202526.pdf",
+      "collected_at": "2026-10-09T06:40:34+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "3751ecf3085391d50b4a3d1de94e0ba6ae3747bd1bf4bb576c82735570d4e2f2",
+      "representation": "original_http_body"
+    },
+    {
+      "path": "collected_sources/IITGN_tentative_offerings_Sem-I_2025-26.pdf",
+      "source_id": "offerings_2025_s1_pdf",
+      "title": "Tentative offerings, August-December 2025",
+      "url": "https://iitgn.ac.in/assets/pdfs/Tentative_Courselist_%28Sem-I%2C%202025-26%29.pdf",
+      "final_url": "https://iitgn.ac.in/assets/pdfs/Tentative_Courselist_%28Sem-I%2C%202025-26%29.pdf",
+      "collected_at": "2026-10-09T06:40:34+00:00",
+      "collector": "codex-assisted-source-collection",
+      "capture_tool": "Python urllib.request",
+      "capture_tool_version": "3.12.14",
+      "sha256": "1f544d76bc7372e926a8102453a81470b5b1e09a641fcf21e2e7100e5e22cfc0",
+      "representation": "original_http_body"
+    }
+  ]
+}
