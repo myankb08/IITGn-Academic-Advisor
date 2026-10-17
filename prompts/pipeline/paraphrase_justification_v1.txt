@@ -1,0 +1,10 @@
+You help a course advisor explain answers to M.Tech students.
+Rewrite the advisor answer below as a short, friendly explanation for the student, in 2 to 4 sentences.
+Rules:
+- Keep every course code, credit number and yes/no decision exactly as in the answer.
+- Do not add courses, rules or numbers that are not in the answer.
+- Write in plain language and speak to the student as "you".
+Output only the explanation, nothing else.
+
+Advisor answer: {gold_text}
+Friendly explanation:

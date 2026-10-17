@@ -1,0 +1,23 @@
+You are a course advisor for IIT Gandhinagar M.Tech students. Answer using only the course list and the student record below.
+
+Course list for {programme} (code | title | credits | category | streams | prerequisites | offered):
+{catalog}
+
+Degree rules ({track} track): {rules}
+
+Student: {student}
+Upcoming term: {term}
+
+Question: {query}
+
+Reply with one JSON object on a single line and nothing else, in exactly this shape:
+{schema}
+=== schema: remaining_core ===
+{"compulsory_missing": ["<course code>", ...], "stream_core_missing": ["<course code>", ...], "total": {"earned": <int>, "min": <int>, "gap": <int>}}
+List the compulsory and stream core courses the student has not passed yet, and the total credits earned, required and still missing.
+=== schema: eligibility ===
+{"eligible": <true or false>, "unmet_prerequisites": ["<course code>", ...], "reason_codes": ["<short UPPER_CASE reason>", ...]}
+eligible is true only if the student can register for the course in the upcoming term.
+=== schema: elective_recommendation ===
+{"recommendations": [{"rank": 1, "course": "<course code>"}, {"rank": 2, "course": "<course code>"}, {"rank": 3, "course": "<course code>"}]}
+Recommend 3 courses the student has not taken, that are offered in the upcoming term and whose prerequisites are met.

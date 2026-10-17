@@ -1,0 +1,791 @@
+{
+ "directed": true,
+ "graph": {},
+ "links": [
+  {
+   "evidence": "\u2022 Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All",
+   "source": "EE 341",
+   "target": "EE 663",
+   "type": "recommended"
+  },
+  {
+   "evidence": "Basic understanding of Python programming (ES 102/ ES 112) or equivalent",
+   "source": "ES 102",
+   "target": "CS 613",
+   "type": "recommended"
+  },
+  {
+   "evidence": "Basic understanding of Python programming (ES 102/ ES 112) or equivalent",
+   "source": "ES 112",
+   "target": "CS 613",
+   "type": "recommended"
+  },
+  {
+   "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+   "source": "ES 112",
+   "target": "ES 666",
+   "type": "recommended"
+  },
+  {
+   "evidence": "\u2022 Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All",
+   "source": "ES 244",
+   "target": "EE 663",
+   "type": "recommended"
+  },
+  {
+   "evidence": "Basic Probability & Statistics (ES 331/ MA 202) or equivalent",
+   "source": "ES 331",
+   "target": "CS 613",
+   "type": "recommended"
+  },
+  {
+   "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+   "source": "MA 101",
+   "target": "ES 666",
+   "type": "recommended"
+  },
+  {
+   "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+   "source": "MA 102",
+   "target": "ES 666",
+   "type": "recommended"
+  },
+  {
+   "evidence": "Basic Probability & Statistics (ES 331/ MA 202) or equivalent",
+   "source": "MA 202",
+   "target": "CS 613",
+   "type": "recommended"
+  }
+ ],
+ "multigraph": false,
+ "nodes": [
+  {
+   "category": "basket",
+   "id": "CS 329",
+   "in_catalog": true,
+   "level": 300,
+   "title": "Foundations of AI: Multiagent Systems"
+  },
+  {
+   "category": "basket",
+   "id": "CS 431",
+   "in_catalog": true,
+   "level": 400,
+   "title": "Computer and Network Security"
+  },
+  {
+   "category": "basket",
+   "id": "CS 434",
+   "in_catalog": true,
+   "level": 400,
+   "title": "Software Engineering and Testing"
+  },
+  {
+   "category": "basket",
+   "id": "CS 435",
+   "in_catalog": true,
+   "level": 400,
+   "title": "Human-Computer Interaction"
+  },
+  {
+   "category": "basket",
+   "id": "CS 607",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Combinatorics in CS"
+  },
+  {
+   "category": "compulsory",
+   "id": "CS 610",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Algorithms"
+  },
+  {
+   "category": "stream_core",
+   "id": "CS 612",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Computer Systems"
+  },
+  {
+   "category": "basket",
+   "id": "CS 613",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Natural Language Processing"
+  },
+  {
+   "category": "stream_core",
+   "id": "CS 614",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Algorithms"
+  },
+  {
+   "category": "basket",
+   "id": "CS 615",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Networks"
+  },
+  {
+   "category": "stream_core",
+   "id": "CS 616",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Distributed Systems and Cloud Computing"
+  },
+  {
+   "category": "basket",
+   "id": "CS 617",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Complexity Theory"
+  },
+  {
+   "category": "basket",
+   "id": "CS 618",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Theoretical Foundations of ML"
+  },
+  {
+   "category": "stream_core",
+   "id": "CS 619",
+   "in_catalog": true,
+   "level": 600,
+   "title": "CS Theory Toolkit"
+  },
+  {
+   "category": "open_elective",
+   "id": "CS 620",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Incentives and Machine learning"
+  },
+  {
+   "category": "compulsory",
+   "id": "CS 621",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Ethics of AI"
+  },
+  {
+   "category": "open_elective",
+   "id": "CS 622",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Combinatorial Game Theory"
+  },
+  {
+   "category": "open_elective",
+   "id": "CS 623",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Algebraic Complexity Theory"
+  },
+  {
+   "category": "basket",
+   "id": "CS 691-XIV",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Special Topics: Usable Privacy and Security"
+  },
+  {
+   "category": "open_elective",
+   "id": "CS 691-XVII",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Special Topics in Computer Science: Combinatorial and Computational Aspects of Games"
+  },
+  {
+   "category": "open_elective",
+   "id": "CS 691-XVIII",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Special Topics Course: Algebraic Complexity theory"
+  },
+  {
+   "category": "ug_background",
+   "id": "EE 341",
+   "in_catalog": true,
+   "level": 300,
+   "title": null
+  },
+  {
+   "category": "basket",
+   "id": "EE 604",
+   "in_catalog": true,
+   "level": 600,
+   "title": "High Voltage DC and Flexible AC Transmission Systems"
+  },
+  {
+   "category": "basket",
+   "id": "EE 605",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Digital Image Processing"
+  },
+  {
+   "category": "basket",
+   "id": "EE 606",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Applied Statistical Bioelectric Signal Analysis"
+  },
+  {
+   "category": "basket",
+   "id": "EE 609",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Signal Processing"
+  },
+  {
+   "category": "basket",
+   "id": "EE 617",
+   "in_catalog": true,
+   "level": 600,
+   "title": "VLSI Design"
+  },
+  {
+   "category": "basket",
+   "id": "EE 618",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Microelectronics Lab"
+  },
+  {
+   "category": "basket",
+   "id": "EE 619",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Special Electrical Machines"
+  },
+  {
+   "category": "basket",
+   "id": "EE 629",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Power Electronic Converters"
+  },
+  {
+   "category": "basket",
+   "id": "EE 633",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Fiber Optics and Photonics"
+  },
+  {
+   "category": "basket",
+   "id": "EE 639",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Lasers"
+  },
+  {
+   "category": "basket",
+   "id": "EE 641",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Electronic Instrumentation"
+  },
+  {
+   "category": "basket",
+   "id": "EE 644",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Physics\u00a0of\u00a0Transistors"
+  },
+  {
+   "category": "basket",
+   "id": "EE 645",
+   "in_catalog": true,
+   "level": 600,
+   "title": "3D Computer Vision"
+  },
+  {
+   "category": "basket",
+   "id": "EE 647",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Asynchronous Circuit Design"
+  },
+  {
+   "category": "basket",
+   "id": "EE 648",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Dynamic Behaviour of Electric Machines"
+  },
+  {
+   "category": "basket",
+   "id": "EE 651",
+   "in_catalog": true,
+   "level": 600,
+   "title": "CMOS Analog IC Design"
+  },
+  {
+   "category": "basket",
+   "id": "EE 652",
+   "in_catalog": true,
+   "level": 600,
+   "title": "IC Design Lab"
+  },
+  {
+   "category": "basket",
+   "id": "EE 659",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Smart Grid"
+  },
+  {
+   "category": "open_elective",
+   "id": "EE 662",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Mixed Signal IC Design"
+  },
+  {
+   "category": "basket",
+   "id": "EE 663",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Wireless Communications"
+  },
+  {
+   "category": "basket",
+   "id": "EE 664",
+   "in_catalog": true,
+   "level": 600,
+   "title": "High Frequency Engineering"
+  },
+  {
+   "category": "basket",
+   "id": "EE 666",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Fundamentals of \u00a0Wireless Localization"
+  },
+  {
+   "category": "basket",
+   "id": "EE 668",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Smart Power Distribution System"
+  },
+  {
+   "category": "basket",
+   "id": "EE 671",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Wireless System Design and Implementation"
+  },
+  {
+   "category": "open_elective",
+   "id": "EE 691-VII",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Special Topics in Electrical Engineering: Economics of Regulation in India"
+  },
+  {
+   "category": "ug_background",
+   "id": "ES 102",
+   "in_catalog": true,
+   "level": 100,
+   "title": null
+  },
+  {
+   "category": "ug_background",
+   "id": "ES 112",
+   "in_catalog": true,
+   "level": 100,
+   "title": "Computing"
+  },
+  {
+   "category": "ug_background",
+   "id": "ES 244",
+   "in_catalog": true,
+   "level": 200,
+   "title": "Signals, Systems, and Random Processes"
+  },
+  {
+   "category": "ug_background",
+   "id": "ES 331",
+   "in_catalog": true,
+   "level": 300,
+   "title": null
+  },
+  {
+   "category": "basket",
+   "id": "ES 404",
+   "in_catalog": true,
+   "level": 400,
+   "title": "Networks and Complex Systems"
+  },
+  {
+   "category": "basket",
+   "id": "ES 417",
+   "in_catalog": true,
+   "level": 400,
+   "title": "5G and Beyond"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 604",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Engineering Optimization"
+  },
+  {
+   "category": "basket",
+   "id": "ES 606",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Computational Neuroscience"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 607",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Foundations of Fluid Dynamics"
+  },
+  {
+   "category": "basket",
+   "id": "ES 608",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Nanoscale Device Engineering"
+  },
+  {
+   "category": "basket",
+   "id": "ES 612",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Artificial Intelligence"
+  },
+  {
+   "category": "basket",
+   "id": "ES 613",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Modern Control Theory"
+  },
+  {
+   "category": "basket",
+   "id": "ES 615",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Nature-inspired computing"
+  },
+  {
+   "category": "basket",
+   "id": "ES 616",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Digital Control Systems"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 621",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Solid Mechanics"
+  },
+  {
+   "category": "basket",
+   "id": "ES 625",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Optical Communication"
+  },
+  {
+   "category": "basket",
+   "id": "ES 626",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Microfabrication and Semiconductor Processes"
+  },
+  {
+   "category": "basket",
+   "id": "ES 627",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Linear Algebra and Computation"
+  },
+  {
+   "category": "basket",
+   "id": "ES 634",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Applied Multivariate Data Analysis"
+  },
+  {
+   "category": "basket",
+   "id": "ES 637",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Mathematical Foundations for Computer Vision and Graphics"
+  },
+  {
+   "category": "basket",
+   "id": "ES 639",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Multimedia Security"
+  },
+  {
+   "category": "basket",
+   "id": "ES 642",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Control of Nonlinear Dynamical Systems"
+  },
+  {
+   "category": "basket",
+   "id": "ES 643",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Quantum computation and information"
+  },
+  {
+   "category": "basket",
+   "id": "ES 645",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Optimization for ML"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 646",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Elastodynamics and Vibrations"
+  },
+  {
+   "category": "basket",
+   "id": "ES 653",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Analog IC Design Lab"
+  },
+  {
+   "category": "basket",
+   "id": "ES 654",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Machine Learning"
+  },
+  {
+   "category": "basket",
+   "id": "ES 655",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Medical Imaging"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 656",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Human-Robot Interaction"
+  },
+  {
+   "category": "basket",
+   "id": "ES 657",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Biomedical Ultrasound"
+  },
+  {
+   "category": "basket",
+   "id": "ES 658",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Memory Device Technologies and Applications"
+  },
+  {
+   "category": "basket",
+   "id": "ES 659",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Computer Graphics"
+  },
+  {
+   "category": "basket",
+   "id": "ES 660",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Power Management IC Design"
+  },
+  {
+   "category": "basket",
+   "id": "ES 661",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Probabilistic ML"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 662",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Flexible Electronics: Materials, Methods and Devices"
+  },
+  {
+   "category": "basket",
+   "id": "ES 663",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Smart Renewable Energy Systems"
+  },
+  {
+   "category": "basket",
+   "id": "ES 665",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Transportation Electrification Technology"
+  },
+  {
+   "category": "basket",
+   "id": "ES 666",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Computer Vision"
+  },
+  {
+   "category": "stream_core",
+   "id": "ES 667",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Deep Learning"
+  },
+  {
+   "category": "basket",
+   "id": "ES 668",
+   "in_catalog": true,
+   "level": 600,
+   "title": "5G and Beyond"
+  },
+  {
+   "category": "basket",
+   "id": "ES 669",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Advanced Computer Architecture and Systems"
+  },
+  {
+   "category": "basket",
+   "id": "ES 670",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Matrix Methods for Signal Processing, Data Science, and Machine Learning"
+  },
+  {
+   "category": "basket",
+   "id": "ES 672",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Semiconductor Packaging"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 673",
+   "in_catalog": true,
+   "level": 600,
+   "title": "NeuroAI: Neuroscience & Artificial Intelligence"
+  },
+  {
+   "category": "basket",
+   "id": "ES 675",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Photonics \u2013 Principles and Applications"
+  },
+  {
+   "category": "stream_core",
+   "id": "ES 678",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Machine Learning"
+  },
+  {
+   "category": "open_elective",
+   "id": "ES 679",
+   "in_catalog": true,
+   "level": 600,
+   "title": "RFIC Design"
+  },
+  {
+   "category": "requirement",
+   "id": "FP 601",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Aarohan (For 2026 MTech, PGDIIT and PhD students)"
+  },
+  {
+   "category": "requirement",
+   "id": "FP 602",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Writing (For Engineering PhD students and MTech Students)"
+  },
+  {
+   "category": "ug_background",
+   "id": "MA 101",
+   "in_catalog": true,
+   "level": 100,
+   "title": null
+  },
+  {
+   "category": "ug_background",
+   "id": "MA 102",
+   "in_catalog": true,
+   "level": 100,
+   "title": null
+  },
+  {
+   "category": "ug_background",
+   "id": "MA 202",
+   "in_catalog": true,
+   "level": 200,
+   "title": null
+  },
+  {
+   "category": "basket",
+   "id": "MA 607",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Graph Theory"
+  },
+  {
+   "category": "requirement",
+   "id": "PE 600",
+   "in_catalog": true,
+   "level": 600,
+   "title": "Physical Education (MTech and PhD students)"
+  },
+  {
+   "category": "requirement",
+   "id": "REQ-HSS",
+   "in_catalog": true,
+   "level": null,
+   "title": "HSS course (students admitted before AY 2025-26)"
+  },
+  {
+   "category": "requirement",
+   "id": "REQ-PROJECT",
+   "in_catalog": true,
+   "level": null,
+   "title": "Postgraduate level project course"
+  },
+  {
+   "category": "requirement",
+   "id": "REQ-THESIS",
+   "in_catalog": true,
+   "level": null,
+   "title": "M.Tech thesis unit"
+  }
+ ]
+}

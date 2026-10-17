@@ -1,0 +1,5 @@
+response_id,consent_given,consent_statement_version,form_version,included_in_dataset,reason
+R001,yes,v1,v1,yes,
+R002,yes,v1,v1,yes,
+R003,no,v1,v1,no,no consent
+R004,yes,v1,v1,yes,

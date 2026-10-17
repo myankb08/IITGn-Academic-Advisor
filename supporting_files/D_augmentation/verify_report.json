@@ -1,0 +1,53 @@
+{
+ "parents": 600,
+ "children_in": 1490,
+ "kept": 1490,
+ "dropped": 0,
+ "parent_gold_drift_vs_engine": 0,
+ "missing_child_files": [
+  "data/interim/aug_paraphrase.jsonl"
+ ],
+ "per_augmentation": {
+  "paraphrase": {
+   "augmentation": "paraphrase",
+   "n_children": 0,
+   "n_pass": 0,
+   "n_fail": 0,
+   "invariance_rate": null,
+   "check": "gold unchanged",
+   "gold_changed_vs_parent": 0,
+   "fail_reasons": ""
+  },
+  "typo_abbrev": {
+   "augmentation": "typo_abbrev",
+   "n_children": 600,
+   "n_pass": 600,
+   "n_fail": 0,
+   "invariance_rate": 1.0,
+   "check": "gold unchanged",
+   "gold_changed_vs_parent": 0,
+   "fail_reasons": ""
+  },
+  "transcript_reorder": {
+   "augmentation": "transcript_reorder",
+   "n_children": 445,
+   "n_pass": 445,
+   "n_fail": 0,
+   "invariance_rate": 1.0,
+   "check": "gold unchanged",
+   "gold_changed_vs_parent": 0,
+   "fail_reasons": ""
+  },
+  "transcript_length": {
+   "augmentation": "transcript_length",
+   "n_children": 445,
+   "n_pass": 445,
+   "n_fail": 0,
+   "invariance_rate": 1.0,
+   "check": "gold recomputed correctly",
+   "gold_changed_vs_parent": 445,
+   "fail_reasons": ""
+  }
+ },
+ "output": "data/processed/queries_augmented.jsonl"
+}

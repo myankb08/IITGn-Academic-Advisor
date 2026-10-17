@@ -1,0 +1,16 @@
+{
+  "id": "hemant436/course-advisory-llm-smoke",
+  "title": "course-advisory-llm-smoke",
+  "code_file": "kaggle_llm_runs.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["hemant436/course-advisory-llm-inputs"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

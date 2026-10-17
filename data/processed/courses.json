@@ -1,0 +1,3527 @@
+[
+  {
+    "code": "CS 329",
+    "title": "Foundations of AI: Multiagent Systems",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 300,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan CS_329.html has no prerequisite statement",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 64: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/mas",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 64,
+        "source_section": null
+      },
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 113,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "5a28fe3b034085a31e7cf8af36745c958920c37ba212b4b851628886a8bb8df7"
+  },
+  {
+    "code": "CS 431",
+    "title": "Computer and Network Security",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 400,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4e264e8b3d8c5c4811bcb8d02556953f2e2b487a576d78760b2dbb3e7e5a1dd1"
+  },
+  {
+    "code": "CS 434",
+    "title": "Software Engineering and Testing",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 400,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "a5f57781dc912cf573e58e8354923e6687c5fb70365844996d31b9dd18b2a4dc"
+  },
+  {
+    "code": "CS 435",
+    "title": "Human-Computer Interaction",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 400,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan CS_435.html has no prerequisite statement",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 241: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://yogeshkmeena.github.io/Teaching/",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 241,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "4c6ac98b6b509eaa20885deab5e68dcf178eea64e792cc6594bf6a9ac567156c"
+  },
+  {
+    "code": "CS 607",
+    "title": "Combinatorics in CS",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "aafd1cb5d3758d889e9a585ab3ab49530e65ab821030ccd9aad449e26b200e32"
+  },
+  {
+    "code": "CS 610",
+    "title": "Algorithms",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "compulsory",
+    "streams": [
+      "AI/ML",
+      "Systems",
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": "odd",
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Revised CSE MTech Course Structure [2025-26].pdf p1: 1. CS 610 (Algorithms) is a compulsory course for all streams (Offered in Odd semester). || Timetable, Sem-I, 2026-27.xlsx row 243: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/1FR3B1uaVfesy6V3M3JLivJlmD_H8Jhda9_e9nz81e3o/edit?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 243,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "01f5760a73782f7db5d9e5e2f7263edfc1a9228ae70d46dfc9e7b4250a12b6ff"
+  },
+  {
+    "code": "CS 612",
+    "title": "Computer Systems",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 244: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/1rkO3HupBKTxuW4P_bS8WdPuI2Rz5UiSf/edit?usp=sharing&ouid=110990247842517328873&rtpof=true&sd=true",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 244,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "8ddb9820995763a00f1419515aebf146db913966dd1e296508d0c2bf4efd8c7f"
+  },
+  {
+    "code": "CS 613",
+    "title": "Natural Language Processing",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "manual",
+    "prereq_evidence": "Plan heading says Prerequisite (Optional); the listed UG courses are recommended background with 'or equivalent', not enforceable prerequisites for M.Tech students, so none are stored [plan text: Prerequisite (Optional) | Basic Probability & Statistics (ES 331/ MA 202) or equivalent | Basic understanding of Python programming (ES 102/ ES 112) or equivalent]",
+    "recommended_background": [
+      {
+        "any_of": [
+          "ES 331",
+          "MA 202"
+        ],
+        "evidence": "Basic Probability & Statistics (ES 331/ MA 202) or equivalent",
+        "source_doc": "CS_613.html"
+      },
+      {
+        "any_of": [
+          "ES 102",
+          "ES 112"
+        ],
+        "evidence": "Basic understanding of Python programming (ES 102/ ES 112) or equivalent",
+        "source_doc": "CS_613.html"
+      }
+    ],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 245: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/cs613-2026/home",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 245,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "e00d69702719dc0f21e67eeff115cc3dae66ea0dd62a3a6006b528785d902f74"
+  },
+  {
+    "code": "CS 614",
+    "title": "Advanced Algorithms",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 246: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 246,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "2855c35804a7adbd67d4add7cdf94e87d55fe25e3bc54a566e7c4852df4fb449"
+  },
+  {
+    "code": "CS 615",
+    "title": "Advanced Networks",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "7938c0de4e13802df0fb6885a3e80b5cdea1ae3cbc03a30438f9802c95348c43"
+  },
+  {
+    "code": "CS 616",
+    "title": "Distributed Systems and Cloud Computing",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "185b975a7b95e36ede04e724c06ea36c55c89a03ca7b88282ed0f1b6639200e0"
+  },
+  {
+    "code": "CS 617",
+    "title": "Complexity Theory",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "9576abff95ee624e546154bfd80906b1a45b7ad11731b45b03085050bdbbd6ba"
+  },
+  {
+    "code": "CS 618",
+    "title": "Theoretical Foundations of ML",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "69f0260ccf0c9e1fd22158f393a240cbba3ea78a3141826997b3e641112ea31d"
+  },
+  {
+    "code": "CS 619",
+    "title": "CS Theory Toolkit",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan CS_619.txt has no prerequisite statement",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 247: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/1DHyg6VoBb9hcpkJw1rTl6zxPpNmRReedm6YgFTSNZHA/edit?usp=drivesdk",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 247,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "8f7b123a3f9c07e0779885afdc7d81739b009ddb050d2645c37e6369c6ac2e82"
+  },
+  {
+    "code": "CS 620",
+    "title": "Incentives and Machine learning",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan CS_620.html has no prerequisite statement",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 248: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 248,
+    "source_url": "https://sites.google.com/iitgn.ac.in/mdml",
+    "other_sources": [],
+    "record_sha256": "2f4ecbd7072178eeff550afad7271ebc79a05ec76b4ad1a0baba1bba05c1067b"
+  },
+  {
+    "code": "CS 621",
+    "title": "Ethics of AI",
+    "credits": 4,
+    "credits_source": "rules_doc: Adv5_NormsforMTechProgramme.pdf p2",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "compulsory",
+    "streams": [
+      "AI/ML",
+      "Systems",
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": "even",
+    "offered_terms": [],
+    "offering_evidence": "Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "2d44d1ce19c7083c08dc5304f95c9f8e543a52f691a6bc60111fd9261336d94b"
+  },
+  {
+    "code": "CS 622",
+    "title": "Combinatorial Game Theory",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 252: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 252,
+    "source_url": "https://docs.google.com/document/d/1NwZcqAiXIz6zMqx6aSI6GIDphK3G_qe0nJbwQNMuMlg/edit?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "c24edaa7d4941e8a73af46429dfef1c53264130a2bc9e5a9d4bb433328b2d08e"
+  },
+  {
+    "code": "CS 623",
+    "title": "Algebraic Complexity Theory",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 254: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 254,
+    "source_url": "https://docs.google.com/document/d/1b7CuCo9So4LxVda_Ioj7ZwX2Cmp4OfgTbDPLoF6c7Vc/edit?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "0b2de133abf80e20cda7c5866dd35e5d01162d41ef064293845035bded4e9ba6"
+  },
+  {
+    "code": "CS 691-XIV",
+    "title": "Special Topics: Usable Privacy and Security",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "6db59948f33053c98721eecaf12ce38b87d6c12d4269a595322414632dbe7f45"
+  },
+  {
+    "code": "CS 691-XVII",
+    "title": "Special Topics in Computer Science: Combinatorial and Computational Aspects of Games",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 251: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 251,
+    "source_url": "https://docs.google.com/document/d/1NwZcqAiXIz6zMqx6aSI6GIDphK3G_qe0nJbwQNMuMlg/edit?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "c85c9be3ea19fb59ff8d12320c65eb46cedac8a6fe68280c8cc9b4d5e6b8c780"
+  },
+  {
+    "code": "CS 691-XVIII",
+    "title": "Special Topics Course: Algebraic Complexity theory",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan CS_691-XVIII.txt has no prerequisite statement",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 253: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 253,
+    "source_url": "https://docs.google.com/document/d/1nYN-fgB5Oj6rbCghhdHXxppzpFyNDMxZyOYkfKkyco8/edit?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "221513a866be5631829a77b18fca89ef06955914c20566a59e447fa998ef581d"
+  },
+  {
+    "code": "EE 341",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 300,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "EE_663.pdf",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/11d-SSfPQzcT00qfeREE1ifwatDs1Hfjp/view?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "e304c7e11403f1aeeec5eb228cf5c718826f833e7c4dcf34afa7b3755853a508"
+  },
+  {
+    "code": "EE 604",
+    "title": "High Voltage DC and Flexible AC Transmission Systems",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "7429d876561cdb83f883d52ffc38c27b78e24908bec039c0e1416cac91a29145"
+  },
+  {
+    "code": "EE 605",
+    "title": "Digital Image Processing",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "097d8df1495121654174e6df71cbb211430471f284996dfc5cdae4cfdc79e20c"
+  },
+  {
+    "code": "EE 606",
+    "title": "Applied Statistical Bioelectric Signal Analysis",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "26ea3180ec68716dd17efcba1a66126d9cdc15350519947115c96a66bf3117f9"
+  },
+  {
+    "code": "EE 609",
+    "title": "Advanced Signal Processing",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "ebefb38bf3f58f9f9142d84456307814f016f9ef3c13aa13d6ee54ca5bd6af89"
+  },
+  {
+    "code": "EE 617",
+    "title": "VLSI Design",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 267: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/1Yd1UWR5dlTjHVpQrEvGT5XebozcdRpaulQbP5kYYbHE/edit?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 267,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "58248d7ccb728c508d55c5b1404c608b76502c6366ac3b13ea32fec7d16158e4"
+  },
+  {
+    "code": "EE 618",
+    "title": "Microelectronics Lab",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "039a5e0daef1ca32cd1c39919d41d0422205d6f162f1acd874642a255a6cd658"
+  },
+  {
+    "code": "EE 619",
+    "title": "Special Electrical Machines",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "fe4c148b1d2edb5178c819cb67b9587134dbdd917733bfbea6fba5682ebaf6f7"
+  },
+  {
+    "code": "EE 629",
+    "title": "Power Electronic Converters",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "88bb3285dc202e2e93b12dc2770f664120eb9bb1bbc2dfcf887bc696a0246609"
+  },
+  {
+    "code": "EE 633",
+    "title": "Fiber Optics and Photonics",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "22bcc34e8d13974c68db4e901cc5b027d4d47295582929f08668ad7ea2f70958"
+  },
+  {
+    "code": "EE 639",
+    "title": "Lasers",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan EE_639.pdf has no prerequisite statement",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 282: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/11kOhmKlYwzT9pbkIYjetqbMJ7ReieJYd/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 282,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "9b7fc0cb584656c75688c79f5d51f80c162ac816ce33ae70503a8400a1d58d4e"
+  },
+  {
+    "code": "EE 641",
+    "title": "Electronic Instrumentation",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "5d0d0ed3de1f9053ce53e27ece8192e718bd16b71bf7070ccb4bbdd002a0ee36"
+  },
+  {
+    "code": "EE 644",
+    "title": "Physics of Transistors",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (EE_644.html has no extractable text)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 268: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://iitgnacin-my.sharepoint.com/:b:/g/personal/sandip_lashkare_iitgn_ac_in/IQCB5CYF5hrKQKJrK0ATpMB3AcSsNovmoEeK0Ns31IyTy9I?e=Y2hwtF",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 268,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "5839dab1635f5273092052f6cae91ad5bbeb1f8da094a0ad16173b1743bfd785"
+  },
+  {
+    "code": "EE 645",
+    "title": "3D Computer Vision",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "8c3e51bb2a9e25d14a245dfaf7393d2f9f3fcb7e7ee51e2cc086db6f1bfce790"
+  },
+  {
+    "code": "EE 647",
+    "title": "Asynchronous Circuit Design",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "bc828a5a1213daadc6217974201ea9cd0cf1eb9dbfef0e80f64a8254cc147206"
+  },
+  {
+    "code": "EE 648",
+    "title": "Dynamic Behaviour of Electric Machines",
+    "credits": 5,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      1.5
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 269: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/127It-hnkS17e9gmGGFruDWSYVQAST0dI/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 269,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "f225c9e4843627aa570caf589b35c942739536887790fd752438ff8bb585e30a"
+  },
+  {
+    "code": "EE 651",
+    "title": "CMOS Analog IC Design",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (EE_651.html has no extractable text)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 274: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://iitgnacin-my.sharepoint.com/:w:/g/personal/tagarwal_iitgn_ac_in/IQCadTuRO8shQbhNg-T2PUD8AYMVUXYaj3L8gp9UubMIApI?e=mjdx8r",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 274,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "13e02254a852a39fc8fae40404ea0b5c83dec60d4819ae130a7df2e5c06ce2d3"
+  },
+  {
+    "code": "EE 652",
+    "title": "IC Design Lab",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "671e52660e98e0e26fc22c41cb3a9e0fee1704dee9a5942e41fa026291129bc2"
+  },
+  {
+    "code": "EE 659",
+    "title": "Smart Grid",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (EE_659.html has no extractable text)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 276: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://iitgnacin-my.sharepoint.com/my?viewid=6042c341%2Df4a0%2D46e5%2Dad56%2Df00a0c67943a&id=%2Fpersonal%2Fnaran%5Fiitgn%5Fac%5Fin%2FDocuments%2FEE%20659%2F2026%2D27%2FEE659%5FCourse%20plan%2Epdf&parent=%2Fpersonal%2Fnaran%5Fiitgn%5Fac%5Fin%2FDocuments%2FEE%20659%2F2026%2D27",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 276,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "d66ca0b6ae1b3e0407207891f1497090f5a8a16aa84a414a7dae6c69e2e54916"
+  },
+  {
+    "code": "EE 662",
+    "title": "Mixed Signal IC Design",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 283: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 283,
+    "source_url": "https://drive.google.com/file/d/1QIglxCIBklfk_YG76WoFAg95wD9MizuS/view?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "d96a57987e3bb71c69994695c04cdefcd5e314f9f75d3a9075d652156ea8cf62"
+  },
+  {
+    "code": "EE 663",
+    "title": "Advanced Wireless Communications",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "• Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All",
+    "recommended_background": [
+      {
+        "any_of": [
+          "EE 341"
+        ],
+        "evidence": "• Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All",
+        "source_doc": "EE_663.pdf"
+      },
+      {
+        "any_of": [
+          "ES 244"
+        ],
+        "evidence": "• Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All",
+        "source_doc": "EE_663.pdf"
+      }
+    ],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 277: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/11d-SSfPQzcT00qfeREE1ifwatDs1Hfjp/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 277,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "014236e1a7f244b6fe8c242398eace09812beec02af3c1a1ea3d0e70ce895706"
+  },
+  {
+    "code": "EE 664",
+    "title": "High Frequency Engineering",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan EE_664.pdf has no prerequisite statement",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 278: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/1WnwJOuz0Vg-VBbhxqZmWkBHW4vP5auvc/view?usp=drive_link",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 278,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "da810fe3aa73e9b00bc6a00e06a3c88adc024894b4a1a81aab97860ce796d228"
+  },
+  {
+    "code": "EE 666",
+    "title": "Fundamentals of  Wireless Localization",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "2800426c005297684de4efc3e35ac2ab80bfab111875d9217c0892c332e08d58"
+  },
+  {
+    "code": "EE 668",
+    "title": "Smart Power Distribution System",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "d3378a2bb40f0bd205f8b7bf516d96105f84ad9eb28bbb7e61e20e09c2b834fc"
+  },
+  {
+    "code": "EE 671",
+    "title": "Wireless System Design and Implementation",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      1.5,
+      0.0,
+      3.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 271: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/1A7Y_yRGU1g_bR2CpjokWzduK3JfUDvqd/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 271,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "d6c887289da49aacf9f185477afc0666ded370606370e1f4d0e3e79ccfe9dca5"
+  },
+  {
+    "code": "EE 691-VII",
+    "title": "Special Topics in Electrical Engineering: Economics of Regulation in India",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (EE_691-VII.html has no extractable text)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 284: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 284,
+    "source_url": "https://iitgnacin-my.sharepoint.com/:w:/g/personal/anand_kumar_iitgn_ac_in/IQAWliKVcuo0Q6zXoh7HP7Y4AdGb1lbdh_KX2yAZ977U1Xs?e=5LD9sz",
+    "other_sources": [],
+    "record_sha256": "a504e9057be7f52f3b225a9d75b9b3e45a9721eba6c77c0d94a02e2c1875a23d"
+  },
+  {
+    "code": "ES 102",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 100,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "CS_613.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/cs613-2026/home",
+    "other_sources": [],
+    "record_sha256": "9d4010d60e94b99200b947fd8715c831ea0240f15d2509790dc1187a0b2ae273"
+  },
+  {
+    "code": "ES 112",
+    "title": "Computing",
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 100,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "CS_613.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/cs613-2026/home",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 8,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "2016fc7c3f1f67e403d931af983e46bac214763d8a9ba7bdb489e143625b7653"
+  },
+  {
+    "code": "ES 244",
+    "title": "Signals, Systems, and Random Processes",
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 200,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "EE_663.pdf",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/11d-SSfPQzcT00qfeREE1ifwatDs1Hfjp/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 49,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "336d0da7932f517fbb29ea6c3512755f1dea60db4c50fa82a73721a1741cd3a5"
+  },
+  {
+    "code": "ES 331",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 300,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "CS_613.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/cs613-2026/home",
+    "other_sources": [],
+    "record_sha256": "e0196e3a197b065a8f95001669ab1b706c69f547adedb60c948c9be4b9bba0c4"
+  },
+  {
+    "code": "ES 404",
+    "title": "Networks and Complex Systems",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 400,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "fff9e4dff8a01bc68d40d794bf3b2ec46beb79995cc9ed804e55df8a70aafa83"
+  },
+  {
+    "code": "ES 417",
+    "title": "5G and Beyond",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 400,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Systems"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "5f0cfd64a5bb045142e00bc6885d58685232009935e8311deee0aa822d7a2add"
+  },
+  {
+    "code": "ES 604",
+    "title": "Engineering Optimization",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 236: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 236,
+    "source_url": "https://docs.google.com/document/d/1nAYf1QY6j7JGH7Lw7UwwHY31w_nIMNQU/edit?usp=drive_link&ouid=102748482566191991041&rtpof=true&sd=true",
+    "other_sources": [],
+    "record_sha256": "e301b86b88eaa47a1a0263c98ff05f685f0c24be1c977ad8873229f0dec1c3a3"
+  },
+  {
+    "code": "ES 606",
+    "title": "Computational Neuroscience",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 394: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/u/0/d/17qJQNPpbHkf1ojjxh1dtmOrOwg3PS7zEA8YAVsWDEjM/edit",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 394,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "af7809f22001291c71f4f60ccebdc9969a1903f8254071ff7a6956a7be878969"
+  },
+  {
+    "code": "ES 607",
+    "title": "Foundations of Fluid Dynamics",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      1.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan ES_607.txt has no prerequisite statement",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 288: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 288,
+    "source_url": "https://docs.google.com/document/d/1mI6e6RxvTV2k4-98f-4_qdW_7Fh46uZ3/edit?usp=sharing&ouid=100579235848488623714&rtpof=true&sd=true",
+    "other_sources": [],
+    "record_sha256": "45184a1f51d4228bf51ae6d1746d4fd702ac7cc5eca07bc269cfb006850f8760"
+  },
+  {
+    "code": "ES 608",
+    "title": "Nanoscale Device Engineering",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "3a8ca2eefbcb1cbe8b6636138db35d0ce067e8a9ff4fa6fbf93ec64af8dbf6a5"
+  },
+  {
+    "code": "ES 612",
+    "title": "Artificial Intelligence",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML",
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+        "source_page": null,
+        "source_row": null,
+        "source_section": "Curriculum"
+      }
+    ],
+    "record_sha256": "635749543ab4efe7505ae63d9e2a237b58a2a44313b3452de562681c8ff86cf6"
+  },
+  {
+    "code": "ES 613",
+    "title": "Modern Control Theory",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "1d0870bc1c870e9ffdaee2309027fe149b95dd27f31299ec33cfc442a0afe852"
+  },
+  {
+    "code": "ES 615",
+    "title": "Nature-inspired computing",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML",
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+        "source_page": null,
+        "source_row": null,
+        "source_section": "Curriculum"
+      }
+    ],
+    "record_sha256": "836023720a779a1a3934a9d48395ba5e15a1a8df4c6d3a66f46d2b55f4cf702c"
+  },
+  {
+    "code": "ES 616",
+    "title": "Digital Control Systems",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      1.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "Pre-requisite: Control Systems (UG), (Preferred , Not mandatory )",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 272: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/1kRe1j1mw-ScS4GBQWbrLvWI20zkrSgTn/view?usp=drive_link",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 272,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "f96a8c4dd54df172ec3ba8cbda10a84fc2b403639625a0694cf0bf9338f79c33"
+  },
+  {
+    "code": "ES 621",
+    "title": "Advanced Solid Mechanics",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan ES_621.pdf has no prerequisite statement",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 212: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 212,
+    "source_url": "https://drive.google.com/file/d/1XNr-Oi82lDzPpks_PhR0rTZsAXJ6HG16/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 291,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "5f19a53680bc00ddbea0efbb9419b0e03150fa830630449c5e79412bef748ad9"
+  },
+  {
+    "code": "ES 625",
+    "title": "Optical Communication",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "b03795b40022ca052c9903b3a945e5e0cdc3412ce93274ffbdfcbc68c1d6ae4e"
+  },
+  {
+    "code": "ES 626",
+    "title": "Microfabrication and Semiconductor Processes",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 273: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/1Ds3tjD8J9P_u1d_fQIZXHB36gVibP0kR/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 273,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "ed77a57aa324b12aa55c411fee905f81c86991865d74e01e93410333e4b1cba5"
+  },
+  {
+    "code": "ES 627",
+    "title": "Linear Algebra and Computation",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "cb12ede94e7fa383d44229f8c085147bac1b8970a28d24104c913e1c1b25eb6c"
+  },
+  {
+    "code": "ES 634",
+    "title": "Applied Multivariate Data Analysis",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4b1f04819948451242c304733ede69970b578e664e1a935f175b43d01dd062f5"
+  },
+  {
+    "code": "ES 637",
+    "title": "Mathematical Foundations for Computer Vision and Graphics",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "1db11f10634ef95ff4f614f6a39597b093da1128ea46f74ceaf160074ebc1bd3"
+  },
+  {
+    "code": "ES 639",
+    "title": "Multimedia Security",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "0c3e427685043310dae36809e62efb40d32c335e563e199024b8998d69930305"
+  },
+  {
+    "code": "ES 642",
+    "title": "Control of Nonlinear Dynamical Systems",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "6a3504efb67a0f9f72991345a4aad3a5d37b17129a521821b090b79e8a4c5abb"
+  },
+  {
+    "code": "ES 643",
+    "title": "Quantum computation and information",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4bf785cc4ac0b431fc636e1c73c08a8de18afceab8a4d76bcc31249180140f6f"
+  },
+  {
+    "code": "ES 645",
+    "title": "Optimization for ML",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML",
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+        "source_page": null,
+        "source_row": null,
+        "source_section": "Curriculum"
+      }
+    ],
+    "record_sha256": "cd51cd6ff54f3bdc3b9e3d32cddcee7686ee08888fdd7926162023d14d9ae26c"
+  },
+  {
+    "code": "ES 646",
+    "title": "Elastodynamics and Vibrations",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 294: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 294,
+    "source_url": "https://drive.google.com/file/d/14rF9TMdXs3fYRxXqjwzPkEtkSlkFcLdB/view?usp=drive_link",
+    "other_sources": [],
+    "record_sha256": "761488348829c2354b0b4db9088710271893da5fdbb169ad97ed128b050dccf0"
+  },
+  {
+    "code": "ES 653",
+    "title": "Analog IC Design Lab",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "2a433556c2464620e5b6fd03a7c0d443d21c8ef221aef85c6181a358fa5a9761"
+  },
+  {
+    "code": "ES 654",
+    "title": "Machine Learning",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+        "source_page": null,
+        "source_row": null,
+        "source_section": "Curriculum"
+      }
+    ],
+    "record_sha256": "5462e1e292967ce32e939980cdd49d7ff9a6910436943e2325e2ce992619abe6"
+  },
+  {
+    "code": "ES 655",
+    "title": "Medical Imaging",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "e3a146b7330c7ddd0808bbdfd61e6c474dfee4d624c79df5eba9e086bcaa16f9"
+  },
+  {
+    "code": "ES 656",
+    "title": "Human-Robot Interaction",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 290: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 290,
+    "source_url": "https://drive.google.com/file/d/1cfkjeuITM2BsI-oMOnxtCMuwbTSMZ1S9/view?usp=drive_link",
+    "other_sources": [],
+    "record_sha256": "fd9dc19935238c7f5924382ebbbdb566e48ba8be93fdf382c25a061e6ab7f939"
+  },
+  {
+    "code": "ES 657",
+    "title": "Biomedical Ultrasound",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "Prerequisites | : | No formal prerequisites, but students will need a basic background in calculus, physics, signal processing and programming. Knowledge of biology is not necessary.",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 275: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/1tot22WpkJgil8EiVmg-bHWgO91IhTxqA/edit",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 275,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "f1d0cb73f8c5f0e8aa93c3294e58d44623fba270a19d2c26e914eae26a5aa7c1"
+  },
+  {
+    "code": "ES 658",
+    "title": "Memory Device Technologies and Applications",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "f2fed9be9df148b9148435b6d0f97805f47383f835e7300a6d5bd6182684ebce"
+  },
+  {
+    "code": "ES 659",
+    "title": "Computer Graphics",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "05e032bffffcf38bddf9cf5cc66365fefd9ecad6c587ad562d403ba2a05bb582"
+  },
+  {
+    "code": "ES 660",
+    "title": "Power Management IC Design",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "203a4d5ec614b486cccf5740c16982764b415a3d7413c62cd5ad5bf61aed4449"
+  },
+  {
+    "code": "ES 661",
+    "title": "Probabilistic ML",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "b6f8017b25bb83d31d644ae46f051503850807935e19a34df2bcf58d6047c228"
+  },
+  {
+    "code": "ES 662",
+    "title": "Flexible Electronics: Materials, Methods and Devices",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (ES_662.html has no extractable text)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 237: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 237,
+    "source_url": "https://iitgnacin-my.sharepoint.com/:w:/g/personal/bsaha_iitgn_ac_in/IQAgc6De535kTI5BHvkyh-otASKy5pbIjDA1L5r_GBQxboI?e=Qyd2Li",
+    "other_sources": [],
+    "record_sha256": "80f873b91a2ccfb2a7cbff023c728fa4fa488f9908ec889b9cc2212db6fb7221"
+  },
+  {
+    "code": "ES 663",
+    "title": "Smart Renewable Energy Systems",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4b98c72c75b905e42a46c9d5c03f3d1f672ee7359e5cd5e32f4a31dfcf0ffb1d"
+  },
+  {
+    "code": "ES 665",
+    "title": "Advanced Transportation Electrification Technology",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Power Engineering & Control Systems"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/power-engineering-control-systems.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "1b6cf203be8f18410e1cf9c4c1908037c12825462fc3b14288b87a919ebc41f3"
+  },
+  {
+    "code": "ES 666",
+    "title": "Computer Vision",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "Prerequisites · UG | ES 112 Computing, MA 101, MA 102, or equivalent || Prerequisites · PG | None",
+    "recommended_background": [
+      {
+        "any_of": [
+          "ES 112"
+        ],
+        "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+        "source_doc": "ES_666.html"
+      },
+      {
+        "any_of": [
+          "MA 101"
+        ],
+        "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+        "source_doc": "ES_666.html"
+      },
+      {
+        "any_of": [
+          "MA 102"
+        ],
+        "evidence": "ES 112 Computing, MA 101, MA 102, or equivalent",
+        "source_doc": "ES_666.html"
+      }
+    ],
+    "category": "basket",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 249: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://shanmugaiit.github.io/es666.html",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 249,
+        "source_section": null
+      },
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 279,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "8f32c6ea44de36afe3ba905a0cc6740fd5af8708143b7bd9763675a1d80cf7ef"
+  },
+  {
+    "code": "ES 667",
+    "title": "Deep Learning",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan ES_667.html has no prerequisite statement",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 250: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://nipunbatra.github.io/dl-2026/",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 250,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "7cbc338b0f84e597195d97022e5730b1233c11c375316572199b7db072481774"
+  },
+  {
+    "code": "ES 668",
+    "title": "5G and Beyond",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "Background and prerequisites: The course does not set hard prerequisites and will not assume prior knowledge.",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 280: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": "https://docs.google.com/document/d/198eel1egMa8j4mvsq2Fbj9riGMKX8FGSA9CUFXo3Ryg/edit?tab=t.0",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 280,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "312ab659ffd03f136b2ef7187aaa4355ad1e8b71b6753e1da086fcd4e4729609"
+  },
+  {
+    "code": "ES 669",
+    "title": "Advanced Computer Architecture and Systems",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "48d507f21ac813fd2a7f9d41e0606b00ff268d33d9185df400bc7d628af7744e"
+  },
+  {
+    "code": "ES 670",
+    "title": "Matrix Methods for Signal Processing, Data Science, and Machine Learning",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "AI/ML",
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+        "source_page": null,
+        "source_row": null,
+        "source_section": "Curriculum"
+      }
+    ],
+    "record_sha256": "21b575988421c417ccfe96e0b348fc7422ab2eb7afeafde9a50e96ef9433cde8"
+  },
+  {
+    "code": "ES 672",
+    "title": "Semiconductor Packaging",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [],
+    "programmes": [
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ee_mtech_site/integrated-circuit-design-technology.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4439d4d92720633163c05a8bebdeb9af3d0e9dcccada6afaee6a533840a0a6e8"
+  },
+  {
+    "code": "ES 673",
+    "title": "NeuroAI: Neuroscience & Artificial Intelligence",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 395: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 395,
+    "source_url": "https://docs.google.com/document/d/1Hs6fo04QySv_OyPYWWZSekPlfonWRO7B3GQJ-omAPjY/edit?usp=sharing",
+    "other_sources": [],
+    "record_sha256": "147a930717772b83b205a4ecc58a38b11598b714d4cc35057c1d0a4e4b7ee05d"
+  },
+  {
+    "code": "ES 675",
+    "title": "Photonics – Principles and Applications",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Signal Processing & Machine Learning"
+    ],
+    "programmes": [
+      "MTech-EE"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 281: listed in 2026-27 Sem-I",
+    "source_doc": "ee_mtech_site/signal-processing-machine-learning.html",
+    "source_page": null,
+    "source_section": "Curriculum",
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 281,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "949ec18c2de2a3b90cb8d084bf94fee45d624dfda5c5754b6e41668b100b61ad"
+  },
+  {
+    "code": "ES 678",
+    "title": "Machine Learning",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      1.5,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "course plan ES_678.html has no prerequisite statement",
+    "recommended_background": [],
+    "category": "stream_core",
+    "streams": [
+      "AI/ML"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 66: listed in 2026-27 Sem-I",
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://ml2026.floodresq.com/",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 66,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "9fdeeb22483467634921b9eed4e0c2d2739e97ab91f45029ebf6221002e08f22"
+  },
+  {
+    "code": "ES 679",
+    "title": "RFIC Design",
+    "credits": 5,
+    "credits_source": "timetable",
+    "ltp": [
+      3.0,
+      0.0,
+      3.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (download failed: Google sign-in page, file not public)",
+    "recommended_background": [],
+    "category": "open_elective",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 266: listed in 2026-27 Sem-I",
+    "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+    "source_page": null,
+    "source_section": null,
+    "source_row": 266,
+    "source_url": "https://docs.google.com/document/d/184bxetlzX-eSL8kSFU4ea17kSGH1MUei/edit?usp=sharing&ouid=106706293449739761250&rtpof=true&sd=true",
+    "other_sources": [],
+    "record_sha256": "99e0beb94b1c3661fe7b8b051b53b44c4d6848289d28335d5bb28ba57be185c0"
+  },
+  {
+    "code": "FP 601",
+    "title": "Aarohan (For 2026 MTech, PGDIIT and PhD students)",
+    "credits": 2,
+    "credits_source": "timetable",
+    "ltp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 181: listed in 2026-27 Sem-I",
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 181,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "1cf01a03762552a3c1bbcb5755182885743a91ff41388018483ff081c97f1ee7"
+  },
+  {
+    "code": "FP 602",
+    "title": "Writing (For Engineering PhD students and MTech Students)",
+    "credits": 4,
+    "credits_source": "timetable",
+    "ltp": [
+      1.0,
+      0.0,
+      3.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 400: listed in 2026-27 Sem-I",
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 1,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://drive.google.com/file/d/1CA1z_AAB4S7DtStNdOVW2gCOzdfAi1E1/view?usp=sharing",
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 400,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "e87fcaead7bf90cb0acdf67ad5e95603bfb7263faaf7ce3506aff379a7720a6b"
+  },
+  {
+    "code": "MA 101",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 100,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ES_666.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://shanmugaiit.github.io/es666.html",
+    "other_sources": [],
+    "record_sha256": "e6141ab3c6bbf317e4d6fea56a50fa83a35fb2d7b4c8a3c50ad92035683a03dd"
+  },
+  {
+    "code": "MA 102",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 100,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "ES_666.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://shanmugaiit.github.io/es666.html",
+    "other_sources": [],
+    "record_sha256": "6bc5dbebb8597c9b8dca0a55fb0e13c1a44dba7554d726264eb0bebc465c7a3a"
+  },
+  {
+    "code": "MA 202",
+    "title": null,
+    "credits": null,
+    "credits_source": "not counted: UG background course, not part of the M.Tech catalog",
+    "ltp": null,
+    "level": 200,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "UG background course, prerequisites not tracked",
+    "recommended_background": [],
+    "category": "ug_background",
+    "streams": [],
+    "programmes": [],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "CS_613.html",
+    "source_page": null,
+    "source_section": null,
+    "source_row": null,
+    "source_url": "https://sites.google.com/iitgn.ac.in/cs613-2026/home",
+    "other_sources": [],
+    "record_sha256": "2dc4c2b596877851a5cd2a4a6912b47e13ca618c81a2465aaa15c88a1a25f9df"
+  },
+  {
+    "code": "MA 607",
+    "title": "Graph Theory",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "no course plan available (no course plan link in the Sem-I 2026-27 timetable)",
+    "recommended_background": [],
+    "category": "basket",
+    "streams": [
+      "Theory"
+    ],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "0965b1c0e408af64ffede5e9819720d090d6488210169e054e0695f824ec0f4e"
+  },
+  {
+    "code": "PE 600",
+    "title": "Physical Education (MTech and PhD students)",
+    "credits": 0,
+    "credits_source": "timetable",
+    "ltp": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "level": 600,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [
+      "2026-27 Sem-I"
+    ],
+    "offering_evidence": "Timetable, Sem-I, 2026-27.xlsx row 185: listed in 2026-27 Sem-I",
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [
+      {
+        "source_doc": "Timetable, Sem-I, 2026-27.xlsx",
+        "source_page": null,
+        "source_row": 185,
+        "source_section": null
+      }
+    ],
+    "record_sha256": "c51aa59d2c99c312268bb9c9c1ea68eb09704cb532ef90dcb319e427202cdc81"
+  },
+  {
+    "code": "REQ-HSS",
+    "title": "HSS course (students admitted before AY 2025-26)",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": null,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 2,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "d891838d61a1c0a7961c2f4644901dc90e74d5ed97095ecc64d414390730c18c"
+  },
+  {
+    "code": "REQ-PROJECT",
+    "title": "Postgraduate level project course",
+    "credits": 4,
+    "credits_source": "default: Adv17_Courses and Credit System.pdf p1 (standard 3-0-0 course = 4 credits)",
+    "ltp": null,
+    "level": null,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 4,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "6628ca8c865490f4759fd014d52bb537c46b3a85f232c8dda5babcc098f7a32b"
+  },
+  {
+    "code": "REQ-THESIS",
+    "title": "M.Tech thesis unit",
+    "credits": 4,
+    "credits_source": "rules_doc: Adv5_NormsforMTechProgramme.pdf p3",
+    "ltp": null,
+    "level": null,
+    "prerequisites": [],
+    "prereq_source": "none_stated",
+    "prereq_evidence": "requirement entry, prerequisites not applicable",
+    "recommended_background": [],
+    "category": "requirement",
+    "streams": [],
+    "programmes": [
+      "MTech-CSE",
+      "MTech-AI",
+      "MTech-EE",
+      "MTech-ICDT"
+    ],
+    "offered_parity": null,
+    "offered_terms": [],
+    "offering_evidence": null,
+    "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+    "source_page": 3,
+    "source_section": null,
+    "source_row": null,
+    "source_url": null,
+    "other_sources": [],
+    "record_sha256": "4c46f68688ba4191f143f01a27460af4dbf05bc3f09a928ae75564afdb6a6c3b"
+  }
+]

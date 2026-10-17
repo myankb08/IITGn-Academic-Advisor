@@ -1,0 +1,10 @@
+Here is a question a graduate student typed into a course advisory chat.
+Say the same thing a different way: change the sentence structure and word choice, for example make it more casual or put the background after the question.
+Constraints:
+- Every course code must appear exactly as written (for example "CS 610").
+- The programme, stream, track, completed semesters and any term must stay the same.
+- Ask for exactly the same thing. Do not answer it.
+Reply with the new question only.
+
+Original: {query_text}
+New version:

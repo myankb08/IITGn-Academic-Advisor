@@ -1,0 +1,8 @@
+template_family,template_id,n_templates,test_only
+el_can_register,el_can_register_t1,3,True
+el_prereq_check,el_prereq_check_t1,3,True
+er_basket_fill,er_basket_fill_t1,3,True
+er_next_semester,er_next_semester_t2,3,True
+rc_core_courses,rc_core_courses_t3,3,True
+rc_credit_gap,rc_credit_gap_t4,4,True
+rc_degree_audit,rc_degree_audit_t3,3,True

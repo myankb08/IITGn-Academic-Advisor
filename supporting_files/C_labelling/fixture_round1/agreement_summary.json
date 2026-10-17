@@ -1,0 +1,48 @@
+{
+  "round": 1,
+  "fixture": true,
+  "export_A1": "tests/fixtures/fixture_round1_export_A1.json",
+  "export_A2": "tests/fixtures/fixture_round1_export_A2.json",
+  "n_items_compared": 40,
+  "decision": {
+    "cohen_kappa": 0.6923076923076923,
+    "percent_agreement": 80.0
+  },
+  "error_category": {
+    "cohen_kappa": 0.6232876712328768,
+    "percent_agreement": 72.5
+  },
+  "both_levels_percent_agreement": 72.5,
+  "label_counts": {
+    "A1_decision": {
+      "accept": 20,
+      "edit": 10,
+      "reject": 10
+    },
+    "A2_decision": {
+      "accept": 16,
+      "edit": 14,
+      "reject": 10
+    },
+    "A1_category": {
+      "none": 20,
+      "wrong_fact_or_policy": 7,
+      "ambiguous_query": 6,
+      "meaning_drift": 4,
+      "fluency": 3
+    },
+    "A2_category": {
+      "none": 16,
+      "wrong_fact_or_policy": 7,
+      "meaning_drift": 6,
+      "ambiguous_query": 5,
+      "fluency": 3,
+      "incomplete_justification": 2,
+      "hallucinated_course": 1
+    }
+  },
+  "only_A1": [],
+  "only_A2": [],
+  "warnings": [],
+  "n_disagreements": 11
+}
