@@ -1,0 +1,375 @@
+# Data pipeline for Project 4 (Course Advisory SLM). Run from the repo root: dvc repro
+# Frozen raw inputs are tracked with `dvc add` (data/raw/sources, data/raw/course_plans,
+# data/raw/course_plans_manual), not produced here. Evidence files under supporting_files/ are
+# outputs with cache: false so they stay in git and are readable on GitHub.
+# LLM stages read data/interim/llm_cache.jsonl (keyed by prompt id, input hash, model digest), so a
+# rerun with the same model is free and deterministic. The cache is a snapshot tracked by `dvc add`.
+
+stages:
+  extract_sources:
+    cmd: .venv/bin/python -m src.collect.extract_sources
+    deps:
+      - src/collect/extract_sources.py
+      - src/collect/common.py
+      - data/raw/sources
+    outs:
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/timetable_rows.jsonl
+      - supporting_files/A_collection/extract_tool_versions.json:
+          cache: false
+
+  fetch_course_plans:
+    cmd: .venv/bin/python -m src.collect.fetch_course_plans --offline
+    deps:
+      - src/collect/fetch_course_plans.py
+      - src/collect/common.py
+      - data/raw/course_plans
+      - data/raw/course_plans_manual
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/timetable_rows.jsonl
+    outs:
+      - data/raw/extracted/course_plan_text.jsonl
+      - supporting_files/A_collection/course_plan_fetch_log.csv:
+          cache: false
+          persist: true
+
+  # The EE site pages and EE course plans were fetched once (no offline flag in the script, and it
+  # rewrites data/raw/sources/source_metadata.json). The stage is frozen: dvc repro never runs it,
+  # its outputs are taken as raw input. To refresh: dvc unfreeze fetch_ee_pages, run it, then
+  # dvc add data/raw/sources data/raw/course_plans and dvc freeze fetch_ee_pages again.
+  fetch_ee_pages:
+    cmd: .venv/bin/python -m src.collect.fetch_ee_pages
+    frozen: true
+    deps:
+      - src/collect/fetch_ee_pages.py
+      - data/raw/extracted/timetable_rows.jsonl
+    outs:
+      - data/raw/extracted/ee_pages.jsonl
+      - data/raw/extracted/ee_course_plan_text.jsonl
+      - supporting_files/A_collection/ee_site_fetch_log.csv:
+          cache: false
+          persist: true
+      - supporting_files/A_collection/ee_course_plan_fetch_log.csv:
+          cache: false
+          persist: true
+
+  build_catalog:
+    cmd: .venv/bin/python -m src.collect.build_catalog
+    deps:
+      - src/collect/build_catalog.py
+      - src/collect/common.py
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/timetable_rows.jsonl
+      - data/raw/extracted/ee_pages.jsonl
+    outs:
+      - data/raw/catalog_raw.json
+
+  build_rules:
+    cmd: .venv/bin/python -m src.collect.build_rules
+    deps:
+      - src/collect/build_rules.py
+      - src/collect/common.py
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/ee_pages.jsonl
+    outs:
+      - data/processed/rules.json
+
+  clean_catalog:
+    cmd: .venv/bin/python -m src.collect.clean_catalog
+    deps:
+      - src/collect/clean_catalog.py
+      - src/collect/common.py
+      - data/raw/catalog_raw.json
+      - data/raw/prereq_manual.csv
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/timetable_rows.jsonl
+      - data/raw/extracted/course_plan_text.jsonl
+      - data/raw/extracted/ee_course_plan_text.jsonl
+      - supporting_files/A_collection/course_plan_fetch_log.csv
+      - supporting_files/A_collection/ee_course_plan_fetch_log.csv
+    outs:
+      - data/processed/courses.json
+      - supporting_files/A_collection/cleaning_changes.csv:
+          cache: false
+
+  prereq_graph:
+    cmd: .venv/bin/python -m src.engine.prereq_graph
+    deps:
+      - src/engine/prereq_graph.py
+      - src/engine/catalog.py
+      - data/processed/courses.json
+      - data/processed/rules.json
+    outs:
+      - data/processed/prereq_graph.json
+      - supporting_files/A_collection/prereq_graph.png:
+          cache: false
+      - supporting_files/B_engine/prereq_graph_report.json:
+          cache: false
+
+  synth_transcripts:
+    cmd: .venv/bin/python -m src.engine.synth_transcripts
+    deps:
+      - src/engine/synth_transcripts.py
+      - src/engine/rule_engine.py
+      - src/engine/catalog.py
+      - data/processed/courses.json
+      - data/processed/rules.json
+    params:
+      - seeds.transcripts
+      - transcripts
+    outs:
+      - data/processed/students.jsonl
+      - supporting_files/B_engine/transcripts_summary.json:
+          cache: false
+
+  # Corrupted transcripts for the Part B validation tests (tests/test_validation.py via src.validate.corrupt).
+  inject_violations:
+    cmd: .venv/bin/python -m src.engine.synth_transcripts --inject-violations 35
+    deps:
+      - src/engine/synth_transcripts.py
+      - src/engine/rule_engine.py
+      - src/engine/catalog.py
+      - data/processed/courses.json
+      - data/processed/rules.json
+    params:
+      - seeds.transcripts
+      - transcripts
+    outs:
+      - data/interim/students_corrupted.jsonl
+
+  # Students are split before any pair is made, so make_queries can render each pair with a template
+  # allowed in its split and no pair is ever dropped.
+  assign_students:
+    cmd: .venv/bin/python -m src.split.assign_students
+    deps:
+      - src/split/assign_students.py
+      - src/queries/make_queries.py
+      - data/processed/students.jsonl
+    params:
+      - seeds.splits
+      - splits
+    outs:
+      - data/splits/assignment
+
+  make_queries:
+    cmd: .venv/bin/python -m src.queries.make_queries
+    deps:
+      - src/queries/make_queries.py
+      - src/split/assign_students.py
+      - data/splits/assignment
+      - src/engine/rule_engine.py
+      - src/engine/catalog.py
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - data/processed/students.jsonl
+    params:
+      - seeds.queries
+      - queries
+    outs:
+      - data/processed/queries.jsonl
+      - supporting_files/B_engine/queries_summary.json:
+          cache: false
+
+  # data/splits only orders the work in this script (test/val first); the output does not depend on it.
+  paraphrase_llm:
+    cmd: .venv/bin/python -m src.queries.paraphrase_llm
+    deps:
+      - src/queries/paraphrase_llm.py
+      - src/queries/llm_client.py
+      - prompts/pipeline/paraphrase_query_v1.txt
+      - prompts/pipeline/paraphrase_justification_v1.txt
+      - data/processed/queries.jsonl
+    params:
+      - seeds.paraphrase
+      - llm.paraphrase_model
+      - llm.temperature
+    outs:
+      - data/processed/queries_para.jsonl
+      - supporting_files/C_labelling/paraphrase_run.json:
+          cache: false
+
+  augment:
+    cmd:
+      - .venv/bin/python -m src.augment.paraphrase
+      - .venv/bin/python -m src.augment.typos_abbrev
+      - .venv/bin/python -m src.augment.transcript_variants
+      - .venv/bin/python -m src.augment.verify
+    deps:
+      - src/augment
+      - src/queries/llm_client.py
+      - src/engine/rule_engine.py
+      - prompts/pipeline/augment_paraphrase_v1.txt
+      - data/processed/queries.jsonl
+      - data/processed/students.jsonl
+      - data/processed/courses.json
+      - data/processed/rules.json
+    params:
+      - seeds.augmentation
+      - llm.paraphrase_model
+      - llm.temperature
+    outs:
+      - data/interim/aug_paraphrase.jsonl
+      - data/interim/aug_typo_abbrev.jsonl
+      - data/interim/aug_transcript.jsonl
+      - data/processed/students_augmented.jsonl
+      - data/processed/queries_augmented.jsonl
+      - supporting_files/D_augmentation:
+          cache: false
+
+  make_splits:
+    cmd: .venv/bin/python -m src.split.make_splits
+    deps:
+      - src/split/make_splits.py
+      - src/split/assign_students.py
+      - data/splits/assignment
+      - data/processed/queries.jsonl
+      - data/processed/queries_augmented.jsonl
+      - data/processed/students.jsonl
+    outs:
+      - data/splits/train.csv
+      - data/splits/val.csv
+      - data/splits/test.csv
+      - data/splits/programme_holdout.csv
+      - supporting_files/E_splits/split_summary.json:
+          cache: false
+      - supporting_files/E_splits/dropped_rows.csv:
+          cache: false
+
+  base_model_answers:
+    cmd: .venv/bin/python -m src.active.base_model_answers
+    deps:
+      - src/active/base_model_answers.py
+      - src/queries/llm_client.py
+      - prompts/pipeline/base_model_answer_v1.txt
+      - data/processed/queries.jsonl
+      - data/processed/students.jsonl
+      - data/processed/courses.json
+      - data/splits/train.csv
+    params:
+      - llm.base_model
+      - llm.base_temperature
+    outs:
+      - data/interim/base_model_answers.jsonl
+      - supporting_files/D_active_learning/base_model_run.json:
+          cache: false
+
+  al_vs_random:
+    cmd:
+      - .venv/bin/python -m src.active.disagreement
+      - .venv/bin/python -m src.active.al_vs_random
+    deps:
+      - src/active/al_vs_random.py
+      - src/active/disagreement.py
+      - data/interim/base_model_answers.jsonl
+      - supporting_files/D_active_learning/base_model_run.json
+      - data/processed/queries.jsonl
+      - data/processed/students.jsonl
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - data/splits/train.csv
+    params:
+      - active_learning
+      - seeds.active_learning
+    outs:
+      - data/interim/al_scores.jsonl
+      - supporting_files/D_active_learning/label_efficiency.png:
+          cache: false
+      - supporting_files/D_active_learning/label_efficiency.csv:
+          cache: false
+      - supporting_files/D_active_learning/summary.md:
+          cache: false
+
+  validate:
+    cmd: .venv/bin/python -m src.validate.run_validation --stage processed
+    deps:
+      - src/validate/checks.py
+      - src/validate/run_validation.py
+      - src/engine
+      - data/raw/extracted/timetable_rows.jsonl
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - data/processed/students.jsonl
+      - data/processed/queries.jsonl
+      - data/splits/train.csv
+      - data/splits/val.csv
+      - data/splits/test.csv
+      - data/splits/programme_holdout.csv
+    outs:
+      - supporting_files/B_validation/processed:
+          cache: false
+
+  build_metadata:
+    cmd: .venv/bin/python -m src.collect.build_metadata
+    deps:
+      - src/collect/build_metadata.py
+      - src/collect/common.py
+      - data/raw/sources
+      - data/raw/course_plans_manual
+      - data/raw/extracted/pages.jsonl
+      - data/raw/extracted/timetable_rows.jsonl
+      - data/raw/extracted/ee_pages.jsonl
+      - data/raw/extracted/course_plan_text.jsonl
+      - data/raw/extracted/ee_course_plan_text.jsonl
+      - data/raw/catalog_raw.json
+      - data/raw/prereq_manual.csv
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - supporting_files/A_collection/extract_tool_versions.json
+      - supporting_files/A_collection/course_plan_fetch_log.csv
+      - supporting_files/A_collection/ee_course_plan_fetch_log.csv
+    outs:
+      - data/metadata.csv
+
+  # PENDING stages: their inputs come from humans and do not exist yet. Uncomment each one when its
+  # input is tracked with dvc add (see README "Human inputs").
+  #
+  # import_forms:
+  #   cmd: .venv/bin/python -m src.collect.import_forms
+  #   deps:
+  #     - src/collect/import_forms.py
+  #     - data/raw/forms/responses_raw.csv
+  #   outs:
+  #     - data/raw/forms/responses_anonymised.jsonl
+  #     - data/consent_register.csv
+  #     - supporting_files/C_labelling/forms_import_log.json:
+  #         cache: false
+  #
+  # shifted_forms:
+  #   cmd: .venv/bin/python -m src.split.shifted_forms
+  #   deps:
+  #     - src/split/shifted_forms.py
+  #     - data/raw/forms/responses_anonymised.jsonl
+  #   outs:
+  #     - data/splits/shifted_forms.csv
+  #     - supporting_files/E_splits/shifted_summary.json:
+  #         cache: false
+  #
+  # adjudicate:
+  #   cmd: .venv/bin/python -m src.queries.adjudicate
+  #   deps:
+  #     - src/queries/adjudicate.py
+  #     - src/queries/ls_export.py
+  #     - data/labels/round1/export_A1.json
+  #     - data/labels/round1/export_A2.json
+  #     - data/labels/round1/adjudication.csv
+  #     - data/labels/round2/export_A1.json
+  #     - data/labels/round2/export_A2.json
+  #     - data/labels/round2/adjudication.csv
+  #   outs:
+  #     - data/labels/audited.jsonl
+  #     - supporting_files/C_labelling/adjudication_log.json:
+  #         cache: false
+  #
+  # freeze_gold:
+  #   cmd: .venv/bin/python -m src.split.freeze_gold
+  #   deps:
+  #     - src/split/freeze_gold.py
+  #     - data/labels/audited.jsonl
+  #     - data/processed/queries_para.jsonl
+  #     - data/splits/test.csv
+  #   outs:
+  #     - data/gold/gold_test.jsonl
+  #     - data/gold/GOLD_SHA256.txt:
+  #         cache: false
+  #     - supporting_files/E_splits/gold_summary.json:
+  #         cache: false

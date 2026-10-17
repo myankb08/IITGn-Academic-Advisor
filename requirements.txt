@@ -11,3 +11,7 @@ networkx==3.4.2
 pandera==0.34.1
 rapidfuzz==3.14.5
 pytest==9.1.1
+dvc==3.67.1
+# torch and transformers are imported only by the optional "kaggle-transformers" backend in
+# src/queries/llm_client.py (Kaggle GPU notebook); they are not needed for the local rebuild.
+kaggle==1.7.4.5

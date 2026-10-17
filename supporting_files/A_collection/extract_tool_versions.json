@@ -1,0 +1,9 @@
+{
+  "run_at_utc": "2026-10-17T10:19:37+00:00",
+  "pdfplumber": "0.11.10",
+  "pdfminer.six": "20260107",
+  "openpyxl": "3.1.5",
+  "pages": 16,
+  "pdf_files": 9,
+  "timetable_rows": 346
+}

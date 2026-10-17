@@ -1,0 +1,2 @@
+code,prerequisites,reason,evidence,decided_by,decided_at
+CS 613,,"Plan heading says Prerequisite (Optional); the listed UG courses are recommended background with 'or equivalent', not enforceable prerequisites for M.Tech students, so none are stored","Prerequisite (Optional) | Basic Probability & Statistics (ES 331/ MA 202) or equivalent | Basic understanding of Python programming (ES 102/ ES 112) or equivalent","pipeline assistant (Claude Code), pending review by hem436",2026-10-17

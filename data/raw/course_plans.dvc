@@ -1,0 +1,6 @@
+outs:
+- md5: 2c7a4111f268214f11ec6791f72aa0ea.dir
+  size: 1930785
+  nfiles: 22
+  hash: md5
+  path: course_plans

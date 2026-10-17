@@ -159,8 +159,9 @@ def test_queries_balanced(cat):
     rows = build(generate(cat, params), cat, params)
     assert len(rows) >= params["queries"]["min_pairs"]
     intents = [r["intent"] for r in rows]
-    assert {i: intents.count(i) for i in set(intents)} == {"remaining_core": 134, "eligibility": 134,
-                                                         "elective_recommendation": 134}
+    per_intent = -(-params["queries"]["min_pairs"] // 3)
+    assert {i: intents.count(i) for i in set(intents)} == {"remaining_core": per_intent, "eligibility": per_intent,
+                                                         "elective_recommendation": per_intent}
     assert len({r["template_family"] for r in rows}) >= 6
     elig = [r["gold_json"] for r in rows if r["intent"] == "eligibility"]
     assert 0.4 < sum(g["eligible"] for g in elig) / len(elig) < 0.6

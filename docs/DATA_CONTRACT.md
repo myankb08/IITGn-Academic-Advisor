@@ -89,6 +89,27 @@ para_query, para_justification, para_model, para_prompt_id,
 augmentation (null | "paraphrase" | "typo_abbrev" | "transcript_reorder" | "transcript_length"), parent_query_id
 ```
 
+### `queries_para.jsonl` (LLM paraphrases, `src/queries/paraphrase_llm.py`)
+Same rows and fields as `queries.jsonl`, with `para_query` and `para_justification` filled as the model returned them
+(null while not generated yet), `para_model` = `<ollama tag>@<model digest>` and
+`para_prompt_id` = `paraphrase_query_v1+paraphrase_justification_v1`. Outputs are never filtered or fixed.
+
+### `queries_augmented.jsonl` and `students_augmented.jsonl` (Part D, `src/augment/`)
+- `queries_augmented.jsonl`: every original pair (augmentation null) followed by the children that passed `src/augment/verify.py`.
+  Child `query_id` is `<parent query_id>-<P|T|R|L>` (paraphrase, typo_abbrev, transcript_reorder, transcript_length),
+  `parent_query_id` is set, `para_*` are null except `para_model`/`para_prompt_id` on LLM paraphrase children.
+- Transcript children point `student_id` at a derived student in `students_augmented.jsonl`: same fields as
+  `students.jsonl` plus `derived_from` (original student_id) and `derivation`. Ids are `<student_id>-R` (entries reordered)
+  and `<student_id>-L<k>` (snapshot after k semesters, entries of semesters 1..k only).
+  For `transcript_length` children `query_text`, `gold_json` and `gold_text` are recomputed for the derived state.
+
+### LLM cache and active learning files (`data/interim/`)
+- `llm_cache.jsonl`: one row per LLM call: `prompt_id, input_hash, model, model_digest, gguf_blob, backend {backend, version, ...},
+  options {seed, temperature, num_predict}, format, response, seconds, prompt_eval_count, eval_count`.
+  Key: (`prompt_id`, `input_hash`, `model_digest`); `input_hash` is the sha256 of the rendered prompt, options, format and backend name.
+- `base_model_answers.jsonl`: `query_id, intent, programme, response, parsed (JSON or null), model, model_digest, prompt_id, backend`.
+- `al_scores.jsonl`: `query_id, intent, programme, score, failures [..], failed, jaccard, pred_codes, gold_codes, hallucinated, ineligible_recs`.
+
 ### Rule engine outputs (`src/engine/`)
 - `prereq_graph.json` networkx node-link data (`nodes`, `links`), edge `prerequisite -> course` with `type` `hard` (from `prerequisites`) or `recommended` (from `recommended_background`), plus `evidence`. Nodes carry `title, category, level, in_catalog`.
 - Rules are applied per programme: common rules, then the programme's overrides from rules.json. For EE and ICDT the own basket is the discipline list (min 16), there is no stream core or other-basket minimum, the below-600 cap is 8 credits instead of 2 courses, and approved MOOCs count as electives (CSE/AI: "no online courses count"). When coursework min + thesis min equals the total (EE thesis track, 42 + 40 = 82), Aarohan counts inside coursework.
@@ -104,7 +125,8 @@ Error categories: `none`, `hallucinated_course`, `wrong_fact_or_policy`, `meanin
 
 Per round N (1 or 2):
 - `roundN/tasks.json` Label Studio import list, each `{"data": {item_id, query_id, round, guidelines_version, position, student_summary, template_query, para_query, gold_text, para_justification}}`. `item_id` is `R<N>-<query_id>`.
-- `roundN/manifest.csv` `position, item_id, query_id, intent, round, guidelines_version, annotators, seed`.
+- `roundN/manifest.csv` `position, item_id, query_id, intent, round, guidelines_version, annotators, seed, split`
+  (`split` is the query's split from `data/splits`; both rounds come from the test split only).
 - `roundN/export_A1.json`, `roundN/export_A2.json` raw Label Studio JSON exports, never edited.
 - `roundN/adjudication.csv` filled by a human: `item_id, final_decision, final_category, final_edit, decided_by`.
 
@@ -114,6 +136,32 @@ item_id, query_id, round, guidelines_version, para_query, para_justification,
 A1: {decision, error_category, edit_text}, A2: {decision, error_category, edit_text},
 final_decision, final_category, final_edit (str | null), decided_by ("agreement" or the adjudicator)
 ```
+
+## Splits (`data/splits/`)
+`assignment/` is made by `src/split/assign_students.py` (seed `seeds.splits`) before any pair exists:
+- `assignment/students.csv` `student_id, programme, split`: students cut per programme by `splits` fractions (by student count); every MTech-ICDT student is `programme_holdout`.
+- `assignment/templates.csv` `template_family, template_id, n_templates, test_only`: the one test-only template of each family.
+
+`make_queries` renders each pair with a template allowed in its student's split (test: the held-out one; train/val: the others; programme_holdout: any).
+`src/split/make_splits.py` then writes one CSV per split, `train.csv, val.csv, test.csv, programme_holdout.csv`, and fails if any pair breaks these rules (no pair is dropped):
+```
+query_id, student_id, template_family, template_id, programme, split
+```
+- Augmented children (`parent_query_id` set, from `queries_augmented.jsonl`) are listed with their root parent's split and their own `student_id`
+  (derived students have new ids). Children whose parent pair changed since augmentation ran are left out and listed in
+  `supporting_files/E_splits/dropped_rows.csv` (manifest columns plus `reason, parent_query_id`).
+- `shifted_forms.csv` (from `src/split/shifted_forms.py`, only once real form responses exist): same columns plus `question_kind, form_version`;
+  `query_id` = `response_id`, `student_id` and `template_id` empty, `template_family` = `real_form`, `split` = `shifted`.
+- Summary with counts and overlap checks: `supporting_files/E_splits/split_summary.json`.
+
+## Gold test set (`data/gold/`)
+`gold_test.jsonl`, made by `src/split/freeze_gold.py` from `data/labels/audited.jsonl`: audited test-split items with final decision accept or edit.
+```
+query_id, student_id, template_id, template_family, intent, target_course, query_text, gold_json, gold_text, para_model, para_prompt_id,
+split ("test"), item_id, round, guidelines_version, para_query, para_justification,
+final_decision ("accept" | "edit"), final_category, final_edit (str for edit, else null), decided_by
+```
+`GOLD_SHA256.txt` holds `<sha256>  data/gold/gold_test.jsonl` (checkable with `sha256sum -c`).
 
 ## Forms (`data/raw/forms/`, `data/consent_register.csv`)
 - `responses_raw.csv` Google Forms CSV download, untouched.

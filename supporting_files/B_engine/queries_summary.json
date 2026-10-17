@@ -1,78 +1,78 @@
 {
- "n_pairs": 402,
+ "n_pairs": 600,
  "per_intent": {
-  "elective_recommendation": 134,
-  "eligibility": 134,
-  "remaining_core": 134
+  "elective_recommendation": 200,
+  "eligibility": 200,
+  "remaining_core": 200
  },
  "per_family": {
-  "el_can_register": 68,
-  "el_prereq_check": 66,
-  "er_basket_fill": 67,
-  "er_next_semester": 67,
-  "rc_core_courses": 45,
-  "rc_credit_gap": 45,
-  "rc_degree_audit": 44
+  "el_can_register": 100,
+  "el_prereq_check": 100,
+  "er_basket_fill": 100,
+  "er_next_semester": 100,
+  "rc_core_courses": 67,
+  "rc_credit_gap": 67,
+  "rc_degree_audit": 66
  },
  "per_template": {
-  "el_can_register_t1": 19,
-  "el_can_register_t2": 21,
-  "el_can_register_t3": 28,
-  "el_prereq_check_t1": 21,
-  "el_prereq_check_t2": 22,
-  "el_prereq_check_t3": 23,
-  "er_basket_fill_t1": 24,
-  "er_basket_fill_t2": 21,
-  "er_basket_fill_t3": 22,
-  "er_next_semester_t1": 25,
-  "er_next_semester_t2": 20,
-  "er_next_semester_t3": 22,
-  "rc_core_courses_t1": 14,
-  "rc_core_courses_t2": 10,
-  "rc_core_courses_t3": 21,
-  "rc_credit_gap_t1": 5,
-  "rc_credit_gap_t2": 11,
-  "rc_credit_gap_t3": 13,
-  "rc_credit_gap_t4": 16,
-  "rc_degree_audit_t1": 18,
-  "rc_degree_audit_t2": 13,
-  "rc_degree_audit_t3": 13
+  "el_can_register_t1": 20,
+  "el_can_register_t2": 35,
+  "el_can_register_t3": 45,
+  "el_prereq_check_t1": 23,
+  "el_prereq_check_t2": 48,
+  "el_prereq_check_t3": 29,
+  "er_basket_fill_t1": 22,
+  "er_basket_fill_t2": 32,
+  "er_basket_fill_t3": 46,
+  "er_next_semester_t1": 39,
+  "er_next_semester_t2": 17,
+  "er_next_semester_t3": 44,
+  "rc_core_courses_t1": 29,
+  "rc_core_courses_t2": 20,
+  "rc_core_courses_t3": 18,
+  "rc_credit_gap_t1": 22,
+  "rc_credit_gap_t2": 19,
+  "rc_credit_gap_t3": 15,
+  "rc_credit_gap_t4": 11,
+  "rc_degree_audit_t1": 23,
+  "rc_degree_audit_t2": 26,
+  "rc_degree_audit_t3": 17
  },
- "eligibility_eligible": 67,
- "eligibility_not_eligible": 67,
+ "eligibility_eligible": 100,
+ "eligibility_not_eligible": 100,
  "not_eligible_reasons": {
-  "ALREADY_TAKEN": 23,
-  "NOT_OFFERED_IN_PARITY": 23,
-  "NOT_OFFERED_NEXT_TERM": 28
+  "ALREADY_TAKEN": 34,
+  "NOT_OFFERED_IN_PARITY": 37,
+  "NOT_OFFERED_NEXT_TERM": 40
  },
  "eligible_warnings": {
-  "MISSING_RECOMMENDED_BACKGROUND": 7,
-  "NOT_COUNTED_BELOW_600_CAP": 7,
-  "OFFERING_UNKNOWN": 22,
-  "OTHER_STREAM_CORE_AS_ELECTIVE": 7,
-  "OUTSIDE_PROGRAMME_LIST": 17
+  "MISSING_RECOMMENDED_BACKGROUND": 10,
+  "NOT_COUNTED_BELOW_600_CAP": 9,
+  "OFFERING_UNKNOWN": 35,
+  "OTHER_STREAM_CORE_AS_ELECTIVE": 10,
+  "OUTSIDE_PROGRAMME_LIST": 23
  },
  "eligibility_cases": {
-  "ALREADY_TAKEN": 23,
-  "CLEAN": 34,
-  "MISSING_RECOMMENDED_BACKGROUND": 7,
-  "NOT_COUNTED_BELOW_600_CAP": 7,
-  "NOT_OFFERED_IN_PARITY": 22,
-  "NOT_OFFERED_NEXT_TERM": 22,
-  "OFFERING_UNKNOWN": 6,
-  "OTHER_STREAM_CORE_AS_ELECTIVE": 7,
-  "OUTSIDE_PROGRAMME_LIST": 6
+  "ALREADY_TAKEN": 34,
+  "CLEAN": 51,
+  "MISSING_RECOMMENDED_BACKGROUND": 10,
+  "NOT_COUNTED_BELOW_600_CAP": 9,
+  "NOT_OFFERED_IN_PARITY": 33,
+  "NOT_OFFERED_NEXT_TERM": 33,
+  "OFFERING_UNKNOWN": 10,
+  "OTHER_STREAM_CORE_AS_ELECTIVE": 10,
+  "OUTSIDE_PROGRAMME_LIST": 10
  },
  "eligibility_terms": {
-  "2026-27 Sem-I": 90,
-  "2026-27 Sem-II": 44
+  "2026-27 Sem-I": 139,
+  "2026-27 Sem-II": 61
  },
  "recommendation_reasons": {
-  "OPEN_ELECTIVE": 4,
-  "OTHER_BASKET_ELECTIVE": 27,
-  "OTHER_BASKET_GAP": 36,
-  "OWN_BASKET_ELECTIVE": 261,
-  "OWN_BASKET_GAP": 74
+  "OPEN_ELECTIVE": 8,
+  "OTHER_BASKET_ELECTIVE": 40,
+  "OTHER_BASKET_GAP": 42,
+  "OWN_BASKET_ELECTIVE": 391,
+  "OWN_BASKET_GAP": 119
  },
- "distinct_students": 161
+ "distinct_students": 177
 }

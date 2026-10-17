@@ -37,8 +37,10 @@ before the category list can steer it. The edit is written last, after the probl
 are listed in `docs/DATA_CONTRACT.md`.
 
 ## 6. Order of items and seed
-Items are sampled from `data/processed/queries.jsonl` (original queries with both paraphrase fields filled),
-stratified by intent with proportional allocation, disjoint between rounds. Sampling and the within-round order both
+Items are sampled from `data/processed/queries_para.jsonl` (original queries with both paraphrase fields filled),
+stratified by intent with proportional allocation, disjoint between rounds. Both rounds come from the test split only
+(`data/splits/test.csv`, 102 pairs, see HANDOFF_A2.md), so the audited items are the gold test set. The manifest
+records each item's split. Sampling and the within-round order both
 use `seeds.annotation_order` = 208 from `params.yaml`. Both annotators see the same order, given by the `position`
 column of the manifest. In Label Studio set Settings > Annotation > Task sampling to **Sequential** so this order
 is kept.

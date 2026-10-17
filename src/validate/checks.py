@@ -846,10 +846,23 @@ def v25_split_leak(meta, b):
     tr = df[df.split == "train"]
     for name in held:
         te = df[df.split == name]
-        cols = ("student_id", tcol) if name == "test" else ("student_id", "programme")
+        # real form questions share programmes with train by nature, so "shifted" is checked on ids and text only
+        cols = ("student_id", tcol) if name == "test" else ("query_id",) if name == "shifted" else ("student_id", "programme")
         for col in cols:
-            for v in sorted(set(tr[col]) & set(te[col])):
+            for v in sorted(set(tr[col].dropna()) & set(te[col].dropna())):
                 bad.append({"split": name, "column": col, "value": v})
+    if "shifted" in held and b.queries:
+        forms = ROOT / "data" / "raw" / "forms" / "responses_anonymised.jsonl"
+        if forms.exists():
+            norm = lambda t: " ".join(str(t).lower().split())  # noqa: E731
+            train_ids = set(tr.query_id)
+            train_text = {norm(q.get("query_text")) for q in b.queries if q["query_id"] in train_ids}
+            for line in forms.read_text().splitlines():
+                if line.strip():
+                    r = json.loads(line)
+                    if norm(r.get("question")) in train_text:
+                        bad.append({"split": "shifted", "column": "question", "value": r.get("response_id"),
+                                    "problem": "form question text equals a train query_text"})
     fam = sorted(set(tr.template_family) & set(df.loc[df.split == "test", "template_family"]))
     dups = df.query_id[df.query_id.duplicated()].tolist()
     bad += [{"column": "query_id", "value": q, "problem": "in more than one split row"} for q in dups]

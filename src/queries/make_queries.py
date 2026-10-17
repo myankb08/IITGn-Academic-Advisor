@@ -1,4 +1,8 @@
-"""Build advisory query/answer pairs whose gold answers come from the rule engine."""
+"""Build advisory query/answer pairs whose gold answers come from the rule engine.
+
+Needs data/splits/assignment/ from src.split.assign_students: each pair is rendered with a surface template
+allowed in its student's split (test: the held-out template of the family; train/val: the others).
+"""
 import argparse
 import json
 import math
@@ -212,25 +216,60 @@ def eligibility_plan(buckets):
     return ok, bad
 
 
-def build(students, catalog, params):
+def slot_splits(n, shares, rng):
+    """n split labels with counts proportional to shares (largest remainder), in seeded order."""
+    raw = {k: n * v for k, v in shares.items()}
+    alloc = {k: int(raw[k]) for k in raw}
+    for k in sorted(raw, key=lambda k: (-(raw[k] - alloc[k]), k))[:n - sum(alloc.values())]:
+        alloc[k] += 1
+    labels = [k for k in sorted(alloc) for _ in range(alloc[k])]
+    rng.shuffle(labels)
+    return labels
+
+
+def allowed_templates(family, n, split, held):
+    """Template indexes a pair in this split may use: test only the held-out one, train/val the others."""
+    if not held or split not in ("train", "val", "test"):
+        return list(range(n))
+    h = int(held[family].rsplit("_t", 1)[1]) - 1
+    return [h] if split == "test" else [i for i in range(n) if i != h]
+
+
+def build(students, catalog, params, split_of=None, held=None):
+    """Pairs per intent; each pair slot gets a split (in proportion to the students per split) first, then a
+    student of that split and a template allowed there. Eligibility slots come in eligible/not-eligible pairs
+    that share a split, so every split stays balanced."""
     rng = random.Random(params["seeds"]["queries"])
     per_intent = math.ceil(params["queries"]["min_pairs"] / 3)
     rows, used = [], {}
     by_id = {s["student_id"]: s for s in students}
+    split_of = split_of or {s["student_id"]: "all" for s in students}
+    pool = {}
+    for s in students:
+        pool.setdefault(split_of[s["student_id"]], []).append(s)
+    shares = {k: len(v) / len(students) for k, v in sorted(pool.items())}
     buckets = eligibility_buckets(students, catalog)
     ok_cycle, bad_cycle = eligibility_plan(buckets)
+    split_buckets = {sp: {case: [x for x in v if split_of[x[0]] == sp] for case, v in buckets.items()} for sp in pool}
     for intent, fams in FAMILIES.items():
         fam_names = sorted(fams)
+        labels = slot_splits(math.ceil(per_intent / 2) if intent == "eligibility" else per_intent, shares, rng)
         for i in range(per_intent):
             family = fam_names[(i // 2) % len(fam_names)] if intent == "eligibility" else fam_names[i % len(fam_names)]
+            split = labels[i // 2] if intent == "eligibility" else labels[i]
+            allowed = allowed_templates(family, len(fams[family]), split, held)
             for attempt in range(400):
-                s = rng.choice(students)
-                t_idx = rng.randrange(len(fams[family]))
+                s = rng.choice(pool[split])
+                t_idx = rng.choice(allowed)
                 target, gold = None, None
                 if intent == "eligibility":
                     cycle = ok_cycle if i % 2 == 0 or not bad_cycle else bad_cycle
-                    case = cycle[(i // 2) % len(cycle)]
-                    sid, target = rng.choice(buckets[case])
+                    start = (i // 2) % len(cycle)
+                    case = next((cycle[(start + j) % len(cycle)] for j in range(len(cycle))
+                                 if split_buckets[split].get(cycle[(start + j) % len(cycle)])), None)
+                    if case is None:
+                        raise SystemExit(f"no eligibility case of this kind for split {split}")
+                    sid, target = rng.choice(split_buckets[split][case])
                     s = by_id[sid]
                     gold = eligibility(s, target, catalog=catalog)
                 elif intent == "remaining_core":
@@ -245,7 +284,7 @@ def build(students, catalog, params):
                 used.setdefault(key, set()).add(t_idx)
                 break
             else:
-                raise SystemExit(f"could not find a fresh pair for {family}")
+                raise SystemExit(f"could not find a fresh pair for {family} in split {split}")
             fill = {"profile": _profile(s), "course": target, "term": upcoming_term(s), "k": 3,
                     "title": catalog.course(target)["title"] if target else None,
                     "unit_word": "thesis" if s["track"] == "thesis" else "project"}
@@ -276,7 +315,12 @@ def main():
     catalog = load_catalog(args.courses, args.rules)
     with open(args.students) as f:
         students = [json.loads(line) for line in f if line.strip()]
-    rows = build(students, catalog, params)
+    from src.split.assign_students import load_assignment
+    split_of, held = load_assignment()
+    missing = sorted({s["student_id"] for s in students} - set(split_of))
+    if missing:
+        raise SystemExit(f"{len(missing)} students have no split (e.g. {missing[:3]}); rerun src.split.assign_students")
+    rows = build(students, catalog, params, split_of, held)
     QUERIES_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(QUERIES_PATH, "w") as f:
         for r in rows:

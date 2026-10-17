@@ -1,0 +1,79 @@
+record_id,field,before,after,reason
+req-hss,code,,REQ-HSS,"requirement without a course code in the timetable, placeholder code assigned"
+req-thesis_units,code,,REQ-THESIS,"requirement without a course code in the timetable, placeholder code assigned"
+req-project_courses,code,,REQ-PROJECT,"requirement without a course code in the timetable, placeholder code assigned"
+tt-r401,record,FP 602 (MA),dropped,"Writing variant for another PG programme (Writing (PG Mathematics)), M.Tech uses FP 602 row"
+tt-r402,record,FP 602 (CG),dropped,"Writing variant for another PG programme (Writing (PG Cognitive and Brain Science)), M.Tech uses FP 602 row"
+tt-r403,record,FP 602 (CH),dropped,"Writing variant for another PG programme (Writing (PG Chemistry)), M.Tech uses FP 602 row"
+tt-r279,record,tt-r279,tt-r249,"same course listed again in the timetable under another discipline, merged"
+tt-r113,record,tt-r113,tt-r64,"same course listed again in the timetable under another discipline, merged"
+tt-r291,record,tt-r291,tt-r212,"same course listed again in the timetable under another discipline, merged"
+tt-r64,credits,4.0,4,float credit in xlsx converted to int
+tt-r113,credits,4.0,4,float credit in xlsx converted to int
+tt-r241,credits,4.0,4,float credit in xlsx converted to int
+tt-r243,credits,4.0,4,float credit in xlsx converted to int
+tt-r244,credits,4.0,4,float credit in xlsx converted to int
+struct-003,title,NLP,Natural Language Processing,title taken from timetable row 245 (official course name)
+tt-r245,credits,4.0,4,float credit in xlsx converted to int
+struct-020,title,Advanced Algrithms,Advanced Algorithms,"typo 'Algrithms' in source, corrected to 'Algorithms'"
+tt-r246,credits,4.0,4,float credit in xlsx converted to int
+struct-013,record,struct-013,struct-008,duplicate listing in the same source merged into one course record
+tt-r247,credits,4.0,4,float credit in xlsx converted to int
+tt-r248,title,Incentives and Machine learning ,Incentives and Machine learning,stripped trailing whitespace or comma
+tt-r248,credits,4.0,4,float credit in xlsx converted to int
+tt-r252,credits,4.0,4,float credit in xlsx converted to int
+tt-r254,credits,4.0,4,float credit in xlsx converted to int
+tt-r251,credits,4.0,4,float credit in xlsx converted to int
+tt-r253,credits,4.0,4,float credit in xlsx converted to int
+tt-r267,credits,4.0,4,float credit in xlsx converted to int
+tt-r282,credits,4.0,4,float credit in xlsx converted to int
+ee-integrated-03,title,Physics of Transistors,Physics of Transistors,title taken from timetable row 268 (official course name)
+tt-r268,credits,4.0,4,float credit in xlsx converted to int
+ee-power-04,title,Dynamic Behaviour of Electric Machinery,Dynamic Behaviour of Electric Machines,title taken from timetable row 269 (official course name)
+tt-r269,credits,5.0,5,float credit in xlsx converted to int
+ee-integrated-05,title,Analog CMOS IC Design,CMOS Analog IC Design,title taken from timetable row 274 (official course name)
+tt-r274,credits,4.0,4,float credit in xlsx converted to int
+tt-r276,credits,4.0,4,float credit in xlsx converted to int
+tt-r283,credits,4.0,4,float credit in xlsx converted to int
+tt-r277,credits,4.0,4,float credit in xlsx converted to int
+tt-r278,credits,4.0,4,float credit in xlsx converted to int
+tt-r271,credits,4.0,4,float credit in xlsx converted to int
+tt-r284,credits,4.0,4,float credit in xlsx converted to int
+tt-r236,credits,4.0,4,float credit in xlsx converted to int
+struct-007,title,Computational neuroscience,Computational Neuroscience,title taken from timetable row 394 (official course name)
+tt-r394,credits,4.0,4,float credit in xlsx converted to int
+tt-r288,credits,4.0,4,float credit in xlsx converted to int
+struct-012,title,"Artificial Intelligence,",Artificial Intelligence,stripped trailing whitespace or comma
+struct-022,title,"Nature-inspired computing,",Nature-inspired computing,stripped trailing whitespace or comma
+ee-signal-11,title,Nature Inspired Computing,Nature-inspired computing,title taken from the first structure listing (Revised CSE MTech Course Structure [2025-26].pdf)
+tt-r272,credits,4.0,4,float credit in xlsx converted to int
+tt-r212,credits,4.0,4,float credit in xlsx converted to int
+tt-r291,credits,4.0,4,float credit in xlsx converted to int
+tt-r273,credits,4.0,4,float credit in xlsx converted to int
+ee-signal-15,title,Optimization Methods For Machine Learning,Optimization for ML,title taken from the first structure listing (Revised CSE MTech Course Structure [2025-26].pdf)
+tt-r294,credits,4.0,4,float credit in xlsx converted to int
+tt-r290,credits,4.0,4,float credit in xlsx converted to int
+tt-r275,credits,4.0,4,float credit in xlsx converted to int
+tt-r237,credits,4.0,4,float credit in xlsx converted to int
+tt-r249,credits,4.0,4,float credit in xlsx converted to int
+tt-r279,credits,4.0,4,float credit in xlsx converted to int
+tt-r250,credits,4.0,4,float credit in xlsx converted to int
+tt-r280,credits,4.0,4,float credit in xlsx converted to int
+tt-r395,title,NeuroAI: Neuroscience & Artificial Intelligence ,NeuroAI: Neuroscience & Artificial Intelligence,stripped trailing whitespace or comma
+tt-r395,credits,4.0,4,float credit in xlsx converted to int
+ee-signal-20,title,Photonics - Principles and Applications,Photonics – Principles and Applications,title taken from timetable row 281 (official course name)
+tt-r281,credits,4.0,4,float credit in xlsx converted to int
+tt-r66,credits,4.0,4,float credit in xlsx converted to int
+tt-r266,credits,5.0,5,float credit in xlsx converted to int
+tt-r181,credits,2.0,2,float credit in xlsx converted to int
+tt-r400,credits,4.0,4,float credit in xlsx converted to int
+tt-r185,credits,0.0,0,float credit in xlsx converted to int
+CS 613,prerequisites,,,manual decision from data/raw/prereq_manual.csv
+EE 341,record,,added,"referenced by EE 663 ('• Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All'), added as ug_background so every referenced code exists; no title in any source"
+ES 102,record,,added,"referenced by CS 613 ('Basic understanding of Python programming (ES 102/ ES 112) or equivalent'), added as ug_background so every referenced code exists; no title in any source"
+ES 112,record,,added,"referenced by CS 613, ES 666 ('Basic understanding of Python programming (ES 102/ ES 112) or equivalent'), added as ug_background so every referenced code exists; title from timetable row 8"
+ES 244,record,,added,"referenced by EE 663 ('• Prerequisites:BasicUGcourseworkonCommunicationSystems(EE341)andSignalsandSystems(ES244).All'), added as ug_background so every referenced code exists; title from timetable row 49"
+ES 331,record,,added,"referenced by CS 613 ('Basic Probability & Statistics (ES 331/ MA 202) or equivalent'), added as ug_background so every referenced code exists; no title in any source"
+MA 101,record,,added,"referenced by ES 666 ('ES 112 Computing, MA 101, MA 102, or equivalent'), added as ug_background so every referenced code exists; no title in any source"
+MA 102,record,,added,"referenced by ES 666 ('ES 112 Computing, MA 101, MA 102, or equivalent'), added as ug_background so every referenced code exists; no title in any source"
+MA 202,record,,added,"referenced by CS 613 ('Basic Probability & Statistics (ES 331/ MA 202) or equivalent'), added as ug_background so every referenced code exists; no title in any source"

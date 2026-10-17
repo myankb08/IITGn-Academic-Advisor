@@ -1,0 +1,268 @@
+{
+ "seed": 207,
+ "fractions": {
+  "train": 0.65,
+  "val": 0.15,
+  "test": 0.2
+ },
+ "holdout_programme": "MTech-ICDT",
+ "held_out_templates": {
+  "el_can_register": "el_can_register_t1",
+  "el_prereq_check": "el_prereq_check_t1",
+  "er_basket_fill": "er_basket_fill_t1",
+  "er_next_semester": "er_next_semester_t2",
+  "rc_core_courses": "rc_core_courses_t3",
+  "rc_credit_gap": "rc_credit_gap_t4",
+  "rc_degree_audit": "rc_degree_audit_t3"
+ },
+ "n_queries_in": 600,
+ "n_children_in": 1008,
+ "rows_per_split": {
+  "train": 339,
+  "val": 80,
+  "test": 102,
+  "programme_holdout": 82
+ },
+ "original_rows_per_split": {
+  "train": 336,
+  "val": 80,
+  "test": 102,
+  "programme_holdout": 82
+ },
+ "child_rows_per_split": {
+  "train": 3,
+  "val": 0,
+  "test": 0,
+  "programme_holdout": 0
+ },
+ "students_per_split": {
+  "train": 102,
+  "val": 23,
+  "test": 30,
+  "programme_holdout": 24
+ },
+ "student_assignment": {
+  "train": {
+   "MTech-AI": 27,
+   "MTech-CSE": 41,
+   "MTech-EE": 33
+  },
+  "val": {
+   "MTech-AI": 6,
+   "MTech-CSE": 10,
+   "MTech-EE": 8
+  },
+  "test": {
+   "MTech-AI": 8,
+   "MTech-CSE": 13,
+   "MTech-EE": 10
+  },
+  "programme_holdout": {
+   "MTech-ICDT": 24
+  }
+ },
+ "students_with_pairs": {
+  "train": 100,
+  "val": 23,
+  "test": 30,
+  "programme_holdout": 24
+ },
+ "rows_by_programme": {
+  "train": {
+   "MTech-AI": 90,
+   "MTech-CSE": 130,
+   "MTech-EE": 119
+  },
+  "val": {
+   "MTech-AI": 21,
+   "MTech-CSE": 35,
+   "MTech-EE": 24
+  },
+  "test": {
+   "MTech-AI": 21,
+   "MTech-CSE": 49,
+   "MTech-EE": 32
+  },
+  "programme_holdout": {
+   "MTech-ICDT": 82
+  }
+ },
+ "rows_by_intent": {
+  "train": {
+   "elective_recommendation": 112,
+   "eligibility": 112,
+   "remaining_core": 115
+  },
+  "val": {
+   "elective_recommendation": 27,
+   "eligibility": 26,
+   "remaining_core": 27
+  },
+  "test": {
+   "elective_recommendation": 34,
+   "eligibility": 34,
+   "remaining_core": 34
+  },
+  "programme_holdout": {
+   "elective_recommendation": 27,
+   "eligibility": 28,
+   "remaining_core": 27
+  }
+ },
+ "rows_by_template_family": {
+  "train": {
+   "el_can_register": 62,
+   "el_prereq_check": 50,
+   "er_basket_fill": 53,
+   "er_next_semester": 59,
+   "rc_core_courses": 34,
+   "rc_credit_gap": 40,
+   "rc_degree_audit": 41
+  },
+  "val": {
+   "el_can_register": 6,
+   "el_prereq_check": 20,
+   "er_basket_fill": 16,
+   "er_next_semester": 11,
+   "rc_core_courses": 12,
+   "rc_credit_gap": 11,
+   "rc_degree_audit": 4
+  },
+  "test": {
+   "el_can_register": 16,
+   "el_prereq_check": 18,
+   "er_basket_fill": 18,
+   "er_next_semester": 16,
+   "rc_core_courses": 14,
+   "rc_credit_gap": 10,
+   "rc_degree_audit": 10
+  },
+  "programme_holdout": {
+   "el_can_register": 16,
+   "el_prereq_check": 12,
+   "er_basket_fill": 13,
+   "er_next_semester": 14,
+   "rc_core_courses": 10,
+   "rc_credit_gap": 6,
+   "rc_degree_audit": 11
+  }
+ },
+ "original_rows_by_intent": {
+  "train": {
+   "elective_recommendation": 112,
+   "eligibility": 112,
+   "remaining_core": 112
+  },
+  "val": {
+   "elective_recommendation": 27,
+   "eligibility": 26,
+   "remaining_core": 27
+  },
+  "test": {
+   "elective_recommendation": 34,
+   "eligibility": 34,
+   "remaining_core": 34
+  },
+  "programme_holdout": {
+   "elective_recommendation": 27,
+   "eligibility": 28,
+   "remaining_core": 27
+  }
+ },
+ "original_rows_by_programme": {
+  "train": {
+   "MTech-AI": 90,
+   "MTech-CSE": 127,
+   "MTech-EE": 119
+  },
+  "val": {
+   "MTech-AI": 21,
+   "MTech-CSE": 35,
+   "MTech-EE": 24
+  },
+  "test": {
+   "MTech-AI": 21,
+   "MTech-CSE": 49,
+   "MTech-EE": 32
+  },
+  "programme_holdout": {
+   "MTech-ICDT": 82
+  }
+ },
+ "original_rows_by_programme_intent": {
+  "train": {
+   "MTech-AI/elective_recommendation": 30,
+   "MTech-AI/eligibility": 26,
+   "MTech-AI/remaining_core": 34,
+   "MTech-CSE/elective_recommendation": 43,
+   "MTech-CSE/eligibility": 45,
+   "MTech-CSE/remaining_core": 39,
+   "MTech-EE/elective_recommendation": 39,
+   "MTech-EE/eligibility": 41,
+   "MTech-EE/remaining_core": 39
+  },
+  "val": {
+   "MTech-AI/elective_recommendation": 7,
+   "MTech-AI/eligibility": 6,
+   "MTech-AI/remaining_core": 8,
+   "MTech-CSE/elective_recommendation": 11,
+   "MTech-CSE/eligibility": 13,
+   "MTech-CSE/remaining_core": 11,
+   "MTech-EE/elective_recommendation": 9,
+   "MTech-EE/eligibility": 7,
+   "MTech-EE/remaining_core": 8
+  },
+  "test": {
+   "MTech-AI/elective_recommendation": 7,
+   "MTech-AI/eligibility": 4,
+   "MTech-AI/remaining_core": 10,
+   "MTech-CSE/elective_recommendation": 19,
+   "MTech-CSE/eligibility": 17,
+   "MTech-CSE/remaining_core": 13,
+   "MTech-EE/elective_recommendation": 8,
+   "MTech-EE/eligibility": 13,
+   "MTech-EE/remaining_core": 11
+  },
+  "programme_holdout": {
+   "MTech-ICDT/elective_recommendation": 27,
+   "MTech-ICDT/eligibility": 28,
+   "MTech-ICDT/remaining_core": 27
+  }
+ },
+ "eligibility_by_split": {
+  "train": {
+   "eligible": 56,
+   "not_eligible": 56
+  },
+  "val": {
+   "eligible": 13,
+   "not_eligible": 13
+  },
+  "test": {
+   "eligible": 17,
+   "not_eligible": 17
+  },
+  "programme_holdout": {
+   "eligible": 14,
+   "not_eligible": 14
+  }
+ },
+ "n_dropped_pairs": 0,
+ "n_dropped_children": 1005,
+ "dropped": {
+  "stale child: parent pair changed since augment ran": 1005
+ },
+ "overlap_checks": {
+  "students_train_x_val": 0,
+  "students_train_x_test": 0,
+  "students_train_x_programme_holdout": 0,
+  "students_val_x_test": 0,
+  "students_val_x_programme_holdout": 0,
+  "students_test_x_programme_holdout": 0,
+  "templates_trainval_x_test": 0,
+  "holdout_programme_in_train_val_test": 0,
+  "duplicate_query_ids": 0
+ },
+ "all_overlaps_zero": true,
+ "shifted_forms": "pending: data/raw/forms/responses_anonymised.jsonl not present yet"
+}
