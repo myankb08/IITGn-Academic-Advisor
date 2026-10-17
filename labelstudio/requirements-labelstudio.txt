@@ -1,0 +1,2 @@
+# Separate venv for annotation only: python3.10 -m venv .venv-labelstudio && .venv-labelstudio/bin/pip install --no-cache-dir -r labelstudio/requirements-labelstudio.txt
+label-studio==1.23.2

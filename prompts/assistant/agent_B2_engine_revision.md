@@ -1,0 +1,13 @@
+# Agent B, follow-up: prerequisites, offering semantics, richer eligibility
+
+Follow `prompts/assistant/agent_common_rules.md`. Agent A has finished, so you may now edit `src/collect/clean_catalog.py` and `src/collect/fetch_course_plans.py` as well as your own files.
+
+Findings from Part A: no available source states an enforceable prerequisite; 12 course plans need an IITGN login (hem436 will download them by hand); "odd" in courses.json only means "listed in the Sem-I 2026-27 timetable".
+
+Changes:
+1. Offering. Replace the parity guess with `offered_terms` (list, e.g. ["2026-27 Sem-I"] for courses in the timetable) and `offered_parity` set only where a document states it (CS 610 odd, CS 621 even, from the CSE structure PDF), otherwise null. Eligibility question becomes "can I register for X in the upcoming term (2026-27 Sem-I)": not offered then -> not eligible with reason NOT_OFFERED_NEXT_TERM, citing the timetable. Unknown parity must never block.
+2. Two-tier prerequisites. Keep `prerequisites` for enforceable ones (hard block). Add `recommended_background`: codes named in plan lines marked optional, recommended, "or equivalent", or background, each with the evidence line. Referenced codes that are not M.Tech catalog courses (e.g. ES 331, MA 202, ES 112) become graph nodes with `category: ug_background`, `level` from the code, never counted for credit, so "every prerequisite code exists" stays checkable. Edge types: `hard` and `recommended`. Eligibility: hard unmet -> not eligible; recommended missing -> eligible with `warnings` [MISSING_RECOMMENDED_BACKGROUND, codes]. Synthetic students get a seeded `ug_background` list (codes from the ug_background nodes, meaning completed in UG or equivalent).
+3. Manual plans. If files exist in `data/raw/course_plans_manual/<CODE with space as _>.(pdf|docx|txt|html)`, ingest them like fetched plans (collector hem436, method "manual download with IITGN login") and extract both tiers. Rerun safely when they appear later.
+4. More real eligibility constraints from rules.json, each as a reason code with source: MTech-AI students restricted to the AI/ML curriculum where the source says so; below-600 courses beyond the allowed count -> eligible but NOT_COUNTED_BELOW_600_CAP warning; already passed -> ALREADY_TAKEN.
+5. Rebalance eligibility queries so that not-eligible cases cover every reason that has data, and eligible cases include some with warnings. Keep about 400 pairs, balanced intents.
+6. Rerun: clean_catalog, prereq_graph, synth_transcripts, make_queries, build_metadata, pytest. Update docs/DATA_CONTRACT.md and supporting_files summaries. Report new counts (edges by type, reason code distribution).

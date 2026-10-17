@@ -9,3 +9,5 @@ Project4_*.pdf
 # old exploration scratch
 output/
 tmp/
+.venv-labelstudio/
+labelstudio/ls_data/

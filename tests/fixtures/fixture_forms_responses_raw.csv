@@ -1,0 +1,5 @@
+Timestamp,Consent,Programme,Stream,Track,Current semester,Courses completed so far,Your question for an academic advisor,What kind of question is this?
+2026/01/01 10:00:00 AM GMT+5:30,"I agree that my anonymous answers may be used in a course project dataset",MTech-CSE,AI/ML,Thesis,2,"FIXTURE CS 610, CS 621","FIXTURE question: which core courses do I still need?",Remaining requirements
+2026/01/01 10:05:00 AM GMT+5:30,"I agree that my anonymous answers may be used in a course project dataset",MTech-AI,AI/ML,Coursework,1,FIXTURE none,"FIXTURE question: can I take CS 614 next sem? mail me at fixture.person@example.com",Eligibility for a course
+2026/01/01 10:09:00 AM GMT+5:30,,MTech-CSE,Systems,Coursework,3,FIXTURE CS 610,FIXTURE question from a person who did not consent,Other
+2026/01/01 10:12:00 AM GMT+5:30,"I agree that my anonymous answers may be used in a course project dataset",Other,Not decided / not applicable,Not decided,2,FIXTURE CS 610,"FIXTURE question: which electives fit theory? call 9876543210",Elective advice

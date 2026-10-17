@@ -1,0 +1,2650 @@
+[
+ {
+  "id": 1000,
+  "data": {
+   "item_id": "R1-FXQ0036",
+   "query_id": "FXQ0036",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 1,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 36 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 36",
+   "gold_text": "FIXTURE gold answer 36",
+   "para_justification": "FIXTURE paraphrased justification 36"
+  },
+  "annotations": [
+   {
+    "id": 5200,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d0",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c0",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     },
+     {
+      "id": "e0",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0036"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1000
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 1,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1001,
+  "data": {
+   "item_id": "R1-FXQ0009",
+   "query_id": "FXQ0009",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 2,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 9 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 9",
+   "gold_text": "FIXTURE gold answer 9",
+   "para_justification": "FIXTURE paraphrased justification 9"
+  },
+  "annotations": [
+   {
+    "id": 5201,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d1",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c1",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e1",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0009"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1001
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 2,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1002,
+  "data": {
+   "item_id": "R1-FXQ0025",
+   "query_id": "FXQ0025",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 3,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 25 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 25",
+   "gold_text": "FIXTURE gold answer 25",
+   "para_justification": "FIXTURE paraphrased justification 25"
+  },
+  "annotations": [
+   {
+    "id": 5202,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d2",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c2",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1002
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 3,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1003,
+  "data": {
+   "item_id": "R1-FXQ0084",
+   "query_id": "FXQ0084",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 4,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 84 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 84",
+   "gold_text": "FIXTURE gold answer 84",
+   "para_justification": "FIXTURE paraphrased justification 84"
+  },
+  "annotations": [
+   {
+    "id": 5203,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d3",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c3",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1003
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 4,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1004,
+  "data": {
+   "item_id": "R1-FXQ0091",
+   "query_id": "FXQ0091",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 5,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 91 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 91",
+   "gold_text": "FIXTURE gold answer 91",
+   "para_justification": "FIXTURE paraphrased justification 91"
+  },
+  "annotations": [
+   {
+    "id": 5204,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d4",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c4",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1004
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 5,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1005,
+  "data": {
+   "item_id": "R1-FXQ0063",
+   "query_id": "FXQ0063",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 6,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 63 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 63",
+   "gold_text": "FIXTURE gold answer 63",
+   "para_justification": "FIXTURE paraphrased justification 63"
+  },
+  "annotations": [
+   {
+    "id": 5205,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d5",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c5",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e5",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0063"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1005
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 6,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1006,
+  "data": {
+   "item_id": "R1-FXQ0030",
+   "query_id": "FXQ0030",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 7,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 30 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 30",
+   "gold_text": "FIXTURE gold answer 30",
+   "para_justification": "FIXTURE paraphrased justification 30"
+  },
+  "annotations": [
+   {
+    "id": 5206,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d6",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c6",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1006
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 7,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1007,
+  "data": {
+   "item_id": "R1-FXQ0087",
+   "query_id": "FXQ0087",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 8,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 87 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 87",
+   "gold_text": "FIXTURE gold answer 87",
+   "para_justification": "FIXTURE paraphrased justification 87"
+  },
+  "annotations": [
+   {
+    "id": 5207,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d7",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c7",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e7",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0087"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1007
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 8,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1008,
+  "data": {
+   "item_id": "R1-FXQ0065",
+   "query_id": "FXQ0065",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 9,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 65 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 65",
+   "gold_text": "FIXTURE gold answer 65",
+   "para_justification": "FIXTURE paraphrased justification 65"
+  },
+  "annotations": [
+   {
+    "id": 5208,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d8",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c8",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1008
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 9,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1009,
+  "data": {
+   "item_id": "R1-FXQ0024",
+   "query_id": "FXQ0024",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 10,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 24 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 24",
+   "gold_text": "FIXTURE gold answer 24",
+   "para_justification": "FIXTURE paraphrased justification 24"
+  },
+  "annotations": [
+   {
+    "id": 5209,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d9",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c9",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1009
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 10,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1010,
+  "data": {
+   "item_id": "R1-FXQ0017",
+   "query_id": "FXQ0017",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 11,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 17 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 17",
+   "gold_text": "FIXTURE gold answer 17",
+   "para_justification": "FIXTURE paraphrased justification 17"
+  },
+  "annotations": [
+   {
+    "id": 5210,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d10",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c10",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "ambiguous_query"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1010
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 11,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1011,
+  "data": {
+   "item_id": "R1-FXQ0035",
+   "query_id": "FXQ0035",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 12,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 35 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 35",
+   "gold_text": "FIXTURE gold answer 35",
+   "para_justification": "FIXTURE paraphrased justification 35"
+  },
+  "annotations": [
+   {
+    "id": 5211,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d11",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c11",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "ambiguous_query"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1011
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 12,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1012,
+  "data": {
+   "item_id": "R1-FXQ0023",
+   "query_id": "FXQ0023",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 13,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 23 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 23",
+   "gold_text": "FIXTURE gold answer 23",
+   "para_justification": "FIXTURE paraphrased justification 23"
+  },
+  "annotations": [
+   {
+    "id": 5212,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d12",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c12",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1012
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 13,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1013,
+  "data": {
+   "item_id": "R1-FXQ0053",
+   "query_id": "FXQ0053",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 14,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 53 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 53",
+   "gold_text": "FIXTURE gold answer 53",
+   "para_justification": "FIXTURE paraphrased justification 53"
+  },
+  "annotations": [
+   {
+    "id": 5213,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d13",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c13",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e13",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0053"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1013
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 14,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1014,
+  "data": {
+   "item_id": "R1-FXQ0022",
+   "query_id": "FXQ0022",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 15,
+   "student_summary": "MTech-CSE, Systems stream, coursework track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 22 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 22",
+   "gold_text": "FIXTURE gold answer 22",
+   "para_justification": "FIXTURE paraphrased justification 22"
+  },
+  "annotations": [
+   {
+    "id": 5214,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d14",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c14",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1014
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 15,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1015,
+  "data": {
+   "item_id": "R1-FXQ0043",
+   "query_id": "FXQ0043",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 16,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 43 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 43",
+   "gold_text": "FIXTURE gold answer 43",
+   "para_justification": "FIXTURE paraphrased justification 43"
+  },
+  "annotations": [
+   {
+    "id": 5215,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d15",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c15",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "ambiguous_query"
+       ]
+      }
+     },
+     {
+      "id": "e15",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0043"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1015
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 16,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1016,
+  "data": {
+   "item_id": "R1-FXQ0082",
+   "query_id": "FXQ0082",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 17,
+   "student_summary": "MTech-CSE, Systems stream, coursework track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 82 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 82",
+   "gold_text": "FIXTURE gold answer 82",
+   "para_justification": "FIXTURE paraphrased justification 82"
+  },
+  "annotations": [
+   {
+    "id": 5216,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d16",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c16",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1016
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 17,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1017,
+  "data": {
+   "item_id": "R1-FXQ0058",
+   "query_id": "FXQ0058",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 18,
+   "student_summary": "MTech-CSE, Systems stream, coursework track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 58 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 58",
+   "gold_text": "FIXTURE gold answer 58",
+   "para_justification": "FIXTURE paraphrased justification 58"
+  },
+  "annotations": [
+   {
+    "id": 5217,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d17",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c17",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "hallucinated_course"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1017
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 18,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1018,
+  "data": {
+   "item_id": "R1-FXQ0031",
+   "query_id": "FXQ0031",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 19,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 31 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 31",
+   "gold_text": "FIXTURE gold answer 31",
+   "para_justification": "FIXTURE paraphrased justification 31"
+  },
+  "annotations": [
+   {
+    "id": 5218,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d18",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c18",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1018
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 19,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1019,
+  "data": {
+   "item_id": "R1-FXQ0086",
+   "query_id": "FXQ0086",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 20,
+   "student_summary": "MTech-CSE, Theory stream, coursework track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 86 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 86",
+   "gold_text": "FIXTURE gold answer 86",
+   "para_justification": "FIXTURE paraphrased justification 86"
+  },
+  "annotations": [
+   {
+    "id": 5219,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d19",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c19",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e19",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0086"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1019
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 20,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1020,
+  "data": {
+   "item_id": "R1-FXQ0074",
+   "query_id": "FXQ0074",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 21,
+   "student_summary": "MTech-CSE, Theory stream, coursework track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 74 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 74",
+   "gold_text": "FIXTURE gold answer 74",
+   "para_justification": "FIXTURE paraphrased justification 74"
+  },
+  "annotations": [
+   {
+    "id": 5220,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d20",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c20",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "fluency"
+       ]
+      }
+     },
+     {
+      "id": "e20",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0074"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1020
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 21,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1021,
+  "data": {
+   "item_id": "R1-FXQ0014",
+   "query_id": "FXQ0014",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 22,
+   "student_summary": "MTech-CSE, Theory stream, coursework track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 14 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 14",
+   "gold_text": "FIXTURE gold answer 14",
+   "para_justification": "FIXTURE paraphrased justification 14"
+  },
+  "annotations": [
+   {
+    "id": 5221,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d21",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c21",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1021
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 22,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1022,
+  "data": {
+   "item_id": "R1-FXQ0070",
+   "query_id": "FXQ0070",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 23,
+   "student_summary": "MTech-CSE, Systems stream, coursework track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 70 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 70",
+   "gold_text": "FIXTURE gold answer 70",
+   "para_justification": "FIXTURE paraphrased justification 70"
+  },
+  "annotations": [
+   {
+    "id": 5222,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d22",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c22",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "fluency"
+       ]
+      }
+     },
+     {
+      "id": "e22",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0070"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1022
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 23,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1023,
+  "data": {
+   "item_id": "R1-FXQ0018",
+   "query_id": "FXQ0018",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 24,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 18 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 18",
+   "gold_text": "FIXTURE gold answer 18",
+   "para_justification": "FIXTURE paraphrased justification 18"
+  },
+  "annotations": [
+   {
+    "id": 5223,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d23",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c23",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "ambiguous_query"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1023
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 24,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1024,
+  "data": {
+   "item_id": "R1-FXQ0098",
+   "query_id": "FXQ0098",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 25,
+   "student_summary": "MTech-CSE, Theory stream, coursework track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 98 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 98",
+   "gold_text": "FIXTURE gold answer 98",
+   "para_justification": "FIXTURE paraphrased justification 98"
+  },
+  "annotations": [
+   {
+    "id": 5224,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d24",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c24",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1024
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 25,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1025,
+  "data": {
+   "item_id": "R1-FXQ0054",
+   "query_id": "FXQ0054",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 26,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 54 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 54",
+   "gold_text": "FIXTURE gold answer 54",
+   "para_justification": "FIXTURE paraphrased justification 54"
+  },
+  "annotations": [
+   {
+    "id": 5225,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d25",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c25",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "incomplete_justification"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1025
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 26,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1026,
+  "data": {
+   "item_id": "R1-FXQ0089",
+   "query_id": "FXQ0089",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 27,
+   "student_summary": "MTech-CSE, Theory stream, thesis track, admitted 2025, 3 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 89 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 89",
+   "gold_text": "FIXTURE gold answer 89",
+   "para_justification": "FIXTURE paraphrased justification 89"
+  },
+  "annotations": [
+   {
+    "id": 5226,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d26",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c26",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1026
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 27,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1027,
+  "data": {
+   "item_id": "R1-FXQ0100",
+   "query_id": "FXQ0100",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 28,
+   "student_summary": "MTech-CSE, Systems stream, coursework track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 100 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 100",
+   "gold_text": "FIXTURE gold answer 100",
+   "para_justification": "FIXTURE paraphrased justification 100"
+  },
+  "annotations": [
+   {
+    "id": 5227,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d27",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c27",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1027
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 28,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1028,
+  "data": {
+   "item_id": "R1-FXQ0001",
+   "query_id": "FXQ0001",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 29,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 1 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 1",
+   "gold_text": "FIXTURE gold answer 1",
+   "para_justification": "FIXTURE paraphrased justification 1"
+  },
+  "annotations": [
+   {
+    "id": 5228,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d28",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c28",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1028
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 29,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1029,
+  "data": {
+   "item_id": "R1-FXQ0055",
+   "query_id": "FXQ0055",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 30,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 55 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 55",
+   "gold_text": "FIXTURE gold answer 55",
+   "para_justification": "FIXTURE paraphrased justification 55"
+  },
+  "annotations": [
+   {
+    "id": 5229,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d29",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c29",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "ambiguous_query"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1029
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 30,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1030,
+  "data": {
+   "item_id": "R1-FXQ0003",
+   "query_id": "FXQ0003",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 31,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 3 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 3",
+   "gold_text": "FIXTURE gold answer 3",
+   "para_justification": "FIXTURE paraphrased justification 3"
+  },
+  "annotations": [
+   {
+    "id": 5230,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d30",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c30",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     },
+     {
+      "id": "e30",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0003"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1030
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 31,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1031,
+  "data": {
+   "item_id": "R1-FXQ0096",
+   "query_id": "FXQ0096",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 32,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 96 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 96",
+   "gold_text": "FIXTURE gold answer 96",
+   "para_justification": "FIXTURE paraphrased justification 96"
+  },
+  "annotations": [
+   {
+    "id": 5231,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d31",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c31",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "meaning_drift"
+       ]
+      }
+     },
+     {
+      "id": "e31",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0096"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1031
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 32,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1032,
+  "data": {
+   "item_id": "R1-FXQ0061",
+   "query_id": "FXQ0061",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 33,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 61 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 61",
+   "gold_text": "FIXTURE gold answer 61",
+   "para_justification": "FIXTURE paraphrased justification 61"
+  },
+  "annotations": [
+   {
+    "id": 5232,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d32",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c32",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1032
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 33,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1033,
+  "data": {
+   "item_id": "R1-FXQ0048",
+   "query_id": "FXQ0048",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 34,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 48 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 48",
+   "gold_text": "FIXTURE gold answer 48",
+   "para_justification": "FIXTURE paraphrased justification 48"
+  },
+  "annotations": [
+   {
+    "id": 5233,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d33",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c33",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1033
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 34,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1034,
+  "data": {
+   "item_id": "R1-FXQ0060",
+   "query_id": "FXQ0060",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 35,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 60 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 60",
+   "gold_text": "FIXTURE gold answer 60",
+   "para_justification": "FIXTURE paraphrased justification 60"
+  },
+  "annotations": [
+   {
+    "id": 5234,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d34",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c34",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "fluency"
+       ]
+      }
+     },
+     {
+      "id": "e34",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0060"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1034
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 35,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1035,
+  "data": {
+   "item_id": "R1-FXQ0037",
+   "query_id": "FXQ0037",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 36,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 37 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 37",
+   "gold_text": "FIXTURE gold answer 37",
+   "para_justification": "FIXTURE paraphrased justification 37"
+  },
+  "annotations": [
+   {
+    "id": 5235,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d35",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c35",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e35",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0037"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1035
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 36,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1036,
+  "data": {
+   "item_id": "R1-FXQ0067",
+   "query_id": "FXQ0067",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 37,
+   "student_summary": "MTech-CSE, Systems stream, thesis track, admitted 2025, 2 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 67 (eligibility)",
+   "para_query": "FIXTURE paraphrased query 67",
+   "gold_text": "FIXTURE gold answer 67",
+   "para_justification": "FIXTURE paraphrased justification 67"
+  },
+  "annotations": [
+   {
+    "id": 5236,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d36",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c36",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1036
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 37,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1037,
+  "data": {
+   "item_id": "R1-FXQ0072",
+   "query_id": "FXQ0072",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 38,
+   "student_summary": "MTech-AI, AI/ML stream, coursework track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B).",
+   "template_query": "FIXTURE template query 72 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 72",
+   "gold_text": "FIXTURE gold answer 72",
+   "para_justification": "FIXTURE paraphrased justification 72"
+  },
+  "annotations": [
+   {
+    "id": 5237,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d37",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "edit"
+       ]
+      }
+     },
+     {
+      "id": "c37",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "wrong_fact_or_policy"
+       ]
+      }
+     },
+     {
+      "id": "e37",
+      "from_name": "edit_text",
+      "to_name": "para_query",
+      "type": "textarea",
+      "origin": "manual",
+      "value": {
+       "text": [
+        "FIXTURE edit by A2 for R1-FXQ0072"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1037
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 38,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1038,
+  "data": {
+   "item_id": "R1-FXQ0039",
+   "query_id": "FXQ0039",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 39,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 39 (remaining_core)",
+   "para_query": "FIXTURE paraphrased query 39",
+   "gold_text": "FIXTURE gold answer 39",
+   "para_justification": "FIXTURE paraphrased justification 39"
+  },
+  "annotations": [
+   {
+    "id": 5238,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d38",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "reject"
+       ]
+      }
+     },
+     {
+      "id": "c38",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "incomplete_justification"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1038
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 39,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ },
+ {
+  "id": 1039,
+  "data": {
+   "item_id": "R1-FXQ0081",
+   "query_id": "FXQ0081",
+   "round": 1,
+   "guidelines_version": "v1",
+   "position": 40,
+   "student_summary": "MTech-AI, AI/ML stream, thesis track, admitted 2025, 1 semester(s) completed. Completed: CS 610 (sem 1, 4 cr, B); CS 621 (sem 1, 4 cr, A).",
+   "template_query": "FIXTURE template query 81 (elective_recommendation)",
+   "para_query": "FIXTURE paraphrased query 81",
+   "gold_text": "FIXTURE gold answer 81",
+   "para_justification": "FIXTURE paraphrased justification 81"
+  },
+  "annotations": [
+   {
+    "id": 5239,
+    "completed_by": 2,
+    "result": [
+     {
+      "id": "d39",
+      "from_name": "decision",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "accept"
+       ]
+      }
+     },
+     {
+      "id": "c39",
+      "from_name": "error_category",
+      "to_name": "para_query",
+      "type": "choices",
+      "origin": "manual",
+      "value": {
+       "choices": [
+        "none"
+       ]
+      }
+     }
+    ],
+    "was_cancelled": false,
+    "ground_truth": false,
+    "created_at": "2026-01-01T00:00:00.000000Z",
+    "updated_at": "2026-01-01T00:00:00.000000Z",
+    "lead_time": 30.0,
+    "task": 1039
+   }
+  ],
+  "predictions": [],
+  "meta": {},
+  "created_at": "2026-01-01T00:00:00.000000Z",
+  "updated_at": "2026-01-01T00:00:00.000000Z",
+  "inner_id": 40,
+  "total_annotations": 1,
+  "cancelled_annotations": 0,
+  "total_predictions": 0,
+  "project": 2
+ }
+]

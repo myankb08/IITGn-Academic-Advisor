@@ -1,0 +1,54 @@
+<View>
+  <Style>
+    .block { padding: 8px 12px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px; }
+    .levels { padding: 8px 12px; margin-top: 12px; border-top: 3px solid #888; }
+  </Style>
+
+  <!-- What the annotator reads. No model prediction of the label is shown. -->
+  <View className="block">
+    <Header value="Student summary"/>
+    <Text name="student_summary" value="$student_summary"/>
+  </View>
+  <View className="block">
+    <Header value="Template query (original)"/>
+    <Text name="template_query" value="$template_query"/>
+  </View>
+  <View className="block">
+    <Header value="Paraphrased query (audit this)"/>
+    <Text name="para_query" value="$para_query"/>
+  </View>
+  <View className="block">
+    <Header value="Rule-engine gold answer"/>
+    <Text name="gold_text" value="$gold_text"/>
+  </View>
+  <View className="block">
+    <Header value="Paraphrased justification (audit this)"/>
+    <Text name="para_justification" value="$para_justification"/>
+  </View>
+
+  <!-- Label levels, filled top to bottom in this fixed order. -->
+  <View className="levels">
+    <Header value="1. Decision"/>
+    <Choices name="decision" toName="para_query" choice="single-radio" required="true" showInline="true">
+      <Choice value="accept" hotkey="1"/>
+      <Choice value="edit" hotkey="2"/>
+      <Choice value="reject" hotkey="3"/>
+    </Choices>
+
+    <Header value="2. Error category (choose none if the item is fine)"/>
+    <Choices name="error_category" toName="para_query" choice="single-radio" required="true">
+      <Choice value="none"/>
+      <Choice value="hallucinated_course"/>
+      <Choice value="wrong_fact_or_policy"/>
+      <Choice value="meaning_drift"/>
+      <Choice value="incomplete_justification"/>
+      <Choice value="fluency"/>
+      <Choice value="ambiguous_query"/>
+    </Choices>
+
+    <View visibleWhen="choice-selected" whenTagName="decision" whenChoiceValue="edit">
+      <Header value="3. Edit text (required when decision = edit): corrected query and/or justification"/>
+      <TextArea name="edit_text" toName="para_query" rows="5" editable="true" maxSubmissions="1" required="true"/>
+    </View>
+  </View>
+</View>
