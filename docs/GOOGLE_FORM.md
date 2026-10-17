@@ -1,5 +1,7 @@
 # Google Form: student advisory questions
 
+> Version note: this file is the v1 spec. The live form is v2 since 2026-10-17 ~23:00 IST: question 7 is titled "Your question ?", the description explains the AI advisor being built, and question 7 has help text with three example questions. See supporting_files/C_labelling/forms_log.md.
+
 Create this form exactly as written. The question titles must match character for character,
 because `src/collect/import_forms.py` maps CSV columns by title.
 

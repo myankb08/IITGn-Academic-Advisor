@@ -73,3 +73,5 @@ augmentation invariance in that setting (CS203 Assignment 1 and 2). Not a source
 answers follow the documents as of the 2026-27 Sem-I timetable and the team's documented interpretations, and real
 decisions must be checked with the academic office. No personal data: students are synthetic and the forms data is
 anonymised and consent-filtered (`docs/CONSENT_AND_LICENSING.md`).
+
+- Google Form v2 shows three example questions under the question field; replies submitted after 2026-10-17 23:00 IST may echo their wording. Each reply carries its form_version.

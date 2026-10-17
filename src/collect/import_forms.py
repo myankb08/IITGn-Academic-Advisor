@@ -10,11 +10,14 @@ import csv
 import hashlib
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-FORM_VERSION = "v1"
 CONSENT_VERSION = "v1"
+# v2 (2026-10-17 ~23:00 IST): purpose text in the description and three example questions under
+# the question field; replies submitted before this time saw v1. See supporting_files/C_labelling/forms_log.md
+V2_FROM = datetime(2026, 10, 17, 23, 0, 0)
 # exact question titles from docs/GOOGLE_FORM.md -> output field
 FIELDS = {
     "Consent": "consent",
@@ -24,6 +27,7 @@ FIELDS = {
     "Current semester": "semester",
     "Courses completed so far": "courses_completed",
     "Your question for an academic advisor": "question",
+    "Your question ?": "question",  # title as edited on the live form (v2)
     "What kind of question is this?": "question_kind",
 }
 DROP = {"timestamp", "email address", "email", "username"}
@@ -39,6 +43,19 @@ def redact(text, counts):
     counts["emails_redacted"] += n1
     counts["phones_redacted"] += n2
     return text
+
+
+def form_version(ts):
+    """Google Forms timestamps are local (IST) and day-first or month-first depending on locale."""
+    if not ts:
+        return "unknown"
+    for fmt in ("%d/%m/%Y %H:%M:%S", "%m/%d/%Y %H:%M:%S", "%Y/%m/%d %I:%M:%S %p", "%Y-%m-%d %H:%M:%S"):
+        try:
+            when = datetime.strptime(ts.split(" GMT")[0].strip(), fmt)
+            return "v2" if when >= V2_FROM else "v1"
+        except ValueError:
+            continue
+    return "unknown"
 
 
 def map_header(header):
@@ -75,7 +92,13 @@ def main():
     with open(src, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         mapping, unknown = map_header(reader.fieldnames or [])
-        rows = [{field: (r.get(col) or "").strip() for col, field in mapping.items()} for r in reader]
+        ts_col = next((c for c in (reader.fieldnames or []) if c.strip().lower() == "timestamp"), None)
+        rows = []
+        for r in reader:
+            row = {field: (r.get(col) or "").strip() for col, field in mapping.items()}
+            # the timestamp only decides the form version and is not kept
+            row["form_version"] = form_version(r.get(ts_col)) if ts_col else "unknown"
+            rows.append(row)
     missing = sorted(set(FIELDS.values()) - set(mapping.values()))
     if missing:
         raise SystemExit(f"CSV lacks columns for {missing}; check titles against docs/GOOGLE_FORM.md")
@@ -95,10 +118,10 @@ def main():
             consent = r["consent"].lower().startswith(CONSENT_YES.lower())
             usable = consent and bool(r["question"])
             reason = "" if usable else ("no consent" if not consent else "empty question")
-            reg.writerow([rid, "yes" if consent else "no", CONSENT_VERSION, FORM_VERSION, "yes" if usable else "no", reason])
+            reg.writerow([rid, "yes" if consent else "no", CONSENT_VERSION, r["form_version"], "yes" if usable else "no", reason])
             if not usable:
                 continue
-            rec = {"response_id": rid, "form_version": FORM_VERSION, **{k: v for k, v in r.items() if k != "consent"}}
+            rec = {"response_id": rid, **{k: v for k, v in r.items() if k != "consent"}}
             fj.write(json.dumps(rec, ensure_ascii=False) + "\n")
             kept += 1
     log = {"source": str(src.relative_to(ROOT)), "rows_read": len(rows), "rows_kept": kept,
