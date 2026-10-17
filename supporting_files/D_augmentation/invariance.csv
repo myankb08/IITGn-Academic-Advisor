@@ -1,5 +1,5 @@
 augmentation,n_children,n_pass,n_fail,invariance_rate,check,gold_changed_vs_parent,fail_reasons
-paraphrase,0,0,0,,gold unchanged,0,
+paraphrase,120,119,1,0.9917,gold unchanged,0,code_lost=1
 typo_abbrev,600,600,0,1.0,gold unchanged,0,
 transcript_reorder,445,445,0,1.0,gold unchanged,0,
 transcript_length,445,445,0,1.0,gold recomputed correctly,445,

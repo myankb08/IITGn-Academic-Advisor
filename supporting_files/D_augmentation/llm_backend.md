@@ -39,6 +39,23 @@ so the same weights were served with llama.cpp instead.
   transformers and GPU names are written to each cache row (`backend`) and to `kaggle_out/environment.json`.
 - The JSON format is not enforced by a grammar here, unlike llama.cpp. The prompt asks for JSON in both cases.
 
+## What actually ran on Kaggle
+
+- Smoke stage (10 rows): Tesla T4, torch 2.11.0+cu128, transformers 5.16.1, Python 3.13. All 33 calls worked,
+  about 3 to 5 s per call unbatched. Merged into `data/interim/kaggle_smoke_cache.jsonl`, kept apart from the main cache.
+- Test stage: queued for about 35 minutes on T4. Version 2 was pushed with `machine_shape: NvidiaTeslaP100` and started at once,
+  but kaggle CLI 1.7.4.5 silently drops `machine_shape` (the pulled metadata has no such field), so it really ran on
+  a Tesla T4 (no P100 was ever used). Its own environment.json shows Tesla T4 and 172 calls at 2.51 s per call (436 s of
+  generation), so the long wall time was Kaggle queueing and setup, not a CPU fallback. Its inputs were made stale by the
+  gold fix, so its rows were never merged; its logs are in `kaggle_test_kernel_unmerged/`. The `machine_shape` field in
+  `kaggle/kernel/kernel-metadata.json` is ignored by kaggle CLI 1.7.4.5.
+- Test split paraphrases (102 rows) therefore come from local llama.cpp. Each row of `queries_para.jsonl` says which backend
+  produced it in `para_backend`.
+- Rest stage: single GPU (`CUDA_VISIBLE_DEVICES=0`, model on `cuda:0`, fp16), left-padded batches of 16 (`LLM_BATCH`), a
+  32-call timing step first, and the script fails if CUDA is missing. Seeded sampling for paraphrases uses one
+  `torch.manual_seed(seed)` per batch, so a batched answer depends on its batch neighbours; each cache row records the batch
+  size and position. Base answers are greedy. Rows already cached by llama.cpp are reused (`--also-backends llamacpp`).
+
 ## Same prompts and seeds on every backend
 
 All backends get the rendered prompt file as a single user chat message, with the same seed

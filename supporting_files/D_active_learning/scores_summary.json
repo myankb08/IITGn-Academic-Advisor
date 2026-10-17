@@ -1,27 +1,28 @@
 {
- "n": 175,
- "failed": 102,
+ "n": 336,
+ "failed": 232,
  "failure_types": {
-  "invalid_json": 21,
-  "hallucinated_code": 6,
-  "wrong_eligibility": 22,
-  "wrong_remaining": 20,
-  "ineligible_recommendation": 39
+  "invalid_json": 18,
+  "hallucinated_code": 2,
+  "wrong_eligibility": 56,
+  "wrong_remaining": 94,
+  "ineligible_recommendation": 64
  },
  "failed_by_intent": {
-  "remaining_core": 28,
-  "eligibility": 28,
-  "elective_recommendation": 46
+  "elective_recommendation": 64,
+  "eligibility": 56,
+  "remaining_core": 112
  },
- "mean_score": 0.7869,
+ "mean_score": 1.1656,
  "score_histogram": {
   "0.0": 56,
-  "0.5": 56,
-  "1.0": 36,
-  "1.2": 1,
-  "1.5": 1,
-  "2.0": 4,
-  "3.0": 21
+  "0.8": 33,
+  "0.9": 6,
+  "1.0": 140,
+  "1.8": 2,
+  "1.9": 9,
+  "2.0": 70,
+  "3.0": 20
  },
- "output": "/tmp/claude-1000/-home-hem436-Downloads-STT-AI-STT-AI/f362d8d9-cccf-42f8-8624-661064981102/scratchpad/fake_scores.jsonl"
+ "output": "data/interim/al_scores.jsonl"
 }

@@ -1,22 +1,20 @@
 {
  "parents": 600,
- "children_in": 1490,
- "kept": 1490,
- "dropped": 0,
+ "children_in": 1610,
+ "kept": 1609,
+ "dropped": 1,
  "parent_gold_drift_vs_engine": 0,
- "missing_child_files": [
-  "data/interim/aug_paraphrase.jsonl"
- ],
+ "missing_child_files": [],
  "per_augmentation": {
   "paraphrase": {
    "augmentation": "paraphrase",
-   "n_children": 0,
-   "n_pass": 0,
-   "n_fail": 0,
-   "invariance_rate": null,
+   "n_children": 120,
+   "n_pass": 119,
+   "n_fail": 1,
+   "invariance_rate": 0.9917,
    "check": "gold unchanged",
    "gold_changed_vs_parent": 0,
-   "fail_reasons": ""
+   "fail_reasons": "code_lost=1"
   },
   "typo_abbrev": {
    "augmentation": "typo_abbrev",

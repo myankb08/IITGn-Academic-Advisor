@@ -98,17 +98,20 @@ def main():
     llm = LLM(params["llm"]["base_model"], cache_path=args.cache)
     opts = {"seed": params["seeds"]["active_learning"][0], "temperature": params["llm"]["base_temperature"]}
     out, t0 = [], time.time()
-    for i, r in enumerate(pool, 1):
-        s = students[r["student_id"]]
-        res = llm.generate(PROMPT_ID, build_prompt(r, s, catalog, tpl, schemas), opts, fmt="json",
-                           num_predict=NUM_PREDICT[r["intent"]])
-        out.append({"query_id": r["query_id"], "intent": r["intent"], "programme": s["programme"],
+    by_intent = {}
+    for r in pool:
+        by_intent.setdefault(r["intent"], []).append(r)
+    answers = {}
+    for intent, part in by_intent.items():
+        prompts = [build_prompt(r, students[r["student_id"]], catalog, tpl, schemas) for r in part]
+        res = llm.generate_many(PROMPT_ID, prompts, opts, fmt="json", num_predict=NUM_PREDICT[intent])
+        answers.update({r["query_id"]: x for r, x in zip(part, res)})
+        print(f"{intent}: {len(part)} answers, {time.time() - t0:.0f}s, new calls {llm.calls}", flush=True)
+    for r in pool:
+        res = answers[r["query_id"]]
+        out.append({"query_id": r["query_id"], "intent": r["intent"], "programme": students[r["student_id"]]["programme"],
                     "response": res["response"], "parsed": parse_json(res["response"]),
-                    "model": llm.model, "model_digest": llm.digest, "prompt_id": PROMPT_ID,
-                    "backend": llm.backend})
-        if i % 10 == 0:
-            write_jsonl(args.out, out)
-            print(f"{i}/{len(pool)} done, {time.time() - t0:.0f}s, new calls {llm.calls}", flush=True)
+                    "model": llm.model, "model_digest": llm.digest, "prompt_id": PROMPT_ID, "backend": llm.backend})
     write_jsonl(args.out, out)
     log = {"pool": pool_note, "n": len(out), "invalid_json": sum(o["parsed"] is None for o in out),
            "prompt_id": PROMPT_ID, "options": opts, "num_predict": NUM_PREDICT, "output": rel(args.out),

@@ -1,1 +1,4 @@
 query_id,augmentation,reason,parent_codes,child_codes,child_text
+Q0278-P,paraphrase,code_lost,ES 615,CS 615,"Sure! Here's how you could rephrase that question:
+
+Is it possible for me to enroll in CS 615 next term?"

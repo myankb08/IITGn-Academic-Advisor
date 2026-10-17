@@ -3,6 +3,8 @@
 #   STAGE=smoke  10 rows end to end, merged into data/interim/kaggle_smoke_cache.jsonl
 #   STAGE=test   paraphrases for the test split
 #   STAGE=rest   all other paraphrases, base-model answers (train pool), augmentation paraphrases
+# COLLECT_ONLY=1 skips building and pushing and only waits for, downloads and merges a pushed kernel.
+# MACHINE=NvidiaTeslaP100 overrides the GPU type in kernel-metadata.json.
 # Token: read from the repo-root file .secrets into the environment only. Never echo it.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -24,20 +26,19 @@ case "$STAGE" in
                  ["base_model_answers","src.active.base_model_answers","--limit","10"],
                  ["augment_paraphrase","src.augment.paraphrase","--per-intent","1"]]' ;;
   test)  STEPS='[["paraphrase","src.queries.paraphrase_llm","--only-splits","test","--write-every","20"]]' ;;
-  rest)  STEPS='[["paraphrase","src.queries.paraphrase_llm","--write-every","50"],
+  rest)  STEPS='[["timing_check","src.queries.paraphrase_llm","--only-splits","train","--limit","16","--write-every","16","--also-backends","llamacpp"],
+                 ["paraphrase","src.queries.paraphrase_llm","--write-every","64","--also-backends","llamacpp"],
                  ["base_model_answers","src.active.base_model_answers"],
                  ["augment_paraphrase","src.augment.paraphrase"]]' ;;
   *) echo "unknown STAGE $STAGE"; exit 1 ;;
 esac
 
+if [ "${COLLECT_ONLY:-0}" != 1 ]; then
 rm -rf "$BUILD" && mkdir -p "$BUILD/dataset" "$BUILD/kernel" "$BUILD/extra/data/interim"
-echo "{\"stage\": \"$STAGE\", \"steps\": $STEPS}" > "$BUILD/extra/run_config.json"
-# earlier Kaggle rows ride along so a later stage does not repeat finished calls (not for smoke)
+echo "{\"stage\": \"$STAGE\", \"env\": {\"LLM_BATCH\": \"${LLM_BATCH:-16}\"}, \"steps\": $STEPS}" > "$BUILD/extra/run_config.json"
+# the local cache rides along so finished calls (Kaggle or local llama.cpp) are not repeated (not for smoke)
 if [ "$STAGE" != smoke ] && [ -f data/interim/llm_cache.jsonl ]; then
-  $PY -c "import json,sys
-for line in open('data/interim/llm_cache.jsonl'):
-    if line.strip() and (json.loads(line).get('backend') or {}).get('backend') == 'kaggle-transformers':
-        sys.stdout.write(line)" > "$BUILD/extra/data/interim/llm_cache.jsonl"
+  cp data/interim/llm_cache.jsonl "$BUILD/extra/data/interim/llm_cache.jsonl"
 fi
 FILES=(params.yaml data/processed/queries.jsonl data/processed/students.jsonl data/processed/courses.json
        data/processed/rules.json prompts/pipeline src/__init__.py src/engine src/queries src/augment src/active)
@@ -47,7 +48,7 @@ done
 tar --exclude='__pycache__' -czf "$BUILD/dataset/repo_inputs.tar.gz" "${FILES[@]}" -C "$BUILD/extra" .
 sed "s#KAGGLE_USERNAME#$KAGGLE_USERNAME#g" kaggle/dataset/dataset-metadata.json > "$BUILD/dataset/dataset-metadata.json"
 sed -e "s#KAGGLE_USERNAME#$KAGGLE_USERNAME#g" -e "s#course-advisory-llm-runs#course-advisory-llm-$STAGE#g" \
-  kaggle/kernel/kernel-metadata.json > "$BUILD/kernel/kernel-metadata.json"
+  -e "s#NvidiaTeslaT4#${MACHINE:-NvidiaTeslaT4}#g" kaggle/kernel/kernel-metadata.json > "$BUILD/kernel/kernel-metadata.json"
 cp notebooks/kaggle_llm_runs.ipynb "$BUILD/kernel/"
 
 if $KAGGLE datasets status "$DATASET" >/dev/null 2>&1; then
@@ -61,6 +62,7 @@ for _ in $(seq 1 60); do
 done
 
 $KAGGLE kernels push -p "$BUILD/kernel"
+fi
 while true; do
   sleep 60
   STATUS=$($KAGGLE kernels status "$KERNEL" 2>&1 || true)

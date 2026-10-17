@@ -134,26 +134,44 @@ class LLM:
             self._server = backend_info(self.backend)
         return self._server
 
-    def _hf_call(self, msgs, options):
+    def _hf_load(self):
+        """Tokenizer and fp16 model pinned to cuda:0. Fails loudly without CUDA."""
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
         if self._hf is None:
+            if not torch.cuda.is_available():
+                raise RuntimeError("kaggle-transformers needs CUDA and none is available")
             repo, rev = HF_FOR_TAG[self.model]
-            tok = AutoTokenizer.from_pretrained(repo, revision=rev)
-            dev = "cuda" if torch.cuda.is_available() else "cpu"
-            mdl = AutoModelForCausalLM.from_pretrained(
-                repo, revision=rev, torch_dtype=torch.float16 if dev == "cuda" else torch.float32).to(dev).eval()
-            self._hf = (tok, mdl, dev)
-        tok, mdl, dev = self._hf
-        text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-        ids = tok(text, return_tensors="pt").to(dev)
+            tok = AutoTokenizer.from_pretrained(repo, revision=rev, padding_side="left")
+            if tok.pad_token is None:
+                tok.pad_token = tok.eos_token
+            mdl = AutoModelForCausalLM.from_pretrained(repo, revision=rev, dtype=torch.float16).to("cuda:0").eval()
+            print(f"model on {mdl.device}, {torch.cuda.get_device_name(0)}, {torch.cuda.device_count()} GPU(s) visible", flush=True)
+            self._hf = (tok, mdl)
+        return self._hf
+
+    def _hf_batch(self, prompt_texts, options):
+        """[(text, prompt tokens, generated tokens)] for a batch, left padded; one seed per batch."""
+        import torch
+        tok, mdl = self._hf_load()
+        texts = [tok.apply_chat_template([{"role": "user", "content": t}], tokenize=False, add_generation_prompt=True)
+                 for t in prompt_texts]
+        enc = tok(texts, return_tensors="pt", padding=True).to("cuda:0")
         torch.manual_seed(options["seed"])
         sample = options["temperature"] > 0
         kw = {"do_sample": True, "temperature": options["temperature"]} if sample else {"do_sample": False}
         with torch.no_grad():
-            out = mdl.generate(**ids, max_new_tokens=options["num_predict"], pad_token_id=tok.eos_token_id, **kw)
-        new = out[0][ids["input_ids"].shape[1]:]
-        return tok.decode(new, skip_special_tokens=True), int(ids["input_ids"].shape[1]), int(len(new))
+            out = mdl.generate(**enc, max_new_tokens=options["num_predict"], pad_token_id=tok.pad_token_id, **kw)
+        width = enc["input_ids"].shape[1]
+        res = []
+        for i, row in enumerate(out):
+            new = row[width:].tolist()
+            n_new = next((k + 1 for k, t in enumerate(new) if t in (tok.eos_token_id, tok.pad_token_id)), len(new))
+            res.append((tok.decode(new, skip_special_tokens=True), int(enc["attention_mask"][i].sum()), n_new))
+        return res
+
+    def _hf_call(self, msgs, options):
+        return self._hf_batch([msgs[0]["content"]], options)[0]
 
     def _call(self, prompt_text, options, fmt):
         """(text, prompt tokens, generated tokens) for one user message."""
@@ -190,7 +208,6 @@ class LLM:
     def generate(self, prompt_id, prompt_text, options, fmt=None, num_predict=256):
         options = {**options, "num_predict": num_predict}
         key = self._key(prompt_id, prompt_text, options, fmt)
-        h = key[1]
         if key in self.cache:
             self.hits += 1
             return self.cache[key]
@@ -199,15 +216,47 @@ class LLM:
         dt = time.time() - t0
         self.calls += 1
         self.seconds += dt
-        row = {"prompt_id": prompt_id, "input_hash": h, "model": self.model, "model_digest": self.digest,
+        return self._store(key, prompt_id, options, fmt, text, n_in, n_out, dt)
+
+    def _store(self, key, prompt_id, options, fmt, text, n_in, n_out, dt, batch=None):
+        row = {"prompt_id": prompt_id, "input_hash": key[1], "model": self.model, "model_digest": self.digest,
                "gguf_blob": self.info.get("gguf_blob"), "backend": self.server, "options": options,
                "format": fmt, "response": text.strip(), "seconds": round(dt, 3),
                "prompt_eval_count": n_in, "eval_count": n_out}
+        if batch:
+            row["batch"] = batch
         self.cache[key] = row
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         with open(self.cache_path, "a") as f:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
         return row
+
+    def generate_many(self, prompt_id, prompt_texts, options, fmt=None, num_predict=256, batch_size=None):
+        """generate() for many prompts. On kaggle-transformers with LLM_BATCH > 1 the misses run in
+        left-padded batches (seeded once per batch; batch size and position stored in each row)."""
+        batch_size = batch_size or int(os.environ.get("LLM_BATCH", "1"))
+        options = {**options, "num_predict": num_predict}
+        keys = [self._key(prompt_id, t, options, fmt) for t in prompt_texts]
+        out = [self.cache.get(k) for k in keys]
+        self.hits += sum(r is not None for r in out)
+        miss = [i for i, r in enumerate(out) if r is None]
+        if self.backend != "kaggle-transformers" or batch_size <= 1:
+            for i in miss:
+                out[i] = self.generate(prompt_id, prompt_texts[i], options, fmt, num_predict)
+            return out
+        for b in range(0, len(miss), batch_size):
+            idx = miss[b:b + batch_size]
+            t0 = time.time()
+            res = self._hf_batch([prompt_texts[i] for i in idx], options)
+            dt = time.time() - t0
+            self.calls += len(idx)
+            self.seconds += dt
+            print(f"{prompt_id} batch {b // batch_size + 1}: {len(idx)} prompts in {dt:.1f}s "
+                  f"({dt / len(idx):.2f}s per call, {sum(r[2] for r in res)} new tokens)", flush=True)
+            for pos, (i, (text, n_in, n_out)) in enumerate(zip(idx, res)):
+                out[i] = self._store(keys[i], prompt_id, options, fmt, text, n_in, n_out, dt / len(idx),
+                                     batch={"size": len(idx), "position": pos, "batch_seconds": round(dt, 3)})
+        return out
 
     def stats(self):
         server = self._server if self._server is not None else {"backend": self.backend, "mode": "cache_replay"}

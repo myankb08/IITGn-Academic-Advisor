@@ -31,13 +31,10 @@ def sample_parents(rows, seed, per_intent):
 
 def augment(rows, llm, seed, temperature):
     tpl = load_prompt(PROMPT_ID)
-    out = []
-    for r in rows:
-        res = llm.generate(PROMPT_ID, render(tpl, query_text=r["query_text"]),
-                           {"seed": seed, "temperature": temperature}, num_predict=NUM_PREDICT)
-        out.append(child(r, "paraphrase", "P", query_text=res["response"],
-                         para_model=f"{llm.model}@{llm.digest}", para_prompt_id=PROMPT_ID))
-    return out
+    res = llm.generate_many(PROMPT_ID, [render(tpl, query_text=r["query_text"]) for r in rows],
+                            {"seed": seed, "temperature": temperature}, num_predict=NUM_PREDICT)
+    return [child(r, "paraphrase", "P", query_text=x["response"], para_model=f"{llm.model}@{llm.digest}",
+                  para_prompt_id=PROMPT_ID) for r, x in zip(rows, res)]
 
 
 def main():

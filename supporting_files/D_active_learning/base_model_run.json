@@ -1,0 +1,28 @@
+{
+ "pool": "train split of data/splits/*.csv",
+ "n": 336,
+ "invalid_json": 18,
+ "prompt_id": "base_model_answer_v1",
+ "options": {
+  "seed": 11,
+  "temperature": 0.0
+ },
+ "num_predict": {
+  "remaining_core": 200,
+  "eligibility": 100,
+  "elective_recommendation": 120
+ },
+ "output": "data/interim/base_model_answers.jsonl",
+ "wall_seconds": 0.1,
+ "model": "qwen2.5:1.5b",
+ "model_digest": "hf:Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+ "gguf_blob": null,
+ "backend": {
+  "backend": "kaggle-transformers",
+  "mode": "cache_replay"
+ },
+ "new_calls": 0,
+ "cache_hits": 336,
+ "llm_seconds": 0.0,
+ "mean_seconds_per_call": null
+}

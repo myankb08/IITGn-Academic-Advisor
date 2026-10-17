@@ -57,13 +57,23 @@ def work_order(rows, splits):
     return sorted(rows, key=key)
 
 
-def build_rows(rows, done_q, done_j, llm):
+def _backend(row):
+    return (row.get("backend") or {}).get("backend")
+
+
+def build_rows(rows, done_q, done_j):
+    """Rows with para_* filled from the cache rows that answered them; para_backend names the backend(s)."""
     out = []
     for r in rows:
         q, j = done_q.get(r["query_id"]), done_j.get(r["query_id"])
-        out.append({**r, "para_query": q, "para_justification": j,
-                    "para_model": f"{llm.model}@{llm.digest}" if q is not None or j is not None else None,
-                    "para_prompt_id": f"{Q_PROMPT}+{J_PROMPT}" if q is not None or j is not None else None})
+        got = [x for x in (q, j) if x is not None]
+        models = sorted({f"{x['model']}@{x['model_digest']}" for x in got})
+        backends = sorted({_backend(x) for x in got})
+        out.append({**r, "para_query": q["response"] if q else None,
+                    "para_justification": j["response"] if j else None,
+                    "para_model": "+".join(models) or None,
+                    "para_prompt_id": f"{Q_PROMPT}+{J_PROMPT}" if got else None,
+                    "para_backend": "+".join(backends) or None})
     return out
 
 
@@ -87,6 +97,8 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="first N rows of the work order only (smoke runs)")
     ap.add_argument("--write-every", type=int, default=10)
     ap.add_argument("--replay", action="store_true", help="cache only: never call a model, leave misses null")
+    ap.add_argument("--also-backends", default="",
+                    help="comma separated backends whose cached answers are reused (first hit wins after LLM_BACKEND)")
     args = ap.parse_args()
     params = load_params()
     rows = [r for r in read_jsonl(args.queries) if r.get("augmentation") is None]
@@ -97,6 +109,8 @@ def main():
         todo = [r for r in todo if splits.get(r["query_id"]) in keep]
     todo = [] if args.replay else todo[:args.limit]
     llm = LLM(params["llm"]["paraphrase_model"], cache_path=args.cache)
+    lookups = [llm] + [LLM(params["llm"]["paraphrase_model"], cache_path=args.cache, backend=b)
+                       for b in args.also_backends.split(",") if b and b != llm.backend]
     opts = {"seed": params["seeds"]["paraphrase"], "temperature": params["llm"]["temperature"]}
     q_tpl, j_tpl = load_prompt(Q_PROMPT), load_prompt(J_PROMPT)
 
@@ -106,24 +120,30 @@ def main():
     def j_call(r, fn):
         return fn(J_PROMPT, render(j_tpl, gold_text=r["gold_text"]), opts, num_predict=J_TOKENS)
 
+
     t0 = time.time()
     done_q, done_j, timings = {}, {}, {"query": 0.0, "justification": 0.0}
     for r in rows:
-        q, j = q_call(r, llm.lookup), j_call(r, llm.lookup)
-        if q:
-            done_q[r["query_id"]] = q["response"]
-        if j:
-            done_j[r["query_id"]] = j["response"]
-    for n, r in enumerate(todo, 1):
-        for kind, call, done in (("query", q_call, done_q), ("justification", j_call, done_j)):
+        for call, done in ((q_call, done_q), (j_call, done_j)):
+            hit = next((h for h in (call(r, x.lookup) for x in lookups) if h), None)
+            if hit:
+                done[r["query_id"]] = hit
+    todo = [r for r in todo if r["query_id"] not in done_q or r["query_id"] not in done_j]
+    step = args.write_every
+    for n in range(0, len(todo), step):
+        chunk = todo[n:n + step]
+        for kind, prompt_id, tpl, field, tokens, done in (
+                ("query", Q_PROMPT, q_tpl, "query_text", Q_TOKENS, done_q),
+                ("justification", J_PROMPT, j_tpl, "gold_text", J_TOKENS, done_j)):
+            need = [r for r in chunk if r["query_id"] not in done]
             t1 = time.time()
-            done[r["query_id"]] = call(r, llm.generate)["response"]
+            res = llm.generate_many(prompt_id, [render(tpl, **{field: r[field]}) for r in need], opts, num_predict=tokens)
             timings[kind] += time.time() - t1
-        if n % args.write_every == 0 or n == len(todo):
-            write_rows(args.out, build_rows(rows, done_q, done_j, llm))
-            print(f"{n}/{len(todo)} rows done ({splits.get(r['query_id'], 'no split')}), "
-                  f"{time.time() - t0:.0f}s, new calls {llm.calls}", flush=True)
-    out = build_rows(rows, done_q, done_j, llm)
+            done.update({r["query_id"]: x for r, x in zip(need, res)})
+        write_rows(args.out, build_rows(rows, done_q, done_j))
+        print(f"{n + len(chunk)}/{len(todo)} rows done ({splits.get(chunk[-1]['query_id'], 'no split')}), "
+              f"{time.time() - t0:.0f}s, new calls {llm.calls}", flush=True)
+    out = build_rows(rows, done_q, done_j)
     write_rows(args.out, out)
     per_split = {}
     for sp in sorted({splits.get(r["query_id"], "none") for r in out}):
@@ -138,6 +158,7 @@ def main():
         "limit": args.limit, "split_files_found": bool(splits), "per_split": per_split,
         "para_query_done": sum(r["para_query"] is not None for r in out),
         "para_justification_done": sum(r["para_justification"] is not None for r in out),
+        "per_backend": dict(Counter(r["para_backend"] for r in out if r["para_backend"])),
         "empty_para_query": sum(r["para_query"] == "" for r in out),
         "empty_para_justification": sum(r["para_justification"] == "" for r in out),
         "seconds_this_run": {k: round(v, 1) for k, v in timings.items()},

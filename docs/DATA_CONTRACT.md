@@ -92,7 +92,7 @@ augmentation (null | "paraphrase" | "typo_abbrev" | "transcript_reorder" | "tran
 ### `queries_para.jsonl` (LLM paraphrases, `src/queries/paraphrase_llm.py`)
 Same rows and fields as `queries.jsonl`, with `para_query` and `para_justification` filled as the model returned them
 (null while not generated yet), `para_model` = `<ollama tag>@<model digest>` and
-`para_prompt_id` = `paraphrase_query_v1+paraphrase_justification_v1`. Outputs are never filtered or fixed.
+`para_prompt_id` = `paraphrase_query_v1+paraphrase_justification_v1`, plus `para_backend` (extension: `llamacpp`, `kaggle-transformers`, or both joined by `+` when the query and justification came from different backends). `para_model` lists every `<tag>@<digest>` used. Outputs are never filtered or fixed.
 
 ### `queries_augmented.jsonl` and `students_augmented.jsonl` (Part D, `src/augment/`)
 - `queries_augmented.jsonl`: every original pair (augmentation null) followed by the children that passed `src/augment/verify.py`.
