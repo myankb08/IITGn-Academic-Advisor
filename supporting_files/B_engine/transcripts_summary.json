@@ -1,0 +1,839 @@
+{
+ "n_students": 180,
+ "programmes": {
+  "MTech-AI": 41,
+  "MTech-CSE": 64,
+  "MTech-EE": 51,
+  "MTech-ICDT": 24
+ },
+ "streams": {
+  "AI/ML": 68,
+  "None": 24,
+  "Power Engineering & Control Systems": 25,
+  "Signal Processing & Machine Learning": 26,
+  "Systems": 19,
+  "Theory": 18
+ },
+ "programme_tracks": {
+  "MTech-AI/coursework": 19,
+  "MTech-AI/thesis": 22,
+  "MTech-CSE/coursework": 29,
+  "MTech-CSE/thesis": 35,
+  "MTech-EE/coursework": 28,
+  "MTech-EE/thesis": 23,
+  "MTech-ICDT/coursework": 12,
+  "MTech-ICDT/thesis": 12
+ },
+ "tracks": {
+  "coursework": 88,
+  "thesis": 92
+ },
+ "semesters_completed": {
+  "0": 44,
+  "1": 46,
+  "2": 50,
+  "3": 40
+ },
+ "upcoming_terms": {
+  "2026-27 Sem-I": 94,
+  "2026-27 Sem-II": 86
+ },
+ "ug_background_codes": {
+  "EE 341": 112,
+  "ES 102": 115,
+  "ES 112": 111,
+  "ES 244": 91,
+  "ES 331": 106,
+  "MA 101": 109,
+  "MA 102": 102,
+  "MA 202": 110
+ },
+ "transcript_entries": 1422,
+ "violations": 0,
+ "rules_used": {
+  "MTech-AI": {
+   "programme": "MTech-AI",
+   "values": {
+    "total_min_credits": 82,
+    "coursework_min_credits": {
+     "thesis": 32,
+     "coursework": 48
+    },
+    "thesis_min_credits": {
+     "thesis": 32,
+     "coursework": 0
+    },
+    "project_min_credits": {
+     "thesis": 0,
+     "coursework": 16
+    },
+    "aarohan_credits": 2,
+    "writing_credits": 4,
+    "hss_min_credits": 4,
+    "ai_applications_credits": 4,
+    "own_basket_min_credits": 4,
+    "other_basket_min_credits": 4,
+    "stream_core_credits": 8,
+    "discipline_specified_min_credits": 16,
+    "electives_min_credits": 8,
+    "below_600_max_courses": 2,
+    "max_credits_per_semester": null,
+    "pe_courses_required": 2,
+    "mtech_ai_stream": "AI/ML",
+    "hss_required_before_admit_year": 2025,
+    "mooc_electives_allowed": false,
+    "below_600_max_credits": null
+   },
+   "provenance": {
+    "total_min_credits": {
+     "from": "rules.json",
+     "path": "rules/total_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 1
+    },
+    "coursework_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "thesis_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     }
+    },
+    "project_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "aarohan_credits": {
+     "from": "rules.json",
+     "path": "rules/aarohan_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "writing_credits": {
+     "from": "rules.json",
+     "path": "rules/writing_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 1
+    },
+    "hss_min_credits": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "ai_applications_credits": {
+     "from": "rules.json",
+     "path": "rules/applications_of_ai_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "own_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/own_basket_min_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "other_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/other_basket_min_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "stream_core_credits": {
+     "from": "rules.json",
+     "path": "rules/stream_core_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "discipline_specified_min_credits": {
+     "from": "rules.json",
+     "path": "rules/discipline_specified_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "electives_min_credits": {
+     "from": "rules.json",
+     "path": "rules/electives_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "below_600_max_courses": {
+     "from": "rules.json",
+     "path": "rules/ug_courses_max",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "max_credits_per_semester": {
+     "from": "not_stated",
+     "path": "rules/max_credits_per_semester",
+     "source_doc": null,
+     "source_page": null
+    },
+    "pe_courses_required": {
+     "from": "rules.json",
+     "path": "rules/physical_education_courses",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mtech_ai_stream": {
+     "from": "rules.json",
+     "path": "rules/mtech_ai_stream",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "hss_required_before_admit_year": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits/applies_to/admitted",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mooc_electives_allowed": {
+     "from": "rules.json",
+     "path": "rules/online_courses_count",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 2
+    },
+    "below_600_max_credits": {
+     "from": "not_stated",
+     "source_doc": null,
+     "source_page": null
+    }
+   },
+   "ai_applications_course": "CS 621",
+   "requirement_codes": {
+    "writing": "FP 602",
+    "aarohan": "FP 601",
+    "pe": "PE 600"
+   },
+   "overlays": {}
+  },
+  "MTech-CSE": {
+   "programme": "MTech-CSE",
+   "values": {
+    "total_min_credits": 82,
+    "coursework_min_credits": {
+     "thesis": 32,
+     "coursework": 48
+    },
+    "thesis_min_credits": {
+     "thesis": 32,
+     "coursework": 0
+    },
+    "project_min_credits": {
+     "thesis": 0,
+     "coursework": 16
+    },
+    "aarohan_credits": 2,
+    "writing_credits": 4,
+    "hss_min_credits": 4,
+    "ai_applications_credits": 4,
+    "own_basket_min_credits": 4,
+    "other_basket_min_credits": 4,
+    "stream_core_credits": 8,
+    "discipline_specified_min_credits": 16,
+    "electives_min_credits": 8,
+    "below_600_max_courses": 2,
+    "max_credits_per_semester": null,
+    "pe_courses_required": 2,
+    "mtech_ai_stream": "AI/ML",
+    "hss_required_before_admit_year": 2025,
+    "mooc_electives_allowed": false,
+    "below_600_max_credits": null
+   },
+   "provenance": {
+    "total_min_credits": {
+     "from": "rules.json",
+     "path": "rules/total_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 1
+    },
+    "coursework_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "thesis_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     }
+    },
+    "project_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "aarohan_credits": {
+     "from": "rules.json",
+     "path": "rules/aarohan_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "writing_credits": {
+     "from": "rules.json",
+     "path": "rules/writing_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 1
+    },
+    "hss_min_credits": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "ai_applications_credits": {
+     "from": "rules.json",
+     "path": "rules/applications_of_ai_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "own_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/own_basket_min_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "other_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/other_basket_min_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "stream_core_credits": {
+     "from": "rules.json",
+     "path": "rules/stream_core_credits",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "discipline_specified_min_credits": {
+     "from": "rules.json",
+     "path": "rules/discipline_specified_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "electives_min_credits": {
+     "from": "rules.json",
+     "path": "rules/electives_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "below_600_max_courses": {
+     "from": "rules.json",
+     "path": "rules/ug_courses_max",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "max_credits_per_semester": {
+     "from": "not_stated",
+     "path": "rules/max_credits_per_semester",
+     "source_doc": null,
+     "source_page": null
+    },
+    "pe_courses_required": {
+     "from": "rules.json",
+     "path": "rules/physical_education_courses",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mtech_ai_stream": {
+     "from": "rules.json",
+     "path": "rules/mtech_ai_stream",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "hss_required_before_admit_year": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits/applies_to/admitted",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mooc_electives_allowed": {
+     "from": "rules.json",
+     "path": "rules/online_courses_count",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 2
+    },
+    "below_600_max_credits": {
+     "from": "not_stated",
+     "source_doc": null,
+     "source_page": null
+    }
+   },
+   "ai_applications_course": "CS 621",
+   "requirement_codes": {
+    "writing": "FP 602",
+    "aarohan": "FP 601",
+    "pe": "PE 600"
+   },
+   "overlays": {}
+  },
+  "MTech-EE": {
+   "programme": "MTech-EE",
+   "values": {
+    "total_min_credits": 82,
+    "coursework_min_credits": {
+     "thesis": 42,
+     "coursework": 48
+    },
+    "thesis_min_credits": {
+     "thesis": 40,
+     "coursework": 0
+    },
+    "project_min_credits": {
+     "thesis": 0,
+     "coursework": 16
+    },
+    "aarohan_credits": 2,
+    "writing_credits": 4,
+    "hss_min_credits": 4,
+    "ai_applications_credits": 4,
+    "own_basket_min_credits": 16,
+    "other_basket_min_credits": 0,
+    "stream_core_credits": 0,
+    "discipline_specified_min_credits": 16,
+    "electives_min_credits": 8,
+    "below_600_max_courses": null,
+    "max_credits_per_semester": null,
+    "pe_courses_required": 2,
+    "mtech_ai_stream": "AI/ML",
+    "hss_required_before_admit_year": 2025,
+    "mooc_electives_allowed": true,
+    "below_600_max_credits": 8
+   },
+   "provenance": {
+    "total_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.total_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "coursework_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/ee.coursework_min_credits",
+      "source_doc": "ee_mtech_site/home.html",
+      "source_page": null,
+      "source_section": "Curriculum"
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "thesis_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/ee.thesis_min_credits",
+      "source_doc": "ee_mtech_site/home.html",
+      "source_page": null,
+      "source_section": "Curriculum"
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     }
+    },
+    "project_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "aarohan_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.aarohan_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "writing_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.writing_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "hss_min_credits": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "ai_applications_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.applications_of_ai_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "own_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "the discipline list of the student's stream is the own basket"
+    },
+    "other_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "no other-basket rule for this programme"
+    },
+    "stream_core_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "no stream core for this programme"
+    },
+    "discipline_specified_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "electives_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.electives_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "below_600_max_courses": {
+     "from": "rules.json",
+     "path": "rules/ee.ug_elective_credits_max",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "replaced by a credit cap"
+    },
+    "max_credits_per_semester": {
+     "from": "not_stated",
+     "path": "rules/max_credits_per_semester",
+     "source_doc": null,
+     "source_page": null
+    },
+    "pe_courses_required": {
+     "from": "rules.json",
+     "path": "rules/ee.physical_education_courses",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "mtech_ai_stream": {
+     "from": "rules.json",
+     "path": "rules/mtech_ai_stream",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "hss_required_before_admit_year": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits/applies_to/admitted",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mooc_electives_allowed": {
+     "from": "rules.json",
+     "path": "rules/ee.mooc_electives_allowed",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "below_600_max_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.ug_elective_credits_max",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    }
+   },
+   "ai_applications_course": null,
+   "requirement_codes": {
+    "writing": "FP 602",
+    "aarohan": "FP 601",
+    "pe": "PE 600"
+   },
+   "overlays": {}
+  },
+  "MTech-ICDT": {
+   "programme": "MTech-ICDT",
+   "values": {
+    "total_min_credits": 82,
+    "coursework_min_credits": {
+     "thesis": 42,
+     "coursework": 48
+    },
+    "thesis_min_credits": {
+     "thesis": 40,
+     "coursework": 0
+    },
+    "project_min_credits": {
+     "thesis": 0,
+     "coursework": 16
+    },
+    "aarohan_credits": 2,
+    "writing_credits": 4,
+    "hss_min_credits": 4,
+    "ai_applications_credits": 4,
+    "own_basket_min_credits": 16,
+    "other_basket_min_credits": 0,
+    "stream_core_credits": 0,
+    "discipline_specified_min_credits": 16,
+    "electives_min_credits": 8,
+    "below_600_max_courses": null,
+    "max_credits_per_semester": null,
+    "pe_courses_required": 2,
+    "mtech_ai_stream": "AI/ML",
+    "hss_required_before_admit_year": 2025,
+    "mooc_electives_allowed": true,
+    "below_600_max_credits": 8
+   },
+   "provenance": {
+    "total_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.total_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "coursework_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/ee.coursework_min_credits",
+      "source_doc": "ee_mtech_site/home.html",
+      "source_page": null,
+      "source_section": "Curriculum"
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/coursework_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "thesis_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/ee.thesis_min_credits",
+      "source_doc": "ee_mtech_site/home.html",
+      "source_page": null,
+      "source_section": "Curriculum"
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/thesis_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     }
+    },
+    "project_min_credits": {
+     "thesis": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.thesis",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 4
+     },
+     "coursework": {
+      "from": "rules.json",
+      "path": "rules/project_min_credits.coursework",
+      "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+      "source_page": 1
+     }
+    },
+    "aarohan_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.aarohan_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "writing_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.writing_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "hss_min_credits": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "ai_applications_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.applications_of_ai_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "own_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "the discipline list of the student's stream is the own basket"
+    },
+    "other_basket_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "no other-basket rule for this programme"
+    },
+    "stream_core_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "no stream core for this programme"
+    },
+    "discipline_specified_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.discipline_specified_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "electives_min_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.electives_min_credits",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "below_600_max_courses": {
+     "from": "rules.json",
+     "path": "rules/ee.ug_elective_credits_max",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum",
+     "note": "replaced by a credit cap"
+    },
+    "max_credits_per_semester": {
+     "from": "not_stated",
+     "path": "rules/max_credits_per_semester",
+     "source_doc": null,
+     "source_page": null
+    },
+    "pe_courses_required": {
+     "from": "rules.json",
+     "path": "rules/ee.physical_education_courses",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "mtech_ai_stream": {
+     "from": "rules.json",
+     "path": "rules/mtech_ai_stream",
+     "source_doc": "Revised CSE MTech Course Structure [2025-26].pdf",
+     "source_page": 1
+    },
+    "hss_required_before_admit_year": {
+     "from": "rules.json",
+     "path": "rules/hss_min_credits/applies_to/admitted",
+     "source_doc": "Adv5_NormsforMTechProgramme.pdf",
+     "source_page": 2
+    },
+    "mooc_electives_allowed": {
+     "from": "rules.json",
+     "path": "rules/ee.mooc_electives_allowed",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    },
+    "below_600_max_credits": {
+     "from": "rules.json",
+     "path": "rules/ee.ug_elective_credits_max",
+     "source_doc": "ee_mtech_site/home.html",
+     "source_page": null,
+     "source_section": "Curriculum"
+    }
+   },
+   "ai_applications_course": null,
+   "requirement_codes": {
+    "writing": "FP 602",
+    "aarohan": "FP 601",
+    "pe": "PE 600"
+   },
+   "overlays": {}
+  }
+ }
+}

@@ -6,10 +6,13 @@ seeds:
   active_learning: [11, 12, 13, 14, 15]
   splits: 207
   annotation_order: 208
+  validation_corruption: 209
 
 transcripts:
   n_students: 180
-  programmes: {MTech-CSE: 0.7, MTech-AI: 0.3}
+  # Synthetic mix over the four programmes in scope (docs/DECISIONS.md D1, D2): CS department 0.55,
+  # EE department 0.45, so both departments and every programme have enough students for splits.
+  programmes: {MTech-CSE: 0.35, MTech-AI: 0.2, MTech-EE: 0.3, MTech-ICDT: 0.15}
   tracks: {thesis: 0.5, coursework: 0.5}
 
 queries:

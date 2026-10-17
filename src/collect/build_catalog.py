@@ -11,10 +11,11 @@ from src.collect.common import (CODE_RE, EXTRACTED, ROOT, STRUCTURE_PDF, TIMETAB
 ADV5 = "Adv5_NormsforMTechProgramme.pdf"
 BASKET_HEADINGS = {"AI/ML Basket": "AI/ML", "Systems Basket": "Systems", "Theory Basket": "Theory"}
 ITEM_RE = re.compile(r"^\d+\.\s+([A-Z]{2,3}\s*\d{3}(?:-[IVXL]+)?)\s*:?\s*(.*)$")
+# EE site page -> (programme, stream). ICDT is a separate programme without streams (docs/DECISIONS.md D2).
 EE_STREAMS = {
-    "power-engineering-control-systems": "Power Engineering & Control Systems",
-    "signal-processing-machine-learning": "Signal Processing & Machine Learning",
-    "integrated-circuit-design-technology": "Integrated Circuit Design & Technology",
+    "power-engineering-control-systems": ("MTech-EE", "Power Engineering & Control Systems"),
+    "signal-processing-machine-learning": ("MTech-EE", "Signal Processing & Machine Learning"),
+    "integrated-circuit-design-technology": ("MTech-ICDT", None),
 }
 EE_ITEM_RE = re.compile(r"^((?:EE|ES)\s*\d{3})\s+(.+)$")
 COMPULSORY_RE = re.compile(r"^\d+\.\s+([A-Z]{2,3}\s*\d{3})\s*\(([^)]*)\)\s*is a compulsory course")
@@ -102,7 +103,7 @@ def timetable_records(rows, wanted):
 
 def ee_records(sections):
     out = []
-    for slug, stream in EE_STREAMS.items():
+    for slug, (programme, stream) in EE_STREAMS.items():
         doc = f"ee_mtech_site/{slug}.html"
         secs = [p for p in sections if p["file"] == doc and p["section"] == "Curriculum"]
         if not secs:
@@ -115,7 +116,7 @@ def ee_records(sections):
             n += 1
             out.append({"raw_id": f"ee-{slug.split('-')[0]}-{n:02d}", "role": "basket", "stream": stream,
                         "code_raw": m.group(1), "title_raw": m.group(2), "offered_raw": None, "line": line,
-                        "programmes": ["MTech-EE"], "source_doc": doc, "source_page": None,
+                        "programmes": [programme], "source_doc": doc, "source_page": None,
                         "source_section": "Curriculum", "source_row": None})
     return out
 
@@ -129,7 +130,7 @@ def build():
     for r in struct:
         r.setdefault("programmes", ["MTech-CSE", "MTech-AI"])
     for r in reqs:
-        r.setdefault("programmes", ["MTech-CSE", "MTech-AI", "MTech-EE"])
+        r.setdefault("programmes", ["MTech-CSE", "MTech-AI", "MTech-EE", "MTech-ICDT"])
     wanted = {normalise_code(r["code_raw"]) for r in struct + reqs + ee if r["code_raw"]}
     wanted |= {c for c in (normalise_code(r["course_number_raw"]) for r in rows)
                if c and re.match(r"(CS|ES|EE) 6\d\d", c)}

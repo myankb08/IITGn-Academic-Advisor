@@ -1,0 +1,116 @@
+{
+  "_note": "Test fixture only. Shape is a guess at data/processed/rules.json; numbers mirror Adv5 but the file is not a source.",
+  "programmes": {
+    "MTech-CSE": {
+      "streams": [
+        "AI/ML",
+        "Systems",
+        "Theory"
+      ],
+      "tracks": [
+        "thesis",
+        "coursework"
+      ]
+    },
+    "MTech-AI": {
+      "streams": [
+        "AI/ML"
+      ],
+      "tracks": [
+        "thesis",
+        "coursework"
+      ]
+    }
+  },
+  "total_min_credits": {
+    "value": 82,
+    "source_doc": "fixture",
+    "source_page": 1
+  },
+  "tracks": {
+    "thesis": {
+      "coursework_min_credits": {
+        "value": 32,
+        "source_doc": "fixture",
+        "source_page": 1
+      },
+      "thesis_min_credits": {
+        "value": 32,
+        "source_doc": "fixture",
+        "source_page": 1
+      },
+      "project_min_credits": {
+        "value": 0,
+        "source_doc": "fixture",
+        "source_page": 4
+      }
+    },
+    "coursework": {
+      "coursework_min_credits": {
+        "value": 48,
+        "source_doc": "fixture",
+        "source_page": 1
+      },
+      "thesis_min_credits": {
+        "value": 0,
+        "source_doc": "fixture",
+        "source_page": 4
+      },
+      "project_min_credits": {
+        "value": 16,
+        "source_doc": "fixture",
+        "source_page": 1
+      }
+    }
+  },
+  "aarohan_credits": {
+    "value": 2,
+    "source_doc": "fixture",
+    "source_page": 1
+  },
+  "writing_credits": {
+    "value": 4,
+    "source_doc": "fixture",
+    "source_page": 1
+  },
+  "hss_min_credits": {
+    "value": 4,
+    "source_doc": "fixture",
+    "source_page": 2
+  },
+  "ai_applications_credits": {
+    "value": 4,
+    "source_doc": "fixture",
+    "source_page": 2
+  },
+  "own_basket_min_credits": {
+    "value": 4,
+    "source_doc": "fixture",
+    "source_page": 1
+  },
+  "other_basket_min_credits": {
+    "value": 4,
+    "source_doc": "fixture",
+    "source_page": 1
+  },
+  "discipline_specified_min_credits": {
+    "value": 16,
+    "source_doc": "fixture",
+    "source_page": 2
+  },
+  "electives_min_credits": {
+    "value": 8,
+    "source_doc": "fixture",
+    "source_page": 2
+  },
+  "below_600_max_courses": {
+    "value": 2,
+    "source_doc": "fixture",
+    "source_page": 2
+  },
+  "max_credits_per_semester": {
+    "value": 24,
+    "source_doc": "fixture",
+    "source_page": null
+  }
+}

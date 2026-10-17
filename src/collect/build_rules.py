@@ -139,12 +139,17 @@ RULES = [
      ADV42, "The continuation of additional fellowship beyond the first semester is subject to the student maintaining a CPI 8.0 and above."),
 ]
 EE_HOME = "ee_mtech_site/home.html"
-EE = {"programmes": ["MTech-EE"], "tracks": ["thesis"], "admitted": "all"}
+DECISIONS = "docs/DECISIONS.md"
+EE_PROGS = ["MTech-EE", "MTech-ICDT"]
+# The EE site gives the thesis structure (42 + 40); its other rules apply to both tracks (DECISIONS D3).
+EE = {"programmes": EE_PROGS, "tracks": ["thesis"], "admitted": "all"}
+EE_BOTH = {"programmes": EE_PROGS, "tracks": TRACKS, "admitted": "all"}
+D3 = {"tracks_decision": f"{DECISIONS} D3"}
 EE_STREAM_PAGES = {
     "Power Engineering & Control Systems": "ee_mtech_site/power-engineering-control-systems.html",
     "Signal Processing & Machine Learning": "ee_mtech_site/signal-processing-machine-learning.html",
-    "Integrated Circuit Design & Technology": "ee_mtech_site/integrated-circuit-design-technology.html",
 }
+ICDT_PAGE = "ee_mtech_site/integrated-circuit-design-technology.html"
 EE_LIST_QUOTE = ("Students must credit at least 16 credits of courses from this list under the 'Courses Specified by "
                  "the Discipline' basket. The courses in this list can also be considered as Electives.")
 # rule_id, value, unit, applies_to, extra fields, source_doc, source_section, verbatim quote
@@ -159,38 +164,38 @@ EE_RULES = [
      EE_HOME, "Curriculum", "10 x 4 Credit Thesis Units"),
     ("ee.credit_split", [42, 40], "credits", EE, {"note": "coursework, thesis"},
      EE_HOME, "Curriculum", "42 credits through coursework and 40 credits through thesis credits."),
-    ("ee.aarohan_credits", 2, "credits", EE, {"codes": ["FP 601"]},
+    ("ee.aarohan_credits", 2, "credits", EE_BOTH, {**D3, "codes": ["FP 601"]},
      EE_HOME, "Curriculum", "Aarohan - 2 Credits"),
-    ("ee.writing_credits", 4, "credits", EE, {"codes": ["FP 602"]},
+    ("ee.writing_credits", 4, "credits", EE_BOTH, {**D3, "codes": ["FP 602"]},
      EE_HOME, "Curriculum", "Writing - 4 Credits"),
-    ("ee.applications_of_ai_credits", 4, "credits", EE, {"note": "the EE site does not name the course"},
+    ("ee.applications_of_ai_credits", 4, "credits", EE_BOTH, {**D3, "note": "the EE site does not name the course"},
      EE_HOME, "Curriculum", "4 credits of Applications of AI courses relevant to the discipline"),
-    ("ee.electives_min_credits", 8, "credits", EE, {},
+    ("ee.electives_min_credits", 8, "credits", EE_BOTH, {**D3, },
      EE_HOME, "Curriculum", "Electives - At least 8 Credits"),
-    ("ee.discipline_specified_min_credits", 16, "credits", EE, {"see": "ee.discipline_list.<stream>"},
+    ("ee.discipline_specified_min_credits", 16, "credits", EE_BOTH, {**D3, "see": "ee.discipline_list.<stream>"},
      EE_HOME, "Curriculum", "Courses specified by the Discipline - At least 16 Credits"),
-    ("ee.physical_education_courses", 2, "courses", EE, {"codes": ["PE 600"], "credits_each": 0, "grading": "Pass/Fail"},
+    ("ee.physical_education_courses", 2, "courses", EE_BOTH, {**D3, "codes": ["PE 600"], "credits_each": 0, "grading": "Pass/Fail"},
      EE_HOME, "Curriculum", "Physical Education - 2 Courses (Zero credit each)"),
-    ("ee.fellowship_after_aarohan", True, "flag", EE, {},
+    ("ee.fellowship_after_aarohan", True, "flag", EE_BOTH, {**D3, },
      EE_HOME, "Curriculum", "Fellowship (if eligible) will be usually released only after completion of Aarohan."),
-    ("ee.ug_elective_credits_max", 8, "credits", EE, {"overrides": "ug_courses_max", "levels": "5XX or below", "group": "electives"},
+    ("ee.ug_elective_credits_max", 8, "credits", EE_BOTH, {**D3, "overrides": "ug_courses_max", "levels": "5XX or below", "group": "electives"},
      EE_HOME, "Curriculum", "A maximum of 8 Credits from the Electives group can be at the undergraduate level (Course Code 5XX or below)."),
-    ("ee.other_courses_min_level", 600, "level", EE, {},
+    ("ee.other_courses_min_level", 600, "level", EE_BOTH, {**D3, },
      EE_HOME, "Curriculum", "All other courses MUST be at the postgraduate level (Course Code 6XX or above)."),
-    ("ee.mooc_electives_allowed", True, "flag", EE, {"note": "pre-approved MOOCs only, electives group only, within approved credit limits"},
+    ("ee.mooc_electives_allowed", True, "flag", EE_BOTH, {**D3, "note": "pre-approved MOOCs only, electives group only, within approved credit limits"},
      EE_HOME, "Curriculum", "Pre-approved MOOCs, subject to approved credit limits, can be considered for courses from the Electives group."),
     ("ee.sub_specialisations", ["Power Engineering & Control Systems", "Signal Processing & Machine Learning"], "streams",
-     {**EE, "admitted": "from AY 2025-26"}, {"degree": "MTech (Electrical Engineering), no specialization on the degree"},
+     {**EE_BOTH, "programmes": ["MTech-EE"], "admitted": "from AY 2025-26"}, {"degree": "MTech (Electrical Engineering), no specialization on the degree"},
      EE_HOME, "A. Electrical Engineering", "The following sub-specializations are offered for MTech in Electrical Engineering, for students admitted from 2025-26."),
-    ("ee.icdt_degree", "MTech (Integrated Circuit Design & Technology)", "degree", EE,
-     {"note": "the site lists ICDT as a separate degree; it is modelled here as an MTech-EE stream as instructed"},
+    ("ee.icdt_degree", "MTech (Integrated Circuit Design & Technology)", "degree", {**EE_BOTH, "programmes": ["MTech-ICDT"]},
+     {"note": f"modelled as the separate programme MTech-ICDT without streams ({DECISIONS} D2)"},
      EE_HOME, "B. Integrated Circuit Design & Technology", "The degree offered is MTech (Integrated Circuit Design & Technology)"),
 ]
 NOT_STATED = {
     "max_credits_per_semester": "no maximum credits per semester is stated in Adv5, Adv17, Adv24, Adv42, the CSE structure or the EE M.Tech site",
 }
 CSE_AI_ONLY = {"applications_of_ai_course"}
-ALL_PROGRAMMES = ["MTech-CSE", "MTech-AI", "MTech-EE"]
+ALL_PROGRAMMES = ["MTech-CSE", "MTech-AI", "MTech-EE", "MTech-ICDT"]
 
 
 def page_of(pages, doc, quote):
@@ -243,12 +248,14 @@ def build():
         add(rules, {"rule_id": rule_id, "value": value, "unit": unit, "applies_to": applies, **extra,
                     "source_doc": doc, "source_page": None,
                     "source_section": check_section(sections, doc, section, quote), "quote": quote})
-    for stream, doc in EE_STREAM_PAGES.items():
-        extra = {"stream": stream, "min_credits": 16, "also_count_as_electives": True}
-        if "integrated" in doc:
-            extra["note"] = "the page marks this list '*To be updated soon'"
-        add(rules, {"rule_id": f"ee.discipline_list.{stream}", "value": ee_stream_codes(sections, doc),
-                    "unit": "codes", "applies_to": EE, **extra, "source_doc": doc, "source_page": None,
+    lists = [(f"ee.discipline_list.{st}", doc, {**EE_BOTH, "programmes": ["MTech-EE"]}, {"stream": st})
+             for st, doc in EE_STREAM_PAGES.items()]
+    lists.append(("ee.discipline_list.MTech-ICDT", ICDT_PAGE, {**EE_BOTH, "programmes": ["MTech-ICDT"]},
+                  {"stream": None, "note": f"the page marks this list '*To be updated soon'; ICDT has no streams ({DECISIONS} D2)"}))
+    for rule_id, doc, applies, extra in lists:
+        add(rules, {"rule_id": rule_id, "value": ee_stream_codes(sections, doc), "unit": "codes",
+                    "applies_to": applies, **extra, "min_credits": 16, "also_count_as_electives": True, **D3,
+                    "source_doc": doc, "source_page": None,
                     "source_section": check_section(sections, doc, "Curriculum", EE_LIST_QUOTE), "quote": EE_LIST_QUOTE})
     for rule_id, why in NOT_STATED.items():
         rules[rule_id] = {"rule_id": rule_id, "value": None, "unit": "credits",
@@ -256,11 +263,16 @@ def build():
                           "source_doc": None, "source_page": None, "source_section": None, "quote": None}
     return {
         "programmes": {
-            "MTech-CSE": {"streams": ["AI/ML", "Systems", "Theory"], "tracks": TRACKS},
-            "MTech-AI": {"streams": ["AI/ML"], "tracks": TRACKS},
-            "MTech-EE": {"streams": list(EE_STREAM_PAGES), "tracks": ["thesis"],
-                         "note": "the EE site describes only the thesis structure (42 coursework + 40 thesis); "
-                                 "no EE coursework track is described, so none is modelled"},
+            "MTech-CSE": {"department": "CS", "streams": ["AI/ML", "Systems", "Theory"], "tracks": TRACKS,
+                          "source_doc": STRUCTURE_PDF},
+            "MTech-AI": {"department": "CS", "streams": ["AI/ML"], "tracks": TRACKS, "source_doc": STRUCTURE_PDF},
+            "MTech-EE": {"department": "EE", "streams": list(EE_STREAM_PAGES), "tracks": TRACKS,
+                         "source_doc": f"{EE_HOME}; {DECISIONS} D2, D3",
+                         "note": "the EE site describes the thesis structure (42 coursework + 40 thesis); the coursework "
+                                 "track uses the Adv5 common track rules plus the EE discipline rules (D3)"},
+            "MTech-ICDT": {"department": "EE", "streams": [], "tracks": TRACKS,
+                           "source_doc": f"{EE_HOME}; {DECISIONS} D2, D3",
+                           "note": "separate degree on the EE site; no streams, its course list is its discipline basket"},
         },
         "precedence": "a rule with 'overrides' replaces the named common rule for its programmes",
         "placeholder_codes": {
@@ -270,7 +282,8 @@ def build():
         },
         "requirement_codes": {"writing": "FP 602", "aarohan": "FP 601", "physical_education": "PE 600",
                               "applications_of_ai": "CS 621"},
-        "applications_of_ai_by_programme": {"MTech-CSE": "CS 621", "MTech-AI": "CS 621", "MTech-EE": None},
+        "applications_of_ai_by_programme": {"MTech-CSE": "CS 621", "MTech-AI": "CS 621", "MTech-EE": None,
+                                            "MTech-ICDT": None},
         "rules": rules,
     }
 
