@@ -15,7 +15,7 @@ because `src/collect/import_forms.py` maps CSV columns by title.
 Course advisory questions from M.Tech students (anonymous)
 
 ## Description (intro text)
-We are building a small dataset of the questions M.Tech students at IIT Gandhinagar (CS discipline) ask about
+We are building a small dataset of the questions M.Tech students at IIT Gandhinagar (CS and EE disciplines) ask about
 their degree requirements, course eligibility and electives. It is for a course project (CS 203, Assignment 1).
 The form is anonymous: we do not collect your name, email or roll number, and the timestamp Google adds is
 deleted before the data is used. Please do not write anything in the answers that identifies you.
@@ -31,12 +31,16 @@ It takes about 3 minutes.
 2. **Programme** (Multiple choice, required)
    - `MTech-CSE`
    - `MTech-AI`
+   - `MTech-EE`
    - `Other`
 
 3. **Stream** (Multiple choice, required)
    - `AI/ML`
    - `Systems`
    - `Theory`
+   - `Power Engineering & Control Systems`
+   - `Signal Processing & Machine Learning`
+   - `Integrated Circuit Design & Technology`
    - `Not decided / not applicable`
 
 4. **Track** (Multiple choice, required)
