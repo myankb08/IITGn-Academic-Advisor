@@ -68,10 +68,10 @@
   "2026-27 Sem-II": 61
  },
  "recommendation_reasons": {
-  "OPEN_ELECTIVE": 8,
-  "OTHER_BASKET_ELECTIVE": 40,
-  "OTHER_BASKET_GAP": 42,
-  "OWN_BASKET_ELECTIVE": 391,
+  "OPEN_ELECTIVE": 5,
+  "OTHER_BASKET_ELECTIVE": 43,
+  "OTHER_BASKET_GAP": 77,
+  "OWN_BASKET_ELECTIVE": 356,
   "OWN_BASKET_GAP": 119
  },
  "distinct_students": 177

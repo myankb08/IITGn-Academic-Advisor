@@ -184,3 +184,14 @@ def test_structured_rules_track_scoping(cat):
     assert rs.get("thesis_min_credits", "coursework") == 0
     assert rs.ai_applications_course == "FX 621"
     assert rs.requirement_codes == {"writing": "REQ-WRITING"}
+
+
+def test_mtech_ai_other_baskets_use_cse_streams():
+    # found while reviewing round-1 labelling items: MTech-AI gold answers listed no other baskets
+    from src.engine.rule_engine import remaining_requirements
+    student = {"student_id": "T-AI", "programme": "MTech-AI", "stream": "AI/ML", "track": "thesis",
+               "admit_year": 2025, "semesters_completed": 1,
+               "transcript": [{"code": "CS 615", "semester": 1, "credits": 4, "grade": "A"}]}
+    rem = remaining_requirements(student)
+    assert rem["other_basket"]["streams"] == ["Systems", "Theory"]
+    assert rem["other_basket"]["earned"] == 4

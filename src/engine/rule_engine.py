@@ -18,6 +18,9 @@ CSE_DOC = CSE
 
 REPEATABLE = {"thesis", "project", "pe"}
 NON_COURSEWORK = {"aarohan", "thesis", "project", "pe"}
+# CSE structure p1: "MTech in AI is deemed to be in the AI-ML stream only and should follow the
+# corresponding curriculum", so its basket rules use the CSE streams (own AI/ML, other Systems and Theory)
+CURRICULUM_OF = {"MTech-AI": "MTech-CSE"}
 
 
 @functools.lru_cache(maxsize=1)
@@ -37,6 +40,11 @@ def _prefix(code):
 def prules(catalog, student):
     """Rules for the student's programme (common rules with the programme's overrides)."""
     return catalog.rules_for(student["programme"])
+
+
+def basket_streams(rules, student):
+    """Streams whose baskets count for this student's programme curriculum."""
+    return rules.streams(CURRICULUM_OF.get(student["programme"], student["programme"]))
 
 
 def role_of(catalog, student, code):
@@ -63,7 +71,7 @@ def role_of(catalog, student, code):
     if cat == "basket" and in_prog:
         if stream is None or stream in streams:
             return "own_basket"
-        if set(streams) & set(rules.streams(student["programme"])):
+        if set(streams) & set(basket_streams(rules, student)):
             return "other_basket"
     if _prefix(code) == "HS":
         return "hss"
@@ -219,7 +227,7 @@ def remaining_requirements(student, catalog=None):
         "compulsory_missing": sorted(c for c in compulsory if c not in passed),
         "stream_core_missing": sorted(c for c in own_core if c not in passed),
         "own_basket": {"stream": student["stream"], "label": basket_label(rules, student), **_gap(own_b, own_min)},
-        "other_basket": {"streams": sorted(s for s in rules.streams(student["programme"]) if s != student["stream"]),
+        "other_basket": {"streams": sorted(s for s in basket_streams(rules, student) if s != student["stream"]),
                          **_gap(other_b, other_min)},
         "discipline_specified": _gap(discipline, rules.get("discipline_specified_min_credits")),
         "electives": _gap(electives, rules.get("electives_min_credits")),
