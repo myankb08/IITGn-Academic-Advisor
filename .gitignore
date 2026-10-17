@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+# course handouts, not part of the dataset
+CS203_Assignment1.pdf
+Project4_*.pdf
+# old exploration scratch
+output/
+tmp/

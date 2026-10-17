@@ -1,0 +1,30 @@
+seeds:
+  transcripts: 203
+  queries: 204
+  paraphrase: 205
+  augmentation: 206
+  active_learning: [11, 12, 13, 14, 15]
+  splits: 207
+  annotation_order: 208
+
+transcripts:
+  n_students: 180
+  programmes: {MTech-CSE: 0.7, MTech-AI: 0.3}
+  tracks: {thesis: 0.5, coursework: 0.5}
+
+queries:
+  min_pairs: 400
+
+llm:
+  paraphrase_model: qwen2.5:1.5b
+  base_model: qwen2.5:1.5b
+  temperature: 0.7
+  base_temperature: 0.0
+
+active_learning:
+  budgets: [25, 50, 100]
+
+splits:
+  train: 0.7
+  val: 0.15
+  test: 0.15
