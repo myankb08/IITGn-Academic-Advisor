@@ -200,7 +200,9 @@ def eligibility_buckets(students, catalog):
         for code in catalog.codes:
             if catalog.course(code).get("category") in ("requirement", "ug_background"):
                 continue
-            g = eligibility(s, code, catalog=catalog)
+            # selection_view keeps the D4-era UG background cases as a diversity bucket so the chosen
+            # pairs stay the same after D5; the gold answers below never use it
+            g = eligibility(s, code, catalog=catalog, selection_view=True)
             buckets.setdefault(case_of(g), []).append((s["student_id"], code))
     return buckets
 

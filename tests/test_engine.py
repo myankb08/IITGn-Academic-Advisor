@@ -77,11 +77,14 @@ def test_eligibility_taken_failed_unknown(cat):
 
 
 def test_recommended_background_warning(cat):
+    # D5: UG-level background never warns in gold answers; the selection view still sees it
     out = eligibility(student([]), "FX 666", catalog=cat)
     assert out["eligible"] is True
-    assert out["warnings"] == ["MISSING_RECOMMENDED_BACKGROUND"]
-    assert out["missing_recommended"] == [["UG 101", "UG 102"]]
-    assert eligibility(student([], ug=["UG 102"]), "FX 666", catalog=cat)["warnings"] == []
+    assert out["warnings"] == []
+    sel = eligibility(student([]), "FX 666", catalog=cat, selection_view=True)
+    assert sel["warnings"] == ["MISSING_RECOMMENDED_BACKGROUND"]
+    assert sel["missing_recommended"] == [["UG 101", "UG 102"]]
+    assert eligibility(student([], ug=["UG 102"]), "FX 666", catalog=cat, selection_view=True)["warnings"] == []
 
 
 def test_other_warnings(cat):
@@ -195,3 +198,13 @@ def test_mtech_ai_other_baskets_use_cse_streams():
     rem = remaining_requirements(student)
     assert rem["other_basket"]["streams"] == ["Systems", "Theory"]
     assert rem["other_basket"]["earned"] == 4
+
+
+def test_ug_background_never_warns_mtech_students():
+    # docs/DECISIONS.md D5: ES 666's plan names ES 112 / MA 101 / MA 102 as background; M.Tech students are not told to take them
+    from src.engine.rule_engine import eligibility
+    student = {"student_id": "T-D5", "programme": "MTech-CSE", "stream": "AI/ML", "track": "thesis",
+               "admit_year": 2025, "semesters_completed": 1, "ug_background": [], "transcript": []}
+    g = eligibility(student, "ES 666")
+    assert "MISSING_RECOMMENDED_BACKGROUND" not in g["warnings"]
+    assert "MISSING_RECOMMENDED_BACKGROUND" in eligibility(student, "ES 666", selection_view=True)["warnings"]

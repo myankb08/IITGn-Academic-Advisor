@@ -296,9 +296,13 @@ def offering_check(catalog, code, term):
     return None, "OFFERING_UNKNOWN", f"no timetable for {term} in data/raw/sources and no stated semester"
 
 
-def _missing_recommended(catalog, student, c, have):
+def _missing_recommended(catalog, student, c, have, include_ug=False):
+    # docs/DECISIONS.md D5: UG-level background (level < 500) is assumed from the student's own UG degree
+    # ("or equivalent" in the plans), so only PG-level recommended background can raise a warning.
+    # include_ug=True is only for make_queries' case selection, never for gold answers.
     return [g["any_of"] for g in (c.get("recommended_background") or [])
-            if not set(g["any_of"]) & have]
+            if (include_ug or any((course_level(None, code) or 0) >= 500 for code in g["any_of"]))
+            and not set(g["any_of"]) & have]
 
 
 def _cite_rule(rules, name):
@@ -309,7 +313,7 @@ def _cite_rule(rules, name):
     return f"{p['source_doc']} {where}"
 
 
-def eligibility(student, course_code, term=None, catalog=None):
+def eligibility(student, course_code, term=None, catalog=None, selection_view=False):
     """Can the student register for course_code in term (default: the student's upcoming term)."""
     catalog = _cat(catalog)
     term = term or upcoming_term(student)
@@ -342,7 +346,7 @@ def eligibility(student, course_code, term=None, catalog=None):
     if warn:
         warnings.append(warn)
         sources[warn] = off_ev
-    missing_rec = _missing_recommended(catalog, student, c, have)
+    missing_rec = _missing_recommended(catalog, student, c, have, include_ug=selection_view)
     if missing_rec:
         warnings.append("MISSING_RECOMMENDED_BACKGROUND")
         docs = sorted({g.get("source_doc") or "" for g in c["recommended_background"]})

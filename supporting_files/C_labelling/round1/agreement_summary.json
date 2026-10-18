@@ -1,0 +1,45 @@
+{
+  "round": 1,
+  "fixture": false,
+  "export_A1": "data/labels/round1/export_A1.json",
+  "export_A2": "data/labels/round1/export_A2.json",
+  "n_items_compared": 40,
+  "decision": {
+    "cohen_kappa": 0.22651933701657467,
+    "percent_agreement": 65.0
+  },
+  "error_category": {
+    "cohen_kappa": 0.17127071823204432,
+    "percent_agreement": 62.5
+  },
+  "both_levels_percent_agreement": 57.5,
+  "label_counts": {
+    "A1_decision": {
+      "accept": 24,
+      "edit": 11,
+      "reject": 5
+    },
+    "A2_decision": {
+      "accept": 34,
+      "edit": 5,
+      "reject": 1
+    },
+    "A1_category": {
+      "none": 25,
+      "wrong_fact_or_policy": 5,
+      "meaning_drift": 4,
+      "incomplete_justification": 4,
+      "ambiguous_query": 1,
+      "fluency": 1
+    },
+    "A2_category": {
+      "none": 34,
+      "incomplete_justification": 4,
+      "wrong_fact_or_policy": 2
+    }
+  },
+  "only_A1": [],
+  "only_A2": [],
+  "warnings": [],
+  "n_disagreements": 17
+}

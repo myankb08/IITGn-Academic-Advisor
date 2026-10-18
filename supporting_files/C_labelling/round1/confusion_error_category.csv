@@ -1,0 +1,8 @@
+,A2:none,A2:hallucinated_course,A2:wrong_fact_or_policy,A2:meaning_drift,A2:incomplete_justification,A2:fluency,A2:ambiguous_query
+A1:none,24,0,1,0,0,0,0
+A1:hallucinated_course,0,0,0,0,0,0,0
+A1:wrong_fact_or_policy,2,0,1,0,2,0,0
+A1:meaning_drift,3,0,0,0,1,0,0
+A1:incomplete_justification,4,0,0,0,0,0,0
+A1:fluency,1,0,0,0,0,0,0
+A1:ambiguous_query,0,0,0,0,1,0,0
