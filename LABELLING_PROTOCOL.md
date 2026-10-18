@@ -6,8 +6,8 @@ the annotators can supply. Everything else is fixed by the code and config in th
 ## 1. Who labelled what
 | Annotator ID | Person (kept private, initials only) | Round 1 items | Round 2 items | Adjudication role |
 |---|---|---|---|---|
-| A1 | TODO | all 40 (overlapping) | all 40 (overlapping) | TODO |
-| A2 | TODO | all 40 (overlapping) | all 40 (overlapping) | TODO |
+| A1 | SMH | all 40 (overlapping) | all 40 (overlapping) | TODO |
+| A2 | MSB | all 40 (overlapping) | all 40 (overlapping) | TODO |
 
 Both annotators label the same 40 items in each round, so every item has two independent labels.
 Round 1 and round 2 item sets are disjoint. The item lists are in `data/labels/round{1,2}/manifest.csv`.
@@ -16,7 +16,7 @@ Round 1 and round 2 item sets are disjoint. The item lists are in `data/labels/r
 - Label Studio: 1.23.2 (pip package `label-studio==1.23.2`), installed in a separate venv `.venv-labelstudio` (Python 3.10).
 - Task files: `src/queries/to_labelstudio.py`. Agreement: `src/queries/agreement.py`. Merge: `src/queries/adjudicate.py`.
 - Analysis Python: `.venv` (scikit-learn, pandas, matplotlib, versions in requirements.txt).
-- Machine(s) used by each annotator: TODO.
+- Machine(s) used by each annotator: A1 on their own Ubuntu 22.04 laptop, Label Studio served locally on port 8095 (8080 was held by another local process). A2: TODO.
 
 ## 3. Labelling config per round
 | Round | Config file | Notes |
@@ -64,8 +64,8 @@ exports of a round were saved. Each annotator used a separate Label Studio proje
 ## 9. Timeline matched to export files
 | Step | Date (UTC) | File |
 |---|---|---|
-| Round 1 tasks generated | TODO | `data/labels/round1/tasks.json`, `manifest.csv` |
-| Round 1 A1 finished | TODO | `data/labels/round1/export_A1.json` |
+| Round 1 tasks generated | 2026-10-18 17:01 IST (rebuilt after the D5 gold fix; tasks sha256 f6633acb...; first build 00:49 was superseded before any finished labelling, see supporting_files/B_engine/gold_fix_ug_background.md) | `data/labels/round1/tasks.json`, `manifest.csv` |
+| Round 1 A1 labelled 2026-10-18 19:00 to 20:10 IST, exported 20:12 (export sha256 0238baff...) | `data/labels/round1/export_A1.json` |
 | Round 1 A2 finished | TODO | `data/labels/round1/export_A2.json` |
 | Round 1 agreement | TODO | `supporting_files/C_labelling/round1/agreement_summary.json` |
 | Round 1 adjudication | TODO | `data/labels/round1/adjudication.csv` |
@@ -86,4 +86,4 @@ For each annotator create one project per round: Settings > Labeling Interface >
 import `data/labels/roundN/tasks.json`. When done: Export > JSON, save as `data/labels/roundN/export_<ID>.json`.
 Remote annotator (A2): either A2 installs the same Label Studio version, imports the same `tasks.json` and config,
 and sends back the JSON export; or A1 starts the server with `--host 0.0.0.0` on a shared network and A2 logs in
-with a separate account to a separate project. TODO record which option was used.
+with a separate account to a separate project. Used: A1 local install on own machine; A2 local install on own machine from the round-1 kit (labelstudio/ANNOTATOR_SETUP.md), shared as a download page, not a shared server.
