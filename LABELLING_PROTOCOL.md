@@ -65,7 +65,7 @@ exports of a round were saved. Each annotator used a separate Label Studio proje
 | Step | Date (UTC) | File |
 |---|---|---|
 | Round 1 tasks generated | 2026-10-18 17:01 IST (rebuilt after the D5 gold fix; tasks sha256 f6633acb...; first build 00:49 was superseded before any finished labelling, see supporting_files/B_engine/gold_fix_ug_background.md) | `data/labels/round1/tasks.json`, `manifest.csv` |
-| Round 1 A1 labelled 2026-10-18 19:00 to 20:10 IST, exported 20:12 (export sha256 0238baff...) | `data/labels/round1/export_A1.json` |
+| Round 1 A1 finished | labelled 2026-10-18 19:00 to 20:10 IST, exported 20:12 (export sha256 0238baff...) | `data/labels/round1/export_A1.json` |
 | Round 1 A2 finished | TODO | `data/labels/round1/export_A2.json` |
 | Round 1 agreement | TODO | `supporting_files/C_labelling/round1/agreement_summary.json` |
 | Round 1 adjudication | TODO | `data/labels/round1/adjudication.csv` |
