@@ -1,0 +1,68 @@
+{
+ "input": "data/processed/queries.jsonl",
+ "output": "data/processed/queries_para.jsonl",
+ "n_pairs": 600,
+ "per_intent": {
+  "elective_recommendation": 200,
+  "eligibility": 200,
+  "remaining_core": 200
+ },
+ "prompt_ids": [
+  "paraphrase_query_v1",
+  "paraphrase_justification_v1"
+ ],
+ "num_predict": {
+  "query": 96,
+  "justification": 160
+ },
+ "seed": 205,
+ "temperature": 0.7,
+ "only_splits": null,
+ "limit": null,
+ "split_files_found": true,
+ "per_split": {
+  "programme_holdout": {
+   "rows": 82,
+   "complete": 82
+  },
+  "test": {
+   "rows": 102,
+   "complete": 102
+  },
+  "train": {
+   "rows": 336,
+   "complete": 336
+  },
+  "val": {
+   "rows": 80,
+   "complete": 80
+  }
+ },
+ "para_query_done": 600,
+ "para_justification_done": 600,
+ "per_backend": {
+  "llamacpp": 107,
+  "kaggle-transformers": 332,
+  "kaggle-transformers+llamacpp": 161
+ },
+ "empty_para_query": 0,
+ "empty_para_justification": 0,
+ "seconds_this_run": {
+  "query": 0.0,
+  "justification": 46.5
+ },
+ "wall_seconds": 46.6,
+ "model": "qwen2.5:1.5b",
+ "model_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+ "gguf_blob": "sha256:183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4",
+ "backend": {
+  "backend": "llamacpp",
+  "url": "http://127.0.0.1:8091",
+  "version": "b11643-1ddc26255",
+  "model_path": "sha256-183715c435899236895da3869489cc30ac241476b4971a20285b1a462818a5b4"
+ },
+ "new_calls": 4,
+ "cache_hits": 2,
+ "llm_seconds": 46.5,
+ "mean_seconds_per_call": 11.63
+}

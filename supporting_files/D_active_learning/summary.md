@@ -13,7 +13,7 @@ Score (see src/active/disagreement.py): 3 for invalid JSON, else (1 - Jaccard of
 | 50 | active_learning_stratified | 0.19 (sd 0.01) | 1.00 | 3.0 | 3.0 |
 | 50 | random | 0.15 (sd 0.01) | 0.92 | 3.0 | 3.0 |
 | 100 | active_learning | 0.43 (sd 0.00) | 0.60 | 3.0 | 1.0 |
-| 100 | active_learning_stratified | 0.39 (sd 0.01) | 1.00 | 3.0 | 3.0 |
+| 100 | active_learning_stratified | 0.38 (sd 0.01) | 1.00 | 3.0 | 3.0 |
 | 100 | random | 0.30 (sd 0.01) | 0.88 | 3.0 | 3.0 |
 
 active_learning_stratified was added after the first run, which showed plain top-k drawing every pick from remaining_core; the original strategy and its numbers are kept unchanged.

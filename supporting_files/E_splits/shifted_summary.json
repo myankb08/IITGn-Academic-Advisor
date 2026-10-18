@@ -1,0 +1,15 @@
+{
+ "n_rows": 10,
+ "by_programme": {
+  "MTech-AI": 2,
+  "MTech-CSE": 4,
+  "MTech-EE": 2,
+  "MTech-ICDT": 2
+ },
+ "by_question_kind": {
+  "Elective advice": 2,
+  "Eligibility for a course": 1,
+  "Other": 1,
+  "Remaining requirements": 6
+ }
+}

@@ -3,8 +3,8 @@ budget,strategy,n_seeds,failures_captured,failures_captured_sd,failure_types_cov
 25,active_learning_stratified,5,0.0974,0.0044,1.0,0.0,3,0.0,3,0.0
 25,random,5,0.0776,0.0061,0.88,0.098,3,0.0,3,0.0
 50,active_learning,5,0.2155,0.0,0.6,0.0,3,0.0,1,0.0
-50,active_learning_stratified,5,0.1931,0.0074,1.0,0.0,3,0.0,3,0.0
+50,active_learning_stratified,5,0.1931,0.0069,1.0,0.0,3,0.0,3,0.0
 50,random,5,0.1517,0.0103,0.92,0.098,3,0.0,3,0.0
 100,active_learning,5,0.431,0.0,0.6,0.0,3,0.0,1,0.0
-100,active_learning_stratified,5,0.3853,0.013,1.0,0.0,3,0.0,3,0.0
+100,active_learning_stratified,5,0.3836,0.0122,1.0,0.0,3,0.0,3,0.0
 100,random,5,0.2991,0.008,0.88,0.098,3,0.0,3,0.0
