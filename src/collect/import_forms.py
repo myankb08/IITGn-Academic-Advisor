@@ -26,6 +26,7 @@ FIELDS = {
     "Track": "track",
     "Current semester": "semester",
     "Courses completed so far": "courses_completed",
+    "Name of courses completed so far": "courses_completed",  # title as edited on the live form
     "Your question for an academic advisor": "question",
     "Your question ?": "question",  # title as edited on the live form (v2)
     "What kind of question is this?": "question_kind",

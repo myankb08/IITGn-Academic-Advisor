@@ -1,0 +1,12 @@
+{
+  "source": "data/raw/forms/responses_raw.csv",
+  "rows_read": 10,
+  "rows_kept": 10,
+  "rows_excluded": 0,
+  "dropped_columns": [
+    "Timestamp"
+  ],
+  "unmapped_columns": [],
+  "emails_redacted": 0,
+  "phones_redacted": 0
+}
