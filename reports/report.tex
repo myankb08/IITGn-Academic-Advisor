@@ -60,7 +60,7 @@
 \newcommand{\nmeta}{3083}
 \newcommand{\nmetaraw}{578}
 \newcommand{\nmetaproc}{2505}
-\newcommand{\ncommitsH}{47}
+\newcommand{\ncommitsH}{48}
 \newcommand{\ncommitsM}{3}
 \newcommand{\freezestatus}{set on the commit that contains this report}
 
@@ -112,7 +112,7 @@ rows (\nmetaraw{} raw, \nmetaproc{} processed): source files, pages, timetable r
 rule with a stated value (76 of 77), 180 students, 600 pairs, 1526 augmented children and \nforms{} form responses
 [\ev{meta}, \ev{metakinds}].
 
-\textbf{Course plans.} For the 50 CS and ES codes, 15 plans downloaded, 12 links need an IITGN login (not bypassed)
+\textbf{Course plans.} For the 50 CS and ES codes, 15 plans downloaded, 12 links need an IITGN login, so they were not downloaded
 and 23 codes have no link [\ev{plancs}]. For the 25 EE codes the split is 7, 4 and 14 [\ev{planee}], so 22 plan
 files were saved [\ev{planfiles}].
 
@@ -185,7 +185,8 @@ justification. Annotators fill three levels in a fixed order: decision (accept, 
 then the edit text (Appendix~\ref{app:c}). Deciding first keeps the category list from steering the decision. A1 (SMH)
 and A2 (MSB) labelled the same items in Label Studio 1.23.2, two disjoint rounds drawn from the test split with
 seed 208 [\ev{design}, \ev{seedann}, \ev{ls}]. Round 1 used guidelines v1; round 2 used v2, which adds seven rules,
-each tied to a round-1 disagreement [\ev{v2rules}].
+each tied to a round-1 disagreement [\ev{v2rules}]. Labelling test items is how the gold test set is built: the
+rounds only audit and correct the text, and no model is trained, tuned or selected on any test item.
 
 \begin{figure}[h]
 \centering

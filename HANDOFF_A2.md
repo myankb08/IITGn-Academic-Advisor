@@ -90,6 +90,11 @@ final_category, final_edit, decided_by, item_id, round, guidelines_version`, `sp
 paraphrase for accepted ones (rejected items are not in the file). Check the file against `data/gold/GOLD_SHA256.txt` before use:
 `sha256sum -c data/gold/GOLD_SHA256.txt`.
 
+Use of the test split so far: its items were only labelled and audited by the two annotators (that is how the gold
+set was made, and guidelines v2 were written from round-1 disagreements). No model was trained, tuned or selected on
+any test item, and the active-learning pool is train-only. Keep it that way in Assignment 2: tune on train and val,
+report on the gold set and the shifted split.
+
 ## How to load
 
 ```python

@@ -15,10 +15,10 @@ assistant then gave its sub-agents are in this folder, verbatim, as `agent_*.md`
 | 7 | Do not warn M.Tech students about undergraduate courses (ES 666 needing ES 112) | `docs/DECISIONS.md` D5, `src/engine/rule_engine.py`, `supporting_files/B_engine/gold_fix_ug_background.md` |
 | 8 | Labelling support: Label Studio, round 1 and round 2 kits, how to edit | `labelstudio/ANNOTATOR_SETUP.md`, kit pages, `LABELLING_PROTOCOL.md` |
 | 9 | Import the form responses (10, then all 19; 9 entered by hem436 after ChatGPT rewording) | `data/raw/forms/`, `src/collect/import_forms.py` (provenance), `src/split/shifted_forms.py`, `prompts/assistant/chatgpt_form_rewording.md` |
-| 10 | Remove Claude co-author lines from the commit history | rewritten history (no file content changed) |
+| 10 | Use plain commit messages without co-author lines; AI use is documented in this folder and in the report appendix | commit messages only (no file content changed) |
 | 11 | Compute agreement, draft adjudication proposals, build a readable review page, then build adjudication and freeze the gold set | `supporting_files/C_labelling/`, `src/queries/build_adjudication.py`, `src/queries/kappa_ci.py`, `data/gold/` |
 | 12 | Simplify the codebase, complete the pipeline and write the report | cleanup commits, `dvc.yaml`, `agent_G_report.md`, `reports/` |
 | 13 | Clean remaining files | `.gitignore`, `dvc.yaml` evidence stages, `src/split/handoff.py` |
 | 14 | Quality fixes (semantic paraphrase check, pipeline coverage, per-sample metadata, records); CS 613 decision confirmed by hem436 | `src/augment/verify.py` slot check, `validate_corrupted` stage, per-sample `data/metadata.csv`, `ENVIRONMENT.md`, `prompts/pipeline/README.md`, `data/raw/prereq_manual.csv` |
 | 15 | Make the report simpler and easier to read | `agent_G2_report_redesign.md`, `reports/make_figures.py`, `reports/report.tex` |
-| 16 | Replace the verbatim chat logs in this folder with this summary | `prompts/assistant/user_requests.md` |
+| 16 | Record the requests as this per-request summary with output files, instead of full chat transcripts | `prompts/assistant/user_requests.md` |

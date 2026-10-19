@@ -64,7 +64,7 @@ meaning_drift, incomplete_justification, ambiguous_query, fluency.
 - **Unsure**: pick your best label and do not skip. Disagreements are resolved later, guessing is fine.
 
 ## Worked examples
-These use made-up wording to show the labels. Course facts here are illustrative, always check against the gold answer.
+These use illustrative wording to show the labels. Course facts here are illustrative, always check against the gold answer.
 
 1. Template: "What core courses do I still need to finish?" Paraphrase: "Which core courses are left for me?"
    Justification lists the same remaining courses as the gold answer.
