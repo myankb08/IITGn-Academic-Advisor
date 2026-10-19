@@ -55,7 +55,7 @@ stages:
       size: 105993
     - path: supporting_files/A_collection/extract_tool_versions.json
       hash: md5
-      md5: 5959254cb6cb809a119af8f814db8199
+      md5: 1e4b03179955e737457ca2f407a00f2f
       size: 186
   fetch_course_plans:
     cmd: .venv/bin/python -m src.collect.fetch_course_plans --offline
@@ -93,7 +93,7 @@ stages:
       size: 60178
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 1f24a4737d2e9494b546f7d7fa563848
+      md5: 9c42783cd89110e0fd0b6216bc499ece
       size: 14694
   build_catalog:
     cmd: .venv/bin/python -m src.collect.build_catalog
@@ -184,7 +184,7 @@ stages:
       size: 2507
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 1f24a4737d2e9494b546f7d7fa563848
+      md5: 9c42783cd89110e0fd0b6216bc499ece
       size: 14694
     - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
       hash: md5
@@ -225,8 +225,8 @@ stages:
       size: 15934
     - path: supporting_files/A_collection/prereq_graph.png
       hash: md5
-      md5: a1b8dd9fe63cb2f2d27950e3a40c36fe
-      size: 204823
+      md5: a13003ff36f4ba0b6b3eda14875115c5
+      size: 204634
     - path: supporting_files/B_engine/prereq_graph_report.json
       hash: md5
       md5: 16f499b8e7c9178664d873077c838576
@@ -771,7 +771,7 @@ stages:
     outs:
     - path: supporting_files/B_validation/processed
       hash: md5
-      md5: 53085799e0fe0285355a81f7eb269005.dir
+      md5: 573cc94c52d122e361a80ed3ec462659.dir
       size: 10991
       nfiles: 3
   build_metadata:
@@ -849,7 +849,7 @@ stages:
       size: 2507
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 1f24a4737d2e9494b546f7d7fa563848
+      md5: 9c42783cd89110e0fd0b6216bc499ece
       size: 14694
     - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
       hash: md5
@@ -857,12 +857,12 @@ stages:
       size: 6466
     - path: supporting_files/A_collection/extract_tool_versions.json
       hash: md5
-      md5: 5959254cb6cb809a119af8f814db8199
+      md5: 1e4b03179955e737457ca2f407a00f2f
       size: 186
     outs:
     - path: data/metadata.csv
       hash: md5
-      md5: 56528a51a32f5d755327909a60d0e322
+      md5: 6eb0754fd5a49dc99bbdba87531b93df
       size: 753468
   import_forms:
     cmd: .venv/bin/python -m src.collect.import_forms
@@ -1007,7 +1007,7 @@ stages:
       size: 7450
     - path: supporting_files/B_validation/processed/results.csv
       hash: md5
-      md5: 0263686791124850a6841b6415a6f986
+      md5: cfaf0357e4be1ee14b439e10b187620c
       size: 5296
     outs:
     - path: supporting_files/B_validation/before_after.md
@@ -1123,8 +1123,8 @@ stages:
     outs:
     - path: HANDOFF_A2.md
       hash: md5
-      md5: 790ba8d6d32b19f6727f9a503dd2018b
-      size: 8389
+      md5: e25325b1ed5894e7e373b5a1756b264e
+      size: 8520
   validate_corrupted:
     cmd:
     - .venv/bin/python -m src.validate.corrupt
@@ -1181,11 +1181,11 @@ stages:
     outs:
     - path: data/interim/corrupted
       hash: md5
-      md5: b67db216d11c02990c16d27df01d2b73.dir
-      size: 1773217
+      md5: 94eb660cc636227932e02c0a91ac65ce.dir
+      size: 1776357
       nfiles: 11
     - path: supporting_files/B_validation/corrupted
       hash: md5
-      md5: 929f73cd0cdc9741f8e71d2d80b040d3.dir
+      md5: 06ca753eb5180d6274f119fd35062d94.dir
       size: 23311
       nfiles: 4

@@ -1,4 +1,4 @@
-# Reproducibility check at commit 9adc7fd, 2026-10-19 15:16 IST
+# Reproducibility check at commit 6eac253, 2026-10-19 18:14 IST
 # sha256 of key outputs recorded, then 'dvc repro --force' (every stage rerun), then sha256sum -c
 
 data/processed/courses.json: OK
@@ -17,7 +17,7 @@ data/gold/gold_test.jsonl: OK
 data/interim/base_model_answers.jsonl: OK
 data/raw/forms/responses_anonymised.jsonl: OK
 
-data/metadata.csv: 3074 rows; identical apart from collected_at_utc (run time): True
+data/metadata.csv: 3083 rows; identical apart from collected_at_utc (run time): True
 
 # dvc status after the run:
 Data and pipelines are up to date.
