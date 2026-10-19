@@ -1,6 +1,6 @@
 # Annotator setup (Label Studio 1.23.2)
 
-Each annotator labels on their own, without seeing the other person's labels. A1 = hem436, A2 = Myank.
+Each annotator labels on their own, without seeing the other person's labels. A1 = Shekhar Mohanty Hement (hem436), A2 = Myank Singh Beniwal.
 Read `guidelines_v1.md` (round 1) or `guidelines_v2.md` (round 2) before starting. It takes about 10 minutes.
 
 ## 1. Install (once)
