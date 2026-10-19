@@ -1,5 +1,5 @@
-# Reproducibility check, 2026-10-19 13:35 IST
-# sha256 of key outputs recorded before a full 'dvc repro' (git commit fe6915f), then checked after it with sha256sum -c
+# Reproducibility check at commit 9adc7fd, 2026-10-19 15:16 IST
+# sha256 of key outputs recorded, then 'dvc repro --force' (every stage rerun), then sha256sum -c
 
 data/processed/courses.json: OK
 data/processed/rules.json: OK
@@ -8,14 +8,16 @@ data/processed/queries.jsonl: OK
 data/processed/queries_para.jsonl: OK
 data/processed/queries_augmented.jsonl: OK
 data/splits/train.csv: OK
+data/splits/val.csv: OK
 data/splits/test.csv: OK
+data/splits/programme_holdout.csv: OK
+data/splits/shifted_forms.csv: OK
 data/labels/audited.jsonl: OK
 data/gold/gold_test.jsonl: OK
 data/interim/base_model_answers.jsonl: OK
-data/metadata.csv: FAILED
-sha256sum: WARNING: 1 computed checksum did NOT match
+data/raw/forms/responses_anonymised.jsonl: OK
 
-# data/metadata.csv: 758 rows before and after; identical apart from the collected_at_utc column (run time)
+data/metadata.csv: 3074 rows; identical apart from collected_at_utc (run time): True
 
 # dvc status after the run:
 Data and pipelines are up to date.

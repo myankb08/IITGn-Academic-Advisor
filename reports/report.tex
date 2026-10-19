@@ -35,9 +35,9 @@
 \newcommand{\nformseligibility}{1}
 \newcommand{\nformsother}{1}
 % Numbers that depend on the final dvc repro (data/metadata.csv) and on the final git history
-\newcommand{\nmeta}{758}
+\newcommand{\nmeta}{3074}
 \newcommand{\nmetaraw}{578}
-\newcommand{\nmetaproc}{180}
+\newcommand{\nmetaproc}{2496}
 \newcommand{\ncommitsH}{34}
 \newcommand{\ncommitsM}{3}
 \newcommand{\freezestatus}{created after the final form import (not yet set when this was built)}
@@ -57,7 +57,7 @@ the CS and EE departments, MTech-CSE, MTech-AI, MTech-EE and MTech-ICDT, each wi
 (\f{docs/DECISIONS.md} D1 to D3). A rule engine built from the institute's own documents computes every gold answer, so
 each label points back to a source page. A local LLM (Qwen2.5-1.5B-Instruct) paraphrases questions and
 justifications and two humans audit those paraphrases. Headline numbers: 104 courses and 77 rules with provenance,
-180 synthetic students, 600 advisory pairs (200 per intent), 1609 verified augmented children, 80 doubly labelled
+180 synthetic students, 600 advisory pairs (200 per intent), 1526 verified augmented children, 80 doubly labelled
 audit items, a frozen gold test set of 76 items, and \nforms{} real Google Form questions as a shifted test set.
 
 \section{Part A: Collection}
@@ -67,7 +67,9 @@ pages of the EE M.Tech Google Site. Each file has a sha256 in \f{data/raw/source
 and rule record carries \f{source_doc} plus \f{source_page}, \f{source_row} or \f{source_section}, and a
 \f{record_sha256}; every rule also stores a verbatim quote that \f{build_rules} checks against the page text.
 \f{data/metadata.csv} has \nmeta{} rows (\nmetaraw{} raw, \nmetaproc{} processed), one per sample, with source,
-page, collector, tool, version and content hash.
+page, collector, tool, version and content hash: source files, PDF pages, timetable rows, course plans, raw and
+clean catalog records, every rule with a stated value (76 of 77), 180 students, 600 pairs, 1526 augmented children
+and \nforms{} form responses.
 
 \textbf{Course plans.} Plan links come from the timetable's ``Link To Course Plan'' cell. For the 50 CS/ES codes,
 15 plans downloaded, 12 links need an IITGN login (Google sign-in page, not bypassed) and 23 codes have no link. For
@@ -82,7 +84,7 @@ semester, is marked \f{not_stated} because no source gives it.
 
 \textbf{Prerequisites finding.} No source states an enforceable PG prerequisite: 103 of 104 courses have
 \f{prereq_source: none_stated} and one has a manual entry with an empty list (CS 613, ``Prerequisite (Optional)''
-with UG courses ``or equivalent''). So the engine has two tiers: hard prerequisites (empty in practice, but checked)
+with UG courses ``or equivalent''; first proposed by the pipeline assistant, confirmed by hem436). So the engine has two tiers: hard prerequisites (empty in practice, but checked)
 and \f{recommended_background}, which 3 courses carry. The prerequisite graph has 104 nodes and 9 edges, all of type
 recommended, no missing codes and no cycles. D4 stores UG codes named in plans as recommended background; D5 (decided
 by hem436) says UG-level background never warns an M.Tech student, because they did their UG elsewhere.
@@ -100,7 +102,8 @@ rule engine $\to$ queries $\to$ Label Studio (\f{docs/DATA_FLOW.md}).
 The suite has 25 checks (V01 to V25) written with Pandera schemas, networkx graph checks, rapidfuzz near-duplicate
 titles and the rule engine itself. It runs on three stages. On the raw catalog 10 checks apply: 7 fail, 2 pass,
 1 warns. On processed data all 25 run: 24 pass and V10 warns about 2 near-duplicate titles of different codes, kept
-on purpose (Table~\ref{tab:ba}). On a corrupted copy (seed 209) all 15 injected faults are caught, including a
+on purpose (Table~\ref{tab:ba}). On a corrupted copy made by the DVC stage \f{validate_corrupted} (seed 209, fault list in its output
+\f{data/interim/corrupted/faults.json}) all 15 injected faults are caught, including a
 prerequisite cycle, an unknown prerequisite, total credits changed from 82 to 80, a below-600 cap breach and
 train/test leakage; one planned fault (per-semester credit cap) was not injected because no cap is stated.
 
@@ -171,9 +174,9 @@ overlap and the rounds use different items, so the gain is in the expected direc
 
 \textbf{Adjudication.} 50 items agreed on both levels and needed no adjudication. For the other 30 (17 + 13; round 2
 also includes one item where both chose edit with different texts), the assistant drafted a proposed label and a
-gold-grounded edit for the 29 disagreements, with a one-line reason each. A1 and A2 reviewed every proposal together
-on a review page and made the call: 28 approved, 1 overridden (\f{decided_by} ``A1+A2''). The extra item was decided
-by A1. No item stayed unresolved. Final audit outcome over 80 items: 55 accept, 21 edit, 4 reject. The gold test set
+gold-grounded edit for each of the 30 (the 29 disagreements plus that item), with a one-line reason each. A1 and A2 reviewed every proposal together
+on a review page and made the call on the 29 disagreements: 28 approved, 1 overridden (\f{decided_by} ``A1+A2'').
+A1 decided the extra item. No item stayed unresolved. Final audit outcome over 80 items: 55 accept, 21 edit, 4 reject. The gold test set
 is the 76 accepted or edited items (27 eligibility, 27 elective recommendation, 22 remaining requirements), sha256
 \f{cd2e08dcb56f5716b06981e096c3c93fd417abab1989b5d22d45befeafbc383f} in \f{data/gold/GOLD_SHA256.txt}.
 
@@ -187,7 +190,9 @@ eligibility, \nformsother{} other.
 
 \section{Part D: Augmentation and active learning}
 Every augmented child is kept only if \f{src/augment/verify.py} confirms the rule engine gives the same answer
-(or, for transcript length, the correctly recomputed answer). Of 1610 children, 1609 were kept.
+(or, for transcript length, the correctly recomputed answer). LLM paraphrase children must also keep every fact the
+question states (programme, stream, track, semesters completed, number of electives, term) and must not turn the
+question back on the student (guidelines v2 R4). Of 1610 children, 1526 were kept.
 
 \begin{table}[h]
 \centering\small
@@ -196,7 +201,7 @@ Every augmented child is kept only if \f{src/augment/verify.py} confirms the rul
 \toprule
 augmentation & check & children & pass & rate \\
 \midrule
-LLM paraphrase & gold unchanged & 120 & 119 & 0.9917 \\
+LLM paraphrase & gold and slots unchanged & 120 & 36 & 0.3 \\
 typos and abbreviations & gold unchanged & 600 & 600 & 1.0 \\
 transcript order shuffled & gold unchanged & 445 & 445 & 1.0 \\
 transcript length (earlier snapshot) & gold recomputed correctly & 445 & 445 & 1.0 \\
@@ -204,10 +209,15 @@ transcript length (earlier snapshot) & gold recomputed correctly & 445 & 445 & 1
 \end{tabular}
 \end{table}
 
-The one failed paraphrase lost a course code. For active learning, the base model (same Qwen2.5-1.5B, greedy)
+Only 36 of 120 LLM paraphrases pass: most drop or change a fact the question states. The most frequent lost slot
+is the track (in 47 failures, 26 of them track alone), then semesters completed (35) and stream (21); 10 turn the
+question to the student. This matches the ``workshop track'' errors the annotators caught in Part C. The typo and
+transcript checks pass at 1.0 by construction, since those transforms never touch the facts the engine reads (or, for
+length, the engine recomputes the answer). For active learning, the base model (same Qwen2.5-1.5B, greedy)
 answered the 336 train pairs; 232 of its answers fail against gold (wrong remaining 94, ineligible recommendation 64,
 wrong eligibility 56, invalid JSON 18, hallucinated code 2). The score ranks pairs by disagreement with the rule
 engine. Table~\ref{tab:al} gives the share of the 232 failures each strategy captures; random is the mean of 5 seeds.
+This is a label-efficiency comparison, not a learning curve: no model is retrained on the picks.
 
 \begin{table}[h]
 \centering\small
@@ -229,7 +239,9 @@ random (5 seeds) & 0.08 & 0.15 & 0.30 & 0.88 to 0.92 & 3 \\
 \caption{Label efficiency: failures captured, failure types covered and intents covered per budget.}\label{fig:al}
 \end{figure}
 
-Honest reading: plain top-k finds the most failures at every budget, but every pick comes from one intent
+Honest reading: the score and the failure test are the same comparison with the rule engine, so every top-k pick
+is a failure (precision 1 by construction) and its ``failures captured'' is just budget over 232. The informative
+comparison is which failures each strategy reaches. Plain top-k takes every pick from one intent
 (remaining requirements) and it covers only 0.60 of the failure types. We saw this after the first run and added an
 intent-stratified variant; it keeps most of the gain over random and covers all failure types and intents. The
 original strategy and its numbers are kept unchanged and the stratified one is reported as a later addition.
@@ -237,7 +249,7 @@ original strategy and its numbers are kept unchanged and the stratified one is r
 \section{Part E: Versioning and splits}
 DVC tracks the frozen human and raw inputs with \f{dvc add} (\f{data/raw/sources}, both course-plan folders, the raw
 form CSV, the LLM cache \f{data/interim/llm_cache.jsonl}, and the round 1 and 2 tasks, manifests, exports and adjudication files) and the pipeline in \f{dvc.yaml}
-(25 stages, from \f{extract_sources} through the human-input stages to \f{handoff}; EE fetching is frozen). Evidence files are outputs with
+(26 stages, from \f{extract_sources} through the human-input stages to \f{handoff} and \f{validate_corrupted}; EE fetching is frozen). Evidence files are outputs with
 \f{cache: false} so they stay readable in git. \f{dvc.lock} pins the hash of every stage output. A full \f{dvc repro}
 runs offline (LLM stages replay the cache) and reproduced courses, rules, students, queries, paraphrases,
 augmented pairs, splits, audited labels, the gold set and base-model answers byte for byte; \f{data/metadata.csv}
@@ -257,9 +269,9 @@ ICDT in train/val/test, duplicate ids), and no pair was dropped.
 \toprule
 split & students & pairs & children & rows & eligible / not & pairs CSE / AI / EE / ICDT \\
 \midrule
-train & 101 & 336 & 922 & 1258 & 56 / 56 & 127 / 90 / 119 / 0 \\
-val & 24 & 80 & 207 & 287 & 13 / 13 & 35 / 21 / 24 / 0 \\
-test & 31 & 102 & 274 & 376 & 17 / 17 & 49 / 21 / 32 / 0 \\
+train & 101 & 336 & 869 & 1205 & 56 / 56 & 127 / 90 / 119 / 0 \\
+val & 24 & 80 & 200 & 280 & 13 / 13 & 35 / 21 / 24 / 0 \\
+test & 31 & 102 & 251 & 353 & 17 / 17 & 49 / 21 / 32 / 0 \\
 programme\_holdout & 24 & 82 & 206 & 288 & 14 / 14 & 0 / 0 / 0 / 82 \\
 shifted (forms) & n/a & \nforms{} & 0 & \nforms{} & n/a & see Part C \\
 \bottomrule
@@ -273,7 +285,9 @@ The shifted split \f{data/splits/shifted_forms.csv} holds the real form question
 \f{DATASET_CARD.md} lists sources, sizes, split balance, known biases and intended use (advisory model training and
 label-noise study, not official advice). \f{ENVIRONMENT.md} records the machine (Ubuntu 22.04.5, Ryzen 5 2500U, CPU
 only), Python 3.10.12, DVC 3.67.1, Label Studio 1.23.2 in its own venv, the model tag, digest and GGUF blob, all
-eight seeds, and the three LLM backends. \f{LABELLING_PROTOCOL.md} records who labelled what, config and guideline
+eight seeds, the three LLM backends and the Kaggle GPU (Tesla T4, CUDA 12.8, torch 2.11.0+cu128, transformers
+5.16.1). \f{prompts/pipeline/README.md} records the model, versions and backends per prompt and the Qwen default
+system prompt. \f{LABELLING_PROTOCOL.md} records who labelled what, config and guideline
 per round, item order and seed, what annotators could see, the adjudication process and a timeline matched to export
 files. Exports are never edited. Rebuild:
 \f{python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt}, then \f{.venv/bin/dvc pull},
@@ -330,7 +344,7 @@ number & claim & file & field / row \\
 1422; 0 & transcript entries; violations & same & \f{transcript_entries}, \f{violations} \\
 203 & transcript seed & \f{params.yaml} & \f{seeds.transcripts} \\
 600; 200 per intent & advisory pairs & \f{supporting_files/B_engine/queries_summary.json} & \f{n_pairs}, \f{per_intent} \\
-1609; 1610 & children kept; children in & \f{supporting_files/D_augmentation/verify_report.json} & \f{kept}, \f{children_in} \\
+1526; 1610 & children kept; children in & \f{supporting_files/E_splits/split_summary.json}, \f{supporting_files/D_augmentation/verify_report.json} & \f{n_children_in} (sum of \f{child_rows_per_split}); \f{children_in} \\
 80 & audit items & \f{data/labels/audited.jsonl} & row count (40 with round 1, 40 with round 2) \\
 76 & gold items & \f{supporting_files/E_splits/gold_summary.json} & \f{n_gold} \\
 \nforms{} & real form questions & \f{supporting_files/C_labelling/forms_import_log.json} & \f{rows_kept}; \f{supporting_files/E_splits/shifted_summary.json} \f{n_rows} \\
@@ -339,13 +353,14 @@ number & claim & file & field / row \\
 \nformsremaining{} / \nformselective{} / \nformseligibility{} / \nformsother{} & replies by kind & \f{supporting_files/E_splits/shifted_summary.json} & \f{by_question_kind} \\
 8 advisories, CSE structure, timetable, 4 EE pages & raw sources & \f{data/raw/sources/source_metadata.json}, \f{data/metadata.csv} & \f{sources[].sha256}; \f{artifact} rows under \f{data/raw/sources/} \\
 \nmeta{} (\nmetaraw{} raw, \nmetaproc{} processed) & metadata rows & \f{data/metadata.csv} & row count; \f{layer} counts \\
+180 / 600 / 1526 / \nforms{} / 76 & metadata rows for students, pairs, children, forms, rules & \f{data/metadata.csv} & \f{sample_id} prefixes \f{student}, \f{pair}, \f{aug}, \f{form}, \f{rule} \\
 50: 15 / 12 / 23 & CS/ES plan codes: downloaded / login / no link & \f{supporting_files/A_collection/course_plan_fetch_log.csv} & last \f{outcome} per \f{code} (ok, failed with ``Google sign-in page'', no\_url) \\
 25: 7 / 4 / 14 & EE plan codes & \f{supporting_files/A_collection/ee_course_plan_fetch_log.csv} & same \\
 22 & plan files & \f{data/raw/course_plans/} & file count (15 + 7) \\
 136 & raw catalog records & \f{data/metadata.csv} & rows with \f{artifact} = \f{data/raw/catalog_raw.json}; \f{supporting_files/A_collection/collection_log.md} section 7 \\
 78 & cleaning changes & \f{supporting_files/A_collection/cleaning_changes.csv} & data rows \\
 103 / 1 & none\_stated / manual prerequisite & \f{data/processed/courses.json} & \f{prereq_source} \\
-CS 613 & manual prerequisite decision & \f{data/raw/prereq_manual.csv}, \f{supporting_files/A_collection/collection_log.md} & section 4 \\
+CS 613 & manual prerequisite decision & \f{data/raw/prereq_manual.csv} & \f{decided_by} \\
 3 & courses with recommended background & \f{data/processed/courses.json} & non-empty \f{recommended_background} \\
 104 nodes, 9 edges, 0 cycles, 0 missing & prerequisite graph & \f{supporting_files/B_engine/prereq_graph_report.json} & \f{nodes}, \f{edges}, \f{edges_by_type}, \f{cycles}, \f{missing_prereq_codes} \\
 D4, D5 & background decisions & \f{docs/DECISIONS.md} & rows D4, D5 \\
@@ -354,7 +369,7 @@ raw 10: 7 fail, 2 pass, 1 warn & raw stage & \f{supporting_files/B_validation/ra
 processed 24 pass, 1 warn (2) & processed stage & \f{supporting_files/B_validation/processed/results.csv} & \f{status}; V10 \f{n_failures} \\
 15 of 15 & faults caught & \f{supporting_files/B_validation/corrupted/faults_caught.json} & \f{caught} \\
 82 to 80 & injected credit fault & same & F05 \f{description} \\
-1 not injected & semester cap fault & \f{data/interim/corrupted/faults.json} & \f{not_injected} \\
+1 not injected & semester cap fault & \f{data/interim/corrupted/faults.json} (output of DVC stage \f{validate_corrupted}) & \f{not_injected} \\
 209 & corruption seed & \f{params.yaml} & \f{seeds.validation_corruption} \\
 Table 1 values & before/after & \f{supporting_files/B_validation/before_after.md} & table rows \\
 100 of 600 & gold changed, MTech-AI fix & \f{supporting_files/B_engine/gold_fix_mtech_ai_baskets.md} & ``Effect'' \\
@@ -371,21 +386,23 @@ Table 2 kappas and CIs & agreement & \f{supporting_files/C_labelling/kappa_ci.js
 Figure 1 & confusion & \f{supporting_files/C_labelling/round1/confusion_decision.csv}, \f{round2/confusion_decision.csv} & matrix \\
 seven v2 rules & guideline changes & \f{supporting_files/C_labelling/round1/disagreement_analysis.md} & R1 to R7 \\
 50; 17 + 13 & agreed; adjudicated & \f{supporting_files/C_labelling/adjudication_log.json} & \f{agreed}, \f{adjudicated} per round \\
-29 & assistant proposals & \f{supporting_files/C_labelling/adjudication_proposals.json} & keys other than \f{_about} \\
+30 (29 + R2-Q0196) & assistant proposals & \f{supporting_files/C_labelling/adjudication_proposals.json} & keys other than \f{_about} \\
 28 approve, 1 override & human decisions & \f{supporting_files/C_labelling/adjudication_decisions_export.json} & \f{choice}, \f{decided_by} \\
 1 decided by A1 & extra item R2-Q0196 & \f{data/labels/audited.jsonl} & \f{decided_by} ``A1 (chose the assistant-drafted combined text in chat)'' \\
 0 unresolved & adjudication & \f{supporting_files/C_labelling/adjudication_log.json} & \f{unresolved_items} \\
 55 / 21 / 4 & final accept / edit / reject & \f{data/labels/audited.jsonl} & \f{final_decision} \\
 27 / 27 / 22 & gold by intent & \f{supporting_files/E_splits/gold_summary.json} & \f{by_intent} \\
 sha256 cd2e08dc... & gold checksum & \f{data/gold/GOLD_SHA256.txt} & line 1 \\
-Table 3 values & invariance & \f{supporting_files/D_augmentation/invariance.csv} & all rows \\
-code\_lost & failed paraphrase & same & \f{fail_reasons} \\
+Table 3 values; 36 of 120 & invariance & \f{supporting_files/D_augmentation/invariance.csv} & all rows; \f{n_pass} \\
+47 (26 alone) / 35 / 21 / 10 & paraphrase failures losing track / semesters / stream / turned to student & same & \f{fail_reasons}, counts summed over every reason that names the slot \\
+slot list & semantic check & \f{src/augment/verify.py} & \f{slot_issues} \\
 336; 232 & AL pool; failures & \f{supporting_files/D_active_learning/scores_summary.json} & \f{n}, \f{failed} \\
 94 / 64 / 56 / 18 / 2 & failure types & same & \f{failure_types} \\
 Table 4 values & AL vs random & \f{supporting_files/D_active_learning/label_efficiency.csv} & \f{failures_captured}, \f{failure_types_covered}, \f{intents_covered} \\
 5 seeds & random baseline & \f{params.yaml} & \f{seeds.active_learning} \\
-stratified added later & AL variant & \f{supporting_files/D_active_learning/summary.md} & last paragraph \\
-25 stages; frozen EE fetch & DVC pipeline & \f{dvc.yaml} & \f{stages}; \f{fetch_ee_pages: frozen} \\
+stratified added later & AL variant & \f{supporting_files/D_active_learning/summary.md} & paragraph after the table \\
+precision 1; not a learning curve & reading of AL & same & ``Reading the first column'' \\
+26 stages; frozen EE fetch & DVC pipeline & \f{dvc.yaml} & \f{stages}; \f{fetch_ee_pages: frozen} \\
 \f{dvc add} inputs & DVC-tracked inputs & \f{data/raw/*.dvc}, \f{data/raw/forms/responses_raw.csv.dvc}, \f{data/labels/round*/*.dvc} & files \\
 \f{../dvc_remote} & DVC remote & \f{.dvc/config}, \f{README.md} & \f{remote "localremote"} \\
 \f{a1-final} & freeze tag & \f{HANDOFF_A2.md} & first paragraph \\
@@ -396,12 +413,15 @@ stratified added later & AL variant & \f{supporting_files/D_active_learning/summ
 Table 5 values & split sizes & \f{supporting_files/E_splits/split_summary.json} & \f{student_assignment}, \f{original_rows_per_split}, \f{child_rows_per_split}, \f{rows_per_split}, \f{eligibility_by_split}, \f{original_rows_by_programme} \\
 all overlaps 0, 0 dropped & split checks & same & \f{overlap_checks}, \f{all_overlaps_zero}, \f{n_dropped_pairs} \\
 22.04.5, 2500U, 3.10.12, 3.67.1 & environment & \f{ENVIRONMENT.md} & Machine, Python and tools tables \\
+T4, CUDA 12.8, 2.11.0+cu128, 5.16.1 & Kaggle GPU & \f{ENVIRONMENT.md} & GPU row \\
+per-prompt model and backends & prompt record & \f{prompts/pipeline/README.md} & Model, Prompts \\
+prompts 1 to 58 & session logs & \f{prompts/assistant/claude_code_session_2026-10-18.md} & last heading ``Prompt 58'' \\
 eight seeds & seeds & \f{params.yaml} & \f{seeds} \\
 Ollama 0.1.38, llama.cpp, Kaggle T4 & LLM backends & \f{supporting_files/D_augmentation/llm_backend.md} & sections 1, 2, 4 \\
 \f{para_backend} per row & backend record & \f{data/processed/queries_para.jsonl} & \f{para_backend} \\
 30 & form target & assignment brief (not in the zip) & Section 8, Project 4, Labelling: ``at least 30 real queries'' \\
 ``to be updated soon'' & ICDT list incomplete & \f{supporting_files/A_collection/collection_log.md}, \f{DATASET_CARD.md} & section 7; limits \\
-\ncommitsH{} / \ncommitsM{} & commits per author & git history: \f{git log --format=}\%\f{an | sort | uniq -c} & hem436 / Myank Singh Beniwal \\
+\ncommitsH{} / \ncommitsM{} & commits per author & git history: \texttt{git log -{}-format=\%an | sort | uniq -c} & hem436 / Myank Singh Beniwal \\
 A2 exports & committed by MSB & git commits f395c8a, 709292f; \f{LABELLING_PROTOCOL.md} & section 9 \\
 form shared by hem436 & distribution & \f{supporting_files/C_labelling/forms_log.md} & row 2 \\
 byte-for-byte repro & reproducibility & \f{supporting_files/F_reproducibility/repro_check.txt} & \f{sha256sum -c} lines; \f{dvc status} \\
@@ -416,15 +436,17 @@ byte-for-byte repro & reproducibility & \f{supporting_files/F_reproducibility/re
 prompts are in \f{prompts/assistant/}: \f{agent_common_rules.md}, \f{agent_A_curriculum.md}, \f{agent_A2_ee_pages.md},
 \f{agent_B_engine.md}, \f{agent_B2_engine_revision.md}, \f{agent_C_labelling.md}, \f{agent_D_validation.md},
 \f{agent_E_llm_augment_al.md}, \f{agent_F_splits_dvc_docs.md}, \f{agent_F2_resplit.md} and \f{agent_G_report.md}
-(this report). The user's own prompts are logged in \f{claude_code_session_2026-10-17.md} and
-\f{claude_code_session_2026-10-18.md}. The assistant also drafted the 29 adjudication proposals (a human made every
+(this report) and \f{agent_H_mock_grading.md} (mock grading). The user's own prompts are logged in
+\f{claude_code_session_2026-10-17.md} and \f{claude_code_session_2026-10-18.md}, which cover prompts 1 to 58.
+The assistant also drafted the 30 adjudication proposals (a human made every
 final call), built the labelling kit pages and the adjudication review page, and built and edited the Google Form in
 the browser (Claude in Chrome) at the user's request.
 
 \textbf{Pipeline LLM.} Qwen2.5-1.5B-Instruct (\f{qwen2.5:1.5b}, Q4\_K\_M via llama.cpp, or fp16 via transformers on
 Kaggle) paraphrases queries and justifications and gives base-model answers. Its prompts are files in
 \f{prompts/pipeline/}: \f{paraphrase_query_v1.txt}, \f{paraphrase_justification_v1.txt}, \f{augment_paraphrase_v1.txt},
-\f{base_model_answer_v1.txt}. Model, digest and backend are stored with every output.
+\f{base_model_answer_v1.txt}. Model, digest and backend are stored with every output, and
+\f{prompts/pipeline/README.md} lists model, versions and backends per prompt and the Qwen default system prompt.
 
 \textbf{What humans did.} All labelling (A1 and A2, both rounds), every adjudication decision, the scope and modelling
 decisions in \f{docs/DECISIONS.md}, both gold-bug findings, and form sharing and distribution. The assistant declined

@@ -55,7 +55,7 @@ stages:
       size: 105993
     - path: supporting_files/A_collection/extract_tool_versions.json
       hash: md5
-      md5: cc81917da6c6ad215311e3c15eab9378
+      md5: 5959254cb6cb809a119af8f814db8199
       size: 186
   fetch_course_plans:
     cmd: .venv/bin/python -m src.collect.fetch_course_plans --offline
@@ -93,7 +93,7 @@ stages:
       size: 60178
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 29b904d974a8da6b01a0b720b6134a16
+      md5: 1f24a4737d2e9494b546f7d7fa563848
       size: 14694
   build_catalog:
     cmd: .venv/bin/python -m src.collect.build_catalog
@@ -184,7 +184,7 @@ stages:
       size: 2507
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 29b904d974a8da6b01a0b720b6134a16
+      md5: 1f24a4737d2e9494b546f7d7fa563848
       size: 14694
     - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
       hash: md5
@@ -225,8 +225,8 @@ stages:
       size: 15934
     - path: supporting_files/A_collection/prereq_graph.png
       hash: md5
-      md5: e62afcf47f76711a4c0d3cdf01408f9d
-      size: 203421
+      md5: a1b8dd9fe63cb2f2d27950e3a40c36fe
+      size: 204823
     - path: supporting_files/B_engine/prereq_graph_report.json
       hash: md5
       md5: 16f499b8e7c9178664d873077c838576
@@ -849,7 +849,7 @@ stages:
       size: 2507
     - path: supporting_files/A_collection/course_plan_fetch_log.csv
       hash: md5
-      md5: 29b904d974a8da6b01a0b720b6134a16
+      md5: 1f24a4737d2e9494b546f7d7fa563848
       size: 14694
     - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
       hash: md5
@@ -857,12 +857,12 @@ stages:
       size: 6466
     - path: supporting_files/A_collection/extract_tool_versions.json
       hash: md5
-      md5: cc81917da6c6ad215311e3c15eab9378
+      md5: 5959254cb6cb809a119af8f814db8199
       size: 186
     outs:
     - path: data/metadata.csv
       hash: md5
-      md5: 6157338169d4d3748738cae2267245be
+      md5: 59ebb340eae0c58905674eb2222321ea
       size: 751254
   import_forms:
     cmd: .venv/bin/python -m src.collect.import_forms
