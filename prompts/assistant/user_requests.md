@@ -19,7 +19,6 @@ assistant then gave its sub-agents are in this folder, verbatim, as `agent_*.md`
 | 11 | Compute agreement, draft adjudication proposals, build a readable review page, then build adjudication and freeze the gold set | `supporting_files/C_labelling/`, `src/queries/build_adjudication.py`, `src/queries/kappa_ci.py`, `data/gold/` |
 | 12 | Simplify the codebase, complete the pipeline and write the report | cleanup commits, `dvc.yaml`, `agent_G_report.md`, `reports/` |
 | 13 | Clean remaining files | `.gitignore`, `dvc.yaml` evidence stages, `src/split/handoff.py` |
-| 14 | Emulate the AI and TA grading | `agent_H_mock_grading.md` (read-only check) |
-| 15 | Apply the grading fixes; CS 613 decision confirmed by hem436 | `src/augment/verify.py` slot check, `validate_corrupted` stage, per-sample `data/metadata.csv`, `ENVIRONMENT.md`, `prompts/pipeline/README.md`, `data/raw/prereq_manual.csv` |
-| 16 | Make the report simpler and easier to read | `agent_G2_report_redesign.md`, `reports/make_figures.py`, `reports/report.tex` |
-| 17 | Replace the verbatim chat logs in this folder with this summary | `prompts/assistant/user_requests.md` |
+| 14 | Quality fixes (semantic paraphrase check, pipeline coverage, per-sample metadata, records); CS 613 decision confirmed by hem436 | `src/augment/verify.py` slot check, `validate_corrupted` stage, per-sample `data/metadata.csv`, `ENVIRONMENT.md`, `prompts/pipeline/README.md`, `data/raw/prereq_manual.csv` |
+| 15 | Make the report simpler and easier to read | `agent_G2_report_redesign.md`, `reports/make_figures.py`, `reports/report.tex` |
+| 16 | Replace the verbatim chat logs in this folder with this summary | `prompts/assistant/user_requests.md` |
