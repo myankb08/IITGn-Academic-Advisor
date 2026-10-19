@@ -75,3 +75,4 @@ decisions must be checked with the academic office. No personal data: students a
 anonymised and consent-filtered (`docs/CONSENT_AND_LICENSING.md`).
 
 - Google Form v2 shows three example questions under the question field; replies submitted after 2026-10-17 23:00 IST may echo their wording. Each reply carries its form_version.
+- 9 of the 19 real questions were asked in person and entered in the form by hem436 after ChatGPT rewording (`provenance = entered_by_hem436_chatgpt_reworded`): they are real questions but not in the students' own words. Use the 10 `self_submitted` rows when the students' own phrasing matters.

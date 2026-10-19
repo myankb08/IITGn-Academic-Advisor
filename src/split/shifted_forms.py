@@ -3,7 +3,7 @@
     .venv/bin/python -m src.split.shifted_forms
 
 Reads data/raw/forms/responses_anonymised.jsonl (consenting rows only, made by src.collect.import_forms)
-and writes data/splits/shifted_forms.csv with the manifest columns plus question_kind and form_version.
+and writes data/splits/shifted_forms.csv with the manifest columns plus question_kind, form_version and provenance.
 These are real student questions without a template, so template_family is "real_form" and template_id is empty.
 If the forms file is absent the stage stops with a message and writes nothing.
 """
@@ -22,15 +22,17 @@ def main():
     SPLITS.mkdir(parents=True, exist_ok=True)
     out = SPLITS / "shifted_forms.csv"
     with open(out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNS + ["question_kind", "form_version"])
+        w = csv.DictWriter(f, fieldnames=COLUMNS + ["question_kind", "form_version", "provenance"])
         w.writeheader()
         for r in sorted(rows, key=lambda r: r["response_id"]):
             w.writerow({"query_id": r["response_id"], "student_id": "", "template_family": "real_form",
                         "template_id": "", "programme": r.get("programme"), "split": "shifted",
-                        "question_kind": r.get("question_kind"), "form_version": r.get("form_version")})
+                        "question_kind": r.get("question_kind"), "form_version": r.get("form_version"), "provenance": r.get("provenance")})
     summary = {"n_rows": len(rows),
                "by_programme": dict(sorted(Counter(str(r.get("programme")) for r in rows).items())),
-               "by_question_kind": dict(sorted(Counter(str(r.get("question_kind")) for r in rows).items()))}
+               "by_question_kind": dict(sorted(Counter(str(r.get("question_kind")) for r in rows).items())),
+               "by_form_version": dict(sorted(Counter(str(r.get("form_version")) for r in rows).items())),
+               "by_provenance": dict(sorted(Counter(str(r.get("provenance")) for r in rows).items()))}
     EVIDENCE.mkdir(parents=True, exist_ok=True)
     with open(EVIDENCE / "shifted_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=1)

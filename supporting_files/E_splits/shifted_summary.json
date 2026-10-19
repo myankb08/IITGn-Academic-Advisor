@@ -1,15 +1,23 @@
 {
- "n_rows": 10,
+ "n_rows": 19,
  "by_programme": {
-  "MTech-AI": 2,
-  "MTech-CSE": 4,
-  "MTech-EE": 2,
-  "MTech-ICDT": 2
+  "MTech-AI": 3,
+  "MTech-CSE": 8,
+  "MTech-EE": 5,
+  "MTech-ICDT": 3
  },
  "by_question_kind": {
-  "Elective advice": 2,
-  "Eligibility for a course": 1,
-  "Other": 1,
-  "Remaining requirements": 6
+  "Elective advice": 5,
+  "Eligibility for a course": 2,
+  "Other": 3,
+  "Remaining requirements": 9
+ },
+ "by_form_version": {
+  "v1": 8,
+  "v2": 11
+ },
+ "by_provenance": {
+  "entered_by_hem436_chatgpt_reworded": 9,
+  "self_submitted": 10
  }
 }

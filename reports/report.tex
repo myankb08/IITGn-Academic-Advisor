@@ -26,18 +26,20 @@
 
 % Numbers that change after the final Google Form import (supporting_files/C_labelling/forms_import_log.json,
 % data/raw/forms/responses_anonymised.jsonl, supporting_files/E_splits/shifted_summary.json)
-\newcommand{\nforms}{10}
+\newcommand{\nforms}{19}
 \newcommand{\nformsvone}{8}
-\newcommand{\nformsvtwo}{2}
+\newcommand{\nformsvtwo}{11}
 \newcommand{\nformsexcluded}{0}
-\newcommand{\nformsremaining}{6}
-\newcommand{\nformselective}{2}
-\newcommand{\nformseligibility}{1}
-\newcommand{\nformsother}{1}
+\newcommand{\nformsremaining}{9}
+\newcommand{\nformselective}{5}
+\newcommand{\nformseligibility}{2}
+\newcommand{\nformsother}{3}
+\newcommand{\nformsself}{10}
+\newcommand{\nformsproxy}{9}
 % Numbers that depend on the final dvc repro (data/metadata.csv) and on the final git history
-\newcommand{\nmeta}{3074}
+\newcommand{\nmeta}{3083}
 \newcommand{\nmetaraw}{578}
-\newcommand{\nmetaproc}{2496}
+\newcommand{\nmetaproc}{2505}
 \newcommand{\ncommitsH}{34}
 \newcommand{\ncommitsM}{3}
 \newcommand{\freezestatus}{created after the final form import (not yet set when this was built)}
@@ -182,7 +184,10 @@ is the 76 accepted or edited items (27 eligibility, 27 elective recommendation, 
 
 \textbf{Real form queries.} \nforms{} consenting responses were imported (\nformsexcluded{} excluded), \nformsvone{}
 from form v1 and \nformsvtwo{} from v2. v2 added a description and three example questions after respondents were
-unsure what to ask, so later replies may echo those examples; each row carries its \f{form_version}. Real questions
+unsure what to ask, so later replies may echo those examples; each row carries its \f{form_version}. \nformsproxy{} of the questions were asked in
+person by classmates (verbal consent) and entered in the form by hem436 after rewording them with ChatGPT, so they are
+real questions but not in the students' own words; each row carries \f{provenance}, and the \nformsself{}
+\f{self_submitted} rows keep the students' own phrasing. Real questions
 differ from templates: they are informal (``sem 3 of m.tech EE,SPML stream''), give course counts instead of codes,
 and ask things outside the three intents (proficiency transcript, graduating by a date, other-department courses).
 By kind: \nformsremaining{} remaining requirements, \nformselective{} elective advice, \nformseligibility{}
@@ -303,7 +308,8 @@ keyed by prompt id, input hash and model digest, so a rerun gives the same text.
   part of the paraphrases ran on a Kaggle T4 with transformers fp16. Each row records its backend
   (\f{para_backend}); outputs are not bit-identical across backends.
 \item The form examples were added mid-collection (v1 to v2), which may pull later wording toward them. We have
-  \nforms{} real questions, below the target of 30 at the time of writing.
+  \nforms{} real questions, below the target of 30; \nformsproxy{} of them were reworded with ChatGPT before entry, so
+  only \nformsself{} keep the students' own wording.
 \item The EE site marks the ICDT discipline list ``to be updated soon'', so ICDT answers rest on a partial list.
 \end{itemize}
 
@@ -347,6 +353,7 @@ number & claim & file & field / row \\
 1526; 1610 & children kept; children in & \f{supporting_files/E_splits/split_summary.json}, \f{supporting_files/D_augmentation/verify_report.json} & \f{n_children_in} (sum of \f{child_rows_per_split}); \f{children_in} \\
 80 & audit items & \f{data/labels/audited.jsonl} & row count (40 with round 1, 40 with round 2) \\
 76 & gold items & \f{supporting_files/E_splits/gold_summary.json} & \f{n_gold} \\
+\nformsself{} / \nformsproxy{} & self-submitted / entered by hem436 after ChatGPT rewording & \f{supporting_files/E_splits/shifted_summary.json} & \f{by_provenance} \\
 \nforms{} & real form questions & \f{supporting_files/C_labelling/forms_import_log.json} & \f{rows_kept}; \f{supporting_files/E_splits/shifted_summary.json} \f{n_rows} \\
 \nformsexcluded{} & excluded responses & \f{supporting_files/C_labelling/forms_import_log.json} & \f{rows_excluded} \\
 \nformsvone{} / \nformsvtwo{} & form v1 / v2 replies & \f{data/raw/forms/responses_anonymised.jsonl} & \f{form_version} counts \\
@@ -437,10 +444,13 @@ prompts are in \f{prompts/assistant/}: \f{agent_common_rules.md}, \f{agent_A_cur
 \f{agent_B_engine.md}, \f{agent_B2_engine_revision.md}, \f{agent_C_labelling.md}, \f{agent_D_validation.md},
 \f{agent_E_llm_augment_al.md}, \f{agent_F_splits_dvc_docs.md}, \f{agent_F2_resplit.md} and \f{agent_G_report.md}
 (this report) and \f{agent_H_mock_grading.md} (mock grading). The user's own prompts are logged in
-\f{claude_code_session_2026-10-17.md} and \f{claude_code_session_2026-10-18.md}, which cover prompts 1 to 58.
+\f{claude_code_session_2026-10-17.md} and \f{claude_code_session_2026-10-18.md}, which cover prompts 1 to 61.
 The assistant also drafted the 30 adjudication proposals (a human made every
 final call), built the labelling kit pages and the adjudication review page, and built and edited the Google Form in
 the browser (Claude in Chrome) at the user's request.
+
+\textbf{ChatGPT.} hem436 used ChatGPT to reword \nformsproxy{} questions that classmates asked in person before entering
+them in the form (\f{prompts/assistant/chatgpt_form_rewording.md}; the prompt and the original wording were not kept).
 
 \textbf{Pipeline LLM.} Qwen2.5-1.5B-Instruct (\f{qwen2.5:1.5b}, Q4\_K\_M via llama.cpp, or fp16 via transformers on
 Kaggle) paraphrases queries and justifications and gives base-model answers. Its prompts are files in

@@ -47,7 +47,7 @@ rules. No pair is dropped. Manifests in `data/splits/` have the columns
 | val | 15% of each programme's students, non-held-out templates | 24 | 80 | 27 / 26 / 27 | 13 / 13 | 35 / 21 / 24 / 0 |
 | test | 20% of each programme's students, held-out templates only | 31 | 102 | 34 / 34 / 34 | 17 / 17 | 49 / 21 / 32 / 0 |
 | programme_holdout | every MTech-ICDT student, any template | 24 | 82 | 27 / 28 / 27 | 14 / 14 | 0 / 0 / 0 / 82 |
-| shifted (`shifted_forms.csv`) | real Google Forms questions (`src/split/shifted_forms.py`), no gold answers | n/a | 10 | by student-chosen kind: remaining 6, eligibility 1, elective 2, other 1 | n/a | 4 / 2 / 2 / 2 |
+| shifted (`shifted_forms.csv`) | real Google Forms questions (`src/split/shifted_forms.py`), no gold answers | n/a | 19 | by student-chosen kind: remaining 9, eligibility 2, elective 5, other 3; provenance: 10 self-submitted, 9 entered by hem436 after ChatGPT rewording (filter on `provenance` for the students' own wording) | n/a | 8 / 3 / 5 / 3 |
 
 - Grouping: a student's pairs all go to one split, so no student is in two splits.
 - Pair slots: for each intent, every pair slot gets a split in proportion to the students in that split (seeded),

@@ -1,7 +1,7 @@
 {
   "source": "data/raw/forms/responses_raw.csv",
-  "rows_read": 10,
-  "rows_kept": 10,
+  "rows_read": 19,
+  "rows_kept": 19,
   "rows_excluded": 0,
   "dropped_columns": [
     "Timestamp"

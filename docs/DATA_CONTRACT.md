@@ -165,8 +165,8 @@ final_decision ("accept" | "edit"), final_category, final_edit (str for edit, el
 
 ## Forms (`data/raw/forms/`, `data/consent_register.csv`)
 - `responses_raw.csv` Google Forms CSV download, untouched.
-- `responses_anonymised.jsonl` consenting rows only: `response_id (R001..), form_version, programme, stream, track, semester, courses_completed, question, question_kind`. No timestamp, emails and phone numbers in free text replaced.
-- `consent_register.csv` one row per response: `response_id, consent_given, consent_statement_version, form_version, included_in_dataset, reason`.
+- `responses_anonymised.jsonl` consenting rows only: `response_id (R001..), form_version, provenance (self_submitted | entered_by_hem436_chatgpt_reworded), programme, stream, track, semester, courses_completed, question, question_kind`. No timestamp, emails and phone numbers in free text replaced.
+- `consent_register.csv` one row per response: `response_id, consent_given, consent_mode (form_checkbox | verbal_in_person), consent_statement_version, form_version, provenance, included_in_dataset, reason`.
 
 ## Metadata (`data/metadata.csv`)
 One row per sample in raw and processed layers:

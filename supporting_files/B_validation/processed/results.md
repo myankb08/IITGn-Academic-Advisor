@@ -28,6 +28,6 @@ Checks run: 25. pass: 24, warn: 1.
 | V22 | Stored gold_json equals the rule engine output recomputed from the student | spec: gold answers recomputed by the engine equal stored gold_json | queries.jsonl | pass | 0 | 600 recomputed, 0 skipped (missing student or transcript_length augmentation) |
 | V23 | Query text (and paraphrase) does not leak gold answer markers or the gold text | spec: query text contains no leaked gold answer marker | queries.jsonl | pass | 0 |  |
 | V24 | Audited labels use allowed decisions and error categories, and edits carry text | general: label validity (decisions, error categories) | audited.jsonl | pass | 0 |  |
-| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | pass | 0 | 2136 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout', 'shifted']) on student_id and programme; template families shared by train and test (by design): 7 |
+| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | pass | 0 | 2145 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout', 'shifted']) on student_id and programme; template families shared by train and test (by design): 7 |
 
 Failure examples (first 8 per check) are in results.csv, all failures in failures.json.

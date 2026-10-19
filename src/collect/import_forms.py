@@ -18,6 +18,9 @@ CONSENT_VERSION = "v1"
 # v2 (2026-10-17 ~23:00 IST): purpose text in the description and three example questions under
 # the question field; replies submitted before this time saw v1. See supporting_files/C_labelling/forms_log.md
 V2_FROM = datetime(2026, 10, 17, 23, 0, 0)
+# 2026-10-19 17:16 to 17:18 IST: hem436 entered 9 questions that classmates asked in person (verbal consent),
+# after rewording them with ChatGPT; every other row was submitted by the student. See forms_log.md.
+PROXY_FROM, PROXY_TO = datetime(2026, 10, 19, 17, 16, 0), datetime(2026, 10, 19, 17, 18, 0)
 # exact question titles from docs/GOOGLE_FORM.md -> output field
 FIELDS = {
     "Consent": "consent",
@@ -44,6 +47,22 @@ def redact(text, counts):
     counts["emails_redacted"] += n1
     counts["phones_redacted"] += n2
     return text
+
+
+def parse_ts(ts):
+    for fmt in ("%d/%m/%Y %H:%M:%S", "%m/%d/%Y %H:%M:%S", "%Y/%m/%d %I:%M:%S %p", "%Y-%m-%d %H:%M:%S"):
+        try:
+            return datetime.strptime(ts.split(" GMT")[0].strip(), fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def provenance(ts):
+    when = parse_ts(ts) if ts else None
+    if when and PROXY_FROM <= when <= PROXY_TO:
+        return "entered_by_hem436_chatgpt_reworded"
+    return "self_submitted"
 
 
 def form_version(ts):
@@ -99,6 +118,7 @@ def main():
             row = {field: (r.get(col) or "").strip() for col, field in mapping.items()}
             # the timestamp only decides the form version and is not kept
             row["form_version"] = form_version(r.get(ts_col)) if ts_col else "unknown"
+            row["provenance"] = provenance(r.get(ts_col)) if ts_col else "unknown"
             rows.append(row)
     missing = sorted(set(FIELDS.values()) - set(mapping.values()))
     if missing:
@@ -113,13 +133,16 @@ def main():
     kept = 0
     with open(out_jsonl, "w", encoding="utf-8") as fj, open(out_register, "w", newline="", encoding="utf-8") as fr:
         reg = csv.writer(fr)
-        reg.writerow(["response_id", "consent_given", "consent_statement_version", "form_version", "included_in_dataset", "reason"])
+        reg.writerow(["response_id", "consent_given", "consent_mode", "consent_statement_version", "form_version",
+                      "provenance", "included_in_dataset", "reason"])
         for i, r in enumerate(rows, start=1):
             rid = f"R{i:03d}"
             consent = r["consent"].lower().startswith(CONSENT_YES.lower())
             usable = consent and bool(r["question"])
             reason = "" if usable else ("no consent" if not consent else "empty question")
-            reg.writerow([rid, "yes" if consent else "no", CONSENT_VERSION, r["form_version"], "yes" if usable else "no", reason])
+            mode = "verbal_in_person" if r["provenance"].startswith("entered_by") else "form_checkbox"
+            reg.writerow([rid, "yes" if consent else "no", mode, CONSENT_VERSION, r["form_version"], r["provenance"],
+                          "yes" if usable else "no", reason])
             if not usable:
                 continue
             rec = {"response_id": rid, **{k: v for k, v in r.items() if k != "consent"}}
