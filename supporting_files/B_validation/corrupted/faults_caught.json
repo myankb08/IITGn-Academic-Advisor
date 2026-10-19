@@ -135,10 +135,10 @@
  },
  {
   "fault_id": "F14",
-  "description": "student S0005 copied into train (data/splits)",
+  "description": "student S0126-R copied into train (data/splits)",
   "check_id": "V25",
   "match": [
-   "S0005"
+   "S0126-R"
   ],
   "check_status": "fail",
   "caught": true

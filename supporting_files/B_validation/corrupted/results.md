@@ -28,7 +28,7 @@ Checks run: 25. fail: 12, pass: 12, warn: 1.
 | V22 | Stored gold_json equals the rule engine output recomputed from the student | spec: gold answers recomputed by the engine equal stored gold_json | queries.jsonl | fail | 6 | 600 recomputed, 0 skipped (missing student or transcript_length augmentation) |
 | V23 | Query text (and paraphrase) does not leak gold answer markers or the gold text | spec: query text contains no leaked gold answer marker | queries.jsonl | fail | 1 |  |
 | V24 | Audited labels use allowed decisions and error categories, and edits carry text | general: label validity (decisions, error categories) | audited.jsonl | fail | 1 |  |
-| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | fail | 1 | 2220 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout', 'shifted']) on student_id and programme; template families shared by train and test (by design): 7 |
+| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | fail | 1 | 2137 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout', 'shifted']) on student_id and programme; template families shared by train and test (by design): 7 |
 
 ## Injected faults
 
@@ -49,7 +49,7 @@ Caught 15 of 15 injected faults.
 | F11 | synth_transcripts --inject-violations NOT_OFFERED_IN_PARITY on S0060 | V20 | fail | True |
 | F12 | gold_json of Q0264 flipped eligible | V22 | fail | True |
 | F13 | gold answer marker appended to Q0164 query_text | V23 | fail | True |
-| F14 | student S0005 copied into train (data/splits) | V25 | fail | True |
+| F14 | student S0126-R copied into train (data/splits) | V25 | fail | True |
 | F15 | label R2-Q0400 final_decision 'maybe' (copy of data/labels/audited.jsonl) | V24 | fail | True |
 
 Failure examples (first 8 per check) are in results.csv, all failures in failures.json.

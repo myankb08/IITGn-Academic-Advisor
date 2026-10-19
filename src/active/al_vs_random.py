@@ -116,6 +116,11 @@ def write_summary(rows, pool, pool_note, path):
     for r in rows:
         lines.append(f"| {r['budget']} | {r['strategy']} | {r['failures_captured']:.2f} (sd {r['failures_captured_sd']:.2f}) | "
                      f"{r['failure_types_covered']:.2f} | {r['programmes_covered']:.1f} | {r['intents_covered']:.1f} |")
+    lines += ["", "Reading the first column: the selection score is computed from the same comparison with the rule "
+              "engine that defines a failure, so every pair top-k picks is a failure (precision 1 by construction) "
+              "and its 'failures captured' is simply budget / failures in the pool. The informative comparison is "
+              "which failures each strategy reaches: failure types and intents covered. No model is retrained on "
+              "the picks, so this is a label-efficiency comparison, not a learning curve."]
     lines += ["", "active_learning_stratified was added after the first run, which showed plain top-k drawing every "
               "pick from remaining_core; the original strategy and its numbers are kept unchanged.",
               "", "Random is the mean over the 5 seeds in seeds.active_learning; AL uses the same seeds only to "

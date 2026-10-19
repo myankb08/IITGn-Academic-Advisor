@@ -16,6 +16,8 @@ Score (see src/active/disagreement.py): 3 for invalid JSON, else (1 - Jaccard of
 | 100 | active_learning_stratified | 0.38 (sd 0.01) | 1.00 | 3.0 | 3.0 |
 | 100 | random | 0.30 (sd 0.01) | 0.88 | 3.0 | 3.0 |
 
+Reading the first column: the selection score is computed from the same comparison with the rule engine that defines a failure, so every pair top-k picks is a failure (precision 1 by construction) and its 'failures captured' is simply budget / failures in the pool. The informative comparison is which failures each strategy reaches: failure types and intents covered. No model is retrained on the picks, so this is a label-efficiency comparison, not a learning curve.
+
 active_learning_stratified was added after the first run, which showed plain top-k drawing every pick from remaining_core; the original strategy and its numbers are kept unchanged.
 
 Random is the mean over the 5 seeds in seeds.active_learning; AL uses the same seeds only to break ties. A budget at or above the number of failures lets AL capture all of them, so the interesting comparison is at budgets below that number.

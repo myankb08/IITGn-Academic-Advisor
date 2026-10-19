@@ -295,6 +295,8 @@ stages:
           cache: false
       - supporting_files/D_active_learning/summary.md:
           cache: false
+      - supporting_files/D_active_learning/scores_summary.json:
+          cache: false
 
   validate:
     cmd: .venv/bin/python -m src.validate.run_validation --stage processed
@@ -334,6 +336,10 @@ stages:
       - supporting_files/A_collection/extract_tool_versions.json
       - supporting_files/A_collection/course_plan_fetch_log.csv
       - supporting_files/A_collection/ee_course_plan_fetch_log.csv
+      - data/processed/students.jsonl
+      - data/processed/queries.jsonl
+      - data/processed/queries_augmented.jsonl
+      - data/raw/forms/responses_anonymised.jsonl
     outs:
       - data/metadata.csv
 
@@ -423,7 +429,27 @@ stages:
     outs:
       - supporting_files/C_labelling/round1/agreement_summary.json:
           cache: false
+      - supporting_files/C_labelling/round1/confusion_decision.csv:
+          cache: false
+      - supporting_files/C_labelling/round1/confusion_decision.png:
+          cache: false
+      - supporting_files/C_labelling/round1/confusion_error_category.csv:
+          cache: false
+      - supporting_files/C_labelling/round1/confusion_error_category.png:
+          cache: false
+      - supporting_files/C_labelling/round1/disagreements.csv:
+          cache: false
       - supporting_files/C_labelling/round2/agreement_summary.json:
+          cache: false
+      - supporting_files/C_labelling/round2/confusion_decision.csv:
+          cache: false
+      - supporting_files/C_labelling/round2/confusion_decision.png:
+          cache: false
+      - supporting_files/C_labelling/round2/confusion_error_category.csv:
+          cache: false
+      - supporting_files/C_labelling/round2/confusion_error_category.png:
+          cache: false
+      - supporting_files/C_labelling/round2/disagreements.csv:
           cache: false
       - supporting_files/C_labelling/kappa_ci.json:
           cache: false
@@ -434,3 +460,31 @@ stages:
       - src/split/handoff.py
       - data/gold/gold_test.jsonl
       - data/splits/test.csv
+    outs:
+      # handoff.py rewrites only the frozen-files table; persist keeps the hand-written rest of the file
+      - HANDOFF_A2.md:
+          cache: false
+          persist: true
+
+  validate_corrupted:
+    cmd:
+      - .venv/bin/python -m src.validate.corrupt
+      - .venv/bin/python -m src.validate.run_validation --stage corrupted --report-only
+    deps:
+      - src/validate/corrupt.py
+      - src/validate/checks.py
+      - src/validate/run_validation.py
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - data/processed/students.jsonl
+      - data/processed/queries.jsonl
+      - data/interim/students_corrupted.jsonl
+      - data/labels/audited.jsonl
+      - data/splits/train.csv
+      - data/splits/test.csv
+    params:
+      - seeds.validation_corruption
+    outs:
+      - data/interim/corrupted
+      - supporting_files/B_validation/corrupted:
+          cache: false

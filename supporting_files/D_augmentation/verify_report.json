@@ -1,20 +1,20 @@
 {
  "parents": 600,
  "children_in": 1610,
- "kept": 1609,
- "dropped": 1,
+ "kept": 1526,
+ "dropped": 84,
  "parent_gold_drift_vs_engine": 0,
  "missing_child_files": [],
  "per_augmentation": {
   "paraphrase": {
    "augmentation": "paraphrase",
    "n_children": 120,
-   "n_pass": 119,
-   "n_fail": 1,
-   "invariance_rate": 0.9917,
+   "n_pass": 36,
+   "n_fail": 84,
+   "invariance_rate": 0.3,
    "check": "gold unchanged",
    "gold_changed_vs_parent": 0,
-   "fail_reasons": "code_lost=1"
+   "fail_reasons": "slot_lost:programme=4;slot_lost:programme+elective_count=1;slot_lost:programme+stream=2;slot_lost:programme+stream+semesters=1;slot_lost:programme+stream+term=1;slot_lost:programme+stream+track+semesters=8;slot_lost:programme+track+semesters=1;slot_lost:semesters=11;slot_lost:semesters+elective_count=1;slot_lost:semesters+elective_count+term=1;slot_lost:stream=4;slot_lost:stream+track=1;slot_lost:stream+track+semesters=2;slot_lost:stream+track+semesters+term=1;slot_lost:term=3;slot_lost:track=26;slot_lost:track+semesters=2;slot_lost:track+semesters+elective_count=3;slot_lost:track+term=1;slot_lost:turned_to_student=4;slot_lost:turned_to_student+programme+semesters=1;slot_lost:turned_to_student+semesters=1;slot_lost:turned_to_student+stream+semesters=1;slot_lost:turned_to_student+term=1;slot_lost:turned_to_student+track+semesters=1;slot_lost:turned_to_student+track+term=1"
   },
   "typo_abbrev": {
    "augmentation": "typo_abbrev",

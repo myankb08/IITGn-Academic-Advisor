@@ -16,11 +16,11 @@
   "rc_degree_audit": "rc_degree_audit_t3"
  },
  "n_queries_in": 600,
- "n_children_in": 1609,
+ "n_children_in": 1526,
  "rows_per_split": {
-  "train": 1258,
-  "val": 287,
-  "test": 376,
+  "train": 1205,
+  "val": 280,
+  "test": 353,
   "programme_holdout": 288
  },
  "original_rows_per_split": {
@@ -30,9 +30,9 @@
   "programme_holdout": 82
  },
  "child_rows_per_split": {
-  "train": 922,
-  "val": 207,
-  "test": 274,
+  "train": 869,
+  "val": 200,
+  "test": 251,
   "programme_holdout": 206
  },
  "students_per_split": {
@@ -69,19 +69,19 @@
  },
  "rows_by_programme": {
   "train": {
-   "MTech-AI": 332,
-   "MTech-CSE": 484,
-   "MTech-EE": 442
+   "MTech-AI": 316,
+   "MTech-CSE": 466,
+   "MTech-EE": 423
   },
   "val": {
-   "MTech-AI": 64,
-   "MTech-CSE": 133,
-   "MTech-EE": 90
+   "MTech-AI": 63,
+   "MTech-CSE": 129,
+   "MTech-EE": 88
   },
   "test": {
-   "MTech-AI": 88,
-   "MTech-CSE": 177,
-   "MTech-EE": 111
+   "MTech-AI": 83,
+   "MTech-CSE": 165,
+   "MTech-EE": 105
   },
   "programme_holdout": {
    "MTech-ICDT": 288
@@ -89,19 +89,19 @@
  },
  "rows_by_intent": {
   "train": {
-   "elective_recommendation": 438,
-   "eligibility": 398,
-   "remaining_core": 422
+   "elective_recommendation": 416,
+   "eligibility": 381,
+   "remaining_core": 408
   },
   "val": {
-   "elective_recommendation": 93,
-   "eligibility": 98,
-   "remaining_core": 96
+   "elective_recommendation": 90,
+   "eligibility": 95,
+   "remaining_core": 95
   },
   "test": {
-   "elective_recommendation": 127,
-   "eligibility": 117,
-   "remaining_core": 132
+   "elective_recommendation": 121,
+   "eligibility": 110,
+   "remaining_core": 122
   },
   "programme_holdout": {
    "elective_recommendation": 96,
@@ -111,31 +111,31 @@
  },
  "rows_by_template_family": {
   "train": {
-   "el_can_register": 215,
-   "el_prereq_check": 183,
-   "er_basket_fill": 215,
-   "er_next_semester": 223,
-   "rc_core_courses": 111,
-   "rc_credit_gap": 154,
-   "rc_degree_audit": 157
+   "el_can_register": 207,
+   "el_prereq_check": 174,
+   "er_basket_fill": 206,
+   "er_next_semester": 210,
+   "rc_core_courses": 110,
+   "rc_credit_gap": 150,
+   "rc_degree_audit": 148
   },
   "val": {
-   "el_can_register": 23,
-   "el_prereq_check": 75,
-   "er_basket_fill": 56,
-   "er_next_semester": 37,
-   "rc_core_courses": 43,
+   "el_can_register": 22,
+   "el_prereq_check": 73,
+   "er_basket_fill": 54,
+   "er_next_semester": 36,
+   "rc_core_courses": 42,
    "rc_credit_gap": 38,
    "rc_degree_audit": 15
   },
   "test": {
-   "el_can_register": 46,
-   "el_prereq_check": 71,
-   "er_basket_fill": 65,
-   "er_next_semester": 62,
-   "rc_core_courses": 53,
-   "rc_credit_gap": 39,
-   "rc_degree_audit": 40
+   "el_can_register": 42,
+   "el_prereq_check": 68,
+   "er_basket_fill": 63,
+   "er_next_semester": 58,
+   "rc_core_courses": 50,
+   "rc_credit_gap": 36,
+   "rc_degree_audit": 36
   },
   "programme_holdout": {
    "el_can_register": 56,

@@ -10,7 +10,7 @@ Everything in this repo was built and run on one laptop, CPU only. Values below 
 | Kernel | Linux 6.8.0-138-generic x86_64 (`#138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC`) |
 | CPU | AMD Ryzen 5 2500U, 4 cores / 8 threads |
 | RAM | 6.7 GiB, plus 2 GiB swap |
-| GPU | none used. The only graphics device is the integrated Radeon Vega (no CUDA); all models ran on CPU |
+| GPU | local machine: none (integrated Radeon Vega, no CUDA). Kaggle: Tesla T4 (2 visible, model pinned to one), CUDA 12.8, torch 2.11.0+cu128, transformers 5.16.1, used for most LLM paraphrases, all base-model answers and the augmentation paraphrases (`supporting_files/D_augmentation/kaggle_merge_rest.json`, `llm_backend.md`) |
 | Free disk during the build | about 6 GB |
 
 ## Python and tools
@@ -40,8 +40,10 @@ Label Studio has its own venv because its dependency pins clash with the analysi
 `src/queries/llm_client.py` records the model digest, the GGUF blob and the backend version with every cached
 answer in `data/interim/llm_cache.jsonl`, and each run log (`supporting_files/C_labelling/paraphrase_run.json`,
 `supporting_files/D_active_learning/base_model_run.json`) repeats them. torch and transformers are needed only for
-the Kaggle backend and are not installed locally. If a Kaggle notebook was used, its runtime (GPU type, torch and
-transformers versions) is in the run logs under `server`.
+the Kaggle backend and are not installed locally; the Kaggle runtime (Tesla T4, CUDA 12.8, torch 2.11.0+cu128,
+transformers 5.16.1, Qwen/Qwen2.5-1.5B-Instruct at revision 989aa7980e4cf806f80c7fef2b1adb7bc71aa306) is recorded in
+`supporting_files/D_augmentation/kaggle_merge_rest.json` and in every cached answer. Rebuilding never needs a GPU:
+`dvc repro` replays the cache.
 
 ## Seeds (params.yaml)
 | key | value | what it controls |

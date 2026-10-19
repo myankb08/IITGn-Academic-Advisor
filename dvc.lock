@@ -172,8 +172,8 @@ stages:
       size: 105993
     - path: data/raw/prereq_manual.csv
       hash: md5
-      md5: 347843e84360b2654891c9924a4379bc
-      size: 488
+      md5: 13b0059acbf50064c67aa67d2b062532
+      size: 499
     - path: src/collect/clean_catalog.py
       hash: md5
       md5: fe24df5a7687f74383a437791dd962f8
@@ -470,8 +470,8 @@ stages:
       size: 526
     - path: src/augment
       hash: md5
-      md5: 0bc51dcd23cfcfe7704a50fc5ae01162.dir
-      size: 25286
+      md5: f5f4ffaec119b51d5b873e252dc2d6b4.dir
+      size: 28270
       nfiles: 6
     - path: src/engine/rule_engine.py
       hash: md5
@@ -501,28 +501,28 @@ stages:
       size: 1252998
     - path: data/processed/queries_augmented.jsonl
       hash: md5
-      md5: 0cd2d3bd6310c3f31ccdad2d4789beac
-      size: 4687198
+      md5: 0a9cbc13bcf69a16dfa27f208cbd3c37
+      size: 4500385
     - path: data/processed/students_augmented.jsonl
       hash: md5
       md5: 279a8dc31036ee75b2cb915dcd946dc8
       size: 245066
     - path: supporting_files/D_augmentation/dropped.csv
       hash: md5
-      md5: 42ab24d1e05767f4f1879dead30f862f
-      size: 217
+      md5: 2b06c5dc0a7810e2745952c5ee8c96b5
+      size: 19432
     - path: supporting_files/D_augmentation/invariance.csv
       hash: md5
-      md5: 2ea906879361a8684ab86677a6814354
-      size: 316
+      md5: 68fafe7a8e94eb46c258ed429bd9a8b2
+      size: 1185
     - path: supporting_files/D_augmentation/paraphrase_sample.json
       hash: md5
       md5: 57a1970b87a64259469da78438e2d493
       size: 1798
     - path: supporting_files/D_augmentation/samples_paraphrase.md
       hash: md5
-      md5: 754d06baba1ca1d9df1b7da98699279a
-      size: 4191
+      md5: d34118ae0a641b5d510dcf39e82d618b
+      size: 4762
     - path: supporting_files/D_augmentation/samples_transcript_length.md
       hash: md5
       md5: 099d4acf9457ec3e53c7ade27cdf037f
@@ -537,8 +537,8 @@ stages:
       size: 3812
     - path: supporting_files/D_augmentation/verify_report.json
       hash: md5
-      md5: e0450aa5ebf37f06051d6315ebfd7ac1
-      size: 1164
+      md5: 96f3db9f528c48d99db78ec31d0d9a79
+      size: 2034
   make_splits:
     cmd: .venv/bin/python -m src.split.make_splits
     deps:
@@ -548,8 +548,8 @@ stages:
       size: 1248881
     - path: data/processed/queries_augmented.jsonl
       hash: md5
-      md5: 0cd2d3bd6310c3f31ccdad2d4789beac
-      size: 4687198
+      md5: 0a9cbc13bcf69a16dfa27f208cbd3c37
+      size: 4500385
     - path: data/processed/students.jsonl
       hash: md5
       md5: 76814c5a89c6b4d43bac2d094632eb25
@@ -574,23 +574,23 @@ stages:
       size: 22891
     - path: data/splits/test.csv
       hash: md5
-      md5: e03eadd339a38c1718efaf7b19768786
-      size: 24295
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
     - path: data/splits/train.csv
       hash: md5
-      md5: 463e138c58fbd90498a128a49cab0ccd
-      size: 82322
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
     - path: data/splits/val.csv
       hash: md5
-      md5: cceb960839bf00c07729a7f02ef0d067
-      size: 18214
+      md5: e19b58e74ba18e9590933b07e55c0a71
+      size: 17771
     - path: supporting_files/E_splits/dropped_rows.csv
       hash: md5
       md5: b929caab426abe73fa54df55a1882d88
       size: 88
     - path: supporting_files/E_splits/split_summary.json
       hash: md5
-      md5: 73784b707bb0153f3dfd4a76658854da
+      md5: 110df3578aa84531426172fdfb586fff
       size: 5584
   base_model_answers:
     cmd: LLM_BACKEND=kaggle-transformers .venv/bin/python -m 
@@ -614,8 +614,8 @@ stages:
       size: 134684
     - path: data/splits/train.csv
       hash: md5
-      md5: 463e138c58fbd90498a128a49cab0ccd
-      size: 82322
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
     - path: prompts/pipeline/base_model_answer_v1.txt
       hash: md5
       md5: 4a3b396e1177886a00220d63d3eaca84
@@ -668,12 +668,12 @@ stages:
       size: 134684
     - path: data/splits/train.csv
       hash: md5
-      md5: 463e138c58fbd90498a128a49cab0ccd
-      size: 82322
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
     - path: src/active/al_vs_random.py
       hash: md5
-      md5: 4db34143667c876469db213229e465a9
-      size: 6935
+      md5: baa06ea20610eaf041a7d03f76b1f238
+      size: 7493
     - path: src/active/disagreement.py
       hash: md5
       md5: 25b783ea489a4252a7f307feb06ebf86
@@ -708,10 +708,14 @@ stages:
       hash: md5
       md5: c4b8a1a7d011dedfd483d5b92f9906bb
       size: 99534
+    - path: supporting_files/D_active_learning/scores_summary.json
+      hash: md5
+      md5: f9aa86c567b51517308de75e2bc4026c
+      size: 485
     - path: supporting_files/D_active_learning/summary.md
       hash: md5
-      md5: 771300b9ec63a5f6e28e955346d16671
-      size: 1557
+      md5: febcaa23eb02aca160c9306f812909c4
+      size: 2027
   validate:
     cmd: .venv/bin/python -m src.validate.run_validation --stage processed
     deps:
@@ -741,16 +745,16 @@ stages:
       size: 22891
     - path: data/splits/test.csv
       hash: md5
-      md5: e03eadd339a38c1718efaf7b19768786
-      size: 24295
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
     - path: data/splits/train.csv
       hash: md5
-      md5: 463e138c58fbd90498a128a49cab0ccd
-      size: 82322
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
     - path: data/splits/val.csv
       hash: md5
-      md5: cceb960839bf00c07729a7f02ef0d067
-      size: 18214
+      md5: e19b58e74ba18e9590933b07e55c0a71
+      size: 17771
     - path: src/engine
       hash: md5
       md5: e4822615bf074ec32e6ec361ffb24800.dir
@@ -767,7 +771,7 @@ stages:
     outs:
     - path: supporting_files/B_validation/processed
       hash: md5
-      md5: e340c5c1b9ff1e52b8d104731e83b71f.dir
+      md5: 53085799e0fe0285355a81f7eb269005.dir
       size: 10991
       nfiles: 3
   build_metadata:
@@ -777,10 +781,22 @@ stages:
       hash: md5
       md5: 565495db7637db6e41540c1c343e9349
       size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/queries_augmented.jsonl
+      hash: md5
+      md5: 0a9cbc13bcf69a16dfa27f208cbd3c37
+      size: 4500385
     - path: data/processed/rules.json
       hash: md5
       md5: 03de2e8e40e2b981abc8fe5f58c203e1
       size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
     - path: data/raw/catalog_raw.json
       hash: md5
       md5: 4e381d86a793221184d8963deee20458
@@ -810,10 +826,14 @@ stages:
       hash: md5
       md5: adc091af7909da6939e885803495931e
       size: 105993
+    - path: data/raw/forms/responses_anonymised.jsonl
+      hash: md5
+      md5: f1056d58aebac904a1aa6fc3524409a3
+      size: 3753
     - path: data/raw/prereq_manual.csv
       hash: md5
-      md5: 347843e84360b2654891c9924a4379bc
-      size: 488
+      md5: 13b0059acbf50064c67aa67d2b062532
+      size: 499
     - path: data/raw/sources
       hash: md5
       md5: 725d5c95ccb39a20a5f6bc9cd1c2ab1b.dir
@@ -821,8 +841,8 @@ stages:
       nfiles: 15
     - path: src/collect/build_metadata.py
       hash: md5
-      md5: 7d8535c2a395255da48342fd9b4e1ee9
-      size: 10049
+      md5: fd1d3edd4b3bd5a9c7d709715842692b
+      size: 12034
     - path: src/collect/common.py
       hash: md5
       md5: 1e4c33fd562e7c3f1a6476131f3699bf
@@ -842,8 +862,8 @@ stages:
     outs:
     - path: data/metadata.csv
       hash: md5
-      md5: 2878f1675f87752a608bf02b0ee06e52
-      size: 222771
+      md5: 6157338169d4d3748738cae2267245be
+      size: 751254
   import_forms:
     cmd: .venv/bin/python -m src.collect.import_forms
     deps:
@@ -945,8 +965,8 @@ stages:
       size: 1683474
     - path: data/splits/test.csv
       hash: md5
-      md5: e03eadd339a38c1718efaf7b19768786
-      size: 24295
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
     - path: src/split/freeze_gold.py
       hash: md5
       md5: c0bb0cdb801f231237bad3f2ff62ef06
@@ -987,7 +1007,7 @@ stages:
       size: 7450
     - path: supporting_files/B_validation/processed/results.csv
       hash: md5
-      md5: 2e595e07380b07b7ec8dd843a6a972b9
+      md5: 0263686791124850a6841b6415a6f986
       size: 5296
     outs:
     - path: supporting_files/B_validation/before_after.md
@@ -1041,10 +1061,50 @@ stages:
       hash: md5
       md5: a1caee7dbc0d3b37dec9bad4e9f61701
       size: 967
+    - path: supporting_files/C_labelling/round1/confusion_decision.csv
+      hash: md5
+      md5: 200ab40cbe2f6bcf297ae37509a81099
+      size: 76
+    - path: supporting_files/C_labelling/round1/confusion_decision.png
+      hash: md5
+      md5: 8c39086e112ac06bc90ec10f1a5ecd9a
+      size: 24177
+    - path: supporting_files/C_labelling/round1/confusion_error_category.csv
+      hash: md5
+      md5: 7544b7ca51e68577b0be8a2528c96a36
+      size: 360
+    - path: supporting_files/C_labelling/round1/confusion_error_category.png
+      hash: md5
+      md5: def77618db94578a247f3bc23ae9c559
+      size: 84351
+    - path: supporting_files/C_labelling/round1/disagreements.csv
+      hash: md5
+      md5: 56ebd79e946867ec96fe6bcd675feaab
+      size: 13069
     - path: supporting_files/C_labelling/round2/agreement_summary.json
       hash: md5
       md5: ad3ebc8e560c6da641fc2f8d06c372f7
       size: 955
+    - path: supporting_files/C_labelling/round2/confusion_decision.csv
+      hash: md5
+      md5: e274878f06d3027052c76ff2ca8e785e
+      size: 76
+    - path: supporting_files/C_labelling/round2/confusion_decision.png
+      hash: md5
+      md5: 1a0b0bf40f935b3b45bae2672d229f13
+      size: 23816
+    - path: supporting_files/C_labelling/round2/confusion_error_category.csv
+      hash: md5
+      md5: 9e0b2d7acffef30af38c1f000df7924a
+      size: 360
+    - path: supporting_files/C_labelling/round2/confusion_error_category.png
+      hash: md5
+      md5: 409526d8931c7fd2de238adf9a6c06b5
+      size: 83617
+    - path: supporting_files/C_labelling/round2/disagreements.csv
+      hash: md5
+      md5: 1098d8d032f2977460054027f8111a4a
+      size: 10106
   handoff:
     cmd: .venv/bin/python -m src.split.handoff
     deps:
@@ -1054,9 +1114,78 @@ stages:
       size: 262084
     - path: data/splits/test.csv
       hash: md5
-      md5: e03eadd339a38c1718efaf7b19768786
-      size: 24295
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
     - path: src/split/handoff.py
       hash: md5
-      md5: 4a3ccad0126ad3886ff0580d7e49ba53
-      size: 2150
+      md5: 15be80eec3c80afc4578a240882ed247
+      size: 2125
+    outs:
+    - path: HANDOFF_A2.md
+      hash: md5
+      md5: 790ba8d6d32b19f6727f9a503dd2018b
+      size: 8389
+  validate_corrupted:
+    cmd:
+    - .venv/bin/python -m src.validate.corrupt
+    - .venv/bin/python -m src.validate.run_validation --stage corrupted 
+      --report-only
+    deps:
+    - path: data/interim/students_corrupted.jsonl
+      hash: md5
+      md5: 89fd9c50f6b31dcb57273d9122ff7fe1
+      size: 39932
+    - path: data/labels/audited.jsonl
+      hash: md5
+      md5: 93d8f50d4ca8a234962611f05da2e3bc
+      size: 86461
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/splits/test.csv
+      hash: md5
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
+    - path: src/validate/checks.py
+      hash: md5
+      md5: 6a7acecb154d3bada162fab7ced0b079
+      size: 44790
+    - path: src/validate/corrupt.py
+      hash: md5
+      md5: bfd05caac5f7624f54b1369bfda82b43
+      size: 10034
+    - path: src/validate/run_validation.py
+      hash: md5
+      md5: 409ab4d03f6a59fb61d47398fe9ae3bf
+      size: 6486
+    params:
+      params.yaml:
+        seeds.validation_corruption: 209
+    outs:
+    - path: data/interim/corrupted
+      hash: md5
+      md5: b67db216d11c02990c16d27df01d2b73.dir
+      size: 1773217
+      nfiles: 11
+    - path: supporting_files/B_validation/corrupted
+      hash: md5
+      md5: 929f73cd0cdc9741f8e71d2d80b040d3.dir
+      size: 23311
+      nfiles: 4

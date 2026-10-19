@@ -27,7 +27,6 @@ FILES = [
     "data/splits/shifted_forms.csv",
     "data/labels/audited.jsonl",
     "data/gold/gold_test.jsonl",
-    "data/metadata.csv",
 ]
 
 

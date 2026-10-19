@@ -1,53 +1,63 @@
 # Samples: paraphrase
 
-10 of 119 verified children, picked with seed 206. For human spot checks: does the child ask the same thing (text augmentations) or is the new gold right for the new state (transcript_length)?
+10 of 36 verified children, picked with seed 206. For human spot checks: does the child ask the same thing (text augmentations) or is the new gold right for the new state (transcript_length)?
 
-## Q0025-P (remaining_core)
+## Q0022-P (remaining_core)
 
-- before: I'm an MTech-EE student in the Signal Processing & Machine Learning stream (thesis track) and I have completed 2 semesters. Am I missing any compulsory or stream core course?
-- after: Hey there! I'm a M.Tech in EE from the Signal Processing & ML stream (thesis track). I've been here for two semesters now. Is there anything extra I need to take?
+- before: I'm an MTech-AI student in the AI/ML stream (coursework track) and I have completed no semesters yet. Am I missing any compulsory or stream core course?
+- after: Hey there! So, I'm an MTech-AI student in the AI/ML coursework track and I've just started my studies. Is there anything specific I need to take before moving on?
 
-## Q0120-P (remaining_core)
+## Q0054-P (remaining_core)
 
-- before: I'm an MTech-AI student in the AI/ML stream (coursework track) and I have completed 3 semesters. Which requirements are still pending before I can graduate?
-- after: Hey there! So, I'm an AI Master's student here in the ML/AI stream. And I've finished up my third semester already. What else do I need to get done before I can officially graduate?
+- before: I'm an MTech-EE student in the Power Engineering & Control Systems stream (coursework track) and I have completed 3 semesters. Can you give me a full audit of my remaining graduation requirements?
+- after: Sure! Here's how I can help:
 
-## Q0239-P (eligibility)
+I am a M.Tech-Electrical Engineer currently enrolled in the Power Engineering & Control Systems coursework program. I have already completed three semesters. Could you provide me with a comprehensive list of all the remaining graduation requirements?
 
-- before: I'm an MTech-CSE student in the AI/ML stream (thesis track) and I have completed 3 semesters. Do I satisfy everything needed before taking CS 691-XIV?
-- after: Are you an M.Tech in CSE? Did you choose the AI/ML thesis track? And have you finished three semesters already? Do you meet all the requirements to start CS 691-XIV?
+## Q0135-P (remaining_core)
 
-## Q0254-P (eligibility)
+- before: I'm an MTech-CSE student in the Systems stream (coursework track) and I have completed 3 semesters. Can you give me a full audit of my remaining graduation requirements?
+- after: Hey there! I'm currently pursuing an M.Tech in CSE, specifically in the Systems stream, which means I've got coursework track under my belt. So far, I've finished 3 semesters. Could you please help me compile a comprehensive list of all the things I still need to complete before graduation?
 
-- before: I'm an MTech-CSE student in the AI/ML stream (coursework track) and I have completed 2 semesters. Is it possible for me to enrol in EE 645 next term?
-- after: Hey there! I'm a CSE MTech student specializing in AI/ML. So far, I've taken two semesters worth of coursework. Can you help me figure out if I can join EE 645 this upcoming term?
+## Q0139-P (remaining_core)
+
+- before: I'm an MTech-AI student in the AI/ML stream (coursework track) and I have completed no semesters yet. Which compulsory and core courses have I not taken yet?
+- after: Hey! So, I'm a Master of Technology in Artificial Intelligence student focusing on AI/ML coursework. I've already finished zero semesters. Can you tell me which mandatory and core courses I still need to take?
+
+## Q0240-P (eligibility)
+
+- before: I'm an MTech-EE student in the Signal Processing & Machine Learning stream (coursework track) and I have completed 1 semester. Do I satisfy everything needed before taking CS 610?
+- after: Sure! Here's how you could rephrase that question:
+
+---
+
+Hey there,
+
+I’m a master’s degree student studying Electrical Engineering (MTech-EE). My coursework track focuses on Signal Processing & Machine Learning. I’ve already finished one semester of my studies. Does this mean I’m ready to start the Computer Science course, CS 610?
+
+---
+
+## Q0287-P (eligibility)
+
+- before: I'm an MTech-CSE student in the Systems stream (thesis track) and I have completed 1 semester. What is blocking me, if anything, from taking CS 431?
+- after: Hey! So, I'm a CSE M.Tech. student specializing in systems (thesis track). I've already finished one semester. Any blockers preventing me from enrolling in CS 431?
 
 ## Q0319-P (eligibility)
 
 - before: I'm an MTech-AI student in the AI/ML stream (thesis track) and I have completed 1 semester. Have I met the prerequisites for CS 607 (Combinatorics in CS)?
 - after: Hey there! I'm a Masters of Technology in Artificial Intelligence student specializing in AI/ML (thesis track). I've finished one semester already. Did I meet all the requirements to take CS 607 (Combinatorics in Computer Science)?
 
-## Q0363-P (eligibility)
+## Q0372-P (eligibility)
 
-- before: I'm an MTech-CSE student in the AI/ML stream (coursework track) and I have completed no semesters yet. Have I met the prerequisites for EE 663 (Advanced Wireless Communications)?
-- after: Are you an M.Tech in CSE? What's your coursework track? How many semesters have you completed? Have you fulfilled the prerequisites for EE 663 (Advanced Wireless Communications)?
+- before: I'm an MTech-EE student in the Signal Processing & Machine Learning stream (thesis track) and I have completed no semesters yet. What is blocking me, if anything, from taking CS 621?
+- after: Hey there! I'm currently a Master of Technology in Electrical Engineering student specializing in Signal Processing and Machine Learning (thesis track). I haven't taken any semesters yet. Any obstacles standing in my way to enrolling in CS 621?
 
-## Q0398-P (eligibility)
+## Q0435-P (elective_recommendation)
 
-- before: I'm an MTech-EE student in the Signal Processing & Machine Learning stream (coursework track) and I have completed 2 semesters. Am I eligible to take CS 618 (Theoretical Foundations of ML) in the upcoming term, 2026-27 Sem-I?
-- after: Am I qualified to enroll in CS 618: Theoretical Foundations of ML this upcoming semester, considering my status as a M.Tech-Electrical Engineering student specializing in the Signal Processing & Machine Learning stream? I've already completed two terms.
+- before: I'm an MTech-CSE student in the AI/ML stream (thesis track) and I have completed 2 semesters. I want to close my basket gaps next semester. What should I pick?
+- after: Hey there! I'm currently pursuing an M.Tech in CSE at the AI/ML stream (thesis track). After completing two semesters, I need to fill in some of those gaps before moving forward. Can you suggest what courses I should take?
 
-## Q0408-P (elective_recommendation)
+## Q0484-P (elective_recommendation)
 
-- before: I'm an MTech-CSE student in the Theory stream (coursework track) and I have completed no semesters yet. Suggest 3 electives I can take next semester.
-- after: Hey there! I'm a CSE Master's student focusing on theory stuff. Can you recommend some electives for me to take next semester?
-
-## Q0498-P (elective_recommendation)
-
-- before: I'm an MTech-CSE student in the Systems stream (thesis track) and I have completed 2 semesters. What are the best 3 elective options for me next term?
-- after: Hey! I'm a CSE MTech student in the Systems thesis track. So far, I've finished two semesters. Could you suggest some top three elective courses for me to take this upcoming term?
-
-## Q0543-P (elective_recommendation)
-
-- before: I'm an MTech-CSE student in the AI/ML stream (thesis track) and I have completed 1 semester. I want to close my basket gaps next semester. What should I pick?
-- after: Hey! I'm a CSE MTech student focusing on AI/ML (thesis track). I've finished 1 semester so far. Next up, what should I choose to fill out my remaining gaps?
+- before: I'm an MTech-AI student in the AI/ML stream (coursework track) and I have completed 1 semester. What are the best 3 elective options for me next term?
+- after: Hey! So, I'm a Master of Technology in Artificial Intelligence student focusing on AI/ML coursework, and I've already finished one semester. Can you help me find out what the top three elective courses would be to take this upcoming term?

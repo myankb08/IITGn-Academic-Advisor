@@ -19,15 +19,14 @@ Refresh with `.venv/bin/python -m src.split.handoff` after the last `dvc repro` 
 | `data/processed/students_augmented.jsonl` | 347 | `015cdb1cda781eed8b0246dab93db4df533fc4b9c7a978bb2af70c1676bbfbc9` |
 | `data/processed/queries.jsonl` | 600 | `3b4653aab793befe950cfcb6f940f7f73f40da7a4f9613340e194bd3c81e6059` |
 | `data/processed/queries_para.jsonl` | 600 | `2451af9d7c9bf5cd405fe6b1d337c48a36276409c242ef87d7b7610e8bb8257e` |
-| `data/processed/queries_augmented.jsonl` | 2209 | `d4a67539b160d17b90015d1043e5eaa6dd10c9b3fec097ab774e7f08c8907afe` |
-| `data/splits/train.csv` | 1258 | `9a2db7a375f2465aae86957fe7e7154187486005ce820ecb2bd98b594514b5be` |
-| `data/splits/val.csv` | 287 | `55ec6076dc0c2ae8d204fa61dcb69900c90e35878a9e6c7102640a9469d93375` |
-| `data/splits/test.csv` | 376 | `54f805c30b8f66f9b4367367db34645830f1a72c4dd6b0d6e2e38d5a501ff2cc` |
+| `data/processed/queries_augmented.jsonl` | 2126 | `28c58d6a90c9d2f3add0122aca3e9ae58a68310180b7539a1496b9f1f5b116dd` |
+| `data/splits/train.csv` | 1205 | `a6054ebcb025731745e7f17b26e826f3c0ab0ed7c9e6ca5fdaf75a03550ff7b5` |
+| `data/splits/val.csv` | 280 | `7ce8497c8029659ddec10a0efa1b32dac2e8969254ae4d8c62c52abb26a3122e` |
+| `data/splits/test.csv` | 353 | `22d859eda38e142c3495a6f923e9ac651ed38d6065b6862ed66c26064d526702` |
 | `data/splits/programme_holdout.csv` | 288 | `5f82ec424dd573ad133ac2ee52b2d704939d1f80ce62dea7a29e0eb20dd478b0` |
 | `data/splits/shifted_forms.csv` | 10 | `28c096a6e951788f094c1b9cbbe5013a6c00ba93cf53c9b49e978846e436f68c` |
 | `data/labels/audited.jsonl` | 80 | `4615a5bbd9e9425a12bfb22c4dde2e301c8a1b021a66dc159986497302b1eae5` |
 | `data/gold/gold_test.jsonl` | 76 | `cd2e08dcb56f5716b06981e096c3c93fd417abab1989b5d22d45befeafbc383f` |
-| `data/metadata.csv` | 758 | `f8937af8aca39e0a8e9cd92bcc2962936bf5004683ff8188972c42fec230d278` |
 <!-- FROZEN_FILES_END -->
 
 Gold test set checksum (filled by `src.split.freeze_gold`, also in `data/gold/GOLD_SHA256.txt`):

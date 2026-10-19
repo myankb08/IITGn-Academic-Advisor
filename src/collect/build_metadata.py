@@ -1,4 +1,5 @@
-"""Write data/metadata.csv: one row per sample in the raw and processed layers."""
+"""Write data/metadata.csv: one row per sample in the raw and processed layers, including every synthetic student,
+advisory pair, augmented child and form response."""
 import csv
 import json
 from datetime import datetime, timezone
@@ -14,8 +15,8 @@ def mtime_utc(path):
     return datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat(timespec="seconds")
 
 
-def script_version(module):
-    path = ROOT / "src" / "collect" / f"{module}.py"
+def script_version(module, package="collect"):
+    path = ROOT / "src" / package / f"{module}.py"
     return f"sha256:{sha256_file(path)[:12]}"
 
 
@@ -151,8 +152,39 @@ def catalog_rows():
     return rows
 
 
+def dataset_rows():
+    """Students, advisory pairs, augmented children (synthetic, made by the pipeline) and real form responses."""
+    rows = []
+
+    def add(sample_id, path, record, source, tool, package, collector="pipeline", when=None):
+        module = tool.rsplit(".", 1)[-1]
+        rows.append({"sample_id": sample_id, "layer": "processed", "artifact": rel(path), "source": source,
+                     "source_doc": "", "source_page": "", "source_url": "",
+                     "collected_at_utc": when or mtime_utc(path), "collector": collector, "tool": tool,
+                     "tool_version": script_version(module, package),
+                     "content_sha256": sha256_bytes(canonical_json(record).encode())})
+
+    students = PROCESSED / "students.jsonl"
+    for s in read_jsonl(students):
+        add(f"student:{s['student_id']}", students, s, "rule_engine_synthetic", "src.engine.synth_transcripts", "engine")
+    queries = PROCESSED / "queries.jsonl"
+    for q in read_jsonl(queries):
+        add(f"pair:{q['query_id']}", queries, q, "rule_engine_gold", "src.queries.make_queries", "queries")
+    augmented = PROCESSED / "queries_augmented.jsonl"
+    for q in read_jsonl(augmented):
+        if q.get("augmentation"):
+            add(f"aug:{q['query_id']}", augmented, q, f"augmentation:{q['augmentation']}", "src.augment.verify", "augment")
+    forms = ROOT / "data" / "raw" / "forms"
+    if (forms / "responses_anonymised.jsonl").exists():
+        when = mtime_utc(forms / "responses_raw.csv")  # per-response timestamps are dropped for anonymity
+        for r in read_jsonl(forms / "responses_anonymised.jsonl"):
+            add(f"form:{r['response_id']}", forms / "responses_anonymised.jsonl", r, "google_form_respondent",
+                "src.collect.import_forms", "collect", collector="anonymous respondent", when=when)
+    return rows
+
+
 def main():
-    rows = source_rows() + extracted_rows() + plan_rows() + catalog_rows()
+    rows = source_rows() + extracted_rows() + plan_rows() + catalog_rows() + dataset_rows()
     with open(ROOT / "data" / "metadata.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()

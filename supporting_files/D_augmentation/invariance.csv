@@ -1,5 +1,5 @@
 augmentation,n_children,n_pass,n_fail,invariance_rate,check,gold_changed_vs_parent,fail_reasons
-paraphrase,120,119,1,0.9917,gold unchanged,0,code_lost=1
+paraphrase,120,36,84,0.3,gold unchanged,0,slot_lost:programme=4;slot_lost:programme+elective_count=1;slot_lost:programme+stream=2;slot_lost:programme+stream+semesters=1;slot_lost:programme+stream+term=1;slot_lost:programme+stream+track+semesters=8;slot_lost:programme+track+semesters=1;slot_lost:semesters=11;slot_lost:semesters+elective_count=1;slot_lost:semesters+elective_count+term=1;slot_lost:stream=4;slot_lost:stream+track=1;slot_lost:stream+track+semesters=2;slot_lost:stream+track+semesters+term=1;slot_lost:term=3;slot_lost:track=26;slot_lost:track+semesters=2;slot_lost:track+semesters+elective_count=3;slot_lost:track+term=1;slot_lost:turned_to_student=4;slot_lost:turned_to_student+programme+semesters=1;slot_lost:turned_to_student+semesters=1;slot_lost:turned_to_student+stream+semesters=1;slot_lost:turned_to_student+term=1;slot_lost:turned_to_student+track+semesters=1;slot_lost:turned_to_student+track+term=1
 typo_abbrev,600,600,0,1.0,gold unchanged,0,
 transcript_reorder,445,445,0,1.0,gold unchanged,0,
 transcript_length,445,445,0,1.0,gold recomputed correctly,445,

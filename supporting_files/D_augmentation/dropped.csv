@@ -1,4 +1,137 @@
 query_id,augmentation,reason,parent_codes,child_codes,child_text
-Q0278-P,paraphrase,code_lost,ES 615,CS 615,"Sure! Here's how you could rephrase that question:
+Q0001-P,paraphrase,slot_lost:semesters,,,Hey! I'm a CSE MTech student in the Theory thesis track. How many core courses and basket credits do I have left to complete?
+Q0016-P,paraphrase,slot_lost:track,,,"Hey there! So I’m a CSE-MTech student in the AI/ML stream (workshop track), and I’ve finished two semesters already. Is there anything I’m forgetting to take?"
+Q0020-P,paraphrase,slot_lost:semesters,,,"Hey! So, I'm an M.Tech-CSE student in the AI/ML thesis track. I've already finished my first semester. How many credits do I need to get to graduate?"
+Q0033-P,paraphrase,slot_lost:semesters,,,"What's up? I'm a CSE Master's student focusing on theory (thesis route), and I've finished my first semester already. Can you tell me what else needs to be done before I can officially graduate?"
+Q0046-P,paraphrase,slot_lost:semesters,,,"Hey! So, I'm a MTech-EE student in the Signal Processing & Machine Learning stream (thesis track). How many semesters have you already finished? I want to know if there's anything I need to take that's mandatory or part of my stream curriculum."
+Q0048-P,paraphrase,slot_lost:programme+stream,,,"Hey there! So I'm a M.Tech. in AI/AutoML, right? And I've already finished one semester of coursework. What else do I need to get done before I can officially graduate?"
+Q0060-P,paraphrase,slot_lost:stream+track,,,What's next on my MTech-CSE path since I haven't finished any semesters yet?
+Q0074-P,paraphrase,slot_lost:track,,,"Hey! I'm an M.Tech-Electrical Eng. student in the Power Engineering & Control Systems stream. So far, I've completed two semesters. How many credits do I need to reach my graduation goal?"
+Q0091-P,paraphrase,slot_lost:semesters,,,Hey there! So I'm a M.Tech-Electrical Engineering student in the Signal Processing & Machine Learning thesis track. I've got nothing done so far this semester. Could you tell me what core courses and basket credits I still need to complete for my stream?
+Q0096-P,paraphrase,slot_lost:track,,,"Hey there! I'm a Masters of Technology in Artificial Intelligence student specializing in AI/ML (workshop track). So far, I've finished two semesters. Could you please help me review what's left on my graduation checklist?"
+Q0114-P,paraphrase,slot_lost:track,,,"Hey! So, I'm an M.Tech-CSE student in the AI/ML stream (workshop track). I've already finished zero semesters so far. What's up? What requirements do I need to meet to finally graduate?"
+Q0119-P,paraphrase,slot_lost:programme,,,Hey! I'm a grad student in the AI/ML stream (thesis track) of my M.Tech program. I've already finished 2 semesters. Can you tell me how many credits I'm short on to meet the full requirements? And could you also show me where those missing credits might be coming from?
+Q0120-P,paraphrase,slot_lost:programme+track+semesters,,,"Hey there! So, I'm an AI Master's student here in the ML/AI stream. And I've finished up my third semester already. What else do I need to get done before I can officially graduate?"
+Q0124-P,paraphrase,slot_lost:stream,,,Hey there! I'm a M.Tech in AI/AutoML stream (thesis track). I've been through 3 semesters already. Can you tell me what's remaining on my list of core courses and basket credits?
+Q0138-P,paraphrase,slot_lost:stream+track+semesters,,,What courses do I need to take to complete my M.Tech CSE degree?
+Q0143-P,paraphrase,slot_lost:track+semesters,,,Hey there! So I'm a CSE M.Tech. student specializing in theory right now. Have you heard back from the advisor on my upcoming semester schedule?
+Q0144-P,paraphrase,slot_lost:semesters,,,"Sure! Here's how you can rephrase your request:
+
+---
+
+Hey there! I’m a Master’s in Artificial Intelligence student focusing on AI/ML thesis. So far, I haven’t taken any courses at all. Could you please provide me with a comprehensive list of everything else I need to finish up before graduating?"
+Q0150-P,paraphrase,slot_lost:stream+track+semesters,,,What courses do I need to take to complete my MTech-CSE degree?
+Q0156-P,paraphrase,slot_lost:track,,,"Hey there! I'm currently a Master's in Electrical Engineering student specializing in Power Engineering & Control Systems. So far, I've finished two semesters. Could you please provide me with a comprehensive list of all the graduation requirements that I still need to fulfill?"
+Q0168-P,paraphrase,slot_lost:semesters,,,"Sure! Here's how you can rephrase your request:
+
+---
+
+Hey there! I’m a Master’s in Artificial Intelligence student focusing on AI/ML thesis. So far, I haven’t taken any courses at all. Could you please provide me with a comprehensive list of everything else I need to finish up before graduating?"
+Q0173-P,paraphrase,slot_lost:track,,,"Hey there! I'm a Masters of Technology in Artificial Intelligence student specializing in AI/ML (workshop track). So far, I've finished one semester. Can you tell me what's left on my coursework and project front?"
+Q0194-P,paraphrase,slot_lost:semesters,,,"Hey! So, I'm a CSE master's student studying in the theory stream. My coursework track means I've finished my first semester already. How many credits do I need to get to graduate?"
+Q0195-P,paraphrase,slot_lost:track,,,What's next on my MTech-EE journey in Power Engineering & Control Systems? I've already finished two semesters. How many more do I need to complete?
+Q0197-P,paraphrase,slot_lost:track,,,"Hey there! So, I'm a CSE M.Tech student specializing in theory and I've already finished 3 semesters. Can you tell me how many credits I still need to meet for both my coursework and thesis requirements?"
+Q0198-P,paraphrase,slot_lost:stream,,,Hey there! I'm a M.Tech in AI/AutoML. I've been in the thesis track for one semester. What else do I need to complete my degree?
+Q0202-P,paraphrase,slot_lost:term,,,"Hey there! I'm currently a CSE-MTech student in the Theory stream (thesis track). I've already finished 3 semesters. Can you tell me if I can enroll in CS 614 (Advanced Algorithms) during the upcoming Term 2, which starts in 2026-27?"
+Q0209-P,paraphrase,slot_lost:programme+stream+semesters,,,"Sure! Here's how you could rephrase that question:
+
+Hey there,
+
+Is it okay if I sign up for EE 662 next semester? I’m currently enrolled as an M.Tech. AI student pursuing the thesis track, but I haven’t taken any classes yet this year."
+Q0213-P,paraphrase,slot_lost:term,,,"Hey! So, I'm a Master of Technology in Artificial Intelligence student specializing in AI/ML (thesis track). I've finished two semesters so far. Can you tell me if I'm eligible to enroll in CS 623 (Algebraic Complexity Theory) this upcoming semester, which starts in Fall 2026?"
+Q0221-P,paraphrase,slot_lost:turned_to_student+track+term,,,Are you an M.Tech CSE student specializing in AI/ML? Have you completed no semesters yet? Can you register for CS 610 in the upcoming 2026-27 semester?
+Q0236-P,paraphrase,slot_lost:track,,,"Sure! Here's how you could rephrase your question:
+
+Hey there,
+
+I'm currently enrolled as an MTech-EE student specializing in Power Engineering & Control Systems (workshop track). So far, I've finished two semesters of coursework. Can you confirm if this qualifies me to take ES 404?
+
+Thanks so much!"
+Q0238-P,paraphrase,slot_lost:stream+track+semesters+term,,,"Am I qualified to enroll in EE 604 (High Voltage DC and Flexible AC Transmission Systems) during the upcoming term, which starts in 2026-27 semester one?"
+Q0239-P,paraphrase,slot_lost:turned_to_student,,,Are you an M.Tech in CSE? Did you choose the AI/ML thesis track? And have you finished three semesters already? Do you meet all the requirements to start CS 691-XIV?
+Q0259-P,paraphrase,slot_lost:programme+stream+track+semesters,,,"Sure! Here's a revised version of your question:
+
+Is there anything else required before enrolling in ES 607?"
+Q0261-P,paraphrase,slot_lost:turned_to_student+programme+semesters,,,Are you an AI/Machine Learning thesis student at the MTech level? Have you finished none of your semesters so far? Will you be able to enroll in CS 620 during the upcoming term starting from 2026-27 Semester 1?
+Q0268-P,paraphrase,slot_lost:turned_to_student,,,Are you an MTech-EE student in the Signal Processing & Machine Learning thesis track? Have you completed 3 semesters? Does that mean you're ready to take EE 606?
+Q0276-P,paraphrase,slot_lost:track,,,"Hey there! I'm currently pursuing my M.Tech in Electrical Engineering through the Power Engineering & Control Systems stream. So far, I've finished two semesters. Any obstacles standing in my way to enrolling in CS 621?"
+Q0278-P,paraphrase,slot_lost:programme+stream+track+semesters,,,"Sure! Here's how you could rephrase that question:
 
 Is it possible for me to enroll in CS 615 next term?"
+Q0295-P,paraphrase,slot_lost:programme,,,Hey there! So I’m a M.Tech. AI student specializing in AI/ML coursework and I’ve already finished one semester. Any obstacles standing in my way to taking EE 633?
+Q0300-P,paraphrase,slot_lost:turned_to_student,,,Are you an MTech-EE student in the Power Engineering & Control Systems thesis track? Have you completed one semester? Does this mean you're ready to take CS 610?
+Q0311-P,paraphrase,slot_lost:semesters,,,Hey! So I'm a CSE M.Tech student in the Systems thesis track. I've already finished my first semester. Any blockers preventing me from enrolling in ES 678?
+Q0318-P,paraphrase,slot_lost:track,,,"Sure! Here's the revised question:
+
+Hey there,
+
+I’m currently enrolled as a Master of Technology in Electrical Engineering under the Signal Processing & Machine Learning stream. I’ve finished two semesters so far. Could you tell me if I can sign up for CS 621 in Semester 1 of 2026-27?"
+Q0324-P,paraphrase,slot_lost:turned_to_student+track+semesters,,,Are you an MTech-EE student in the Signal Processing & Machine Learning stream? How many semesters have you completed so far? Have you met the prerequisites for CS 621 (Ethics of AI)?
+Q0343-P,paraphrase,slot_lost:track,,,Am I qualified to take CS 613 if I’m an MTech-EE student in the Power Engineering & Control Systems stream? I’ve already finished one semester.
+Q0346-P,paraphrase,slot_lost:programme+stream+track+semesters,,,"Sure! Here's a rephrased version of your question:
+
+Hey there, could you let me know if it’s still possible for me to join CS 610 during my next semester?"
+Q0350-P,paraphrase,slot_lost:term,,,"Hey! So, I'm a CSE M.Tech. student in the Systems stream (thesis track), right? And I've already finished two semesters. Can you tell me if I can join ES 661 (Probabilistic ML) this upcoming semester, which starts in 2026-27 Term-I?"
+Q0361-P,paraphrase,slot_lost:turned_to_student+term,,,Are you an M.Tech-CSE student in the Theory stream (thesis track)? I haven't completed any semesters yet. Could you register for CS 691-XVII in the upcoming 2026-27 semester?
+Q0363-P,paraphrase,slot_lost:turned_to_student+stream+semesters,,,Are you an M.Tech in CSE? What's your coursework track? How many semesters have you completed? Have you fulfilled the prerequisites for EE 663 (Advanced Wireless Communications)?
+Q0375-P,paraphrase,slot_lost:turned_to_student+semesters,,,Are you an MTech-AI student in the AI/ML thesis track? How many semesters have you completed so far? Did you meet the prerequisites for EE 619 (Special Electrical Machines)?
+Q0382-P,paraphrase,slot_lost:track,,,Hey there! So I’m a CSE M.Tech. student specializing in AI/ML. I’ve already finished 3 semesters. Could you tell me if it’s feasible for me to join ES 656 next term?
+Q0383-P,paraphrase,slot_lost:turned_to_student,,,Are you an MTech-EE student in the Power Engineering & Control Systems thesis track? Have you completed one semester? Does this mean you're ready to take EE 663?
+Q0390-P,paraphrase,slot_lost:programme+stream+term,,,"Sure! Here's how you can rephrase the question:
+
+---
+
+Hey there,
+
+I’m a PhD-ECE student currently enrolled in the Communications Systems program. My thesis track focuses on Wireless Networks. As of now, I haven’t completed any semesters at this institution. Could you help me figure out if I can sign up for CS 621 in the upcoming semester?
+
+---"
+Q0396-P,paraphrase,slot_lost:track,,,"Hey there! I'm currently pursuing my M.Tech in Electrical Engineering through the Power Engineering & Control Systems stream. So far, I've finished two semesters. Any obstacles standing in my way to enrolling in CS 621?"
+Q0398-P,paraphrase,slot_lost:track+term,,,"Am I qualified to enroll in CS 618: Theoretical Foundations of ML this upcoming semester, considering my status as a M.Tech-Electrical Engineering student specializing in the Signal Processing & Machine Learning stream? I've already completed two terms."
+Q0408-P,paraphrase,slot_lost:track+semesters+elective_count,,,Hey there! I'm a CSE Master's student focusing on theory stuff. Can you recommend some electives for me to take next semester?
+Q0416-P,paraphrase,slot_lost:semesters,,,Hey there! I'm a M.Tech-Electrical Engineering student in the Power Engineering & Control Systems coursework stream. Can you recommend some top 3 elective courses for my next semester?
+Q0418-P,paraphrase,slot_lost:track,,,"Hey! So, I'm an M.Tech-CSE student in the AI/ML stream, and I've already finished two semesters. What would be some of your top picks for electives this upcoming term?"
+Q0421-P,paraphrase,slot_lost:track+semesters,,,Hey! I'm a CSE MTech student focusing on AI/ML (workshop track). How can I best plan out my coursework so I meet all my degree requirements?
+Q0430-P,paraphrase,slot_lost:track,,,"Hey there! So, I'm an MTech-EE student in the Power Engineering & Control Systems stream (workshop track). I've already finished 2 semesters of coursework. Can you suggest the top 3 elective courses I should take next term?"
+Q0432-P,paraphrase,slot_lost:programme,,,What are your top three elective choices to complete my AI/ML thesis track requirements in the upcoming semester?
+Q0442-P,paraphrase,slot_lost:programme+stream+track+semesters,,,What three electives should I consider taking for my first semester of 2026-27?
+Q0458-P,paraphrase,slot_lost:semesters+elective_count,,,"Hey there! As an MTech-EE student focusing on Power Engineering & Control Systems coursework, how about suggesting some electives for this upcoming Semester II in 2026-27?"
+Q0459-P,paraphrase,slot_lost:track,,,"Hey there! I'm a CSE M.Tech student focusing on theory stuff. I've already finished one semester. Next up, what do you recommend I add to my curriculum?"
+Q0479-P,paraphrase,slot_lost:programme+stream+track+semesters,,,What classes do you recommend I take to fill up my remaining courses before graduation?
+Q0492-P,paraphrase,slot_lost:track,,,"Hey there! I'm currently a CSE MTech student in the Systems stream, and I've finished 3 semesters so far. Can you help me pick out the top 3 electives to take this upcoming term?"
+Q0507-P,paraphrase,slot_lost:track,,,"Sure! Here's a rephrased version:
+
+I'm a CSE-MTech student focusing on AI/ML and still haven't finished any semesters. Could you suggest some courses to complete my own-basket and other-basket credits?"
+Q0512-P,paraphrase,slot_lost:track,,,"What three elective courses do you suggest I take for my first semester of 2026-27, given that I am currently enrolled in an M.Tech in CSE program specializing in AI/ML?"
+Q0513-P,paraphrase,slot_lost:track,,,Hey there! I'm a CSE MTech student in the Systems stream (workshop track). I've finished 3 semesters already. What classes should I enroll in next to fill up my gap year?
+Q0521-P,paraphrase,slot_lost:stream,,,"Sure! Here's a rephrased version of your question:
+
+Hey there,
+
+I'm an M.Tech in AI student pursuing the thesis track. So far, I've finished 3 semesters. Could you please suggest some courses to complete my own-basket and other-basket credits?"
+Q0522-P,paraphrase,slot_lost:track,,,"Hey there! So, I'm an MTech-EE student in the Power Engineering & Control Systems stream (workshop track). I've already finished 2 semesters of coursework. Can you suggest the top 3 elective courses I should take next term?"
+Q0536-P,paraphrase,slot_lost:programme+stream+track+semesters,,,What are my best 3 elective options to choose from for the upcoming term?
+Q0540-P,paraphrase,slot_lost:semesters,,,Hey there! I'm a M.Tech-Electrical Engineering student in the Power Engineering & Control Systems coursework stream. Can you recommend some top 3 elective courses for my next semester?
+Q0542-P,paraphrase,slot_lost:programme+stream+track+semesters,,,What are my best three elective options to choose from next semester?
+Q0549-P,paraphrase,slot_lost:programme,,,"Hey! So, I'm a M.Tech. AI student specializing in AI/ML coursework and I haven't taken any semesters yet. Could you recommend some courses to fulfill my own-basket and other-basket credits?"
+Q0551-P,paraphrase,slot_lost:track,,,"Hey there! I'm a CSE M.Tech. student in the Theory stream (workshop track). I've finished two semesters already. Next up, what do you recommend I focus on?"
+Q0557-P,paraphrase,slot_lost:track,,,"Hey! So I'm a CSE MTech student in the Systems stream (workshop track), and I've already finished one semester. What classes should I sign up for next to meet all my degree requirements?"
+Q0558-P,paraphrase,slot_lost:semesters+elective_count+term,,,Hey there! I'm currently a CSE MTech student in the Theory stream (thesis track). How about suggesting some elective courses for this fall semester?
+Q0560-P,paraphrase,slot_lost:track+semesters+elective_count,,,Hey! I'm an M.Tech CSE student specializing in AI/ML. Can you suggest some electives I should consider taking next semester?
+Q0569-P,paraphrase,slot_lost:stream,,,"Sure! Here's a revised version of your request:
+
+---
+
+Hey there,
+
+Could you suggest some courses that would help me complete my own basket and other basket credits? I’m currently enrolled as a Master of Technology in Artificial Intelligence student pursuing the thesis track and have already completed two semesters.
+
+---
+
+This version maintains the core information while making it slightly less formal and more conversational."
+Q0570-P,paraphrase,slot_lost:track+semesters+elective_count,,,"What's up? I'm an MTech-EE student in the Power Engineering & Control Systems stream, completing my third semester already. Could you recommend some electives for me to add this year?"
+Q0581-P,paraphrase,slot_lost:programme+stream,,,"Hey there! So I'm a Master's in AI student in the thesis track, and I've already finished two semesters. Next up, what do you recommend for me to focus on?"
+Q0587-P,paraphrase,slot_lost:track,,,"Hey there! So, I'm a CSE Master's student in the Theory stream (workshop track). I've already finished three semesters. Next up, what courses should I enroll in?"
+Q0591-P,paraphrase,slot_lost:programme+stream+track+semesters,,,What courses should I take next semester to fill up the remaining sections of my degree?
+Q0594-P,paraphrase,slot_lost:programme+elective_count,,,Hey there! I'm a M.Tech. AI student in the AI/ML thesis track. I've already finished 2 semesters. Can you recommend some electives for me to add this year?
+Q0596-P,paraphrase,slot_lost:track,,,"What are my top three elective choices to take in the upcoming semester, considering I'm an M.Tech-Electrical Engineering student specializing in Signal Processing & Machine Learning?"

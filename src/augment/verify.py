@@ -13,6 +13,7 @@ import argparse
 import csv
 import json
 import random
+import re
 from collections import Counter, defaultdict
 
 from src.augment.common import (AUG_DIR, INTERIM, PROCESSED, QUERIES, STUDENTS, STUDENTS_AUG, gold_for,
@@ -27,10 +28,70 @@ AUGS = ["paraphrase", "typo_abbrev", "transcript_reorder", "transcript_length"]
 TEXT_AUGS = {"paraphrase", "typo_abbrev"}
 
 
+NUM_WORDS = {"1": "one", "2": "two", "3": "three", "4": "four"}
+PROGRAMME_RE = {"MTech-CSE": r"\bcse\b|computer science",
+                "MTech-EE": r"\bee\b|electrical eng",
+                "MTech-ICDT": r"\bicdt\b|integrated circuit",
+                "MTech-AI": r"m\.?\s*tech[\s-]*(in\s+)?ai\b|\bai\s+m\.?\s*tech|artificial intelligence"}
+# a stream counts as kept when every keyword group is present (alternatives inside a group)
+STREAM_KEYS = {"ai/ml": [r"\bai\b|artificial intelligence", r"\bml\b|machine learning"],
+               "systems": [r"\bsystems?\b"], "theory": [r"\btheor"],
+               "power engineering & control systems": [r"power", r"control"],
+               "signal processing & machine learning": [r"signal processing|\bsp\b|spml", r"\bml\b|machine learning|spml"]}
+
+
+def _has_number(text, n):
+    return re.search(rf"\b({n}|{NUM_WORDS.get(n, n)})\b", text) is not None
+
+
+def slot_issues(parent_text, child_text):
+    """Facts the parent question states that the child paraphrase lost or turned around (empty list = keeps all).
+    Checked: programme, stream, track, semesters completed, the number of electives asked for, the term,
+    and that the question is still asked by the student (guidelines v2 R4)."""
+    p, c = parent_text, child_text.lower()
+    bad = []
+    if re.search(r"^\W*(are|have|do|is)\s+you\b|\bare you an?\b", c):
+        bad.append("turned_to_student")
+    m = re.search(r"MTech-(CSE|AI|EE|ICDT)", p)
+    if m and not re.search(PROGRAMME_RE[m.group(0)], c):
+        bad.append("programme")
+    m = re.search(r"in the (.+?) stream", p)
+    if m and not all(re.search(k, c) for k in STREAM_KEYS.get(m.group(1).lower(), [re.escape(m.group(1).lower())])):
+        bad.append("stream")
+    m = re.search(r"\((thesis|coursework) track\)", p)
+    if m:
+        other = "coursework" if m.group(1) == "thesis" else "thesis"
+        if m.group(1) not in c or re.search(rf"\b({other}|workshop)\b", c):
+            bad.append("track")
+    m = re.search(r"completed (\d+|no) semesters?", p)
+    if m:
+        n = m.group(1)
+        ok = (re.search(r"\b(no|any|zero|0)\b[^.?]*semester|not (yet )?completed|first semester|just start", c)
+              if n == "no" else _has_number(c, n))
+        if not ok:
+            bad.append("semesters")
+    m = re.search(r"\b(\d) electives\b", p)
+    if m and not _has_number(c, m.group(1)):
+        bad.append("elective_count")
+    m = re.search(r"Sem-(I+)\b", p)
+    if m:
+        second = m.group(1) == "II"
+        pat = (r"sem(ester)?[\s-]*(ii|2)\b|second semester|even semester" if second
+               else r"sem(ester)?[\s-]*(i|1)\b|first semester|odd semester")
+        if not re.search(pat, c):
+            bad.append("term")
+    return bad
+
+
 def check_child(kid, parent, students, catalog):
     """(passed, reason, info) for one child."""
     aug = kid["augmentation"]
     info = {}
+    if aug == "paraphrase":
+        lost = slot_issues(parent["query_text"], kid["query_text"] or "")
+        if lost:
+            info = {"parent_codes": [], "child_codes": []}
+            return False, "slot_lost:" + "+".join(lost), info
     if aug in TEXT_AUGS:
         known = set(catalog.codes)
         want = resolve_codes(parent["query_text"], known)
