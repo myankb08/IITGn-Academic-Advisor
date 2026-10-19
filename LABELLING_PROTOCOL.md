@@ -4,10 +4,10 @@ This file records how the paraphrased advisory pairs were audited by humans, as 
 and 2 (18 and 19 October 2026).
 
 ## 1. Who labelled what
-| Annotator ID | Person (kept private, initials only) | Round 1 items | Round 2 items | Adjudication role |
+| Annotator ID | Person (GitHub id) | Round 1 items | Round 2 items | Adjudication role |
 |---|---|---|---|---|
-| A1 | SMH | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A2 |
-| A2 | MSB | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A1 |
+| A1 | hem436 (Shekhar Mohanty Hement) | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A2 |
+| A2 | myankb08 (Myank Singh Beniwal) | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A1 |
 
 Both annotators label the same 40 items in each round, so every item has two independent labels.
 Round 1 and round 2 item sets are disjoint. The item lists are in `data/labels/round{1,2}/manifest.csv`.

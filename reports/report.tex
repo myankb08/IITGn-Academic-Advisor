@@ -60,7 +60,7 @@
 \newcommand{\nmeta}{3083}
 \newcommand{\nmetaraw}{578}
 \newcommand{\nmetaproc}{2505}
-\newcommand{\ncommitsH}{49}
+\newcommand{\ncommitsH}{50}
 \newcommand{\ncommitsM}{3}
 \newcommand{\freezestatus}{set on the commit that contains this report}
 
@@ -182,8 +182,8 @@ annotators.
 
 \textbf{Task.} Each item shows the student, the template query, the paraphrase, the gold answer and the rewritten
 justification. Annotators fill three levels in a fixed order: decision (accept, edit, reject), one error category,
-then the edit text (Appendix~\ref{app:c}). Deciding first keeps the category list from steering the decision. A1 (SMH)
-and A2 (MSB) labelled the same items in Label Studio 1.23.2, two disjoint rounds drawn from the test split with
+then the edit text (Appendix~\ref{app:c}). Deciding first keeps the category list from steering the decision. A1 (hem436)
+and A2 (myankb08) labelled the same items in Label Studio 1.23.2, two disjoint rounds drawn from the test split with
 seed 208 [\ev{design}, \ev{seedann}, \ev{ls}]. Round 1 used guidelines v1; round 2 used v2, which adds seven rules,
 each tied to a round-1 disagreement [\ev{v2rules}]. Labelling test items is how the gold test set is built: the
 rounds only audit and correct the text, and no model is trained, tuned or selected on any test item.
@@ -340,10 +340,10 @@ LLM answers are replayed from the DVC-tracked cache, so a rerun gives the same t
 \toprule
 member & commits & work \\
 \midrule
-Myank Singh Beniwal (25210087; MSB) & \ncommitsM & First data-loading commit; annotator A2 in both rounds (exports committed from his
+Myank Singh Beniwal (25210087; myankb08) & \ncommitsM & First data-loading commit; annotator A2 in both rounds (exports committed from his
 own account); joint adjudication with A1 (all 29 reviewed decisions are A1+A2). The docs record form distribution by
 hem436 only [\ev{commits}, \ev{a2exports}, \ev{formshare}]. \\
-Shekhar Mohanty Hement (25210122; SMH, git hem436) & \ncommitsH & Everything else: scope decisions, pipeline and rule engine (built with Claude
+Shekhar Mohanty Hement (25210122; hem436) & \ncommitsH & Everything else: scope decisions, pipeline and rule engine (built with Claude
 Code), sources, form creation and sharing, annotator A1, joint adjudication, DVC, documentation and this report. \\
 \bottomrule
 \end{tabular}
@@ -455,7 +455,7 @@ id & what & file and field \\
 \evrow{target}{target of 30 real queries}{assignment brief (not in the zip), Section 8, Project 4: ``at least 30 real queries''}
 \evrow{icdt}{ICDT list ``to be updated soon''}{\f{supporting_files/A_collection/collection_log.md} section 7; \f{DATASET_CARD.md}}
 \evrow{commits}{\ncommitsH{} / \ncommitsM{} commits}{git history: \texttt{git log -{}-format=\%an | sort | uniq -c}}
-\evrow{a2exports}{A2 exports committed by MSB}{git commits f395c8a, 709292f; \f{LABELLING_PROTOCOL.md} section 9}
+\evrow{a2exports}{A2 exports committed by myankb08}{\texttt{git log -{}-author=myankb08} (both \f{export_A2.json} commits); \f{LABELLING_PROTOCOL.md} section 9}
 \evrow{formshare}{form shared by hem436}{\f{supporting_files/C_labelling/forms_log.md}, row 2}
 \evrow{sessions}{16 requests to the assistant}{\f{prompts/assistant/user_requests.md}, table rows}
 \bottomrule
