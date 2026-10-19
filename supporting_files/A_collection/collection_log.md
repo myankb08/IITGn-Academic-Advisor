@@ -1,5 +1,11 @@
 # Part A collection log
 
+> Note added 2026-10-19: sections 1 to 6 below log the first run on 2026-10-17, when the scope was CSE and AI only
+> (56 courses, 592 metadata rows). Section 7 adds the EE M.Tech site the same day; later changes are the ICDT and
+> two-track decisions (docs/DECISIONS.md D2, D3), the prerequisite and offering revision, and the D5 rule. Current
+> counts come from the files themselves: data/processed/courses.json (104 courses), data/processed/rules.json and
+> data/metadata.csv (758 rows), as reported in reports/report.pdf.
+
 Run date: 2026-10-17. Python 3.10 in `.venv`. Tools: pdfplumber 0.11.10 (pdfminer.six 20260107), openpyxl 3.1.5, requests 2.34.2.
 Scope: M.Tech CSE (streams AI/ML, Systems, Theory) and M.Tech AI (AI/ML stream only).
 The full pipeline was run twice. Apart from timestamps in the fetch log (failed links are retried), every output file had the same sha256 on both runs.

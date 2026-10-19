@@ -28,3 +28,6 @@ kaggle.json
 
 # outputs of --fixture smoke runs
 /tests/out/
+reports/*.aux
+reports/*.log
+reports/*.out

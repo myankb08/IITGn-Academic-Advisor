@@ -12,23 +12,23 @@ Refresh with `.venv/bin/python -m src.split.handoff` after the last `dvc repro` 
 | file | rows | sha256 |
 |---|---|---|
 | `params.yaml` |  | `c1a9b9561ca8cb1268d011977443110c8f75036aad5abdef99b3224a548db652` |
-| `dvc.lock` | pending | not created yet |
+| `dvc.lock` |  | `2ed8b1287f6efa598b9877bc6cfc2d3553fd422684d97977c9d89a744012649e` |
 | `data/processed/courses.json` |  | `b6118a747d544235751005af3d115a5eab80959a5b1a02896fa6cda2391420e3` |
 | `data/processed/rules.json` |  | `00ef71f6433f3bc71e2a29d82604e6d646df65f90d136b9cfc2f866ba35914a0` |
 | `data/processed/prereq_graph.json` |  | `db94f3d3c36a086bb08f8da9caa29b130cb6408443f94f861bbae224768197cc` |
 | `data/processed/students.jsonl` | 180 | `544322fc9acfda301dd60771e2c6a2c6bf72f3972ef4b7f6e4485b248005ce7f` |
-| `data/processed/students_augmented.jsonl` | 289 | `e591b9d54e4822b3421dc6c22457d258fb0105c65f105ca4962dbec3197268f9` |
-| `data/processed/queries.jsonl` | 600 | `e7f0fcc29a05ad1ff20d9ce542370e4219438b469cf5d3453d1471d0e5f7b12e` |
-| `data/processed/queries_para.jsonl` | 402 | `0d762c0e2e4343e995974a713d5a347d3bb472b9a6ad458012cf53ec585a2d5f` |
-| `data/processed/queries_augmented.jsonl` | 1410 | `75869cb9892360d654c4ad5c29246a9cfc6c70930c198681a13d90a715e3e11b` |
-| `data/splits/train.csv` | 339 | `defed5725be7d20ec8c7127a107ca31a1f87fa7e0447c2ab596281961e49b1fa` |
-| `data/splits/val.csv` | 80 | `f05fab1733a3f5df3d537d3b7ff2f68729f4cb256daed73c149cbf53c21f7b0c` |
-| `data/splits/test.csv` | 102 | `5942dc7ce39bad6577708850779e11efceb5f3834afe2ddb982a958e0b105e6a` |
-| `data/splits/programme_holdout.csv` | 82 | `dad22ae199008603340ab742973ce3f43275f897f4a85a9c11c5a4a6adb39e14` |
-| `data/splits/shifted_forms.csv` | pending | not created yet |
-| `data/labels/audited.jsonl` | pending | not created yet |
-| `data/gold/gold_test.jsonl` | pending | not created yet |
-| `data/metadata.csv` | 758 | `675ed9fc2bd9e44d7cc4b9cf4c0c46b84f58ab5831abb3bc8600956593e90f60` |
+| `data/processed/students_augmented.jsonl` | 347 | `015cdb1cda781eed8b0246dab93db4df533fc4b9c7a978bb2af70c1676bbfbc9` |
+| `data/processed/queries.jsonl` | 600 | `3b4653aab793befe950cfcb6f940f7f73f40da7a4f9613340e194bd3c81e6059` |
+| `data/processed/queries_para.jsonl` | 600 | `2451af9d7c9bf5cd405fe6b1d337c48a36276409c242ef87d7b7610e8bb8257e` |
+| `data/processed/queries_augmented.jsonl` | 2209 | `d4a67539b160d17b90015d1043e5eaa6dd10c9b3fec097ab774e7f08c8907afe` |
+| `data/splits/train.csv` | 1258 | `9a2db7a375f2465aae86957fe7e7154187486005ce820ecb2bd98b594514b5be` |
+| `data/splits/val.csv` | 287 | `55ec6076dc0c2ae8d204fa61dcb69900c90e35878a9e6c7102640a9469d93375` |
+| `data/splits/test.csv` | 376 | `54f805c30b8f66f9b4367367db34645830f1a72c4dd6b0d6e2e38d5a501ff2cc` |
+| `data/splits/programme_holdout.csv` | 288 | `5f82ec424dd573ad133ac2ee52b2d704939d1f80ce62dea7a29e0eb20dd478b0` |
+| `data/splits/shifted_forms.csv` | 10 | `28c096a6e951788f094c1b9cbbe5013a6c00ba93cf53c9b49e978846e436f68c` |
+| `data/labels/audited.jsonl` | 80 | `4615a5bbd9e9425a12bfb22c4dde2e301c8a1b021a66dc159986497302b1eae5` |
+| `data/gold/gold_test.jsonl` | 76 | `cd2e08dcb56f5716b06981e096c3c93fd417abab1989b5d22d45befeafbc383f` |
+| `data/metadata.csv` | 758 | `f8937af8aca39e0a8e9cd92bcc2962936bf5004683ff8188972c42fec230d278` |
 <!-- FROZEN_FILES_END -->
 
 Gold test set checksum (filled by `src.split.freeze_gold`, also in `data/gold/GOLD_SHA256.txt`):
@@ -49,7 +49,7 @@ rules. No pair is dropped. Manifests in `data/splits/` have the columns
 | val | 15% of each programme's students, non-held-out templates | 24 | 80 | 27 / 26 / 27 | 13 / 13 | 35 / 21 / 24 / 0 |
 | test | 20% of each programme's students, held-out templates only | 31 | 102 | 34 / 34 / 34 | 17 / 17 | 49 / 21 / 32 / 0 |
 | programme_holdout | every MTech-ICDT student, any template | 24 | 82 | 27 / 28 / 27 | 14 / 14 | 0 / 0 / 0 / 82 |
-| shifted (`shifted_forms.csv`) | real Google Forms questions (`src/split/shifted_forms.py`) | n/a | pending | | | |
+| shifted (`shifted_forms.csv`) | real Google Forms questions (`src/split/shifted_forms.py`), no gold answers | n/a | 10 | by student-chosen kind: remaining 6, eligibility 1, elective 2, other 1 | n/a | 4 / 2 / 2 / 2 |
 
 - Grouping: a student's pairs all go to one split, so no student is in two splits.
 - Pair slots: for each intent, every pair slot gets a split in proportion to the students in that split (seeded),

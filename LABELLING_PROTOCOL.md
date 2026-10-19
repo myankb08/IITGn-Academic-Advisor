@@ -1,13 +1,13 @@
 # Labelling protocol
 
-This file records how the paraphrased advisory pairs were audited by humans. Items marked TODO need facts that only
-the annotators can supply. Everything else is fixed by the code and config in this repo.
+This file records how the paraphrased advisory pairs were audited by humans, as it actually happened in rounds 1
+and 2 (18 and 19 October 2026).
 
 ## 1. Who labelled what
 | Annotator ID | Person (kept private, initials only) | Round 1 items | Round 2 items | Adjudication role |
 |---|---|---|---|---|
-| A1 | SMH | all 40 (overlapping) | all 40 (overlapping) | TODO |
-| A2 | MSB | all 40 (overlapping) | all 40 (overlapping) | TODO |
+| A1 | SMH | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A2 |
+| A2 | MSB | all 40 (overlapping) | all 40 (overlapping) | joint adjudicator with A1 |
 
 Both annotators label the same 40 items in each round, so every item has two independent labels.
 Round 1 and round 2 item sets are disjoint. The item lists are in `data/labels/round{1,2}/manifest.csv`.
@@ -16,19 +16,19 @@ Round 1 and round 2 item sets are disjoint. The item lists are in `data/labels/r
 - Label Studio: 1.23.2 (pip package `label-studio==1.23.2`), installed in a separate venv `.venv-labelstudio` (Python 3.10).
 - Task files: `src/queries/to_labelstudio.py`. Agreement: `src/queries/agreement.py`. Merge: `src/queries/adjudicate.py`.
 - Analysis Python: `.venv` (scikit-learn, pandas, matplotlib, versions in requirements.txt).
-- Machine(s) used by each annotator: A1 on their own Ubuntu 22.04 laptop, Label Studio served locally on port 8095 (8080 was held by another local process). A2: TODO.
+- Machine(s) used by each annotator: A1 on their own Ubuntu 22.04 laptop, Label Studio served locally on port 8095 (8080 was held by another local process). A2 on their own laptop with a local Label Studio 1.23.2 install from the round kit; further machine details were not recorded.
 
 ## 3. Labelling config per round
 | Round | Config file | Notes |
 |---|---|---|
 | 1 | `labelstudio/config_v1.xml` | decision (Choices), error_category (Choices), edit_text (TextArea, shown only when decision = edit) |
-| 2 | `labelstudio/config_v1.xml` | same label set unless round 1 shows a category is missing; if it changes, add `config_v2.xml` and note it here (TODO confirm) |
+| 2 | `labelstudio/config_v1.xml` | unchanged: round 1 showed no missing category, so no `config_v2.xml` was made |
 
 ## 4. Guideline version per round
 | Round | Guidelines | Status |
 |---|---|---|
 | 1 | `labelstudio/guidelines_v1.md` | final |
-| 2 | `labelstudio/guidelines_v2.md` | to be revised after round 1, list each change and the round-1 disagreement behind it (TODO) |
+| 2 | `labelstudio/guidelines_v2.md` | final; seven rules (R1 to R7), each tied to round-1 items in `supporting_files/C_labelling/round1/disagreement_analysis.md` |
 
 ## 5. Order of label levels and rationale
 Fixed order, top to bottom in the interface: 1) decision accept | edit | reject, 2) error category, 3) edit text
@@ -48,7 +48,8 @@ is kept.
 ## 7. What annotators could see
 Student summary, template query, paraphrased query, rule-engine gold answer and paraphrased justification. They
 could not see the other annotator's labels, any model prediction of the label, or the agreement numbers until both
-exports of a round were saved. Each annotator used a separate Label Studio project (or separate account) TODO confirm.
+exports of a round were saved. Each annotator used their own local Label Studio install and a separate project per
+round (A1: R1-A1, R2-A1).
 
 ## 8. Disagreement resolution
 1. After both exports of a round are saved, run `.venv/bin/python -m src.queries.agreement --round N`.
@@ -78,13 +79,13 @@ exports of a round were saved. Each annotator used a separate Label Studio proje
 | Round 1 A1 finished | labelled 2026-10-18 19:00 to 20:10 IST, exported 20:12 (export sha256 0238baff...) | `data/labels/round1/export_A1.json` |
 | Round 1 A2 finished | committed by A2 from their own account on 2026-10-19 00:32 IST | `data/labels/round1/export_A2.json` |
 | Round 1 agreement | 2026-10-19: decision kappa 0.227, category kappa 0.171 | `supporting_files/C_labelling/round1/agreement_summary.json` |
-| Round 1 adjudication | TODO | `data/labels/round1/adjudication.csv` |
+| Round 1 adjudication | 2026-10-19, A1 and A2 on the review page (17 items), see section 8 | `data/labels/round1/adjudication.csv` |
 | Guidelines v2 frozen | 2026-10-19, issued with the round 2 kit (guidelines_v2.md sha256 f16d8801cb2e8b71...); changes and their round-1 sources in supporting_files/C_labelling/round1/disagreement_analysis.md | `labelstudio/guidelines_v2.md` |
 | Round 2 tasks generated | 2026-10-18 17:01 IST (tasks sha256 210e06e4...), kit issued 2026-10-19 | `data/labels/round2/tasks.json`, `manifest.csv` |
 | Round 2 A1 finished | exported 2026-10-19 07:12 IST (Label Studio project 3, R2-A1); during the round A1 asked the assistant one guideline question about item R2-Q0114 and got rule-level feedback only, no label | `data/labels/round2/export_A1.json` |
 | Round 2 A2 finished | committed by A2 from their own account on 2026-10-19 02:50 IST | `data/labels/round2/export_A2.json` |
 | Round 2 agreement | 2026-10-19: decision kappa 0.377, category kappa 0.350 (CIs in supporting_files/C_labelling/kappa_ci.json) | `supporting_files/C_labelling/round2/agreement_summary.json` |
-| Round 2 adjudication | TODO | `data/labels/round2/adjudication.csv` |
+| Round 2 adjudication | 2026-10-19, A1 and A2 on the review page (12 items) plus R2-Q0196 decided by A1 in chat, see section 8 | `data/labels/round2/adjudication.csv` |
 
 Export files are saved exactly as Label Studio produced them (Export > JSON) and are never edited.
 
