@@ -10,7 +10,7 @@ those paraphrases in Label Studio.
 Scope: four programmes, MTech-CSE and MTech-AI (CS department), MTech-EE and MTech-ICDT (EE department), each with a
 thesis and a coursework track (`docs/DECISIONS.md` D1 to D3).
 
-GitHub: https://github.com/hem436/CS203_Project
+GitHub: https://github.com/myankb08/IITGn-Academic-Advisor
 
 ## Rebuild the data
 
@@ -26,13 +26,16 @@ python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt
 - `dvc pull` reads the local DVC remote at `../dvc_remote` (a folder next to the repo root, stored in `.dvc/config`
   as `../../dvc_remote` because DVC keeps it relative to `.dvc/`). In the submission zip that folder sits next to
   `code/`, so the commands above work offline.
-- `dvc repro` should print "Data and pipelines are up to date" after a pull. If you change code or params, it reruns
-  only the affected stages. The LLM stages (`paraphrase_llm`, `augment`, `base_model_answers`) need Ollama running
-  with `qwen2.5:1.5b` (see ENVIRONMENT.md); answers already in `data/interim/llm_cache.jsonl` are reused, so a rerun
-  with the same model digest gives the same text.
+- `dvc repro` should print "Data and pipelines are up to date" after a pull. Run on its own (no pull), it rebuilds
+  every stage offline: the LLM stages (`paraphrase_llm`, `augment`, `base_model_answers`) replay
+  `data/interim/llm_cache.jsonl` (DVC-tracked), so no model server or GPU is needed. A full rerun reproduces the
+  processed data, splits, audited labels and gold set byte for byte; `data/metadata.csv` differs only in its
+  `collected_at_utc` run timestamps. How the cache was first filled (local llama.cpp and Kaggle T4) is in
+  `supporting_files/D_augmentation/llm_backend.md`.
 - Pipeline definition: `dvc.yaml`. Stage order: extract_sources, fetch_course_plans (offline), fetch_ee_pages
-  (frozen raw input), build_catalog, build_rules, clean_catalog, prereq_graph, synth_transcripts, inject_violations (test fixture data), assign_students, make_queries,
-  paraphrase_llm, augment, make_splits, base_model_answers, al_vs_random, validate, build_metadata.
+  (frozen raw input), build_catalog, build_rules, clean_catalog, prereq_graph, synth_transcripts, inject_violations (Part B corruption data), assign_students, make_queries,
+  paraphrase_llm, augment, make_splits, base_model_answers, al_vs_random, validate, build_metadata, import_forms,
+  shifted_forms, adjudicate, freeze_gold.
 
 ### Human inputs (tracked with `dvc add`, never produced by a stage)
 
@@ -40,8 +43,8 @@ python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt
 |---|---|
 | `data/raw/sources/` (PDFs, timetable xlsx, EE site HTML) | `dvc add data/raw/sources` |
 | `data/raw/course_plans/`, `data/raw/course_plans_manual/` | `dvc add data/raw/course_plans data/raw/course_plans_manual` |
-| `data/raw/forms/responses_raw.csv` (Google Forms download) | `dvc add data/raw/forms/responses_raw.csv`, then uncomment `import_forms` and `shifted_forms` in dvc.yaml |
-| `data/labels/roundN/export_A1.json`, `export_A2.json`, `adjudication.csv` | `dvc add` each file, then uncomment `adjudicate` and `freeze_gold` in dvc.yaml |
+| `data/raw/forms/responses_raw.csv` (Google Forms download) | `dvc add data/raw/forms/responses_raw.csv` (read by the `import_forms` and `shifted_forms` stages) |
+| `data/labels/roundN/export_A1.json`, `export_A2.json`, `adjudication.csv` | `dvc add` each file (read by the `adjudicate` and `freeze_gold` stages); `adjudication.csv` is built from the reviewed worksheet with `src.queries.build_adjudication` |
 
 ## Where each part lives
 
