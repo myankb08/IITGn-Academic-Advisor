@@ -38,6 +38,7 @@ cp -r "$REMOTE" "$OUT/dvc_remote"
 cp -r "$OUT/code/data" "$OUT/data"
 cp -r "$OUT/code/supporting_files" "$OUT/supporting_files"
 git -C "$OUT/code" clean -fdqX
+git -C "$OUT/code" gc --quiet --prune=now
 cp "$REPORT" "$OUT/report/report.pdf"
 
 (cd "$OUT_PARENT" && zip -qr "$NAME.zip" "$NAME")
