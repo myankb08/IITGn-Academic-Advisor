@@ -1,0 +1,5 @@
+outs:
+- md5: 8b92dfa44bddeec503abc16551063f4d
+  size: 116921
+  hash: md5
+  path: export_A2.json

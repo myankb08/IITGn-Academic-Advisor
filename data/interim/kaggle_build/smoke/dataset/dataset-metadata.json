@@ -1,6 +1,0 @@
-{
-  "title": "course-advisory-llm-inputs",
-  "id": "hemant436/course-advisory-llm-inputs",
-  "licenses": [{"name": "other"}],
-  "description": "Inputs for the course advisory LLM runs: repo_inputs.tar.gz holds queries.jsonl, students.jsonl, courses.json, rules.json, prompts/pipeline/*, data/splits/*.csv, params.yaml and the src/ code that builds the prompts. Synthetic students only."
-}

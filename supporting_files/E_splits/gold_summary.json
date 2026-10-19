@@ -1,0 +1,17 @@
+{
+ "n_gold": 76,
+ "sha256": "cd2e08dcb56f5716b06981e096c3c93fd417abab1989b5d22d45befeafbc383f",
+ "source": "data/processed/queries_para.jsonl",
+ "by_decision": {
+  "accept": 55,
+  "edit": 21
+ },
+ "by_intent": {
+  "elective_recommendation": 27,
+  "eligibility": 27,
+  "remaining_core": 22
+ },
+ "skipped": {
+  "final_decision reject": 4
+ }
+}

@@ -55,8 +55,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fixture", action="store_true", help="read fixtures from tests/fixtures, write under supporting_files")
     args = ap.parse_args()
-    out_path = ROOT / ("supporting_files/C_labelling/fixture_audited.jsonl" if args.fixture else "data/labels/audited.jsonl")
-    log_path = ROOT / "supporting_files/C_labelling" / ("fixture_adjudication_log.json" if args.fixture else "adjudication_log.json")
+    out_path = ROOT / ("tests/out/fixture_audited.jsonl" if args.fixture else "data/labels/audited.jsonl")
+    log_path = ROOT / ("tests/out/fixture_adjudication_log.json" if args.fixture else "supporting_files/C_labelling/adjudication_log.json")
     records, log, unresolved = [], {}, []
     for rnd, gver in ROUNDS.items():
         p1, p2, padj = round_paths(rnd, args.fixture)

@@ -172,8 +172,9 @@ stages:
 
   # data/splits only orders the work in this script (test/val first); the output does not depend on it.
   paraphrase_llm:
-    cmd: .venv/bin/python -m src.queries.paraphrase_llm
+    cmd: LLM_BACKEND=llamacpp .venv/bin/python -m src.queries.paraphrase_llm --replay --also-backends kaggle-transformers
     deps:
+      - data/interim/llm_cache.jsonl
       - src/queries/paraphrase_llm.py
       - src/queries/llm_client.py
       - prompts/pipeline/paraphrase_query_v1.txt
@@ -190,7 +191,7 @@ stages:
 
   augment:
     cmd:
-      - .venv/bin/python -m src.augment.paraphrase
+      - LLM_BACKEND=kaggle-transformers .venv/bin/python -m src.augment.paraphrase
       - .venv/bin/python -m src.augment.typos_abbrev
       - .venv/bin/python -m src.augment.transcript_variants
       - .venv/bin/python -m src.augment.verify
@@ -203,6 +204,7 @@ stages:
       - data/processed/students.jsonl
       - data/processed/courses.json
       - data/processed/rules.json
+      - data/interim/llm_cache.jsonl
     params:
       - seeds.augmentation
       - llm.paraphrase_model
@@ -213,7 +215,21 @@ stages:
       - data/interim/aug_transcript.jsonl
       - data/processed/students_augmented.jsonl
       - data/processed/queries_augmented.jsonl
-      - supporting_files/D_augmentation:
+      - supporting_files/D_augmentation/invariance.csv:
+          cache: false
+      - supporting_files/D_augmentation/dropped.csv:
+          cache: false
+      - supporting_files/D_augmentation/verify_report.json:
+          cache: false
+      - supporting_files/D_augmentation/paraphrase_sample.json:
+          cache: false
+      - supporting_files/D_augmentation/samples_paraphrase.md:
+          cache: false
+      - supporting_files/D_augmentation/samples_typo_abbrev.md:
+          cache: false
+      - supporting_files/D_augmentation/samples_transcript_reorder.md:
+          cache: false
+      - supporting_files/D_augmentation/samples_transcript_length.md:
           cache: false
 
   make_splits:
@@ -236,8 +252,9 @@ stages:
           cache: false
 
   base_model_answers:
-    cmd: .venv/bin/python -m src.active.base_model_answers
+    cmd: LLM_BACKEND=kaggle-transformers .venv/bin/python -m src.active.base_model_answers
     deps:
+      - data/interim/llm_cache.jsonl
       - src/active/base_model_answers.py
       - src/queries/llm_client.py
       - prompts/pipeline/base_model_answer_v1.txt
@@ -320,56 +337,55 @@ stages:
     outs:
       - data/metadata.csv
 
-  # PENDING stages: their inputs come from humans and do not exist yet. Uncomment each one when its
-  # input is tracked with dvc add (see README "Human inputs").
-  #
-  # import_forms:
-  #   cmd: .venv/bin/python -m src.collect.import_forms
-  #   deps:
-  #     - src/collect/import_forms.py
-  #     - data/raw/forms/responses_raw.csv
-  #   outs:
-  #     - data/raw/forms/responses_anonymised.jsonl
-  #     - data/consent_register.csv
-  #     - supporting_files/C_labelling/forms_import_log.json:
-  #         cache: false
-  #
-  # shifted_forms:
-  #   cmd: .venv/bin/python -m src.split.shifted_forms
-  #   deps:
-  #     - src/split/shifted_forms.py
-  #     - data/raw/forms/responses_anonymised.jsonl
-  #   outs:
-  #     - data/splits/shifted_forms.csv
-  #     - supporting_files/E_splits/shifted_summary.json:
-  #         cache: false
-  #
-  # adjudicate:
-  #   cmd: .venv/bin/python -m src.queries.adjudicate
-  #   deps:
-  #     - src/queries/adjudicate.py
-  #     - src/queries/ls_export.py
-  #     - data/labels/round1/export_A1.json
-  #     - data/labels/round1/export_A2.json
-  #     - data/labels/round1/adjudication.csv
-  #     - data/labels/round2/export_A1.json
-  #     - data/labels/round2/export_A2.json
-  #     - data/labels/round2/adjudication.csv
-  #   outs:
-  #     - data/labels/audited.jsonl
-  #     - supporting_files/C_labelling/adjudication_log.json:
-  #         cache: false
-  #
-  # freeze_gold:
-  #   cmd: .venv/bin/python -m src.split.freeze_gold
-  #   deps:
-  #     - src/split/freeze_gold.py
-  #     - data/labels/audited.jsonl
-  #     - data/processed/queries_para.jsonl
-  #     - data/splits/test.csv
-  #   outs:
-  #     - data/gold/gold_test.jsonl
-  #     - data/gold/GOLD_SHA256.txt:
-  #         cache: false
-  #     - supporting_files/E_splits/gold_summary.json:
-  #         cache: false
+  # Stages fed by human inputs (form CSV, Label Studio exports, adjudication.csv), each tracked with dvc add.
+
+  import_forms:
+    cmd: .venv/bin/python -m src.collect.import_forms
+    deps:
+      - src/collect/import_forms.py
+      - data/raw/forms/responses_raw.csv
+    outs:
+      - data/raw/forms/responses_anonymised.jsonl
+      - data/consent_register.csv
+      - supporting_files/C_labelling/forms_import_log.json:
+          cache: false
+
+  shifted_forms:
+    cmd: .venv/bin/python -m src.split.shifted_forms
+    deps:
+      - src/split/shifted_forms.py
+      - data/raw/forms/responses_anonymised.jsonl
+    outs:
+      - data/splits/shifted_forms.csv
+      - supporting_files/E_splits/shifted_summary.json:
+          cache: false
+
+  adjudicate:
+    cmd: .venv/bin/python -m src.queries.adjudicate
+    deps:
+      - src/queries/adjudicate.py
+      - src/queries/ls_export.py
+      - data/labels/round1/export_A1.json
+      - data/labels/round1/export_A2.json
+      - data/labels/round1/adjudication.csv
+      - data/labels/round2/export_A1.json
+      - data/labels/round2/export_A2.json
+      - data/labels/round2/adjudication.csv
+    outs:
+      - data/labels/audited.jsonl
+      - supporting_files/C_labelling/adjudication_log.json:
+          cache: false
+
+  freeze_gold:
+    cmd: .venv/bin/python -m src.split.freeze_gold
+    deps:
+      - src/split/freeze_gold.py
+      - data/labels/audited.jsonl
+      - data/processed/queries_para.jsonl
+      - data/splits/test.csv
+    outs:
+      - data/gold/gold_test.jsonl
+      - data/gold/GOLD_SHA256.txt:
+          cache: false
+      - supporting_files/E_splits/gold_summary.json:
+          cache: false

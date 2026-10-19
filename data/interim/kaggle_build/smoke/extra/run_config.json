@@ -1,3 +1,0 @@
-{"stage": "smoke", "steps": [["paraphrase","src.queries.paraphrase_llm","--limit","10","--write-every","5"],
-                 ["base_model_answers","src.active.base_model_answers","--limit","10"],
-                 ["augment_paraphrase","src.augment.paraphrase","--per-intent","1"]]}

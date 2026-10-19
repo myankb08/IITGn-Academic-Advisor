@@ -47,7 +47,9 @@ def basket_streams(rules, student):
     return rules.streams(CURRICULUM_OF.get(student["programme"], student["programme"]))
 
 
-def role_of(catalog, student, code):
+def role_of(catalog, student, code, own_programme_baskets=False):
+    """own_programme_baskets=True keeps the basket view the synthetic students were generated with (before the
+    MTech-AI fix, supporting_files/B_engine/gold_fix_mtech_ai_baskets.md); gold answers never use it."""
     c = catalog.course(code)
     if c is None:
         return "hss" if _prefix(code) == "HS" else "unknown"
@@ -71,7 +73,8 @@ def role_of(catalog, student, code):
     if cat == "basket" and in_prog:
         if stream is None or stream in streams:
             return "own_basket"
-        if set(streams) & set(basket_streams(rules, student)):
+        baskets = rules.streams(student["programme"]) if own_programme_baskets else basket_streams(rules, student)
+        if set(streams) & set(baskets):
             return "other_basket"
     if _prefix(code) == "HS":
         return "hss"

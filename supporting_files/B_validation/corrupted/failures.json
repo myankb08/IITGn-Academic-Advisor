@@ -157,18 +157,7 @@
  ],
  "V22": [
   {
-   "id": "Q0007",
-   "intent": "remaining_core",
-   "keys_differ": [
-    "coursework",
-    "discipline_specified",
-    "electives",
-    "own_basket",
-    "total"
-   ]
-  },
-  {
-   "id": "Q0023",
+   "id": "Q0078",
    "intent": "remaining_core",
    "keys_differ": [
     "below_600",
@@ -181,7 +170,18 @@
    ]
   },
   {
-   "id": "Q0079",
+   "id": "Q0094",
+   "intent": "remaining_core",
+   "keys_differ": [
+    "coursework",
+    "discipline_specified",
+    "electives",
+    "own_basket",
+    "total"
+   ]
+  },
+  {
+   "id": "Q0137",
    "intent": "remaining_core",
    "keys_differ": [
     "below_600",
@@ -194,24 +194,33 @@
    ]
   },
   {
-   "id": "Q0198",
+   "id": "Q0264",
    "intent": "eligibility",
    "keys_differ": [
     "eligible"
    ]
   },
   {
-   "id": "Q0294",
+   "id": "Q0422",
    "intent": "elective_recommendation",
    "keys_differ": [
+    "eligible_pool_size",
     "gaps_before",
+    "recommendations"
+   ]
+  },
+  {
+   "id": "Q0576",
+   "intent": "elective_recommendation",
+   "keys_differ": [
+    "eligible_pool_size",
     "recommendations"
    ]
   }
  ],
  "V23": [
   {
-   "id": "Q0082",
+   "id": "Q0164",
    "field": "query_text",
    "marker": "answer marker",
    "match": "Answer:"
@@ -219,7 +228,7 @@
  ],
  "V24": [
   {
-   "id": "R1-FXQ0086",
+   "id": "R2-Q0400",
    "field": "final_decision",
    "value": "maybe"
   }
@@ -228,7 +237,7 @@
   {
    "split": "test",
    "column": "student_id",
-   "value": "S0149-R"
+   "value": "S0005"
   }
  ]
 }

@@ -25,10 +25,10 @@ Checks run: 25. fail: 12, pass: 12, warn: 1.
 | V19 | Transcripts respect credit caps: below-600 course cap and per-semester cap if stated | spec: credit caps respected, below-600 cap | students.jsonl | fail | 1 | per-semester cap not stated in sources (rules.json not_stated), only below-600 cap is enforced |
 | V20 | Transcripts have no other engine violations (unknown code, duplicate pass, credit mismatch, parity, term range) | spec: transcripts pass the rule engine | students.jsonl | fail | 5 |  |
 | V21 | Queries match the schema; intent, augmentation and template fields valid (Pandera) | general: label validity (intent) and schema | queries.jsonl | pass | 0 |  |
-| V22 | Stored gold_json equals the rule engine output recomputed from the student | spec: gold answers recomputed by the engine equal stored gold_json | queries.jsonl | fail | 5 | 402 recomputed, 0 skipped (missing student or transcript_length augmentation) |
+| V22 | Stored gold_json equals the rule engine output recomputed from the student | spec: gold answers recomputed by the engine equal stored gold_json | queries.jsonl | fail | 6 | 600 recomputed, 0 skipped (missing student or transcript_length augmentation) |
 | V23 | Query text (and paraphrase) does not leak gold answer markers or the gold text | spec: query text contains no leaked gold answer marker | queries.jsonl | fail | 1 |  |
 | V24 | Audited labels use allowed decisions and error categories, and edits carry text | general: label validity (decisions, error categories) | audited.jsonl | fail | 1 |  |
-| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | fail | 1 | 985 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout']) on student_id and programme; template families shared by train and test (by design): 7 |
+| V25 | No student or template in both train and test; held-out programmes and students not in train | spec: no student or template in both train and test | splits | fail | 1 | 2220 rows; train vs test on student_id and template_id, train vs other held-out splits (['programme_holdout', 'shifted']) on student_id and programme; template families shared by train and test (by design): 7 |
 
 ## Injected faults
 
@@ -47,9 +47,9 @@ Caught 15 of 15 injected faults.
 | F09 | synth_transcripts --inject-violations NOT_OFFERED_IN_TERM on S0017 | V20 | fail | True |
 | F10 | synth_transcripts --inject-violations CREDIT_MISMATCH on S0019 | V20 | fail | True |
 | F11 | synth_transcripts --inject-violations NOT_OFFERED_IN_PARITY on S0060 | V20 | fail | True |
-| F12 | gold_json of Q0198 flipped eligible | V22 | fail | True |
-| F13 | gold answer marker appended to Q0082 query_text | V23 | fail | True |
-| F14 | student S0149-R copied into train (data/splits) | V25 | fail | True |
-| F15 | label R1-FXQ0086 final_decision 'maybe' (copy of the Part C fixture) | V24 | fail | True |
+| F12 | gold_json of Q0264 flipped eligible | V22 | fail | True |
+| F13 | gold answer marker appended to Q0164 query_text | V23 | fail | True |
+| F14 | student S0005 copied into train (data/splits) | V25 | fail | True |
+| F15 | label R2-Q0400 final_decision 'maybe' (copy of data/labels/audited.jsonl) | V24 | fail | True |
 
 Failure examples (first 8 per check) are in results.csv, all failures in failures.json.

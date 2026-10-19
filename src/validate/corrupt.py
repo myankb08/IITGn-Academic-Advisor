@@ -21,7 +21,7 @@ PROCESSED = ROOT / "data" / "processed"
 OUT = ROOT / "data" / "interim" / "corrupted"
 SPLITS = ROOT / "data" / "splits"
 INJECTED_STUDENTS = ROOT / "data" / "interim" / "students_corrupted.jsonl"
-FIXTURE_LABELS = ROOT / "supporting_files" / "C_labelling" / "fixture_audited.jsonl"
+AUDITED_LABELS = ROOT / "data" / "labels" / "audited.jsonl"
 
 
 def read_jsonl(path):
@@ -183,15 +183,15 @@ def main():
     (OUT / "labels").mkdir()
     for name, part in df.groupby("split"):
         part.to_csv(OUT / "splits" / f"{name}.csv", index=False)
-    if FIXTURE_LABELS.exists():
-        labels = read_jsonl(FIXTURE_LABELS)
+    if AUDITED_LABELS.exists():
+        labels = read_jsonl(AUDITED_LABELS)
         bad = rng.choice(labels)
         bad["final_decision"] = "maybe"
         write_jsonl(OUT / "labels" / "audited.jsonl", labels)
-        fault(f"F{len(faults) + 1:02d}", f"label {bad['item_id']} final_decision 'maybe' (copy of the Part C fixture)",
+        fault(f"F{len(faults) + 1:02d}", f"label {bad['item_id']} final_decision 'maybe' (copy of data/labels/audited.jsonl)",
               "V24", [bad["item_id"], "maybe"])
     else:
-        not_injected.append({"fault": "invalid label", "reason": "fixture_audited.jsonl missing"})
+        not_injected.append({"fault": "invalid label", "reason": "data/labels/audited.jsonl missing"})
 
     (OUT / "courses.json").write_text(json.dumps(courses, indent=1, ensure_ascii=False))
     (OUT / "rules.json").write_text(json.dumps(rules, indent=1, ensure_ascii=False))

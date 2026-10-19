@@ -116,7 +116,7 @@ def generate_student(catalog, idx, base_seed, params):
         cands = _candidates(catalog, student, passed, passed, term)
         scored = []
         for code in cands:
-            role = role_of(catalog, student, code)
+            role = role_of(catalog, student, code, own_programme_baskets=True)  # keeps data/processed/students.jsonl as labelled
             tier = TIER.get(role, 4)
             if role == "own_basket" and basket["own_basket"] >= own_min:
                 tier = 4

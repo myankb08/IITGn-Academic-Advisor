@@ -60,7 +60,7 @@ def main():
     for p in (p1, p2):
         if not p.exists():
             raise SystemExit(f"{p.relative_to(ROOT)} not found; run with --fixture to test")
-    out = ROOT / "supporting_files/C_labelling" / (f"fixture_round{args.round}" if args.fixture else f"round{args.round}")
+    out = (ROOT / "tests/out" / f"fixture_round{args.round}") if args.fixture else (ROOT / "supporting_files/C_labelling" / f"round{args.round}")
     out.mkdir(parents=True, exist_ok=True)
     r1, w1 = read_export(p1, "A1")
     r2, w2 = read_export(p2, "A2")

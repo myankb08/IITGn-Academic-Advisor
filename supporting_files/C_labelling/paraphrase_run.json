@@ -41,9 +41,9 @@
  "para_query_done": 600,
  "para_justification_done": 600,
  "per_backend": {
-  "llamacpp": 108,
-  "kaggle-transformers": 362,
-  "kaggle-transformers+llamacpp": 130
+  "llamacpp": 107,
+  "kaggle-transformers": 332,
+  "kaggle-transformers+llamacpp": 161
  },
  "empty_para_query": 0,
  "empty_para_justification": 0,

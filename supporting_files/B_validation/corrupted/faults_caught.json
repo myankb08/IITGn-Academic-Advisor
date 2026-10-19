@@ -115,40 +115,40 @@
  },
  {
   "fault_id": "F12",
-  "description": "gold_json of Q0198 flipped eligible",
+  "description": "gold_json of Q0264 flipped eligible",
   "check_id": "V22",
   "match": [
-   "Q0198"
+   "Q0264"
   ],
   "check_status": "fail",
   "caught": true
  },
  {
   "fault_id": "F13",
-  "description": "gold answer marker appended to Q0082 query_text",
+  "description": "gold answer marker appended to Q0164 query_text",
   "check_id": "V23",
   "match": [
-   "Q0082"
+   "Q0164"
   ],
   "check_status": "fail",
   "caught": true
  },
  {
   "fault_id": "F14",
-  "description": "student S0149-R copied into train (data/splits)",
+  "description": "student S0005 copied into train (data/splits)",
   "check_id": "V25",
   "match": [
-   "S0149-R"
+   "S0005"
   ],
   "check_status": "fail",
   "caught": true
  },
  {
   "fault_id": "F15",
-  "description": "label R1-FXQ0086 final_decision 'maybe' (copy of the Part C fixture)",
+  "description": "label R2-Q0400 final_decision 'maybe' (copy of data/labels/audited.jsonl)",
   "check_id": "V24",
   "match": [
-   "R1-FXQ0086",
+   "R2-Q0400",
    "maybe"
   ],
   "check_status": "fail",

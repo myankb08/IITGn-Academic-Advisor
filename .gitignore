@@ -18,3 +18,13 @@ data/interim/corrupted/
 .secrets
 .secrets/
 kaggle.json
+
+# OS and editor clutter
+.DS_Store
+# local build artefacts of the Kaggle runs (logs kept in supporting_files/D_augmentation)
+/data/interim/kaggle_build/
+/data/interim/kaggle_out/
+/data/interim/corrupted/
+
+# outputs of --fixture smoke runs
+/tests/out/

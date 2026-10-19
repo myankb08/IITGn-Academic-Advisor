@@ -1,0 +1,966 @@
+schema: '2.0'
+stages:
+  fetch_ee_pages:
+    cmd: .venv/bin/python -m src.collect.fetch_ee_pages
+    deps:
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: src/collect/fetch_ee_pages.py
+      hash: md5
+      md5: 578b62d41fd308ce77da78bfb0720f99
+      size: 8412
+    outs:
+    - path: data/raw/extracted/ee_course_plan_text.jsonl
+      hash: md5
+      md5: 53f96bdd01607ad3ad34991989c54811
+      size: 16545
+    - path: data/raw/extracted/ee_pages.jsonl
+      hash: md5
+      md5: 25ca99b6df48adbee8b0cedb693bd91b
+      size: 13104
+    - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
+      hash: md5
+      md5: f1b70b571ad1a2dd8274ea1fb1875158
+      size: 6466
+    - path: supporting_files/A_collection/ee_site_fetch_log.csv
+      hash: md5
+      md5: a4def2d4e07bcec7a719ebd0d5b3add1
+      size: 1478
+  extract_sources:
+    cmd: .venv/bin/python -m src.collect.extract_sources
+    deps:
+    - path: data/raw/sources
+      hash: md5
+      md5: 725d5c95ccb39a20a5f6bc9cd1c2ab1b.dir
+      size: 2466705
+      nfiles: 15
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    - path: src/collect/extract_sources.py
+      hash: md5
+      md5: 592276bf14c27c6a8c38aaaabb675653
+      size: 2428
+    outs:
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: supporting_files/A_collection/extract_tool_versions.json
+      hash: md5
+      md5: cc81917da6c6ad215311e3c15eab9378
+      size: 186
+  fetch_course_plans:
+    cmd: .venv/bin/python -m src.collect.fetch_course_plans --offline
+    deps:
+    - path: data/raw/course_plans
+      hash: md5
+      md5: 2c7a4111f268214f11ec6791f72aa0ea.dir
+      size: 1930785
+      nfiles: 22
+    - path: data/raw/course_plans_manual
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    - path: src/collect/fetch_course_plans.py
+      hash: md5
+      md5: 58fa2588f702233aa68dd4fa7299c874
+      size: 10343
+    outs:
+    - path: data/raw/extracted/course_plan_text.jsonl
+      hash: md5
+      md5: 6e9d9f03dd0d7d2e6671ddb9e96b2890
+      size: 60178
+    - path: supporting_files/A_collection/course_plan_fetch_log.csv
+      hash: md5
+      md5: 29b904d974a8da6b01a0b720b6134a16
+      size: 14694
+  build_catalog:
+    cmd: .venv/bin/python -m src.collect.build_catalog
+    deps:
+    - path: data/raw/extracted/ee_pages.jsonl
+      hash: md5
+      md5: 25ca99b6df48adbee8b0cedb693bd91b
+      size: 13104
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: src/collect/build_catalog.py
+      hash: md5
+      md5: 10a6101229766c7808a3ed27a2f205a0
+      size: 7537
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    outs:
+    - path: data/raw/catalog_raw.json
+      hash: md5
+      md5: 4e381d86a793221184d8963deee20458
+      size: 64399
+  build_rules:
+    cmd: .venv/bin/python -m src.collect.build_rules
+    deps:
+    - path: data/raw/extracted/ee_pages.jsonl
+      hash: md5
+      md5: 25ca99b6df48adbee8b0cedb693bd91b
+      size: 13104
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: src/collect/build_rules.py
+      hash: md5
+      md5: f241ba706632a131ca96daf1632954bf
+      size: 22030
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    outs:
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+  clean_catalog:
+    cmd: .venv/bin/python -m src.collect.clean_catalog
+    deps:
+    - path: data/raw/catalog_raw.json
+      hash: md5
+      md5: 4e381d86a793221184d8963deee20458
+      size: 64399
+    - path: data/raw/extracted/course_plan_text.jsonl
+      hash: md5
+      md5: 6e9d9f03dd0d7d2e6671ddb9e96b2890
+      size: 60178
+    - path: data/raw/extracted/ee_course_plan_text.jsonl
+      hash: md5
+      md5: 53f96bdd01607ad3ad34991989c54811
+      size: 16545
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: data/raw/prereq_manual.csv
+      hash: md5
+      md5: 347843e84360b2654891c9924a4379bc
+      size: 488
+    - path: src/collect/clean_catalog.py
+      hash: md5
+      md5: fe24df5a7687f74383a437791dd962f8
+      size: 18694
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    - path: supporting_files/A_collection/course_plan_fetch_log.csv
+      hash: md5
+      md5: 29b904d974a8da6b01a0b720b6134a16
+      size: 14694
+    - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
+      hash: md5
+      md5: f1b70b571ad1a2dd8274ea1fb1875158
+      size: 6466
+    outs:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: supporting_files/A_collection/cleaning_changes.csv
+      hash: md5
+      md5: c6ecd7cb527c20e68294f765684e13fa
+      size: 7450
+  prereq_graph:
+    cmd: .venv/bin/python -m src.engine.prereq_graph
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: src/engine/catalog.py
+      hash: md5
+      md5: 951c94dcc661048f6aada333aa750d48
+      size: 18348
+    - path: src/engine/prereq_graph.py
+      hash: md5
+      md5: b413df383f4af5efc0ac701b93a7257c
+      size: 5514
+    outs:
+    - path: data/processed/prereq_graph.json
+      hash: md5
+      md5: 256928d36b907feba97a32bb9ac3ba7a
+      size: 15934
+    - path: supporting_files/A_collection/prereq_graph.png
+      hash: md5
+      md5: e62afcf47f76711a4c0d3cdf01408f9d
+      size: 203421
+    - path: supporting_files/B_engine/prereq_graph_report.json
+      hash: md5
+      md5: 16f499b8e7c9178664d873077c838576
+      size: 1594
+  synth_transcripts:
+    cmd: .venv/bin/python -m src.engine.synth_transcripts
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: src/engine/catalog.py
+      hash: md5
+      md5: 951c94dcc661048f6aada333aa750d48
+      size: 18348
+    - path: src/engine/rule_engine.py
+      hash: md5
+      md5: a91fd95b90e9af711725e6759e8cf4b0
+      size: 27285
+    - path: src/engine/synth_transcripts.py
+      hash: md5
+      md5: 0a2be2ef5c872f4926d47e41083bde9d
+      size: 13855
+    params:
+      params.yaml:
+        seeds.transcripts: 203
+        transcripts:
+          n_students: 180
+          programmes:
+            MTech-CSE: 0.35
+            MTech-AI: 0.2
+            MTech-EE: 0.3
+            MTech-ICDT: 0.15
+          tracks:
+            thesis: 0.5
+            coursework: 0.5
+    outs:
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: supporting_files/B_engine/transcripts_summary.json
+      hash: md5
+      md5: 610a0cae27b02d47c08be48e638363de
+      size: 24136
+  inject_violations:
+    cmd: .venv/bin/python -m src.engine.synth_transcripts --inject-violations 35
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: src/engine/catalog.py
+      hash: md5
+      md5: 951c94dcc661048f6aada333aa750d48
+      size: 18348
+    - path: src/engine/rule_engine.py
+      hash: md5
+      md5: a91fd95b90e9af711725e6759e8cf4b0
+      size: 27285
+    - path: src/engine/synth_transcripts.py
+      hash: md5
+      md5: 0a2be2ef5c872f4926d47e41083bde9d
+      size: 13855
+    params:
+      params.yaml:
+        seeds.transcripts: 203
+        transcripts:
+          n_students: 180
+          programmes:
+            MTech-CSE: 0.35
+            MTech-AI: 0.2
+            MTech-EE: 0.3
+            MTech-ICDT: 0.15
+          tracks:
+            thesis: 0.5
+            coursework: 0.5
+    outs:
+    - path: data/interim/students_corrupted.jsonl
+      hash: md5
+      md5: 89fd9c50f6b31dcb57273d9122ff7fe1
+      size: 39932
+  assign_students:
+    cmd: .venv/bin/python -m src.split.assign_students
+    deps:
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: src/queries/make_queries.py
+      hash: md5
+      md5: d15028ff6b3b7595b49682d3a87e1cff
+      size: 19733
+    - path: src/split/assign_students.py
+      hash: md5
+      md5: 166c7809af25da516e5499fe61a0c548
+      size: 4120
+    params:
+      params.yaml:
+        seeds.splits: 207
+        splits:
+          train: 0.65
+          val: 0.15
+          test: 0.2
+    outs:
+    - path: data/splits/assignment
+      hash: md5
+      md5: ae0a9e3712fed98ee1f3dcc4942eb30d.dir
+      size: 4657
+      nfiles: 2
+  make_queries:
+    cmd: .venv/bin/python -m src.queries.make_queries
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/splits/assignment
+      hash: md5
+      md5: ae0a9e3712fed98ee1f3dcc4942eb30d.dir
+      size: 4657
+      nfiles: 2
+    - path: src/engine/catalog.py
+      hash: md5
+      md5: 951c94dcc661048f6aada333aa750d48
+      size: 18348
+    - path: src/engine/rule_engine.py
+      hash: md5
+      md5: a91fd95b90e9af711725e6759e8cf4b0
+      size: 27285
+    - path: src/queries/make_queries.py
+      hash: md5
+      md5: d15028ff6b3b7595b49682d3a87e1cff
+      size: 19733
+    - path: src/split/assign_students.py
+      hash: md5
+      md5: 166c7809af25da516e5499fe61a0c548
+      size: 4120
+    params:
+      params.yaml:
+        queries:
+          min_pairs: 600
+        seeds.queries: 204
+    outs:
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: supporting_files/B_engine/queries_summary.json
+      hash: md5
+      md5: baf05fa53b6e1829132e4308b700429c
+      size: 1810
+  paraphrase_llm:
+    cmd: LLM_BACKEND=llamacpp .venv/bin/python -m src.queries.paraphrase_llm 
+      --replay --also-backends kaggle-transformers
+    deps:
+    - path: data/interim/llm_cache.jsonl
+      hash: md5
+      md5: 7b91082d2c2c1b98cf88175ae9aff798
+      size: 1386997
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: prompts/pipeline/paraphrase_justification_v1.txt
+      hash: md5
+      md5: fc5b55824d35d5cfb49d34c210ba0e56
+      size: 481
+    - path: prompts/pipeline/paraphrase_query_v1.txt
+      hash: md5
+      md5: 8e1d4209190a8849d3710956c0604519
+      size: 568
+    - path: src/queries/llm_client.py
+      hash: md5
+      md5: dd9030777f6efa78d01e849bb7bb6ee0
+      size: 13487
+    - path: src/queries/paraphrase_llm.py
+      hash: md5
+      md5: 24ffc5c3fa01c6346a1d98afb6cce56f
+      size: 8282
+    params:
+      params.yaml:
+        llm.paraphrase_model: qwen2.5:1.5b
+        llm.temperature: 0.7
+        seeds.paraphrase: 205
+    outs:
+    - path: data/processed/queries_para.jsonl
+      hash: md5
+      md5: 7a753aeaebff805d16d33ba114669bbf
+      size: 1683474
+    - path: supporting_files/C_labelling/paraphrase_run.json
+      hash: md5
+      md5: c6c42dc3fdd71b1ace4626a262290d88
+      size: 1352
+  augment:
+    cmd:
+    - LLM_BACKEND=kaggle-transformers .venv/bin/python -m src.augment.paraphrase
+    - .venv/bin/python -m src.augment.typos_abbrev
+    - .venv/bin/python -m src.augment.transcript_variants
+    - .venv/bin/python -m src.augment.verify
+    deps:
+    - path: data/interim/llm_cache.jsonl
+      hash: md5
+      md5: 7b91082d2c2c1b98cf88175ae9aff798
+      size: 1386997
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: prompts/pipeline/augment_paraphrase_v1.txt
+      hash: md5
+      md5: ed26105611f1e871e898986292e73377
+      size: 526
+    - path: src/augment
+      hash: md5
+      md5: 0bc51dcd23cfcfe7704a50fc5ae01162.dir
+      size: 25286
+      nfiles: 6
+    - path: src/engine/rule_engine.py
+      hash: md5
+      md5: a91fd95b90e9af711725e6759e8cf4b0
+      size: 27285
+    - path: src/queries/llm_client.py
+      hash: md5
+      md5: dd9030777f6efa78d01e849bb7bb6ee0
+      size: 13487
+    params:
+      params.yaml:
+        llm.paraphrase_model: qwen2.5:1.5b
+        llm.temperature: 0.7
+        seeds.augmentation: 206
+    outs:
+    - path: data/interim/aug_paraphrase.jsonl
+      hash: md5
+      md5: e3531af7821442741fd5fddbd11937fa
+      size: 271807
+    - path: data/interim/aug_transcript.jsonl
+      hash: md5
+      md5: de2ff47d96ba3bd25982229a868a03eb
+      size: 1915067
+    - path: data/interim/aug_typo_abbrev.jsonl
+      hash: md5
+      md5: 8df3235338b5d871e992bc022fd43503
+      size: 1252998
+    - path: data/processed/queries_augmented.jsonl
+      hash: md5
+      md5: 0cd2d3bd6310c3f31ccdad2d4789beac
+      size: 4687198
+    - path: data/processed/students_augmented.jsonl
+      hash: md5
+      md5: 279a8dc31036ee75b2cb915dcd946dc8
+      size: 245066
+    - path: supporting_files/D_augmentation/dropped.csv
+      hash: md5
+      md5: 42ab24d1e05767f4f1879dead30f862f
+      size: 217
+    - path: supporting_files/D_augmentation/invariance.csv
+      hash: md5
+      md5: 2ea906879361a8684ab86677a6814354
+      size: 316
+    - path: supporting_files/D_augmentation/paraphrase_sample.json
+      hash: md5
+      md5: 57a1970b87a64259469da78438e2d493
+      size: 1798
+    - path: supporting_files/D_augmentation/samples_paraphrase.md
+      hash: md5
+      md5: 754d06baba1ca1d9df1b7da98699279a
+      size: 4191
+    - path: supporting_files/D_augmentation/samples_transcript_length.md
+      hash: md5
+      md5: 099d4acf9457ec3e53c7ade27cdf037f
+      size: 18233
+    - path: supporting_files/D_augmentation/samples_transcript_reorder.md
+      hash: md5
+      md5: c53832806c65f590adb7db5f08509552
+      size: 9338
+    - path: supporting_files/D_augmentation/samples_typo_abbrev.md
+      hash: md5
+      md5: 391168e909633d5ef2edecb8b65c9f12
+      size: 3812
+    - path: supporting_files/D_augmentation/verify_report.json
+      hash: md5
+      md5: e0450aa5ebf37f06051d6315ebfd7ac1
+      size: 1164
+  make_splits:
+    cmd: .venv/bin/python -m src.split.make_splits
+    deps:
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/queries_augmented.jsonl
+      hash: md5
+      md5: 0cd2d3bd6310c3f31ccdad2d4789beac
+      size: 4687198
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/splits/assignment
+      hash: md5
+      md5: ae0a9e3712fed98ee1f3dcc4942eb30d.dir
+      size: 4657
+      nfiles: 2
+    - path: src/split/assign_students.py
+      hash: md5
+      md5: 166c7809af25da516e5499fe61a0c548
+      size: 4120
+    - path: src/split/make_splits.py
+      hash: md5
+      md5: 4487ca6f7e484c4a1d556252254f456e
+      size: 9693
+    outs:
+    - path: data/splits/programme_holdout.csv
+      hash: md5
+      md5: 4ffb48900bc5afffe29e29f07d242b7e
+      size: 22891
+    - path: data/splits/test.csv
+      hash: md5
+      md5: e03eadd339a38c1718efaf7b19768786
+      size: 24295
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 463e138c58fbd90498a128a49cab0ccd
+      size: 82322
+    - path: data/splits/val.csv
+      hash: md5
+      md5: cceb960839bf00c07729a7f02ef0d067
+      size: 18214
+    - path: supporting_files/E_splits/dropped_rows.csv
+      hash: md5
+      md5: b929caab426abe73fa54df55a1882d88
+      size: 88
+    - path: supporting_files/E_splits/split_summary.json
+      hash: md5
+      md5: 73784b707bb0153f3dfd4a76658854da
+      size: 5584
+  base_model_answers:
+    cmd: LLM_BACKEND=kaggle-transformers .venv/bin/python -m 
+      src.active.base_model_answers
+    deps:
+    - path: data/interim/llm_cache.jsonl
+      hash: md5
+      md5: 7b91082d2c2c1b98cf88175ae9aff798
+      size: 1386997
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 463e138c58fbd90498a128a49cab0ccd
+      size: 82322
+    - path: prompts/pipeline/base_model_answer_v1.txt
+      hash: md5
+      md5: 4a3b396e1177886a00220d63d3eaca84
+      size: 1292
+    - path: src/active/base_model_answers.py
+      hash: md5
+      md5: 1864f45a8013d7438c1974c45f848c33
+      size: 6134
+    - path: src/queries/llm_client.py
+      hash: md5
+      md5: dd9030777f6efa78d01e849bb7bb6ee0
+      size: 13487
+    params:
+      params.yaml:
+        llm.base_model: qwen2.5:1.5b
+        llm.base_temperature: 0.0
+    outs:
+    - path: data/interim/base_model_answers.jsonl
+      hash: md5
+      md5: 60805b274d085d3266b1ff86e8af415a
+      size: 224243
+    - path: supporting_files/D_active_learning/base_model_run.json
+      hash: md5
+      md5: 3fc3c63f30d8d21e0ff2d26a8fde68d4
+      size: 652
+  al_vs_random:
+    cmd:
+    - .venv/bin/python -m src.active.disagreement
+    - .venv/bin/python -m src.active.al_vs_random
+    deps:
+    - path: data/interim/base_model_answers.jsonl
+      hash: md5
+      md5: 60805b274d085d3266b1ff86e8af415a
+      size: 224243
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 463e138c58fbd90498a128a49cab0ccd
+      size: 82322
+    - path: src/active/al_vs_random.py
+      hash: md5
+      md5: 4db34143667c876469db213229e465a9
+      size: 6935
+    - path: src/active/disagreement.py
+      hash: md5
+      md5: 25b783ea489a4252a7f307feb06ebf86
+      size: 6003
+    - path: supporting_files/D_active_learning/base_model_run.json
+      hash: md5
+      md5: 3fc3c63f30d8d21e0ff2d26a8fde68d4
+      size: 652
+    params:
+      params.yaml:
+        active_learning:
+          budgets:
+          - 25
+          - 50
+          - 100
+        seeds.active_learning:
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+    outs:
+    - path: data/interim/al_scores.jsonl
+      hash: md5
+      md5: b537f4771552335569106831e129a964
+      size: 99325
+    - path: supporting_files/D_active_learning/label_efficiency.csv
+      hash: md5
+      md5: 8e177ff84a211a62585ddd3cea88b1df
+      size: 698
+    - path: supporting_files/D_active_learning/label_efficiency.png
+      hash: md5
+      md5: c4b8a1a7d011dedfd483d5b92f9906bb
+      size: 99534
+    - path: supporting_files/D_active_learning/summary.md
+      hash: md5
+      md5: 771300b9ec63a5f6e28e955346d16671
+      size: 1557
+  validate:
+    cmd: .venv/bin/python -m src.validate.run_validation --stage processed
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries.jsonl
+      hash: md5
+      md5: 6785b08525d6b6fc59bf022d6f11fa89
+      size: 1248881
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: data/splits/programme_holdout.csv
+      hash: md5
+      md5: 4ffb48900bc5afffe29e29f07d242b7e
+      size: 22891
+    - path: data/splits/test.csv
+      hash: md5
+      md5: e03eadd339a38c1718efaf7b19768786
+      size: 24295
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 463e138c58fbd90498a128a49cab0ccd
+      size: 82322
+    - path: data/splits/val.csv
+      hash: md5
+      md5: cceb960839bf00c07729a7f02ef0d067
+      size: 18214
+    - path: src/engine
+      hash: md5
+      md5: e4822615bf074ec32e6ec361ffb24800.dir
+      size: 65002
+      nfiles: 5
+    - path: src/validate/checks.py
+      hash: md5
+      md5: 6a7acecb154d3bada162fab7ced0b079
+      size: 44790
+    - path: src/validate/run_validation.py
+      hash: md5
+      md5: 409ab4d03f6a59fb61d47398fe9ae3bf
+      size: 6486
+    outs:
+    - path: supporting_files/B_validation/processed
+      hash: md5
+      md5: e340c5c1b9ff1e52b8d104731e83b71f.dir
+      size: 10991
+      nfiles: 3
+  build_metadata:
+    cmd: .venv/bin/python -m src.collect.build_metadata
+    deps:
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/raw/catalog_raw.json
+      hash: md5
+      md5: 4e381d86a793221184d8963deee20458
+      size: 64399
+    - path: data/raw/course_plans_manual
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0
+    - path: data/raw/extracted/course_plan_text.jsonl
+      hash: md5
+      md5: 6e9d9f03dd0d7d2e6671ddb9e96b2890
+      size: 60178
+    - path: data/raw/extracted/ee_course_plan_text.jsonl
+      hash: md5
+      md5: 53f96bdd01607ad3ad34991989c54811
+      size: 16545
+    - path: data/raw/extracted/ee_pages.jsonl
+      hash: md5
+      md5: 25ca99b6df48adbee8b0cedb693bd91b
+      size: 13104
+    - path: data/raw/extracted/pages.jsonl
+      hash: md5
+      md5: ea3615ab75a665545df3378efa62877d
+      size: 41406
+    - path: data/raw/extracted/timetable_rows.jsonl
+      hash: md5
+      md5: adc091af7909da6939e885803495931e
+      size: 105993
+    - path: data/raw/prereq_manual.csv
+      hash: md5
+      md5: 347843e84360b2654891c9924a4379bc
+      size: 488
+    - path: data/raw/sources
+      hash: md5
+      md5: 725d5c95ccb39a20a5f6bc9cd1c2ab1b.dir
+      size: 2466705
+      nfiles: 15
+    - path: src/collect/build_metadata.py
+      hash: md5
+      md5: 7d8535c2a395255da48342fd9b4e1ee9
+      size: 10049
+    - path: src/collect/common.py
+      hash: md5
+      md5: 1e4c33fd562e7c3f1a6476131f3699bf
+      size: 2507
+    - path: supporting_files/A_collection/course_plan_fetch_log.csv
+      hash: md5
+      md5: 29b904d974a8da6b01a0b720b6134a16
+      size: 14694
+    - path: supporting_files/A_collection/ee_course_plan_fetch_log.csv
+      hash: md5
+      md5: f1b70b571ad1a2dd8274ea1fb1875158
+      size: 6466
+    - path: supporting_files/A_collection/extract_tool_versions.json
+      hash: md5
+      md5: cc81917da6c6ad215311e3c15eab9378
+      size: 186
+    outs:
+    - path: data/metadata.csv
+      hash: md5
+      md5: 2878f1675f87752a608bf02b0ee06e52
+      size: 222771
+  import_forms:
+    cmd: .venv/bin/python -m src.collect.import_forms
+    deps:
+    - path: data/raw/forms/responses_raw.csv
+      hash: md5
+      md5: c398e76fb8e60a6cfd2c1644a0455ddb
+      size: 3533
+    - path: src/collect/import_forms.py
+      hash: md5
+      md5: 41d2d076379c331b74e310dbbbbe466d
+      size: 6211
+    outs:
+    - path: data/consent_register.csv
+      hash: md5
+      md5: f960c348e13fa7f0ce3903cc0dc92e7f
+      size: 303
+    - path: data/raw/forms/responses_anonymised.jsonl
+      hash: md5
+      md5: f1056d58aebac904a1aa6fc3524409a3
+      size: 3753
+    - path: supporting_files/C_labelling/forms_import_log.json
+      hash: md5
+      md5: dfaaa548632873cfe28c425cfc68e8fd
+      size: 228
+  shifted_forms:
+    cmd: .venv/bin/python -m src.split.shifted_forms
+    deps:
+    - path: data/raw/forms/responses_anonymised.jsonl
+      hash: md5
+      md5: f1056d58aebac904a1aa6fc3524409a3
+      size: 3753
+    - path: src/split/shifted_forms.py
+      hash: md5
+      md5: 25559c12540a8a46c58272cdb63ad962
+      size: 2070
+    outs:
+    - path: data/splits/shifted_forms.csv
+      hash: md5
+      md5: 51f1020e269510423e17c747aa83d067
+      size: 681
+    - path: supporting_files/E_splits/shifted_summary.json
+      hash: md5
+      md5: bedbad976d26d38f044010fff1e1c96f
+      size: 238
+  adjudicate:
+    cmd: .venv/bin/python -m src.queries.adjudicate
+    deps:
+    - path: data/labels/round1/adjudication.csv
+      hash: md5
+      md5: 67cf0116a02648b77e8f6e6f4a9be8ef
+      size: 4928
+    - path: data/labels/round1/export_A1.json
+      hash: md5
+      md5: d6276870a677a7e2c0d506f9560856fe
+      size: 120192
+    - path: data/labels/round1/export_A2.json
+      hash: md5
+      md5: d0e3763cb25324faa6b3b42eef9c8ee5
+      size: 117037
+    - path: data/labels/round2/adjudication.csv
+      hash: md5
+      md5: 65f03e4bf1affba415ce0ffe61f1c49c
+      size: 3516
+    - path: data/labels/round2/export_A1.json
+      hash: md5
+      md5: 263da88a7561e1634f884e97ac026cba
+      size: 116984
+    - path: data/labels/round2/export_A2.json
+      hash: md5
+      md5: 8b92dfa44bddeec503abc16551063f4d
+      size: 116921
+    - path: src/queries/adjudicate.py
+      hash: md5
+      md5: e358f1fd69a4a3ee7b551ac795de76db
+      size: 5159
+    - path: src/queries/ls_export.py
+      hash: md5
+      md5: b1492254f4c90da91dd318a1bebc6993
+      size: 2452
+    outs:
+    - path: data/labels/audited.jsonl
+      hash: md5
+      md5: 93d8f50d4ca8a234962611f05da2e3bc
+      size: 86461
+    - path: supporting_files/C_labelling/adjudication_log.json
+      hash: md5
+      md5: 382d33ebd21cbadfed8b7a1aa1729b71
+      size: 300
+  freeze_gold:
+    cmd: .venv/bin/python -m src.split.freeze_gold
+    deps:
+    - path: data/labels/audited.jsonl
+      hash: md5
+      md5: 93d8f50d4ca8a234962611f05da2e3bc
+      size: 86461
+    - path: data/processed/queries_para.jsonl
+      hash: md5
+      md5: 7a753aeaebff805d16d33ba114669bbf
+      size: 1683474
+    - path: data/splits/test.csv
+      hash: md5
+      md5: e03eadd339a38c1718efaf7b19768786
+      size: 24295
+    - path: src/split/freeze_gold.py
+      hash: md5
+      md5: c0bb0cdb801f231237bad3f2ff62ef06
+      size: 5178
+    outs:
+    - path: data/gold/GOLD_SHA256.txt
+      hash: md5
+      md5: cea1c8ede7078dc0388d956de882a926
+      size: 92
+    - path: data/gold/gold_test.jsonl
+      hash: md5
+      md5: 4d456dc6e3ba3b3019fd8e6eb9ec7ea4
+      size: 262084
+    - path: supporting_files/E_splits/gold_summary.json
+      hash: md5
+      md5: 225e43cc3be3bb0c196a2b3bb53a64a8
+      size: 339

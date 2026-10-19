@@ -116,7 +116,7 @@ def main():
     if args.fixture:
         qpath = ROOT / "tests/fixtures/fixture_queries.jsonl"
         spath = ROOT / "tests/fixtures/fixture_students.jsonl"
-        out_base = ROOT / "supporting_files/C_labelling/fixture_tasks"
+        out_base = ROOT / "tests/out/fixture_tasks"
     else:
         qpath = ROOT / "data/processed/queries_para.jsonl"
         if not qpath.exists():

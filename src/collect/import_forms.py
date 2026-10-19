@@ -80,7 +80,7 @@ def main():
     args = ap.parse_args()
     if args.fixture:
         src = ROOT / "tests/fixtures/fixture_forms_responses_raw.csv"
-        out_dir = ROOT / "supporting_files/C_labelling/fixture_forms"
+        out_dir = ROOT / "tests/out/fixture_forms"
         out_jsonl, out_register = out_dir / "responses_anonymised.jsonl", out_dir / "consent_register.csv"
         log_path = out_dir / "import_log.json"
     else:
