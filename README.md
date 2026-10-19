@@ -35,7 +35,7 @@ python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt
 - Pipeline definition: `dvc.yaml`. Stage order: extract_sources, fetch_course_plans (offline), fetch_ee_pages
   (frozen raw input), build_catalog, build_rules, clean_catalog, prereq_graph, synth_transcripts, inject_violations (Part B corruption data), assign_students, make_queries,
   paraphrase_llm, augment, make_splits, base_model_answers, al_vs_random, validate, build_metadata, import_forms,
-  shifted_forms, adjudicate, freeze_gold.
+  shifted_forms, adjudicate, freeze_gold, before_after, kappa_ci, handoff.
 
 ### Human inputs (tracked with `dvc add`, never produced by a stage)
 

@@ -389,3 +389,48 @@ stages:
           cache: false
       - supporting_files/E_splits/gold_summary.json:
           cache: false
+
+  before_after:
+    cmd:
+      - .venv/bin/python -m src.validate.run_validation --stage raw --report-only
+      - .venv/bin/python -m src.validate.before_after
+    deps:
+      - src/validate/before_after.py
+      - src/validate/checks.py
+      - data/raw/catalog_raw.json
+      - supporting_files/B_validation/processed/results.csv
+      - supporting_files/A_collection/cleaning_changes.csv
+    outs:
+      - supporting_files/B_validation/raw:
+          cache: false
+      - supporting_files/B_validation/before_after.md:
+          cache: false
+
+  kappa_ci:
+    cmd:
+      - .venv/bin/python -m src.queries.agreement --round 1
+      - .venv/bin/python -m src.queries.agreement --round 2
+      - .venv/bin/python -m src.queries.kappa_ci
+    deps:
+      - src/queries/agreement.py
+      - src/queries/kappa_ci.py
+      - data/labels/round1/export_A1.json
+      - data/labels/round1/export_A2.json
+      - data/labels/round2/export_A1.json
+      - data/labels/round2/export_A2.json
+    params:
+      - seeds.annotation_order
+    outs:
+      - supporting_files/C_labelling/round1/agreement_summary.json:
+          cache: false
+      - supporting_files/C_labelling/round2/agreement_summary.json:
+          cache: false
+      - supporting_files/C_labelling/kappa_ci.json:
+          cache: false
+
+  handoff:
+    cmd: .venv/bin/python -m src.split.handoff
+    deps:
+      - src/split/handoff.py
+      - data/gold/gold_test.jsonl
+      - data/splits/test.csv

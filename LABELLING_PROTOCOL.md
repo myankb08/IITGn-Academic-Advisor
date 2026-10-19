@@ -59,6 +59,8 @@ round (A1: R1-A1, R2-A1).
    `item_id, final_decision, final_category, final_edit, decided_by`.
 4. Run `.venv/bin/python -m src.queries.adjudicate` to write `data/labels/audited.jsonl`. It stops and lists any
    item still unresolved.
+- Review page: the reviewers worked in `supporting_files/C_labelling/adjudication_review_page.html` (a copy of the
+  page used), whose saved decisions are exported in `supporting_files/C_labelling/adjudication_decisions_export.json`.
 - How proposals were made: after both rounds were exported, the assistant (Claude Code, claude-opus-5-5) drafted a
   proposed final label and a gold-grounded edit for each of the 29 disagreements (17 round 1, 12 round 2), with a
   one-line reason each (`supporting_files/C_labelling/adjudication_proposals.json`, also shown in the

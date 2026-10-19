@@ -3,3 +3,6 @@
 /queries_para.jsonl
 /students_augmented.jsonl
 /queries_augmented.jsonl
+/rules.json
+/courses.json
+/prereq_graph.json

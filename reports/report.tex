@@ -237,7 +237,7 @@ original strategy and its numbers are kept unchanged and the stratified one is r
 \section{Part E: Versioning and splits}
 DVC tracks the frozen human and raw inputs with \f{dvc add} (\f{data/raw/sources}, both course-plan folders, the raw
 form CSV, the LLM cache \f{data/interim/llm_cache.jsonl}, and the round 1 and 2 tasks, manifests, exports and adjudication files) and the pipeline in \f{dvc.yaml}
-(18 stages from \f{extract_sources} to \f{build_metadata}; EE fetching is frozen). Evidence files are outputs with
+(25 stages, from \f{extract_sources} through the human-input stages to \f{handoff}; EE fetching is frozen). Evidence files are outputs with
 \f{cache: false} so they stay readable in git. \f{dvc.lock} pins the hash of every stage output. A full \f{dvc repro}
 runs offline (LLM stages replay the cache) and reproduced courses, rules, students, queries, paraphrases,
 augmented pairs, splits, audited labels, the gold set and base-model answers byte for byte; \f{data/metadata.csv}
@@ -385,7 +385,7 @@ code\_lost & failed paraphrase & same & \f{fail_reasons} \\
 Table 4 values & AL vs random & \f{supporting_files/D_active_learning/label_efficiency.csv} & \f{failures_captured}, \f{failure_types_covered}, \f{intents_covered} \\
 5 seeds & random baseline & \f{params.yaml} & \f{seeds.active_learning} \\
 stratified added later & AL variant & \f{supporting_files/D_active_learning/summary.md} & last paragraph \\
-18 stages; frozen EE fetch & DVC pipeline & \f{dvc.yaml} & \f{stages}; \f{fetch_ee_pages: frozen} \\
+25 stages; frozen EE fetch & DVC pipeline & \f{dvc.yaml} & \f{stages}; \f{fetch_ee_pages: frozen} \\
 \f{dvc add} inputs & DVC-tracked inputs & \f{data/raw/*.dvc}, \f{data/raw/forms/responses_raw.csv.dvc}, \f{data/labels/round*/*.dvc} & files \\
 \f{../dvc_remote} & DVC remote & \f{.dvc/config}, \f{README.md} & \f{remote "localremote"} \\
 \f{a1-final} & freeze tag & \f{HANDOFF_A2.md} & first paragraph \\

@@ -964,3 +964,99 @@ stages:
       hash: md5
       md5: 225e43cc3be3bb0c196a2b3bb53a64a8
       size: 339
+  before_after:
+    cmd:
+    - .venv/bin/python -m src.validate.run_validation --stage raw --report-only
+    - .venv/bin/python -m src.validate.before_after
+    deps:
+    - path: data/raw/catalog_raw.json
+      hash: md5
+      md5: 4e381d86a793221184d8963deee20458
+      size: 64399
+    - path: src/validate/before_after.py
+      hash: md5
+      md5: 3bb2ecb8e8759af2ce424d150dea8fc0
+      size: 3200
+    - path: src/validate/checks.py
+      hash: md5
+      md5: 6a7acecb154d3bada162fab7ced0b079
+      size: 44790
+    - path: supporting_files/A_collection/cleaning_changes.csv
+      hash: md5
+      md5: c6ecd7cb527c20e68294f765684e13fa
+      size: 7450
+    - path: supporting_files/B_validation/processed/results.csv
+      hash: md5
+      md5: 2e595e07380b07b7ec8dd843a6a972b9
+      size: 5296
+    outs:
+    - path: supporting_files/B_validation/before_after.md
+      hash: md5
+      md5: 2ef4bb6b6f5d6dfc2a68188bb7bce601
+      size: 1958
+    - path: supporting_files/B_validation/raw
+      hash: md5
+      md5: c77b1e47de7dd8115790535d07088692.dir
+      size: 16209
+      nfiles: 3
+  kappa_ci:
+    cmd:
+    - .venv/bin/python -m src.queries.agreement --round 1
+    - .venv/bin/python -m src.queries.agreement --round 2
+    - .venv/bin/python -m src.queries.kappa_ci
+    deps:
+    - path: data/labels/round1/export_A1.json
+      hash: md5
+      md5: d6276870a677a7e2c0d506f9560856fe
+      size: 120192
+    - path: data/labels/round1/export_A2.json
+      hash: md5
+      md5: d0e3763cb25324faa6b3b42eef9c8ee5
+      size: 117037
+    - path: data/labels/round2/export_A1.json
+      hash: md5
+      md5: 263da88a7561e1634f884e97ac026cba
+      size: 116984
+    - path: data/labels/round2/export_A2.json
+      hash: md5
+      md5: 8b92dfa44bddeec503abc16551063f4d
+      size: 116921
+    - path: src/queries/agreement.py
+      hash: md5
+      md5: 5d81328504ef01c2d0e5be92e7bf0747
+      size: 5654
+    - path: src/queries/kappa_ci.py
+      hash: md5
+      md5: b20903bb7224bb29cfabf7faa3aee75d
+      size: 1552
+    params:
+      params.yaml:
+        seeds.annotation_order: 208
+    outs:
+    - path: supporting_files/C_labelling/kappa_ci.json
+      hash: md5
+      md5: 76d2161e897689bc6931cece409ec373
+      size: 400
+    - path: supporting_files/C_labelling/round1/agreement_summary.json
+      hash: md5
+      md5: a1caee7dbc0d3b37dec9bad4e9f61701
+      size: 967
+    - path: supporting_files/C_labelling/round2/agreement_summary.json
+      hash: md5
+      md5: ad3ebc8e560c6da641fc2f8d06c372f7
+      size: 955
+  handoff:
+    cmd: .venv/bin/python -m src.split.handoff
+    deps:
+    - path: data/gold/gold_test.jsonl
+      hash: md5
+      md5: 4d456dc6e3ba3b3019fd8e6eb9ec7ea4
+      size: 262084
+    - path: data/splits/test.csv
+      hash: md5
+      md5: e03eadd339a38c1718efaf7b19768786
+      size: 24295
+    - path: src/split/handoff.py
+      hash: md5
+      md5: 4a3ccad0126ad3886ff0580d7e49ba53
+      size: 2150

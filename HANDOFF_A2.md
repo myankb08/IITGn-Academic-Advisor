@@ -12,7 +12,6 @@ Refresh with `.venv/bin/python -m src.split.handoff` after the last `dvc repro` 
 | file | rows | sha256 |
 |---|---|---|
 | `params.yaml` |  | `c1a9b9561ca8cb1268d011977443110c8f75036aad5abdef99b3224a548db652` |
-| `dvc.lock` |  | `2ed8b1287f6efa598b9877bc6cfc2d3553fd422684d97977c9d89a744012649e` |
 | `data/processed/courses.json` |  | `b6118a747d544235751005af3d115a5eab80959a5b1a02896fa6cda2391420e3` |
 | `data/processed/rules.json` |  | `00ef71f6433f3bc71e2a29d82604e6d646df65f90d136b9cfc2f866ba35914a0` |
 | `data/processed/prereq_graph.json` |  | `db94f3d3c36a086bb08f8da9caa29b130cb6408443f94f861bbae224768197cc` |

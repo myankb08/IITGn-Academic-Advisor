@@ -12,7 +12,6 @@ HANDOFF = ROOT / "HANDOFF_A2.md"
 START, END = "<!-- FROZEN_FILES_START -->", "<!-- FROZEN_FILES_END -->"
 FILES = [
     "params.yaml",
-    "dvc.lock",
     "data/processed/courses.json",
     "data/processed/rules.json",
     "data/processed/prereq_graph.json",

@@ -47,7 +47,7 @@ so the same weights were served with llama.cpp instead.
   but kaggle CLI 1.7.4.5 silently drops `machine_shape` (the pulled metadata has no such field), so it really ran on
   a Tesla T4 (no P100 was ever used). Its own environment.json shows Tesla T4 and 172 calls at 2.51 s per call (436 s of
   generation), so the long wall time was Kaggle queueing and setup, not a CPU fallback. Its inputs were made stale by the
-  gold fix, so its rows were never merged; its logs are in `kaggle_test_kernel_unmerged/`. The `machine_shape` field in
+  gold fix, so its rows were never merged; its logs were checked (Tesla T4, 172 calls at 2.51 s each) and not kept. The rest stage merge is logged in `kaggle_merge_rest.json`. The `machine_shape` field in
   `kaggle/kernel/kernel-metadata.json` is ignored by kaggle CLI 1.7.4.5.
 - Test split paraphrases (102 rows) therefore come from local llama.cpp. Each row of `queries_para.jsonl` says which backend
   produced it in `para_backend`.
