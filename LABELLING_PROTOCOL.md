@@ -58,8 +58,18 @@ exports of a round were saved. Each annotator used a separate Label Studio proje
    `item_id, final_decision, final_category, final_edit, decided_by`.
 4. Run `.venv/bin/python -m src.queries.adjudicate` to write `data/labels/audited.jsonl`. It stops and lists any
    item still unresolved.
-- Who decided: TODO (for example "A1 and A2 together by discussion", or a third person).
-- Rule when no consensus: TODO.
+- How proposals were made: after both rounds were exported, the assistant (Claude Code, claude-opus-5-5) drafted a
+  proposed final label and a gold-grounded edit for each of the 29 disagreements (17 round 1, 12 round 2), with a
+  one-line reason each (`supporting_files/C_labelling/adjudication_proposals.json`, also shown in the
+  `proposed_*` columns of `data/labels/roundN/adjudication_worksheet.csv`). On top of guidelines v2 the proposals
+  used one extra rule: reject when the justification has three or more distinct factual errors, otherwise edit.
+- Who decided: a human made every final call. In the worksheet the reviewer writes `y` in `review_ok` to accept a
+  proposal, or fills `final_*` and `decided_by` with their own decision. `src/queries/build_adjudication.py` turns
+  the reviewed worksheet into `adjudication.csv` and refuses to run while any row is unreviewed. `decided_by`
+  records "A1 (reviewed assistant proposal)" or the reviewer's own entry, so every final label shows whether it was
+  an approved proposal or a human override.
+- Rule when no consensus between A1 and A2 during review: guidelines v2 decide; if still unclear, the item is rejected
+  (excluded from the gold set) rather than guessed.
 
 ## 9. Timeline matched to export files
 | Step | Date (UTC) | File |
