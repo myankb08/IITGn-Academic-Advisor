@@ -66,14 +66,14 @@ exports of a round were saved. Each annotator used a separate Label Studio proje
 |---|---|---|
 | Round 1 tasks generated | 2026-10-18 17:01 IST (rebuilt after the D5 gold fix; tasks sha256 f6633acb...; first build 00:49 was superseded before any finished labelling, see supporting_files/B_engine/gold_fix_ug_background.md) | `data/labels/round1/tasks.json`, `manifest.csv` |
 | Round 1 A1 finished | labelled 2026-10-18 19:00 to 20:10 IST, exported 20:12 (export sha256 0238baff...) | `data/labels/round1/export_A1.json` |
-| Round 1 A2 finished | TODO | `data/labels/round1/export_A2.json` |
-| Round 1 agreement | TODO | `supporting_files/C_labelling/round1/agreement_summary.json` |
+| Round 1 A2 finished | committed by A2 from their own account on 2026-10-19 00:32 IST | `data/labels/round1/export_A2.json` |
+| Round 1 agreement | 2026-10-19: decision kappa 0.227, category kappa 0.171 | `supporting_files/C_labelling/round1/agreement_summary.json` |
 | Round 1 adjudication | TODO | `data/labels/round1/adjudication.csv` |
 | Guidelines v2 frozen | 2026-10-19, issued with the round 2 kit (guidelines_v2.md sha256 f16d8801cb2e8b71...); changes and their round-1 sources in supporting_files/C_labelling/round1/disagreement_analysis.md | `labelstudio/guidelines_v2.md` |
 | Round 2 tasks generated | 2026-10-18 17:01 IST (tasks sha256 210e06e4...), kit issued 2026-10-19 | `data/labels/round2/tasks.json`, `manifest.csv` |
-| Round 2 A1 finished | TODO | `data/labels/round2/export_A1.json` |
-| Round 2 A2 finished | TODO | `data/labels/round2/export_A2.json` |
-| Round 2 agreement | TODO | `supporting_files/C_labelling/round2/agreement_summary.json` |
+| Round 2 A1 finished | exported 2026-10-19 07:12 IST (Label Studio project 3, R2-A1); during the round A1 asked the assistant one guideline question about item R2-Q0114 and got rule-level feedback only, no label | `data/labels/round2/export_A1.json` |
+| Round 2 A2 finished | committed by A2 from their own account on 2026-10-19 02:50 IST | `data/labels/round2/export_A2.json` |
+| Round 2 agreement | 2026-10-19: decision kappa 0.377, category kappa 0.350 (CIs in supporting_files/C_labelling/kappa_ci.json) | `supporting_files/C_labelling/round2/agreement_summary.json` |
 | Round 2 adjudication | TODO | `data/labels/round2/adjudication.csv` |
 
 Export files are saved exactly as Label Studio produced them (Export > JSON) and are never edited.

@@ -1,0 +1,36 @@
+{
+ "n_boot": 2000,
+ "seed": 208,
+ "round1_decision": {
+  "kappa": 0.227,
+  "ci95": [
+   0.0,
+   0.469
+  ],
+  "n": 40
+ },
+ "round1_error_category": {
+  "kappa": 0.171,
+  "ci95": [
+   0.007,
+   0.353
+  ],
+  "n": 40
+ },
+ "round2_decision": {
+  "kappa": 0.377,
+  "ci95": [
+   0.094,
+   0.63
+  ],
+  "n": 40
+ },
+ "round2_error_category": {
+  "kappa": 0.35,
+  "ci95": [
+   0.064,
+   0.62
+  ],
+  "n": 40
+ }
+}
