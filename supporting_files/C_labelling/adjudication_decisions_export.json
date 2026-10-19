@@ -1,0 +1,263 @@
+{
+ "R1-Q0033": {
+  "choice": "override",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Query: Which requirements are still pending before I can graduate as an MTech-CSE student in the Theory stream (thesis track)?\nJustification: You still have a way to go: CS 621 (Ethics of AI) is missing, you need 4 credits from your own Theory basket, 16 more coursework credits, all 32 thesis credits and 8 elective credits, plus AI applications, physical education and Writing. That is 64 of the 82 credits still to go.",
+  "item_id": "R1-Q0033",
+  "reviewed_at": "2026-10-19T07:50:44.437Z"
+ },
+ "R1-Q0109": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: Your core coursework and basket credits are complete: no compulsory or Systems core course is missing, and you have 8 credits in your own Systems basket and 8 in the other baskets (minimum 4 each). What remains is your project and total credit gaps.",
+  "item_id": "R1-Q0109",
+  "reviewed_at": "2026-10-19T07:51:24.496Z"
+ },
+ "R1-Q0120": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: Which requirements are still pending before I can graduate as an MTech-AI student in the coursework track, after 3 semesters?\nJustification: You're almost there: you still need 4 credits from the other baskets (Systems or Theory), 4 more coursework credits and 12 more project credits, which is 32 of the 82 credits still to go. Your compulsory courses, AI/ML core, own basket and electives are complete.",
+  "item_id": "R1-Q0120",
+  "reviewed_at": "2026-10-19T07:51:54.428Z"
+ },
+ "R1-Q0124": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: Your core coursework and basket credits are complete: no compulsory or AI/ML core course is missing, and you have 4 of 4 credits in your own AI/ML basket and 4 of 4 in the other baskets. What remains is outside these baskets: your coursework, elective, thesis and total credit gaps.",
+  "item_id": "R1-Q0124",
+  "reviewed_at": "2026-10-19T07:52:53.048Z"
+ },
+ "R1-Q0161": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: You're on track. Your own AI/ML basket is complete (12 credits, minimum 4) and so are your electives (12 credits, minimum 8). You still need 4 credits from the other baskets, 12 more coursework credits (36 of 48 done) and 8 more project credits (8 of 16 done), so 36 of the 82 credits remain.",
+  "item_id": "R1-Q0161",
+  "reviewed_at": "2026-10-19T07:53:17.132Z"
+ },
+ "R1-Q0175": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: What core coursework and basket credits are still left for my Power Engineering & Control Systems stream after 1 semester?\nJustification: You need 3 more credits from the courses specified by the discipline (13 of 16 done). Your coursework, elective, project and total credit gaps are also open, and physical education and Writing are still missing.",
+  "item_id": "R1-Q0175",
+  "reviewed_at": "2026-10-19T07:53:20.283Z"
+ },
+ "R1-Q0177": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "reject",
+  "final_edit": "",
+  "item_id": "R1-Q0177",
+  "reviewed_at": "2026-10-19T07:53:23.027Z"
+ },
+ "R1-Q0178": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: What core coursework and basket credits are still left for my AI/ML stream (thesis track) after 1 semester?\nJustification: You still need CS 621 (Ethics of AI), 4 credits from your own AI/ML basket and 4 credits from the other baskets (Systems or Theory). No AI/ML core course is missing.",
+  "item_id": "R1-Q0178",
+  "reviewed_at": "2026-10-19T07:53:28.132Z"
+ },
+ "R1-Q0179": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Query: What is my remaining credit gap for coursework and thesis as an MTech-CSE student in the Theory stream (thesis track) after 1 semester?\nJustification: You have 16 of 32 coursework credits, so you need 16 more (including 4 from your own Theory basket), and you still need all 32 thesis credits. In total 64 of the 82 credits remain.",
+  "item_id": "R1-Q0179",
+  "reviewed_at": "2026-10-19T07:53:29.906Z"
+ },
+ "R1-Q0192": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: Which requirements are still pending before I can graduate as an MTech-CSE student in the Systems stream (coursework track)?\nJustification: You're almost done: you only need 8 more project credits (8 of 16 done), which leaves 20 of the 82 credits to go. Your compulsory, core, basket, coursework and elective requirements are complete.",
+  "item_id": "R1-Q0192",
+  "reviewed_at": "2026-10-19T07:53:35.027Z"
+ },
+ "R1-Q0197": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: You're on track! With 66 of 82 credits, you have 16 more to go, including 12 thesis credits (20 of 32 done). Your coursework, own-basket, other-basket and elective requirements are already met.",
+  "item_id": "R1-Q0197",
+  "reviewed_at": "2026-10-19T07:53:37.622Z"
+ },
+ "R1-Q0320": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: I'm an MTech-CSE student in the Systems stream (coursework track) and have completed 2 semesters. Have I met the prerequisites for ES 643 (Quantum computation and information)?",
+  "item_id": "R1-Q0320",
+  "reviewed_at": "2026-10-19T07:53:41.030Z"
+ },
+ "R1-Q0366": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "none",
+  "final_decision": "accept",
+  "final_edit": "",
+  "item_id": "R1-Q0366",
+  "reviewed_at": "2026-10-19T07:53:43.117Z"
+ },
+ "R1-Q0390": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "none",
+  "final_decision": "accept",
+  "final_edit": "",
+  "item_id": "R1-Q0390",
+  "reviewed_at": "2026-10-19T07:53:45.298Z"
+ },
+ "R1-Q0404": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "incomplete_justification",
+  "final_decision": "edit",
+  "final_edit": "Justification: Recommended for 2026-27 Sem-II: CS 613 (Natural Language Processing), CS 618 (Theoretical Foundations of ML) and ES 606 (Computational Neuroscience). All three are extra courses from your own AI/ML basket that count as electives; whether they are offered in Sem-II is not known yet.",
+  "item_id": "R1-Q0404",
+  "reviewed_at": "2026-10-19T07:53:47.502Z"
+ },
+ "R1-Q0421": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "none",
+  "final_decision": "accept",
+  "final_edit": "",
+  "item_id": "R1-Q0421",
+  "reviewed_at": "2026-10-19T07:53:49.785Z"
+ },
+ "R1-Q0495": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "none",
+  "final_decision": "accept",
+  "final_edit": "",
+  "item_id": "R1-Q0495",
+  "reviewed_at": "2026-10-19T07:53:53.029Z"
+ },
+ "R2-Q0014": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: You are just starting: you need 16 credits from the Power Engineering & Control Systems discipline list, 48 coursework credits, 16 project credits and 8 elective credits, 82 credits in total. Don't forget the missing items: Aarohan, physical education and Writing.",
+  "item_id": "R2-Q0014",
+  "reviewed_at": "2026-10-19T07:53:54.749Z"
+ },
+ "R2-Q0019": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: Your discipline requirement is complete: you have 24 credits from the Power Engineering & Control Systems list, above the minimum of 16, and no compulsory course is missing. What remains is your coursework, thesis and total credit gaps.",
+  "item_id": "R2-Q0019",
+  "reviewed_at": "2026-10-19T07:53:57.251Z"
+ },
+ "R2-Q0052": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "reject",
+  "final_edit": "",
+  "item_id": "R2-Q0052",
+  "reviewed_at": "2026-10-19T07:54:00.026Z"
+ },
+ "R2-Q0059": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: You still need 4 own-basket and 4 other-basket credits, 20 more coursework credits (12 of 32 done), all 32 thesis credits and 8 elective credits, plus AI applications, physical education and Writing; 68 of the 82 credits remain.",
+  "item_id": "R2-Q0059",
+  "reviewed_at": "2026-10-19T07:54:02.817Z"
+ },
+ "R2-Q0073": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "reject",
+  "final_edit": "",
+  "item_id": "R2-Q0073",
+  "reviewed_at": "2026-10-19T07:54:05.225Z"
+ },
+ "R2-Q0091": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "reject",
+  "final_edit": "",
+  "item_id": "R2-Q0091",
+  "reviewed_at": "2026-10-19T07:54:07.280Z"
+ },
+ "R2-Q0114": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Query: Which requirements are still pending before I can graduate as an MTech-CSE student in the AI/ML stream (coursework track)?\nJustification: You are just starting: you still need CS 610 (Algorithms) and CS 621 (Ethics of AI), the AI/ML core courses ES 667 (Deep Learning) and ES 678 (Machine Learning), 4 own-basket and 4 other-basket credits, 48 coursework, 16 project and 8 elective credits (82 in total), plus Aarohan, AI applications, physical education and Writing.",
+  "item_id": "R2-Q0114",
+  "reviewed_at": "2026-10-19T07:54:09.023Z"
+ },
+ "R2-Q0126": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "hallucinated_course",
+  "final_decision": "edit",
+  "final_edit": "Justification: Here's what you need to do:\n1. Take the missing courses: CS 610 (Algorithms), CS 621 (Ethics of AI), ES 667 (Deep Learning), ES 678 (Machine Learning).\n2. Earn 4 credits from your own AI/ML basket and 4 from the other baskets (Systems, Theory).\n3. Earn 32 coursework credits, 32 thesis credits and 8 elective credits.\n4. Complete Aarohan, AI applications, physical education and Writing.\nYou are just starting, with 82 credits to go.",
+  "item_id": "R2-Q0126",
+  "reviewed_at": "2026-10-19T07:54:10.579Z"
+ },
+ "R2-Q0127": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "wrong_fact_or_policy",
+  "final_decision": "edit",
+  "final_edit": "Justification: Your discipline requirement is complete: you have 28 credits from the Signal Processing & Machine Learning list, above the minimum of 16, and no compulsory course is missing. What remains is your coursework, project and total credit gaps.",
+  "item_id": "R2-Q0127",
+  "reviewed_at": "2026-10-19T07:54:12.408Z"
+ },
+ "R2-Q0365": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: Can I register for EE 659 in 2026-27 Sem-I?",
+  "item_id": "R2-Q0365",
+  "reviewed_at": "2026-10-19T07:54:14.487Z"
+ },
+ "R2-Q0417": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "none",
+  "final_decision": "accept",
+  "final_edit": "",
+  "item_id": "R2-Q0417",
+  "reviewed_at": "2026-10-19T07:54:17.591Z"
+ },
+ "R2-Q0512": {
+  "choice": "approve",
+  "decided_by": "A1+A2",
+  "final_category": "meaning_drift",
+  "final_decision": "edit",
+  "final_edit": "Query: What electives do you suggest for 2026-27 Semester I for an MTech-CSE student in the AI/ML stream (coursework track)?",
+  "item_id": "R2-Q0512",
+  "reviewed_at": "2026-10-19T07:54:19.874Z"
+ }
+}

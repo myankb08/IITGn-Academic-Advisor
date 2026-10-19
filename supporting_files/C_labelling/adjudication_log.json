@@ -1,29 +1,17 @@
 {
   "round1": {
     "agreed": 23,
-    "adjudicated": 0,
-    "unresolved": 17,
+    "adjudicated": 17,
+    "unresolved": 0,
     "warnings": [],
     "unused_adjudication_rows": []
   },
-  "round2": "skipped, exports not found",
-  "unresolved_items": [
-    "R1-Q0033",
-    "R1-Q0109",
-    "R1-Q0120",
-    "R1-Q0124",
-    "R1-Q0161",
-    "R1-Q0175",
-    "R1-Q0177",
-    "R1-Q0178",
-    "R1-Q0179",
-    "R1-Q0192",
-    "R1-Q0197",
-    "R1-Q0320",
-    "R1-Q0366",
-    "R1-Q0390",
-    "R1-Q0404",
-    "R1-Q0421",
-    "R1-Q0495"
-  ]
+  "round2": {
+    "agreed": 27,
+    "adjudicated": 13,
+    "unresolved": 0,
+    "warnings": [],
+    "unused_adjudication_rows": []
+  },
+  "unresolved_items": []
 }

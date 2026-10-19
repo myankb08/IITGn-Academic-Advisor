@@ -1,0 +1,5 @@
+outs:
+- md5: 65f03e4bf1affba415ce0ffe61f1c49c
+  size: 3516
+  hash: md5
+  path: adjudication.csv

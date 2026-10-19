@@ -32,7 +32,7 @@ Refresh with `.venv/bin/python -m src.split.handoff` after the last `dvc repro` 
 <!-- FROZEN_FILES_END -->
 
 Gold test set checksum (filled by `src.split.freeze_gold`, also in `data/gold/GOLD_SHA256.txt`):
-<!-- GOLD_SHA256 -->`pending: no human labels yet`<!-- /GOLD_SHA256 -->
+<!-- GOLD_SHA256 -->`cd2e08dcb56f5716b06981e096c3c93fd417abab1989b5d22d45befeafbc383f` (76 items)<!-- /GOLD_SHA256 -->
 
 ## Splits
 
@@ -87,8 +87,9 @@ Two annotators (A1, A2) label the same 40 items per round, two disjoint rounds. 
 and whose final decision is accept or edit. One row per item with the query record (`query_id, student_id,
 template_id, template_family, intent, target_course, query_text, gold_json, gold_text, para_model,
 para_prompt_id`), the audited text (`para_query, para_justification`), and the audit result (`final_decision,
-final_category, final_edit, decided_by, item_id, round, guidelines_version`, `split` = test). For an edit, use
-`final_edit` as the human-corrected text. Check the file against `data/gold/GOLD_SHA256.txt` before use:
+final_category, final_edit, decided_by, item_id, round, guidelines_version`, `split` = test). Use
+`audited_query` and `audited_justification`: they hold the human-corrected text for edited items and the
+paraphrase for accepted ones (rejected items are not in the file). Check the file against `data/gold/GOLD_SHA256.txt` before use:
 `sha256sum -c data/gold/GOLD_SHA256.txt`.
 
 ## How to load

@@ -9,6 +9,7 @@ Stops if no labels exist yet.
 """
 import hashlib
 import json
+import re
 from collections import Counter
 
 from src.split.make_splits import EVIDENCE, ROOT, load_split_map, read_jsonl
@@ -20,6 +21,17 @@ GOLD = ROOT / "data" / "gold"
 FIELDS = ["query_id", "student_id", "template_id", "template_family", "intent", "target_course", "query_text",
           "gold_json", "gold_text", "para_model", "para_prompt_id"]
 GOLD_START, GOLD_END = "<!-- GOLD_SHA256 -->", "<!-- /GOLD_SHA256 -->"
+# edit texts start each part with "Query:" or "Justification:" (annotators sometimes wrote "Paraphrased ...")
+EDIT_PART = re.compile(r"^\s*(?:paraphrased\s+)?(query|justification)\s*(?:\(audit this\))?\s*:\s*", re.I | re.M)
+
+
+def edit_parts(text):
+    """Split an edit into {"query": ..., "justification": ...}; text without a prefix is a justification."""
+    marks = list(EDIT_PART.finditer(text))
+    if not marks:
+        return {"justification": text.strip()}
+    return {m.group(1).lower(): text[m.end():(marks[i + 1].start() if i + 1 < len(marks) else len(text))].strip()
+            for i, m in enumerate(marks)}
 
 
 def main():
@@ -43,12 +55,16 @@ def main():
             skipped[f"final_decision {a['final_decision']}"] += 1
             continue
         q = queries[a["query_id"]]
+        fix = edit_parts(a["final_edit"]) if a["final_decision"] == "edit" else {}
         rows.append({**{k: q.get(k) for k in FIELDS}, "split": "test", "item_id": a["item_id"], "round": a["round"],
                      "guidelines_version": a["guidelines_version"], "para_query": a["para_query"],
                      "para_justification": a["para_justification"], "final_decision": a["final_decision"],
                      "final_category": a["final_category"],
                      "final_edit": a["final_edit"] if a["final_decision"] == "edit" else None,
-                     "decided_by": a["decided_by"]})
+                     "decided_by": a["decided_by"],
+                     # the texts that count after the audit: the edit where one was made, else the paraphrase
+                     "audited_query": fix.get("query") or a["para_query"],
+                     "audited_justification": fix.get("justification") or a["para_justification"]})
     if not rows:
         raise SystemExit(f"no accepted or edited test-split items in audited.jsonl (skipped: {dict(skipped)})")
     GOLD.mkdir(parents=True, exist_ok=True)
