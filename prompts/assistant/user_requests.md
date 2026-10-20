@@ -23,3 +23,4 @@ assistant then gave its sub-agents are in this folder, verbatim, as `agent_*.md`
 | 15 | Make the report simpler and easier to read | `agent_G2_report_redesign.md`, `reports/make_figures.py`, `reports/report.tex` |
 | 16 | Record the requests as this per-request summary with output files, instead of full chat transcripts | `prompts/assistant/user_requests.md` |
 | 17 | Rewrite the report in the assignment's format, with its subheadings and diagrams where needed | `agent_G3_report_structure.md`, `reports/report.tex` |
+| 18 | Edits to the AI-assistance appendix by hem436; add the known gold-set limitation | `reports/report.tex`, `HANDOFF_A2.md` (gold set errata) |

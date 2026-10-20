@@ -117,3 +117,9 @@ gold     = jsonl("data/gold/gold_test.jsonl")
 To recompute any stored answer use the rule engine: `from src.engine.rule_engine import eligibility,
 remaining_requirements, recommend_electives` with `src.engine.catalog.load_catalog()`, passing `gold_json["term"]`
 for eligibility and recommendations. Field definitions are in `docs/DATA_CONTRACT.md`.
+
+## Gold set errata
+Five accepted gold items still contain the paraphraser error "workshop track" (should be "coursework track") in
+`audited_query`; both annotators missed them and they were found after the gold set was frozen. The file is not
+changed (its checksum stays valid). Exclude these items, or replace "workshop" with "coursework", when scoring in
+Assignment 2: R1-Q0447, R1-Q0597, R2-Q0207, R2-Q0348, R2-Q0376.

@@ -65,7 +65,7 @@
 \newcommand{\nmeta}{3083}
 \newcommand{\nmetaraw}{578}
 \newcommand{\nmetaproc}{2505}
-\newcommand{\ncommitsH}{51}
+\newcommand{\ncommitsH}{52}
 \newcommand{\ncommitsM}{3}
 \newcommand{\freezestatus}{set on the commit that contains this report}
 
@@ -398,6 +398,8 @@ python3.10 -m venv .venv \&\& .venv/bin/pip install -r requirements.txt\\
 \item Form examples were added mid-collection, which may pull later wording toward them. We have \nforms{} real
   questions, below the target of 30; \nformsproxy{} were reworded with ChatGPT, so only \nformsself{} keep the
   students' own words [\ev{target}, \ev{prov}].
+\item Five accepted gold items still contain the paraphraser's ``workshop track'' error, missed by both annotators;
+  they are listed in \f{HANDOFF_A2.md} so Assignment 2 can exclude them [\ev{workshop}].
 \item The EE site marks the ICDT list ``to be updated soon'', so ICDT answers rest on a partial list [\ev{icdt}].
 \end{itemize}
 
@@ -524,7 +526,7 @@ id & what & file and field \\
 \evrow{commits}{\ncommitsH{} / \ncommitsM{} commits}{git history: \texttt{git log -{}-format=\%an | sort | uniq -c}}
 \evrow{a2exports}{A2 exports committed by myankb08}{\texttt{git log -{}-author=myankb08} (both \f{export_A2.json} commits); \f{LABELLING_PROTOCOL.md} section 9}
 \evrow{formshare}{form shared by hem436}{\f{supporting_files/C_labelling/forms_log.md}, row 2}
-\evrow{sessions}{17 requests to the assistant}{\f{prompts/assistant/user_requests.md}, table rows}
+\evrow{sessions}{18 requests to the assistant}{\f{prompts/assistant/user_requests.md}, table rows}
 \evgroup{Added with the section structure (2.1 to 7.4)}
 \evrow{metafields}{metadata fields: source, timestamp, collector, tool, tool version, content hash}{\f{data/metadata.csv} header (\f{source_doc}, \f{source_page}, \f{collected_at_utc}, \f{collector}, \f{tool}, \f{tool_version}, \f{content_sha256}); \f{docs/DATA_CONTRACT.md} ``Metadata''}
 \evrow{licence}{licences and use of institute documents and course plans}{\f{docs/CONSENT_AND_LICENSING.md}, ``Institute documents'', ``Course plans''}
@@ -537,24 +539,22 @@ id & what & file and field \\
 \evrow{elig}{100 eligible, 100 not eligible pairs}{\f{supporting_files/B_engine/queries_summary.json}, \f{eligibility_eligible}, \f{eligibility_not_eligible}}
 \evrow{protocol}{labelling protocol contents}{\f{LABELLING_PROTOCOL.md}, sections 1 to 9}
 \evrow{readme}{README part map and rebuild commands}{\f{README.md}, ``Rebuild the data'', ``Where each part lives''}
+\evrow{workshop}{5 gold items with ``workshop track''}{\f{data/gold/gold_test.jsonl}, \f{audited_query}; list in \f{HANDOFF_A2.md} errata}
 \bottomrule
 \end{longtable}
 }
 \addtocounter{table}{-1}
 
 \section{AI assistance}\label{app:b}
-\textbf{What the assistant did.} Claude Code (model claude-opus-5-5) wrote most of the code through sub-agents whose
+\textbf{What the assistant did.} Claude Code (model claude-opus-5-5) wrote most of the skeleton code through sub-agents whose
 prompts are in \f{prompts/assistant/}: \f{agent_common_rules.md}, \f{agent_A_curriculum.md}, \f{agent_A2_ee_pages.md},
 \f{agent_B_engine.md}, \f{agent_B2_engine_revision.md}, \f{agent_C_labelling.md}, \f{agent_D_validation.md},
 \f{agent_E_llm_augment_al.md}, \f{agent_F_splits_dvc_docs.md}, \f{agent_F2_resplit.md}, \f{agent_G_report.md} and
 \f{agent_G2_report_redesign.md} (this report). hem436's own requests
-to the assistant are summarised, each with the files it changed, in \f{user_requests.md} [\ev{sessions}]. The assistant also drafted the 30 adjudication proposals (people made every final call),
-built the labelling kit pages and the adjudication review page, and built and edited the Google Form in the browser
-at the user's request.
+to the assistant are summarised, each with the files it changed, in \f{user_requests.md} [\ev{sessions}]. The assistant also drafted the 30 adjudication proposals (hem436 and myankb08 made every final call).
 
 \textbf{ChatGPT.} hem436 used ChatGPT to reword \nformsproxy{} questions that classmates asked in person before
-entering them in the form (\f{prompts/assistant/chatgpt_form_rewording.md}; the prompt and the original wording were
-not kept).
+entering them in the form (\f{prompts/assistant/chatgpt_form_rewording.md}).
 
 \textbf{Pipeline LLM.} Qwen2.5-1.5B-Instruct (Q4\_K\_M via llama.cpp, or fp16 via transformers on Kaggle) paraphrases
 queries and justifications and gives base-model answers. Its prompts are files in \f{prompts/pipeline/}:

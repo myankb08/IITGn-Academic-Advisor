@@ -1123,8 +1123,8 @@ stages:
     outs:
     - path: HANDOFF_A2.md
       hash: md5
-      md5: e25325b1ed5894e7e373b5a1756b264e
-      size: 8520
+      md5: a0492471e847677df6f95a2c002a2ffc
+      size: 9337
   validate_corrupted:
     cmd:
     - .venv/bin/python -m src.validate.corrupt
