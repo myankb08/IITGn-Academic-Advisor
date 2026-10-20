@@ -22,3 +22,4 @@ assistant then gave its sub-agents are in this folder, verbatim, as `agent_*.md`
 | 14 | Quality fixes (semantic paraphrase check, pipeline coverage, per-sample metadata, records); CS 613 decision confirmed by hem436 | `src/augment/verify.py` slot check, `validate_corrupted` stage, per-sample `data/metadata.csv`, `ENVIRONMENT.md`, `prompts/pipeline/README.md`, `data/raw/prereq_manual.csv` |
 | 15 | Make the report simpler and easier to read | `agent_G2_report_redesign.md`, `reports/make_figures.py`, `reports/report.tex` |
 | 16 | Record the requests as this per-request summary with output files, instead of full chat transcripts | `prompts/assistant/user_requests.md` |
+| 17 | Rewrite the report in the assignment's format, with its subheadings and diagrams where needed | `agent_G3_report_structure.md`, `reports/report.tex` |
