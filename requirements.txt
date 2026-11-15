@@ -15,3 +15,17 @@ dvc==3.67.1
 # torch and transformers are imported only by the optional "kaggle-transformers" backend in
 # src/queries/llm_client.py (Kaggle GPU notebook); they are not needed for the local rebuild.
 kaggle==1.7.4.5
+# ---------- Assignment 2: training, evaluation, tracking (GPU machine) and the service ----------
+# torch from the CUDA 12.4 index: pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.5.1
+transformers==4.46.3
+peft==0.13.2
+accelerate==1.1.1
+safetensors==0.8.0
+huggingface-hub==0.36.2
+mlflow==2.18.0
+scipy==1.14.1
+# service (the image pins its own CPU set in docker/requirements-serve.txt)
+gradio==4.44.1
+fastapi==0.115.6
+uvicorn==0.32.1

@@ -1,4 +1,4 @@
-# CS203 Project 4: Course Advisory SLM data (Assignment 1)
+# CS203 Project 4: Course Advisory SLM (Assignments 1 and 2)
 
 Dataset and pipeline for a small language model that answers M.Tech course advising questions at IIT Gandhinagar:
 "which core courses do I still need", "can I register for CS 621 next term", "suggest electives for me".
@@ -12,7 +12,56 @@ thesis and a coursework track (`docs/DECISIONS.md` D1 to D3).
 
 GitHub: https://github.com/myankb08/IITGn-Academic-Advisor
 
-## Rebuild the data
+## Assignment 2: model, service, monitoring
+
+A Qwen2.5-1.5B-Instruct model fine-tuned with LoRA answers the three question kinds in the A1 answer schema plus a
+justification; every answer is checked against the rule engine before it is shown. It is served on CPU (weight-only
+int8) in one Docker image with a Gradio UI and a REST API, monitored for drift, and retrained by one command.
+Plan and fixed decisions: `docs/A2_PLAN.md`. Model card: `MODEL_CARD.md`. Image: `DOCKER.md`. Models and checksums:
+`MODELS.md`. Data changes after `a1-final`: `DATA_CHANGES.md`. Every test, gold, holdout and shifted evaluation:
+`TEST_SET_LOG.md`.
+
+### Reproduce the final training and evaluation (from tag `a2-final`, Linux, one CUDA GPU with 12 GB or more)
+
+```bash
+python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu124
+.venv/bin/dvc pull
+.venv/bin/dvc repro
+scripts/reproduce_a2.sh
+```
+
+`dvc repro` should report that everything is up to date (it rebuilds `data/sft/` and `data/a2/` if they are missing).
+`scripts/reproduce_a2.sh` trains the selected configuration, registers it as `advisor@reproduce` and evaluates it on
+val, test, gold and shifted with paired tests against the baselines. Measured spread: one rerun (11 Nov 2026, Quadro RTX 5000; the original ran on an RTX A5000) registered as
+`advisor` v4 gave set F1 / exact match of 0.910 / 0.814 on val (original 0.912 / 0.807), 0.867 / 0.754 on test
+(0.865 / 0.703), 0.829 / 0.724 on gold (0.851 / 0.697) and 0.706 / 0.486 on shifted (0.680 / 0.524): set F1 within
+0.03 everywhere, exact match within 0.06. GPU training is not bit-exact, so expect differences of this size
+(`supporting_files/C_eval/advisor_v4/`).
+
+### Docker: load or build, start, validate
+
+```bash
+docker load -i ../artefacts/docker_image.tar.gz                    # or: docker build -t iitgn-advisor:a2 .
+docker run --rm -p 7860:7860 --cpus 8 --memory 8g iitgn-advisor:a2  # UI and API at http://localhost:7860
+docker run --rm --network none --cpus 8 --memory 8g -v $PWD/out:/app/out iitgn-advisor:a2 validate
+```
+
+Expected output, timing and tolerance: `DOCKER.md`.
+
+### Where each A2 part lives
+
+| part | what | code | outputs and evidence |
+|---|---|---|---|
+| A | baselines (trivial, zero-shot, few-shot, curriculum retrieval) and the LoRA model; data-mix comparison | `src/model/build_sft.py`, `predict.py`, `train_lora.py` | `supporting_files/A_models/`, MLflow experiment `advisor-search` (runs `mix-*`) |
+| B | MLflow tracking, search over data mix, rank, lr, epochs and model size; registry aliases | `src/model/search.py`, `register.py` | `artefacts/mlflow/`, `supporting_files/B_search/` (search table, plot, registry log) |
+| C | one evaluation script with CIs and paired tests; slices, robustness, errors, justification kappa | `src/eval/` | `supporting_files/C_eval/`, `MODEL_CARD.md` |
+| D | service, UI, REST API, image, CI, load test | `src/serve/`, `Dockerfile`, `docker/`, `.github/workflows/ci.yml` | `DOCKER.md`, `supporting_files/D_deploy/` |
+| E | replay with gradual shift, drift signals, retraining with a gate, promotion, rejection, rollback | `src/monitor/replay.py`, `src/retrain/` | `supporting_files/E_monitoring/`, `supporting_files/E_retrain/` |
+| F | reproducibility | `scripts/reproduce_a2.sh`, `params_a2.yaml`, `dvc.yaml` (stages `build_sft`, `make_pool`) | `ENVIRONMENT.md`, `requirements*.txt` |
+
+Run on: `arka` lab workstation for training, evaluation and the image; seeds and versions in `ENVIRONMENT.md`.
+
+## Assignment 1: rebuild the data
 
 From the repo root, with Python 3.10 on Linux:
 

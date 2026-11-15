@@ -19,7 +19,7 @@ Everything in this repo was built and run on one laptop, CPU only. Values below 
 | Python | 3.10.12 (`.venv`) | `python3.10 -m venv .venv` |
 | pip | 26.2.1 | |
 | Python packages | direct deps pinned with `==` | `requirements.txt` |
-| full package list | `.venv/bin/pip freeze` output | `requirements_freeze.txt` |
+| full package list | `.venv/bin/pip freeze` output | `requirements_freeze.txt` (A1 data pipeline); `requirements_freeze_a2.txt` (A2 training and evaluation on arka) |
 | DVC | 3.67.1 | `requirements.txt` |
 | Label Studio | 1.23.2, in a separate venv `.venv-labelstudio` (Python 3.10) | `labelstudio/requirements-labelstudio.txt` |
 | Ollama | 0.1.38 | system install |
@@ -59,3 +59,39 @@ transformers 5.16.1, Qwen/Qwen2.5-1.5B-Instruct at revision 989aa7980e4cf806f80c
 
 Other run parameters in params.yaml: `transcripts.n_students` (180) and the programme and track mix,
 `queries.min_pairs` (600), `active_learning.budgets` (25, 50, 100), `splits` fractions by student (0.65 / 0.15 / 0.20).
+
+# Assignment 2 environment
+
+Values read on 2026-11-10 and 2026-11-11 (`lscpu`, `free -g`, `nvidia-smi`, `docker --version`, package `__version__`).
+
+## Machines
+| machine | used for | CPU | RAM | GPU | OS / tools |
+|---|---|---|---|---|---|
+| arka (lab workstation, work folder `/mnt/zone_C/hem/cs203_a2`) | LoRA search and training, evaluation, replay, retraining, image build and CPU validation | Intel i9-10900X, 10 cores / 20 threads | 125 GB | NVIDIA RTX A5000 24 GB, 2x Quadro RTX 5000 16 GB | Ubuntu 24.04.5 (kernel 6.8.0-147), driver 595.99.02, Docker 29.9.3 |
+| hem436 PC | baselines on val/test/gold/shifted, service development | 8 threads | 31 GB | 2x RTX 2080 Ti 11 GB | Ubuntu 22.04.5 (kernel 6.8.0-138), driver 595.84 |
+| second CPU-only machine | clean-machine test of the image | <!-- CLEAN_CPU --> | <!-- CLEAN_RAM --> | not used | <!-- CLEAN_OS --> |
+
+GPU runs record the device in the MLflow tag `gpu` (training time depends on it).
+
+## Python and packages
+| item | value |
+|---|---|
+| Python | 3.10.12 in `.venv`, made with `uv venv --python 3.10.12` (arka: Python installed by `uv python install 3.10.12`) |
+| training and evaluation | torch 2.5.1+cu124, transformers 4.46.3, peft 0.13.2, accelerate 1.1.1, safetensors 0.8.0, huggingface-hub 0.36.2, mlflow 2.18.0, scipy 1.14.1 (`requirements.txt`, full list in `requirements_freeze_a2.txt`) |
+| service image | `docker/requirements-serve.txt` (compiled with `uv pip compile` from `docker/requirements-serve.in`): torch 2.5.1+cpu, transformers 4.46.3, gradio 4.44.1, fastapi 0.115.6, uvicorn 0.32.1; base images pinned by digest in `Dockerfile` (python:3.10.12-slim-bookworm, alpine/git:2.47.2) |
+| experiment tracking | MLflow with a SQLite store (`mlflow.db`) and file artefacts (`mlruns/`), exported to `artefacts/mlflow/` |
+
+## Pretrained models
+| model | revision | use |
+|---|---|---|
+| `Qwen/Qwen2.5-1.5B-Instruct` | `989aa7980e4cf806f80c7fef2b1adb7bc71aa306` | base of the final model; all baselines |
+| `Qwen/Qwen2.5-0.5B-Instruct` | `7ae557604adf67be50417f59c2c2f167def9a775` | size trade-off run |
+| `Qwen/Qwen2.5-3B-Instruct` | `aa8e72537993ba99e69dfaafa59ed015b17504d1` | size trade-off run |
+
+## Assignment 2 seeds (`params_a2.yaml`)
+| key | value | what it controls |
+|---|---|---|
+| `seeds.train` | 301 | LoRA training order and init, few-shot example choice, AL/random subsets of the data-mix runs |
+| `seeds.bootstrap` | 302 | bootstrap CIs and paired tests, justification-rating sample and sheet order |
+| `seeds.replay` | 303 | Part E replay traffic and the val calibration windows |
+| `seeds.retrain_pool` | 304 | retraining-pool students and pairs, AL tie-breaks, replay rows mixed into retraining |
