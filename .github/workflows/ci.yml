@@ -1,0 +1,40 @@
+# On each push: unit tests, a sample Assignment 1 validation, the image build and an offline smoke request.
+name: ci
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10.12"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: A1 data sample (CI has no DVC remote)
+        run: sha256sum -c ci/a1_validation_sample.sha256 && tar xzf ci/a1_validation_sample.tar.gz
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Sample Assignment 1 validation (processed stage)
+        run: python -m src.validate.run_validation --stage processed --report-only --out ci_out/validation
+
+  docker:
+    runs-on: ubuntu-22.04
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10.12"
+      - name: Data for the image (curriculum, students, gold set and its prompts)
+        run: |
+          sha256sum -c ci/a1_validation_sample.sha256 && tar xzf ci/a1_validation_sample.tar.gz
+          sha256sum -c data/gold/GOLD_SHA256.txt
+          pip install -r requirements.txt && python -m src.model.build_sft
+      - name: Free disk for the model build
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc && df -h /
+      - name: Build image
+        run: docker build -t iitgn-advisor:ci .
+      - name: Offline smoke request
+        run: docker run --rm --network none iitgn-advisor:ci smoke
