@@ -1,0 +1,35 @@
+{
+ "model": "advisor/1",
+ "name": "advisor_v1",
+ "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+ "thresholds": {
+  "rule_rejection_rate": 0.24,
+  "query_drift": 0.02087584439006431,
+  "answer_chars": 766.7624,
+  "unknown_code_rate": 0.04
+ },
+ "params": {
+  "windows": 20,
+  "window_size": 25,
+  "shift_start": 6,
+  "shift_full": 15,
+  "forms_share": 0.1,
+  "calib_windows": 300,
+  "quantile": 0.99,
+  "alert_signals": [
+   "rule_rejection_rate",
+   "query_drift"
+  ]
+ },
+ "shift_start_window": 6,
+ "first_alert_window": 8,
+ "detection_delay_windows": 2,
+ "false_alarms_before_shift": 0,
+ "pre_shift_windows": 6,
+ "spearman_with_set_f1": {
+  "rule_rejection_rate": -0.9640577220923537,
+  "query_drift": -0.8025739259758754,
+  "answer_chars": -0.5579512053585813,
+  "unknown_code_rate": -0.5685168108958418
+ }
+}

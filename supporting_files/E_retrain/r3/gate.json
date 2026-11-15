@@ -1,0 +1,18 @@
+{
+ "tag": "r3",
+ "production": "advisor_v1",
+ "candidate": "advisor_v5",
+ "candidate_run": "022eed302e4145f0bdc281e6560a3823",
+ "budget": 100,
+ "replay_rows": 1541,
+ "lr": 0.0005,
+ "epochs": 3,
+ "from_scratch": true,
+ "train_rows": 1641,
+ "val_guard": {
+  "production": 0.8142857142857143,
+  "candidate": 0.7464285714285714,
+  "drop": 0.06785714285714284
+ },
+ "decision": "reject (val guard, no gold evaluation)"
+}

@@ -1,0 +1,700 @@
+{
+ "n": 100,
+ "problems": [],
+ "selected": [
+  "PQ0272",
+  "PQ0110",
+  "PQ0074",
+  "PQ0209",
+  "PQ0190",
+  "PQ0002",
+  "PQ0297",
+  "PQ0166",
+  "PQ0035",
+  "PQ0234",
+  "PQ0158",
+  "PQ0064",
+  "PQ0270",
+  "PQ0102",
+  "PQ0004",
+  "PQ0223",
+  "PQ0134",
+  "PQ0031",
+  "PQ0244",
+  "PQ0150",
+  "PQ0044",
+  "PQ0218",
+  "PQ0118",
+  "PQ0088",
+  "PQ0233",
+  "PQ0126",
+  "PQ0036",
+  "PQ0271",
+  "PQ0152",
+  "PQ0022",
+  "PQ0257",
+  "PQ0116",
+  "PQ0038",
+  "PQ0231",
+  "PQ0142",
+  "PQ0015",
+  "PQ0214",
+  "PQ0188",
+  "PQ0065",
+  "PQ0216",
+  "PQ0191",
+  "PQ0067",
+  "PQ0222",
+  "PQ0144",
+  "PQ0095",
+  "PQ0262",
+  "PQ0125",
+  "PQ0055",
+  "PQ0296",
+  "PQ0182",
+  "PQ0087",
+  "PQ0281",
+  "PQ0174",
+  "PQ0066",
+  "PQ0203",
+  "PQ0124",
+  "PQ0020",
+  "PQ0286",
+  "PQ0133",
+  "PQ0073",
+  "PQ0206",
+  "PQ0198",
+  "PQ0084",
+  "PQ0202",
+  "PQ0131",
+  "PQ0008",
+  "PQ0248",
+  "PQ0143",
+  "PQ0062",
+  "PQ0290",
+  "PQ0164",
+  "PQ0092",
+  "PQ0261",
+  "PQ0168",
+  "PQ0081",
+  "PQ0238",
+  "PQ0160",
+  "PQ0063",
+  "PQ0269",
+  "PQ0192",
+  "PQ0028",
+  "PQ0255",
+  "PQ0196",
+  "PQ0068",
+  "PQ0264",
+  "PQ0200",
+  "PQ0077",
+  "PQ0230",
+  "PQ0120",
+  "PQ0075",
+  "PQ0283",
+  "PQ0107",
+  "PQ0016",
+  "PQ0259",
+  "PQ0189",
+  "PQ0070",
+  "PQ0224",
+  "PQ0156",
+  "PQ0079",
+  "PQ0220"
+ ],
+ "scores": {
+  "PQ0272": [
+   1.8,
+   [
+    "hallucinated_code",
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0110": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0074": [
+   2.0,
+   [
+    "hallucinated_code",
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0209": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0190": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0002": [
+   2.0,
+   [
+    "hallucinated_code",
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0297": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0166": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0035": [
+   2.0,
+   [
+    "hallucinated_code",
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0234": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0158": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0064": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0270": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0102": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0004": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0223": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0134": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0031": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0244": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0150": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0044": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0218": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0118": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0088": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0233": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0126": [
+   2.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0036": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0271": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0152": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0022": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0257": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0116": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0038": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0231": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0142": [
+   1.0,
+   []
+  ],
+  "PQ0015": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0214": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0188": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0065": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0216": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0191": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0067": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0222": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0144": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0095": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0262": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0125": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0055": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0296": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0182": [
+   1.0,
+   []
+  ],
+  "PQ0087": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0281": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0174": [
+   1.0,
+   []
+  ],
+  "PQ0066": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0203": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0124": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0020": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0286": [
+   1.0,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0133": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0073": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0206": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0198": [
+   1.0,
+   []
+  ],
+  "PQ0084": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0202": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0131": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0008": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0248": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0143": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0062": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0290": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0164": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0092": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0261": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0168": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0081": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0238": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0160": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0063": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0269": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0192": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0028": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0255": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0196": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0068": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0264": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0200": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0077": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0230": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0120": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0075": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0283": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0107": [
+   1.0,
+   [
+    "wrong_eligibility"
+   ]
+  ],
+  "PQ0016": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0259": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0189": [
+   0.0,
+   []
+  ],
+  "PQ0070": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0224": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ],
+  "PQ0156": [
+   0.0,
+   []
+  ],
+  "PQ0079": [
+   1.0,
+   [
+    "wrong_remaining"
+   ]
+  ],
+  "PQ0220": [
+   0.8,
+   [
+    "ineligible_recommendation"
+   ]
+  ]
+ }
+}

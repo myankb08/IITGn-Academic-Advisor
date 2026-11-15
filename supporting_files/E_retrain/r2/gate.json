@@ -1,0 +1,27 @@
+{
+ "tag": "r2",
+ "production": "advisor_v1",
+ "candidate": "advisor_v3",
+ "candidate_run": "379b73e75c984ea9a18273d8e5927651",
+ "budget": 100,
+ "replay_rows": 600,
+ "lr": 0.0001,
+ "gate": {
+  "shifted_metric": "set_f1",
+  "shifted_p_max": 0.05,
+  "gold_metric": "exact_match",
+  "gold_max_drop": 0.02
+ },
+ "shifted": {
+  "production": 0.6802083333333342,
+  "candidate": 0.8192129629629625,
+  "gain": 0.13900462962962834,
+  "p_one_sided": 0.0
+ },
+ "gold": {
+  "production": 0.6973684210526315,
+  "candidate": 0.6447368421052632,
+  "drop": 0.05263157894736836
+ },
+ "decision": "reject"
+}

@@ -1,0 +1,36 @@
+{
+ "tag": "d6r1",
+ "production": "advisor_v1",
+ "candidate": "advisor_v10",
+ "candidate_run": "aa644d3c4b984c7e8f19446c7c060a72",
+ "budget": 100,
+ "replay_rows": 1541,
+ "lr": 0.0005,
+ "epochs": 3,
+ "from_scratch": true,
+ "train_rows": 1641,
+ "candidate_run_given": "aa644d3c4b984c7e8f19446c7c060a72",
+ "val_guard": {
+  "production": 0.8214285714285714,
+  "candidate": 0.8142857142857143,
+  "drop": 0.0071428571428571175
+ },
+ "gate": {
+  "shifted_metric": "set_f1",
+  "shifted_p_max": 0.05,
+  "gold_metric": "exact_match",
+  "gold_max_drop": 0.02
+ },
+ "shifted": {
+  "production": 0.6906250000000009,
+  "candidate": 0.8293981481481478,
+  "gain": 0.1387731481481469,
+  "p_one_sided": 0.0
+ },
+ "gold": {
+  "production": 0.75,
+  "candidate": 0.75,
+  "drop": 0.0
+ },
+ "decision": "promote"
+}
