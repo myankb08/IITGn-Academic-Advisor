@@ -1,0 +1,58 @@
+# Assignment 2 settings. Kept apart from params.yaml so the A1 frozen hash in HANDOFF_A2.md stays valid.
+seeds:
+  train: 301
+  bootstrap: 302
+  replay: 303
+  retrain_pool: 304
+
+model:
+  base: Qwen/Qwen2.5-1.5B-Instruct
+  max_new_tokens: 360
+  revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+
+train:            # defaults; the search overrides these
+  rank: 16
+  alpha_ratio: 2
+  lr: 2.0e-4
+  epochs: 2
+  batch_size: 1
+  grad_accum: 16
+  data_mix: base_aug   # base | base_aug | al100 | random100
+
+search:
+  rank: [8, 16, 32]
+  lr: [1.0e-4, 2.0e-4, 5.0e-4]
+  epochs: [1, 2, 3]
+  data_mix: [base, base_aug, al100, random100]
+
+eval:
+  n_bootstrap: 1000
+
+# Fixed on 2026-11-10, before any gold evaluation (docs/A2_PLAN.md D8).
+gate:
+  shifted_metric: set_f1
+  shifted_p_max: 0.05
+  gold_metric: exact_match
+  gold_max_drop: 0.02
+
+# Other model sizes for the extra search stage (pinned Hugging Face revisions)
+search_models:
+  Qwen/Qwen2.5-0.5B-Instruct: 7ae557604adf67be50417f59c2c2f167def9a775
+  Qwen/Qwen2.5-3B-Instruct: aa8e72537993ba99e69dfaafa59ed015b17504d1
+
+# Part E replay: 20 windows of 25 requests; the shifted share rises linearly from window 6 to window 15
+replay:
+  windows: 20
+  window_size: 25
+  shift_start: 6
+  shift_full: 15
+  forms_share: 0.1        # share of shifted traffic drawn from the 19 Google Forms questions
+  calib_windows: 300      # val-only windows used to set thresholds
+  quantile: 0.99
+  alert_signals: [rule_rejection_rate, query_drift]
+
+# Part E retraining (src/retrain/run.py)
+retrain:
+  budget: 100           # pool pairs selected by the A1 stratified active-learning score
+  replay_rows: 300      # original train rows mixed in against forgetting
+  epochs: 1

@@ -488,3 +488,52 @@ stages:
       - data/interim/corrupted
       - supporting_files/B_validation/corrupted:
           cache: false
+
+  # ---------- Assignment 2 ----------
+  build_sft:
+    cmd: .venv/bin/python -m src.model.build_sft
+    deps:
+      - src/model/build_sft.py
+      - src/model/d6.py
+      - src/queries/make_queries.py
+      - src/active/base_model_answers.py
+      - prompts/pipeline/advisor_retrieval_v1.txt
+      - data/processed/courses.json
+      - data/processed/rules.json
+      - data/processed/students.jsonl
+      - data/processed/students_augmented.jsonl
+      - data/processed/queries_para.jsonl
+      - data/processed/queries_augmented.jsonl
+      - data/splits/train.csv
+      - data/splits/val.csv
+      - data/splits/test.csv
+      - data/splits/programme_holdout.csv
+      - data/gold/gold_test.jsonl
+    outs:
+      - data/sft/train.jsonl
+      - data/sft/val.jsonl
+      - data/sft/test.jsonl
+      - data/sft/programme_holdout.jsonl
+      - data/sft/gold.jsonl
+      - data/sft/gold_a1.jsonl
+
+  make_pool:
+    cmd: .venv/bin/python -m src.retrain.make_pool
+    deps:
+      - src/retrain/make_pool.py
+      - src/model/d6.py
+      - src/model/build_sft.py
+      - src/engine
+      - src/queries/make_queries.py
+      - data/a2/curriculum_update.json
+      - data/sft/programme_holdout.jsonl
+      - data/raw/forms/responses_anonymised.jsonl
+    params:
+      - params_a2.yaml:
+          - seeds.retrain_pool
+    outs:
+      - data/a2/courses_v2.json
+      - data/a2/students_pool.jsonl
+      - data/sft/shifted.jsonl
+      - data/sft/pool.jsonl
+      - data/sft/forms.jsonl

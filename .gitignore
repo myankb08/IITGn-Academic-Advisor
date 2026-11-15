@@ -31,3 +31,9 @@ kaggle.json
 reports/*.aux
 reports/*.log
 reports/*.out
+
+# Assignment 2 local run state (exported to artefacts/ for submission)
+/mlflow.db
+/mlruns/
+/models/
+/logs/

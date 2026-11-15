@@ -1189,3 +1189,155 @@ stages:
       md5: 06ca753eb5180d6274f119fd35062d94.dir
       size: 23311
       nfiles: 4
+  build_sft:
+    cmd: .venv/bin/python -m src.model.build_sft
+    deps:
+    - path: data/gold/gold_test.jsonl
+      hash: md5
+      md5: 4d456dc6e3ba3b3019fd8e6eb9ec7ea4
+      size: 262084
+    - path: data/processed/courses.json
+      hash: md5
+      md5: 565495db7637db6e41540c1c343e9349
+      size: 109575
+    - path: data/processed/queries_augmented.jsonl
+      hash: md5
+      md5: 0a9cbc13bcf69a16dfa27f208cbd3c37
+      size: 4500385
+    - path: data/processed/queries_para.jsonl
+      hash: md5
+      md5: 7a753aeaebff805d16d33ba114669bbf
+      size: 1683474
+    - path: data/processed/rules.json
+      hash: md5
+      md5: 03de2e8e40e2b981abc8fe5f58c203e1
+      size: 58753
+    - path: data/processed/students.jsonl
+      hash: md5
+      md5: 76814c5a89c6b4d43bac2d094632eb25
+      size: 134684
+    - path: data/processed/students_augmented.jsonl
+      hash: md5
+      md5: 279a8dc31036ee75b2cb915dcd946dc8
+      size: 245066
+    - path: data/splits/programme_holdout.csv
+      hash: md5
+      md5: 4ffb48900bc5afffe29e29f07d242b7e
+      size: 22891
+    - path: data/splits/test.csv
+      hash: md5
+      md5: afc2a0506c83085550fc0dab6d381652
+      size: 22819
+    - path: data/splits/train.csv
+      hash: md5
+      md5: 7f5667dfd754b87914fdf4aac8a84b42
+      size: 78867
+    - path: data/splits/val.csv
+      hash: md5
+      md5: e19b58e74ba18e9590933b07e55c0a71
+      size: 17771
+    - path: prompts/pipeline/advisor_retrieval_v1.txt
+      hash: md5
+      md5: 5e3ca12df29f7ef1abec9fdde80a195e
+      size: 1517
+    - path: src/active/base_model_answers.py
+      hash: md5
+      md5: 1864f45a8013d7438c1974c45f848c33
+      size: 6134
+    - path: src/model/build_sft.py
+      hash: md5
+      md5: 24a40191705d9a2a34c38a3cd5a9e38a
+      size: 6621
+    - path: src/model/d6.py
+      hash: md5
+      md5: f0fed568fb5dfb53c2dcfc027fc2f34e
+      size: 2652
+    - path: src/queries/make_queries.py
+      hash: md5
+      md5: d15028ff6b3b7595b49682d3a87e1cff
+      size: 19733
+    outs:
+    - path: data/sft/gold.jsonl
+      hash: md5
+      md5: 6325650d90dd8d9fc20262028c4711d9
+      size: 566910
+    - path: data/sft/gold_a1.jsonl
+      hash: md5
+      md5: 6deecfdb1e38c35f66211ac16cb59009
+      size: 564978
+    - path: data/sft/programme_holdout.jsonl
+      hash: md5
+      md5: e2a787e820028041b7df4f1a1049d7f8
+      size: 1600738
+    - path: data/sft/test.jsonl
+      hash: md5
+      md5: d7e19bd8cceac19eb07eaac80a6cab0f
+      size: 2664264
+    - path: data/sft/train.jsonl
+      hash: md5
+      md5: 7536f3a02fda65299af7cd86751fb0ae
+      size: 11757544
+    - path: data/sft/val.jsonl
+      hash: md5
+      md5: b14d79865b777be8a19a78ec09e4bd7c
+      size: 2111132
+  make_pool:
+    cmd: .venv/bin/python -m src.retrain.make_pool
+    deps:
+    - path: data/a2/curriculum_update.json
+      hash: md5
+      md5: bb757bfbdace1facd536062c4b861042
+      size: 710
+    - path: data/raw/forms/responses_anonymised.jsonl
+      hash: md5
+      md5: 656ddce5c3fe103064057e12ce9ea877
+      size: 7767
+    - path: data/sft/programme_holdout.jsonl
+      hash: md5
+      md5: e2a787e820028041b7df4f1a1049d7f8
+      size: 1600738
+    - path: src/engine
+      hash: md5
+      md5: e4822615bf074ec32e6ec361ffb24800.dir
+      size: 65002
+      nfiles: 5
+    - path: src/model/build_sft.py
+      hash: md5
+      md5: 24a40191705d9a2a34c38a3cd5a9e38a
+      size: 6621
+    - path: src/model/d6.py
+      hash: md5
+      md5: f0fed568fb5dfb53c2dcfc027fc2f34e
+      size: 2652
+    - path: src/queries/make_queries.py
+      hash: md5
+      md5: d15028ff6b3b7595b49682d3a87e1cff
+      size: 19733
+    - path: src/retrain/make_pool.py
+      hash: md5
+      md5: 0df0c378cdd42c3d9e3b1cbb5bc28bf1
+      size: 7635
+    params:
+      params_a2.yaml:
+        seeds.retrain_pool: 304
+    outs:
+    - path: data/a2/courses_v2.json
+      hash: md5
+      md5: 8190ea97075e29495b01bbade14b213a
+      size: 102977
+    - path: data/a2/students_pool.jsonl
+      hash: md5
+      md5: bf429afb19c565315c5ec3ac14880f8b
+      size: 94171
+    - path: data/sft/forms.jsonl
+      hash: md5
+      md5: 28feee26975f92e06fd70331b1916808
+      size: 58127
+    - path: data/sft/pool.jsonl
+      hash: md5
+      md5: 902cb17773444a05baed5fce8697a18e
+      size: 1934585
+    - path: data/sft/shifted.jsonl
+      hash: md5
+      md5: 79b07188d8b89513403ef55cf1a485cf
+      size: 1625556
