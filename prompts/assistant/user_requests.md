@@ -48,3 +48,9 @@ per request that changed files, summarised, with its output.
 | 14 | Merge both error reviews; check the reviewers' findings (ES 643 is PH 643 in the timetable) | `src/eval/error_review.py`, `error_review/`, `MODEL_CARD.md`, `DATA_CHANGES.md`, `TEST_SET_LOG.md` |
 | 15 | Do the remaining tasks | `supporting_files/F_reproducibility/pytest.txt`, `requirements_freeze_a2.txt`, `dvc push` |
 | 16 | Commit hem436's part and make a package for myankb08 to commit his part | the hem436 commits on `a2`; package outside the repo |
+| 17 | Push hem436's commits (myankb08 had already pushed them with his own); tag the release | tag `a2-final`; release image and archive (`artefacts/`, outside git) |
+| 18 | Show the labelling pages, their database and sample answers in the slides; then UI screenshots | slides (outside git); `supporting_files/D_deploy/ui_screenshots/` |
+| 19 | The UI screenshot shows a rejected answer: show an accepted one too; add the one-shot and few-shot results | `supporting_files/D_deploy/ui_screenshots/` (accepted and rejected answers), slides |
+| 20 | Turn STE mode on and simplify the wording of the report and slides | report source and PDF, slides (outside git) |
+| 21 | The full validation is too slow on the second machine: complete the check without a full run | clean-machine record in `artefacts/DOCKER.md` and `artefacts/clean_machine/` (outside git) |
+| 22 | Commit everything; skip the recording | this commit |
