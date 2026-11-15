@@ -1,0 +1,509 @@
+{
+ "_about": "hem436 (annotator A1) error review, exported from the shared store of the Advisor Error Review page on 2026-11-15; 'by' ids removed",
+ "items": {
+  "Q0035-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 51 instead of 55 (transcript sums to 55), gap 31 instead of 27; discipline courses 29 vs 21, electives 29 vs 25",
+   "t": 1794722585869
+  },
+  "Q0035-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 51 instead of 55 (transcript sums to 55), gap 31 instead of 27; discipline courses 29 vs 21, electives 29 vs 25",
+   "t": 1794722585869
+  },
+  "Q0035": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "total 51 instead of 55",
+   "t": 1794722278052
+  },
+  "Q0052-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 62 (transcript sums to 62), gap 28 instead of 20; discipline courses 24 vs 40",
+   "t": 1794722585869
+  },
+  "Q0052-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 62 (transcript sums to 62), gap 28 instead of 20; discipline courses 24 vs 40",
+   "t": 1794722585869
+  },
+  "Q0052": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 62 (transcript sums to 62), gap 28 instead of 20; discipline courses 24 vs 40",
+   "t": 1794722585869
+  },
+  "Q0073-R": {
+   "cat": "missing_courses",
+   "fix": "list the programme's core courses explicitly in the prompt; more remaining_core pairs per stream",
+   "notes": "misses CS 621; credit totals are right",
+   "t": 1794722585869
+  },
+  "Q0073-T": {
+   "cat": "missing_courses",
+   "fix": "list the programme's core courses explicitly in the prompt; more remaining_core pairs per stream",
+   "notes": "misses CS 621; credit totals are right",
+   "t": 1794722585869
+  },
+  "Q0073": {
+   "cat": "missing_courses",
+   "fix": "list the programme's core courses explicitly in the prompt; more remaining_core pairs per stream",
+   "notes": "misses CS 621; credit totals are right",
+   "t": 1794722585869
+  },
+  "Q0085-L": {
+   "cat": "missing_courses",
+   "fix": "list the programme's core courses explicitly in the prompt; more remaining_core pairs per stream",
+   "notes": "misses CS 621, ES 667; credit totals are right",
+   "t": 1794722585869
+  },
+  "Q0085-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32",
+   "t": 1794722585869
+  },
+  "Q0085-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32",
+   "t": 1794722585869
+  },
+  "Q0085": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32",
+   "t": 1794722585869
+  },
+  "Q0109-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 58 instead of 62 (transcript sums to 62), gap 24 instead of 20; other baskets 4 vs 8",
+   "t": 1794722585869
+  },
+  "Q0109-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 58 instead of 62 (transcript sums to 62), gap 24 instead of 20; other baskets 4 vs 8",
+   "t": 1794722585869
+  },
+  "Q0109": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 58 instead of 62 (transcript sums to 62), gap 24 instead of 20; other baskets 4 vs 8",
+   "t": 1794722585869
+  },
+  "Q0120-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; coursework 48 vs 44, electives 16 vs 20",
+   "t": 1794722585869
+  },
+  "Q0120-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; coursework 48 vs 44, electives 16 vs 20",
+   "t": 1794722585869
+  },
+  "Q0120": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; coursework 48 vs 44, electives 16 vs 20",
+   "t": 1794722585869
+  },
+  "Q0124-L": {
+   "cat": "missing_courses",
+   "fix": "list the programme's core courses explicitly in the prompt; more remaining_core pairs per stream",
+   "notes": "misses ES 667; credit totals are right",
+   "t": 1794722585869
+  },
+  "Q0124-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; own AI/ML basket 8 vs 4",
+   "t": 1794722585869
+  },
+  "Q0124-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; own AI/ML basket 8 vs 4",
+   "t": 1794722585869
+  },
+  "Q0124": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 50 (transcript sums to 50), gap 28 instead of 32; own AI/ML basket 8 vs 4",
+   "t": 1794722585869
+  },
+  "Q0132-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 51 instead of 55 (transcript sums to 55), gap 31 instead of 27; electives 29 vs 25",
+   "t": 1794722585869
+  },
+  "Q0132-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 51 instead of 55 (transcript sums to 55), gap 31 instead of 27; electives 29 vs 25",
+   "t": 1794722585869
+  },
+  "Q0132": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 51 instead of 55 (transcript sums to 55), gap 31 instead of 27; electives 29 vs 25",
+   "t": 1794722585869
+  },
+  "Q0134-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "",
+   "t": 1794723436597
+  },
+  "Q0134-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 62 (transcript sums to 62), gap 28 instead of 20; discipline courses 28 vs 40, coursework 44 vs 52, electives 20 vs 32",
+   "t": 1794722585869
+  },
+  "Q0134": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 54 instead of 62 (transcript sums to 62), gap 28 instead of 20; discipline courses 28 vs 40, coursework 44 vs 52, electives 20 vs 32",
+   "t": 1794722585869
+  },
+  "Q0161-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 50 instead of 46 (transcript sums to 46), gap 32 instead of 36; coursework 40 vs 36, electives 8 vs 12",
+   "t": 1794722585869
+  },
+  "Q0161-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 50 instead of 46 (transcript sums to 46), gap 32 instead of 36; coursework 40 vs 36, electives 8 vs 12",
+   "t": 1794722585869
+  },
+  "Q0161": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 50 instead of 46 (transcript sums to 46), gap 32 instead of 36; coursework 40 vs 36, electives 8 vs 12",
+   "t": 1794722585869
+  },
+  "Q0175-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 17 instead of 15 (transcript sums to 15), gap 65 instead of 67",
+   "t": 1794722585869
+  },
+  "Q0175-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 13 instead of 15 (transcript sums to 15), gap 69 instead of 67; the typo variant gives a different total from the other variants of this case",
+   "t": 1794722585869
+  },
+  "Q0175": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 17 instead of 15 (transcript sums to 15), gap 65 instead of 67",
+   "t": 1794723395376
+  },
+  "Q0189-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 17 instead of 15 (transcript sums to 15), gap 65 instead of 67; coursework 15 vs 13, electives 4 vs 0",
+   "t": 1794722585869
+  },
+  "Q0189-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 17 instead of 15 (transcript sums to 15), gap 65 instead of 67; coursework 15 vs 13, electives 4 vs 0",
+   "t": 1794722585869
+  },
+  "Q0189": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 17 instead of 15 (transcript sums to 15), gap 65 instead of 67; coursework 15 vs 13, electives 4 vs 0",
+   "t": 1794722585869
+  },
+  "Q0197-R": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 62 instead of 66 (transcript sums to 66), gap 20 instead of 16; coursework 40 vs 44, other baskets 12 vs 4",
+   "t": 1794722585869
+  },
+  "Q0197-T": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 62 instead of 66 (transcript sums to 66), gap 20 instead of 16; other baskets 12 vs 4",
+   "t": 1794722585869
+  },
+  "Q0197": {
+   "cat": "wrong_credit_total",
+   "fix": "let the rule engine compute credit totals; the model only explains them",
+   "notes": "earned 62 instead of 66 (transcript sums to 66), gap 20 instead of 16; coursework 40 vs 44, other baskets 12 vs 4",
+   "t": 1794722585869
+  },
+  "Q0208-T": {
+   "cat": "label_policy_repeat",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no because the course is already passed; D6 allows a repeat, rule engine says yes",
+   "t": 1794722585869
+  },
+  "Q0221-T": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: claims the course runs only in that parity, but the term has that parity and its own citation lists the course in it",
+   "t": 1794722585869
+  },
+  "Q0221": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: claims the course runs only in that parity, but the term has that parity and its own citation lists the course in it",
+   "t": 1794722585869
+  },
+  "Q0318-L": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: claims the course runs only in that parity, but the term has that parity and its own citation lists the course in it",
+   "t": 1794722585869
+  },
+  "Q0319-P": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: treats a missing Sem-II timetable as proof the course is not offered",
+   "t": 1794722585869
+  },
+  "Q0319-T": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: treats a missing Sem-II timetable as proof the course is not offered",
+   "t": 1794722585869
+  },
+  "Q0347-R": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: treats a missing Sem-II timetable as proof the course is not offered",
+   "t": 1794722585869
+  },
+  "Q0347-T": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: treats a missing Sem-II timetable as proof the course is not offered",
+   "t": 1794722585869
+  },
+  "Q0347": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says no instead of yes: treats a missing Sem-II timetable as proof the course is not offered",
+   "t": 1794722585869
+  },
+  "Q0362-T": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says yes instead of no: cites a Sem-I timetable row for a course that is not listed in Sem-I",
+   "t": 1794722585869
+  },
+  "Q0362": {
+   "cat": "wrong_eligibility",
+   "fix": "add the target course's prerequisite and offering lines to the prompt; more eligible/not pairs",
+   "notes": "says yes instead of no: cites a Sem-I timetable row for a course that is not listed in Sem-I",
+   "t": 1794722585869
+  },
+  "Q0404-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 607 instead of ES 606; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0404-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 607 instead of ES 606; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0404": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 607 instead of ES 606; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0417-L": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends ES 616 instead of ES 657",
+   "t": 1794722585869
+  },
+  "Q0417-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 619 instead of EE 645; labels a Power Engineering & Control Systems course as the student's discipline course",
+   "t": 1794722585869
+  },
+  "Q0417-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 619 instead of EE 645; labels a Power Engineering & Control Systems course as the student's discipline course",
+   "t": 1794722585869
+  },
+  "Q0417": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 619 instead of EE 645; labels a Power Engineering & Control Systems course as the student's discipline course",
+   "t": 1794722585869
+  },
+  "Q0436-L": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 659 instead of EE 629",
+   "t": 1794722585869
+  },
+  "Q0436-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 663 instead of ES 616; ranks another stream's course above an own basket option",
+   "t": 1794722585869
+  },
+  "Q0436-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 663 instead of ES 616; ranks another stream's course above an own basket option",
+   "t": 1794722585869
+  },
+  "Q0436": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends EE 663 instead of ES 616; ranks another stream's course above an own basket option",
+   "t": 1794722585869
+  },
+  "Q0470-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of CS 617; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0470-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of CS 617; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0470": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of CS 617; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0514-L": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of CS 615; ranks another stream's course above an own basket option",
+   "t": 1794722585869
+  },
+  "Q0514-R": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0514-T": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0514": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0535-L": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 435, CS 613 instead of CS 615, CS 691-XIV",
+   "t": 1794722585869
+  },
+  "Q0539-L": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 435, CS 613 instead of CS 615, CS 691-XIV",
+   "t": 1794722585869
+  },
+  "Q0539-R": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0539-T": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0539": {
+   "cat": "rule_violation",
+   "fix": "filter electives by the below-600 credit allowance; drop courses that cannot count toward graduation",
+   "notes": "recommends CS 431 instead of CS 607; CS 431 is below 600 and this student has used the below-600 allowance (CS 434, ES 417), so it cannot count",
+   "t": 1794722585869
+  },
+  "Q0544-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0544-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0544": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0555-P": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0555-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0555-T": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0555": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends CS 613 instead of ES 627; claims the other-basket requirement is still open when it is already met",
+   "t": 1794722585869
+  },
+  "Q0577-R": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends ES 627 instead of ES 606",
+   "t": 1794722585869
+  },
+  "Q0577": {
+   "cat": "wrong_courses",
+   "fix": "more elective pairs per stream and term; rank by rule-engine order",
+   "notes": "recommends ES 627 instead of ES 606",
+   "t": 1794722585869
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "paraphrase": {
+  "n": 7,
+  "child_set_f1": 0.6666666666666667,
+  "parent_set_f1": 0.8095238095238095,
+  "mean_drop": 0.14285714285714285,
+  "exact_match_invariance": 0.8571428571428571
+ },
+ "transcript_length": {
+  "n": 71,
+  "child_set_f1": 0.92018779342723,
+  "parent_set_f1": 0.8309859154929577,
+  "mean_drop": -0.0892018779342723,
+  "exact_match_invariance": 0.647887323943662
+ },
+ "transcript_reorder": {
+  "n": 71,
+  "child_set_f1": 0.8309859154929577,
+  "parent_set_f1": 0.8309859154929577,
+  "mean_drop": 0.0,
+  "exact_match_invariance": 1.0
+ },
+ "typo_abbrev": {
+  "n": 102,
+  "child_set_f1": 0.8660130718954248,
+  "parent_set_f1": 0.8627450980392157,
+  "mean_drop": -0.003267973856209151,
+  "exact_match_invariance": 0.9705882352941176
+ }
+}

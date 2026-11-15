@@ -1,0 +1,206 @@
+{
+ "model": "advisor@staging",
+ "name": "advisor_v1",
+ "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+ "split": "test",
+ "n": 353,
+ "summary": {
+  "set_f1": 0.8649669499527861,
+  "precision": 0.9565627950897084,
+  "recall": 0.9551463644948076,
+  "exact_match": 0.7025495750708215,
+  "valid_json": 1.0,
+  "violations": 0.0,
+  "invented_codes": 0.0,
+  "invented_rate": 0.0,
+  "eligibility_acc": 0.7090909090909091,
+  "n": 353
+ },
+ "ci": {
+  "set_f1": {
+   "mean": 0.8649669499527858,
+   "ci95": [
+    0.8328375826251181,
+    0.8942398489140698
+   ]
+  },
+  "exact_match": {
+   "mean": 0.7025495750708215,
+   "ci95": [
+    0.6515580736543909,
+    0.7507082152974505
+   ]
+  },
+  "precision": {
+   "mean": 0.9565627950897073,
+   "ci95": [
+    0.9405099150141643,
+    0.9716713881019831
+   ]
+  },
+  "recall": {
+   "mean": 0.9551463644948065,
+   "ci95": [
+    0.9386213408876299,
+    0.9697828139754486
+   ]
+  },
+  "valid_json": {
+   "mean": 1.0,
+   "ci95": [
+    1.0,
+    1.0
+   ]
+  },
+  "violations": {
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  "invented_rate": {
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "slices": {
+  "programme": {
+   "MTech-AI": {
+    "n": 83,
+    "set_f1": 0.8313253012048193,
+    "exact_match": 0.6385542168674698
+   },
+   "MTech-CSE": {
+    "n": 165,
+    "set_f1": 0.8545454545454545,
+    "exact_match": 0.7454545454545455
+   },
+   "MTech-EE": {
+    "n": 105,
+    "set_f1": 0.9079365079365079,
+    "exact_match": 0.6857142857142857
+   }
+  },
+  "intent": {
+   "elective_recommendation": {
+    "n": 121,
+    "set_f1": 0.9063360881542699,
+    "exact_match": 0.7355371900826446
+   },
+   "eligibility": {
+    "n": 110,
+    "set_f1": 0.7090909090909091,
+    "exact_match": 0.7090909090909091
+   },
+   "remaining_core": {
+    "n": 122,
+    "set_f1": 0.9644808743169399,
+    "exact_match": 0.6639344262295082
+   }
+  },
+  "template_family": {
+   "el_can_register": {
+    "n": 42,
+    "set_f1": 0.8095238095238095,
+    "exact_match": 0.8095238095238095
+   },
+   "el_prereq_check": {
+    "n": 68,
+    "set_f1": 0.6470588235294118,
+    "exact_match": 0.6470588235294118
+   },
+   "er_basket_fill": {
+    "n": 63,
+    "set_f1": 0.91005291005291,
+    "exact_match": 0.7619047619047619
+   },
+   "er_next_semester": {
+    "n": 58,
+    "set_f1": 0.9022988505747126,
+    "exact_match": 0.7068965517241379
+   },
+   "rc_core_courses": {
+    "n": 50,
+    "set_f1": 0.9133333333333333,
+    "exact_match": 0.6
+   },
+   "rc_credit_gap": {
+    "n": 36,
+    "set_f1": 1.0,
+    "exact_match": 0.6666666666666666
+   },
+   "rc_degree_audit": {
+    "n": 36,
+    "set_f1": 1.0,
+    "exact_match": 0.75
+   }
+  },
+  "transcript_length": {
+   "0": {
+    "n": 107,
+    "set_f1": 0.9501557632398754,
+    "exact_match": 0.9439252336448598
+   },
+   "1-6": {
+    "n": 108,
+    "set_f1": 0.8425925925925926,
+    "exact_match": 0.7314814814814815
+   },
+   "13+": {
+    "n": 69,
+    "set_f1": 0.7729468599033815,
+    "exact_match": 0.2463768115942029
+   },
+   "7-12": {
+    "n": 69,
+    "set_f1": 0.859903381642512,
+    "exact_match": 0.7391304347826086
+   }
+  },
+  "augmentation": {
+   "none": {
+    "n": 102,
+    "set_f1": 0.8627450980392157,
+    "exact_match": 0.6862745098039216
+   },
+   "paraphrase": {
+    "n": 7,
+    "set_f1": 0.6666666666666667,
+    "exact_match": 0.5714285714285714
+   },
+   "transcript_length": {
+    "n": 71,
+    "set_f1": 0.92018779342723,
+    "exact_match": 0.8732394366197183
+   },
+   "transcript_reorder": {
+    "n": 71,
+    "set_f1": 0.8309859154929577,
+    "exact_match": 0.5774647887323944
+   },
+   "typo_abbrev": {
+    "n": 102,
+    "set_f1": 0.8660130718954248,
+    "exact_match": 0.696078431372549
+   }
+  }
+ },
+ "paired_vs": {
+  "other": "supporting_files/C_eval/few_shot/test/scores.jsonl",
+  "set_f1_diff": 0.5469782813975449,
+  "set_f1_diff_ci95": [
+   0.49383852691218133,
+   0.5979933899905572
+  ],
+  "set_f1_p_one_sided": 0.0,
+  "mcnemar_exact_match": {
+   "a_only": 190,
+   "b_only": 17,
+   "p": 3.591203640744552e-38
+  }
+ }
+}

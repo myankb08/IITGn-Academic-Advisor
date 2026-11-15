@@ -1,0 +1,310 @@
+{
+ "items": {
+  "Q0001": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794389789241
+  },
+  "Q0014": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399360396
+  },
+  "Q0033": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794398164102
+  },
+  "Q0035": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794399303374
+  },
+  "Q0052": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794399433662
+  },
+  "Q0059": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794390670582
+  },
+  "Q0091": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794374294628
+  },
+  "Q0114": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399544444
+  },
+  "Q0126": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399379991
+  },
+  "Q0127": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794399391942
+  },
+  "Q0143": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399558366
+  },
+  "Q0161": {
+   "faithful": "no",
+   "rating": "incorrect",
+   "t": 1794389936620
+  },
+  "Q0173": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399324493
+  },
+  "Q0175": {
+   "faithful": "yes",
+   "notes": "writing is missing",
+   "rating": "partly_correct",
+   "t": 1794390642429
+  },
+  "Q0177": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794389777404
+  },
+  "Q0178": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398173426
+  },
+  "Q0179": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794396580450
+  },
+  "Q0189": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794399399742
+  },
+  "Q0192": {
+   "faithful": "yes",
+   "notes": "",
+   "rating": "partly_correct",
+   "t": 1794396572238
+  },
+  "Q0197": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794399365909
+  },
+  "Q0208": {
+   "faithful": "no",
+   "rating": "partly_correct",
+   "t": 1794399654046
+  },
+  "Q0221": {
+   "faithful": "no",
+   "rating": "incorrect",
+   "t": 1794399633153
+  },
+  "Q0255": {
+   "faithful": "yes",
+   "rating": "partly_correct",
+   "t": 1794398406726
+  },
+  "Q0269": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399385958
+  },
+  "Q0280": {
+   "faithful": "no",
+   "rating": "partly_correct",
+   "t": 1794399578869
+  },
+  "Q0319": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399564217
+  },
+  "Q0320": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794390683414
+  },
+  "Q0323": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794390678767
+  },
+  "Q0324": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399533092
+  },
+  "Q0334": {
+   "faithful": "no",
+   "notes": "648 is already completed",
+   "rating": "incorrect",
+   "t": 1794374319004
+  },
+  "Q0347": {
+   "faithful": "no",
+   "notes": "justification should be that he has already used the allowed below 600 credits.",
+   "rating": "incorrect",
+   "t": 1794398365805
+  },
+  "Q0348": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398414886
+  },
+  "Q0361": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398187885
+  },
+  "Q0362": {
+   "faithful": "no",
+   "rating": "incorrect",
+   "t": 1794399445102
+  },
+  "Q0363": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399291221
+  },
+  "Q0364": {
+   "faithful": "no",
+   "rating": "incorrect",
+   "t": 1794398626414
+  },
+  "Q0366": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399349413
+  },
+  "Q0376": {
+   "faithful": "no",
+   "rating": "partly_correct",
+   "t": 1794399504421
+  },
+  "Q0389": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399540734
+  },
+  "Q0400": {
+   "faithful": "no",
+   "rating": "incorrect",
+   "t": 1794390654917
+  },
+  "Q0401": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399374485
+  },
+  "Q0404": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399405567
+  },
+  "Q0417": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399529013
+  },
+  "Q0427": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794396346813
+  },
+  "Q0428": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794390691482
+  },
+  "Q0442": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794390687834
+  },
+  "Q0449": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398946741
+  },
+  "Q0460": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399549918
+  },
+  "Q0478": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398250813
+  },
+  "Q0493": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399330583
+  },
+  "Q0510": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399439301
+  },
+  "Q0514": {
+   "faithful": "no",
+   "notes": "cannot take cs 431 as it is another undergraduate course, and only 2 undergraduate course is allowed as per policy.",
+   "rating": "incorrect",
+   "t": 1794397443997
+  },
+  "Q0539": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399599774
+  },
+  "Q0548": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399339990
+  },
+  "Q0555": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399594922
+  },
+  "Q0557": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399469838
+  },
+  "Q0558": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794399411926
+  },
+  "Q0561": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398423814
+  },
+  "Q0582": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398267830
+  },
+  "Q0598": {
+   "faithful": "yes",
+   "rating": "correct",
+   "t": 1794398261893
+  }
+ },
+ "rater": "A1"
+}

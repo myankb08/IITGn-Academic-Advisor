@@ -1,0 +1,35 @@
+{
+ "n": 84,
+ "a1": {
+  "wrong_credit_total": 36,
+  "wrong_courses": 26,
+  "wrong_eligibility": 10,
+  "rule_violation": 6,
+  "missing_courses": 5,
+  "label_policy_repeat": 1
+ },
+ "a2": {
+  "wrong_credit_total": 36,
+  "other": 34,
+  "wrong_eligibility": 8,
+  "wrong_courses": 4,
+  "missing_courses": 1,
+  "label_policy_repeat": 1
+ },
+ "agree": 46,
+ "kappa": 0.42692998204667865,
+ "kappa_ci95": [
+  0.334038789868462,
+  0.5187946723144173
+ ],
+ "disagreements (a1 | a2)": {
+  "wrong_courses | other": 26,
+  "rule_violation | other": 6,
+  "missing_courses | wrong_courses": 4,
+  "wrong_eligibility | other": 2
+ },
+ "elective_check": {
+  "allowed_different": 26,
+  "not_allowed": 6
+ }
+}

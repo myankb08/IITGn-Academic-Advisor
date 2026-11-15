@@ -1,0 +1,177 @@
+{
+ "model": "retrieval",
+ "name": "retrieval",
+ "run_id": null,
+ "split": "shifted",
+ "n": 288,
+ "summary": {
+  "set_f1": 0.17592592592592604,
+  "precision": 0.3460648148148146,
+  "recall": 0.3460648148148146,
+  "exact_match": 0.15625,
+  "valid_json": 1.0,
+  "violations": 0.4375,
+  "invented_codes": 0.013888888888888888,
+  "invented_rate": 0.013888888888888888,
+  "eligibility_acc": 0.4787234042553192,
+  "n": 288
+ },
+ "ci": {
+  "set_f1": {
+   "mean": 0.17592592592592593,
+   "ci95": [
+    0.13423032407407406,
+    0.21759259259259256
+   ]
+  },
+  "exact_match": {
+   "mean": 0.15625,
+   "ci95": [
+    0.11458333333333333,
+    0.19453124999999993
+   ]
+  },
+  "precision": {
+   "mean": 0.34606481481481477,
+   "ci95": [
+    0.2916377314814815,
+    0.400462962962963
+   ]
+  },
+  "recall": {
+   "mean": 0.34606481481481477,
+   "ci95": [
+    0.2916377314814815,
+    0.400462962962963
+   ]
+  },
+  "valid_json": {
+   "mean": 1.0,
+   "ci95": [
+    1.0,
+    1.0
+   ]
+  },
+  "violations": {
+   "mean": 0.4375,
+   "ci95": [
+    0.3784722222222222,
+    0.4965277777777778
+   ]
+  },
+  "invented_rate": {
+   "mean": 0.013888888888888888,
+   "ci95": [
+    0.003472222222222222,
+    0.027777777777777776
+   ]
+  }
+ },
+ "slices": {
+  "programme": {
+   "MTech-ICDT": {
+    "n": 288,
+    "set_f1": 0.17592592592592593,
+    "exact_match": 0.15625
+   }
+  },
+  "intent": {
+   "elective_recommendation": {
+    "n": 96,
+    "set_f1": 0.05902777777777777,
+    "exact_match": 0.0
+   },
+   "eligibility": {
+    "n": 94,
+    "set_f1": 0.4787234042553192,
+    "exact_match": 0.4787234042553192
+   },
+   "remaining_core": {
+    "n": 98,
+    "set_f1": 0.0,
+    "exact_match": 0.0
+   }
+  },
+  "template_family": {
+   "el_can_register": {
+    "n": 56,
+    "set_f1": 0.5714285714285714,
+    "exact_match": 0.5714285714285714
+   },
+   "el_prereq_check": {
+    "n": 38,
+    "set_f1": 0.34210526315789475,
+    "exact_match": 0.34210526315789475
+   },
+   "er_basket_fill": {
+    "n": 44,
+    "set_f1": 0.03787878787878787,
+    "exact_match": 0.0
+   },
+   "er_next_semester": {
+    "n": 52,
+    "set_f1": 0.07692307692307691,
+    "exact_match": 0.0
+   },
+   "rc_core_courses": {
+    "n": 34,
+    "set_f1": 0.0,
+    "exact_match": 0.0
+   },
+   "rc_credit_gap": {
+    "n": 22,
+    "set_f1": 0.0,
+    "exact_match": 0.0
+   },
+   "rc_degree_audit": {
+    "n": 42,
+    "set_f1": 0.0,
+    "exact_match": 0.0
+   }
+  },
+  "transcript_length": {
+   "0": {
+    "n": 75,
+    "set_f1": 0.24444444444444446,
+    "exact_match": 0.24
+   },
+   "1-6": {
+    "n": 54,
+    "set_f1": 0.19135802469135804,
+    "exact_match": 0.12962962962962962
+   },
+   "13+": {
+    "n": 57,
+    "set_f1": 0.0,
+    "exact_match": 0.0
+   },
+   "7-12": {
+    "n": 102,
+    "set_f1": 0.21568627450980393,
+    "exact_match": 0.19607843137254902
+   }
+  },
+  "augmentation": {
+   "none": {
+    "n": 82,
+    "set_f1": 0.15447154471544713,
+    "exact_match": 0.13414634146341464
+   },
+   "transcript_length": {
+    "n": 62,
+    "set_f1": 0.2795698924731183,
+    "exact_match": 0.27419354838709675
+   },
+   "transcript_reorder": {
+    "n": 62,
+    "set_f1": 0.12365591397849461,
+    "exact_match": 0.0967741935483871
+   },
+   "typo_abbrev": {
+    "n": 82,
+    "set_f1": 0.15853658536585366,
+    "exact_match": 0.13414634146341464
+   }
+  }
+ }
+}

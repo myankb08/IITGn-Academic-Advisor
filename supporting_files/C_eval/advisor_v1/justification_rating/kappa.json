@@ -1,0 +1,27 @@
+{
+ "n": 60,
+ "rating_kappa": 0.7998888271261813,
+ "rating_kappa_ci95": [
+  0.6556985591711186,
+  0.9276344907186433
+ ],
+ "rating_kappa_linear": 0.8305084745762712,
+ "faithful_kappa": 0.2663043478260869,
+ "faithful_kappa_ci95": [
+  0.0,
+  0.5764705882352942
+ ],
+ "rating_counts": {
+  "A1": {
+   "correct": 39,
+   "partly_correct": 13,
+   "incorrect": 8
+  },
+  "A2": {
+   "correct": 41,
+   "partly_correct": 10,
+   "incorrect": 9
+  }
+ },
+ "agreement": 0.9
+}
