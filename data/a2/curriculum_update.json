@@ -1,0 +1,11 @@
+{
+ "_about": "Simulated curriculum update for the Part E drift demo (docs/A2_PLAN.md D7). Not an institute document. Applied by src/retrain/make_pool.py to data/processed/courses.json, giving data/a2/courses_v2.json.",
+ "effective_term": "2026-27 Sem-II",
+ "set_prerequisites": {"EE 618": ["EE 617"], "EE 651": ["EE 644"], "ES 654": ["ES 626"]},
+ "set_offered_terms": {"EE 618": ["2026-27 Sem-II"], "ES 654": ["2026-27 Sem-II"]},
+ "new_courses": [
+  {"code": "EE 683", "title": "Hardware Accelerators for AI", "credits": 4, "category": "basket",
+   "programmes": ["MTech-ICDT", "MTech-EE"], "streams": [], "prerequisites": ["EE 617"],
+   "offered_terms": ["2026-27 Sem-II"], "copy_fields_from": "EE 617"}
+ ]
+}
