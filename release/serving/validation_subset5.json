@@ -1,0 +1,120 @@
+{
+ "model": {
+  "version": "10",
+  "run_id": "aa644d3c4b984c7e8f19446c7c060a72",
+  "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "adapter": "release/adapter",
+  "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+  "weights_sha256": {
+   "model.safetensors": "bbb11b0403d1df7f22393c6be92b00737774d9a9ea7d22c7c7b95b81e5f08baa"
+  }
+ },
+ "commit": "009626285b41f7811c6aedafaba77634c724d671",
+ "machine": "x86_64",
+ "cpu_count": 20,
+ "python": "3.10.12",
+ "measured": {
+  "n": 5,
+  "subset": 5,
+  "summary": {
+   "set_f1": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "exact_match": 0.6,
+   "valid_json": 1.0,
+   "violations": 0.0,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": null,
+   "n": 5
+  },
+  "seconds": 291.9,
+  "sec_per_item": 58.39
+ },
+ "rows": [
+  {
+   "item_id": "R1-Q0033",
+   "confidence": 0.9984575409930312,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 18, \"min\": 82, \"gap\": 64}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). Theory stream core still missing: none. Own Theory basket: 0 credits earned, minimum 4 (4 to go). Other baskets (AI/ML, Systems): 0 credits earned, minimum 4 (4 to go). Coursework: 16 credits earned, minimum 32 (16 to go). Thesis: 0 credits earned, minimum 32 (32 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: ai applications, physical education, writing. Total: 18 of 82 credits, 64 remaining. Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, Theory core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1032,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0109",
+   "confidence": 0.9869191003943443,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 62, \"min\": 82, \"gap\": 20}, \"justification\": \"Compulsory courses still missing: none. Systems stream core still missing: none. Own Systems basket: 4 credits earned, minimum 4 (0 to go). Other baskets (AI/ML, Theory): 8 credits earned, minimum 4 (0 to go). Justification: checked your transcript against the MTech-CSE coursework track rules (compulsory courses, Systems core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 577,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0120",
+   "confidence": 0.990038437426857,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 54, \"min\": 82, \"gap\": 28}, \"justification\": \"Compulsory courses still missing: none. AI/ML stream core still missing: none. Own AI/ML basket: 12 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 44 credits earned, minimum 48 (4 to go). Project: 4 credits earned, minimum 16 (12 to go). Electives: 20 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 54 of 82 credits, 28 remaining. Justification: checked your transcript against the MTech-AI coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: coursework gap, other basket gap, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 834,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0124",
+   "confidence": 0.9884245892898916,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 54, \"min\": 82, \"gap\": 28}, \"justification\": \"Compulsory courses still missing: none. AI/ML stream core still missing: none. Own AI/ML basket: 8 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 4 credits earned, minimum 4 (0 to go). Justification: checked your transcript against the MTech-AI thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 567,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0161",
+   "confidence": 0.9956757153569479,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 46, \"min\": 82, \"gap\": 36}, \"justification\": \"Own AI/ML basket: 12 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 36 credits earned, minimum 48 (12 to go). Project: 8 credits earned, minimum 16 (8 to go). Electives: 8 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 46 of 82 credits, 36 remaining. Justification: checked your transcript against the MTech-AI coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: coursework gap, other basket gap, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 754,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  }
+ ]
+}

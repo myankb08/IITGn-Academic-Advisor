@@ -1,0 +1,115 @@
+{
+ "model": {
+  "version": "1",
+  "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+  "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "adapter": "release/adapter",
+  "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+  "weights_sha256": {
+   "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+  }
+ },
+ "commit": "009626285b41f7811c6aedafaba77634c724d671",
+ "machine": "x86_64",
+ "cpu_count": 20,
+ "python": "3.10.12",
+ "measured": {
+  "n": 5,
+  "subset": 5,
+  "summary": {
+   "set_f1": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "exact_match": 0.2,
+   "valid_json": 1.0,
+   "violations": 0.0,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": null,
+   "n": 5
+  },
+  "seconds": 322.3,
+  "sec_per_item": 64.46
+ },
+ "rows": [
+  {
+   "item_id": "R1-Q0033",
+   "confidence": 0.9978995875944912,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1032,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0109",
+   "confidence": 0.9845081484312872,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0120",
+   "confidence": 0.9893184299704266,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 818,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0124",
+   "confidence": 0.993939765619841,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 808,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0161",
+   "confidence": 0.9882318732525457,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 767,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  }
+ ]
+}

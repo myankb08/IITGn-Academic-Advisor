@@ -1,0 +1,1555 @@
+{
+ "model": {
+  "version": "10",
+  "run_id": "aa644d3c4b984c7e8f19446c7c060a72",
+  "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "adapter": "release/adapter",
+  "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+  "weights_sha256": {
+   "model.safetensors": "bbb11b0403d1df7f22393c6be92b00737774d9a9ea7d22c7c7b95b81e5f08baa"
+  }
+ },
+ "commit": "009626285b41f7811c6aedafaba77634c724d671",
+ "machine": "x86_64",
+ "cpu_count": 20,
+ "python": "3.10.12",
+ "measured": {
+  "n": 76,
+  "subset": null,
+  "summary": {
+   "set_f1": 0.8771929824561404,
+   "precision": 0.9254385964912282,
+   "recall": 0.9385964912280703,
+   "exact_match": 0.7631578947368421,
+   "valid_json": 1.0,
+   "violations": 0.013157894736842105,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": 0.8518518518518519,
+   "n": 76
+  },
+  "seconds": 3951.8,
+  "sec_per_item": 52.0
+ },
+ "rows": [
+  {
+   "item_id": "R1-Q0033",
+   "confidence": 0.998457504727476,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 18, \"min\": 82, \"gap\": 64}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). Theory stream core still missing: none. Own Theory basket: 0 credits earned, minimum 4 (4 to go). Other baskets (AI/ML, Systems): 0 credits earned, minimum 4 (4 to go). Coursework: 16 credits earned, minimum 32 (16 to go). Thesis: 0 credits earned, minimum 32 (32 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: ai applications, physical education, writing. Total: 18 of 82 credits, 64 remaining. Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, Theory core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1032,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0109",
+   "confidence": 0.9869191003943443,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 62, \"min\": 82, \"gap\": 20}, \"justification\": \"Compulsory courses still missing: none. Systems stream core still missing: none. Own Systems basket: 4 credits earned, minimum 4 (0 to go). Other baskets (AI/ML, Theory): 8 credits earned, minimum 4 (0 to go). Justification: checked your transcript against the MTech-CSE coursework track rules (compulsory courses, Systems core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 577,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0120",
+   "confidence": 0.990038437426857,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 54, \"min\": 82, \"gap\": 28}, \"justification\": \"Compulsory courses still missing: none. AI/ML stream core still missing: none. Own AI/ML basket: 12 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 44 credits earned, minimum 48 (4 to go). Project: 4 credits earned, minimum 16 (12 to go). Electives: 20 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 54 of 82 credits, 28 remaining. Justification: checked your transcript against the MTech-AI coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: coursework gap, other basket gap, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 834,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0124",
+   "confidence": 0.9884245892898916,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 54, \"min\": 82, \"gap\": 28}, \"justification\": \"Compulsory courses still missing: none. AI/ML stream core still missing: none. Own AI/ML basket: 8 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 4 credits earned, minimum 4 (0 to go). Justification: checked your transcript against the MTech-AI thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 567,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0161",
+   "confidence": 0.9956757153569479,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 46, \"min\": 82, \"gap\": 36}, \"justification\": \"Own AI/ML basket: 12 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 36 credits earned, minimum 48 (12 to go). Project: 8 credits earned, minimum 16 (8 to go). Electives: 8 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 46 of 82 credits, 36 remaining. Justification: checked your transcript against the MTech-AI coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: coursework gap, other basket gap, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 754,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0174",
+   "confidence": 0.9912380611289147,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 14, \"min\": 82, \"gap\": 68}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). AI/ML stream core still missing: none. Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Justification: checked your transcript against the MTech-CSE coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, other basket gap, own basket gap, physical education missing, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 752,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0175",
+   "confidence": 0.9948087761147837,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 15, \"min\": 82, \"gap\": 67}, \"justification\": \"Compulsory courses still missing: none. Courses specified by the discipline (Power Engineering & Control Systems): 13 credits earned, minimum 16 (3 to go). Coursework: 13 credits earned, minimum 48 (35 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: physical education, writing. Not tracked in the catalog: ai applications. Total: 15 of 82 credits, 67 remaining. Justification: checked your transcript against the MTech-EE coursework track rules (at least 16 credits of courses specified by the discipline (Power Engineering & Control Systems), 48 coursework credits, 82 total credits); open items: coursework gap, electives gap, own basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 923,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0178",
+   "confidence": 0.9936819448265571,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [\"ES 670\"], \"total\": {\"earned\": 18, \"min\": 82, \"gap\": 64}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). AI/ML stream core still missing: ES 670 (Matrix Methods for Signal Processing, Data Science, and Machine Learning). Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Justification: checked your transcript against the MTech-AI thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, missing stream core, other basket gap, physical education missing, thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 836,
+   "precision": 0.5,
+   "recall": 1.0,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621",
+    "ES 670"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0179",
+   "confidence": 0.9990649025879155,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 18, \"min\": 82, \"gap\": 64}, \"justification\": \"Own Theory basket: 0 credits earned, minimum 4 (4 to go). Other baskets (AI/ML, Systems): 0 credits earned, minimum 4 (4 to go). Coursework: 16 credits earned, minimum 32 (16 to go). Thesis: 0 credits earned, minimum 32 (32 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: ai applications, physical education, writing. Total: 18 of 82 credits, 64 remaining. Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, Theory core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 935,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0189",
+   "confidence": 0.9949376269576237,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 15, \"min\": 82, \"gap\": 67}, \"justification\": \"Compulsory courses still missing: none. Courses specified by the discipline (Power Engineering & Control Systems): 13 credits earned, minimum 16 (3 to go). Coursework: 13 credits earned, minimum 48 (35 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: physical education, writing. Not tracked in the catalog: ai applications. Total: 15 of 82 credits, 67 remaining. Justification: checked your transcript against the MTech-EE coursework track rules (at least 16 credits of courses specified by the discipline (Power Engineering & Control Systems), 48 coursework credits, 82 total credits); open items: coursework gap, electives gap, own basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 923,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0192",
+   "confidence": 0.9913830239157772,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 62, \"min\": 82, \"gap\": 20}, \"justification\": \"Compulsory courses still missing: none. Systems stream core still missing: none. Own Systems basket: 4 credits earned, minimum 4 (0 to go). Other baskets (AI/ML, Theory): 4 credits earned, minimum 4 (0 to go). Coursework: 52 credits earned, minimum 48 (0 to go). Project: 8 credits earned, minimum 16 (8 to go). Electives: 24 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 62 of 82 credits, 20 remaining. Justification: checked your transcript against the MTech-CSE coursework track rules (compulsory courses, Systems core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0197",
+   "confidence": 0.9884167140833139,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 62, \"min\": 82, \"gap\": 20}, \"justification\": \"Own Theory basket: 8 credits earned, minimum 4 (0 to go). Other baskets (AI/ML, Systems): 12 credits earned, minimum 4 (0 to go). Coursework: 42 credits earned, minimum 32 (0 to go). Thesis: 20 credits earned, minimum 32 (12 to go). Electives: 18 credits earned, minimum 8 (0 to go). Other requirements pending: none. Total: 62 of 82 credits, 20 remaining. Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, Theory core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 718,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0221",
+   "confidence": 0.9953296810868734,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for CS 610 (Algorithms) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Revised CSE MTech Course Structure [2025-26].pdf p1: 1. CS 610 (Algorithms) is a compulsory course for all streams (Offered in Odd semester). || Timetable, Sem-I, 2026-27.xlsx row 243: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 496,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0256",
+   "confidence": 0.99064280296504,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\"], \"justification\": \"Yes, you can register for ES 666 (Computer Vision) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it. Note: no timetable for 2026-27 Sem-II is available yet, so confirm the offering when it is published.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 342,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0280",
+   "confidence": 0.9896619310461472,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\"], \"justification\": \"Yes, you can register for ES 667 (Deep Learning) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it. Note: no timetable for 2026-27 Sem-II is available yet, so confirm the offering when it is published.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 340,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0319",
+   "confidence": 0.9921434800175476,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for CS 607 (Combinatorics in CS) in 2026-27 Sem-II. Justification: it is not offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx: CS 607 is not listed for 2026-27 Sem-II).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 311,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0320",
+   "confidence": 0.9943342199564272,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for ES 643 (Quantum computation and information) in 2026-27 Sem-I. Justification: it is not offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx: ES 643 is not listed for 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 324,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0323",
+   "confidence": 0.9935528249416334,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for EE 663 (Advanced Wireless Communications) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx row 277: listed in 2026-27 Sem-II).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 376,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0341",
+   "confidence": 0.9908292546766957,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for CS 691-XVIII (Special Topics Course: Algebraic Complexity theory) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx row 254: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 397,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0347",
+   "confidence": 0.9891755525962204,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\"], \"justification\": \"Yes, you can register for CS 431 (Computer and Network Security) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it. Note: you have already used the allowed below-600 courses (Adv5_NormsforMTechProgramme.pdf p2), so it will not count toward graduation; no timetable for 2026-27 Sem-II is available yet, so confirm the offering when it is published.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 486,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0361",
+   "confidence": 0.9952741708566772,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for CS 691-XVII (Special Topics in Computer Science: Combinatorial and Computational Aspects of Games) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx row 251: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 430,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0362",
+   "confidence": 0.9908340014768863,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for ES 643 (Quantum computation and information) in 2026-27 Sem-I. Justification: it is not offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx: ES 643 is not listed for 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 324,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0364",
+   "confidence": 0.9860977899612408,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for ES 678 (Machine Learning) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx row 250: listed in 2026-27 Sem-II).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 360,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0366",
+   "confidence": 0.9995806360152331,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0390",
+   "confidence": 0.9981328054222649,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0404",
+   "confidence": 0.99312719482471,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): an extra course from your own AI/ML basket that counts as an elective; 2) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective; 3) ES 666 (Computer Vision): an extra course from your own AI/ML basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 693,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0421",
+   "confidence": 0.9997797520337488,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 435\"}, {\"rank\": 3, \"course\": \"ES 606\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed); 2) CS 435 (Human-Computer Interaction): fills the other-basket requirement (4 of 4 credits still needed); 3) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0447",
+   "confidence": 0.9990462296436139,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"EE 648\"}, {\"rank\": 2, \"course\": \"EE 659\"}, {\"rank\": 3, \"course\": \"ES 616\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) EE 648 (Dynamic Behaviour of Electric Machines): fills your courses specified by the discipline (Power Engineering & Control Systems) (5 of 16 credits still needed); 2) EE 659 (Smart Grid): fills your courses specified by the discipline (Power Engineering & Control Systems) (4 of 11 credits still needed); 3) ES 616 (Digital Control Systems): fills your courses specified by the discipline (Power Engineering & Control Systems) (4 of 7 credits still needed). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 832,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ],
+   "gold_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ]
+  },
+  {
+   "item_id": "R1-Q0458",
+   "confidence": 0.9965287190327103,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"EE 604\"}, {\"rank\": 2, \"course\": \"EE 619\"}, {\"rank\": 3, \"course\": \"EE 629\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) EE 604 (High Voltage DC and Flexible AC Transmission Systems): fills your courses specified by the discipline (Power Engineering & Control Systems) (3 of 3 credits still needed) (note: offering unknown); 2) EE 619 (Special Electrical Machines): an extra course from your courses specified by the discipline (Power Engineering & Control Systems) that counts as an elective (note: offering unknown); 3) EE 629 (Power Electronic Converters): an extra course from your courses specified by the discipline (Power Engineering & Control Systems) that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 965,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 604",
+    "EE 619",
+    "EE 629"
+   ],
+   "gold_codes": [
+    "EE 604",
+    "EE 619",
+    "EE 629"
+   ]
+  },
+  {
+   "item_id": "R1-Q0465",
+   "confidence": 0.9977234461527589,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"EE 606\"}, {\"rank\": 2, \"course\": \"EE 633\"}, {\"rank\": 3, \"course\": \"EE 639\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) EE 606 (Applied Statistical Bioelectric Signal Analysis): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective; 2) EE 633 (Fiber Optics and Photonics): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective; 3) EE 639 (Lasers): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 877,
+   "precision": 0.3333333333333333,
+   "recall": 0.3333333333333333,
+   "set_f1": 0.3333333333333333,
+   "exact_match": 0,
+   "violations": 1,
+   "pred_codes": [
+    "EE 606",
+    "EE 633",
+    "EE 639"
+   ],
+   "gold_codes": [
+    "EE 639",
+    "EE 664",
+    "ES 657"
+   ]
+  },
+  {
+   "item_id": "R1-Q0470",
+   "confidence": 0.9976226869099387,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 617\"}, {\"rank\": 2, \"course\": \"ES 627\"}, {\"rank\": 3, \"course\": \"ES 643\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 617 (Complexity Theory): an extra course from your own Theory basket that counts as an elective (note: offering unknown); 2) ES 627 (Linear Algebra and Computation): an extra course from your own Theory basket that counts as an elective (note: offering unknown); 3) ES 643 (Quantum computation and information): an extra course from your own Theory basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 785,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 617",
+    "ES 627",
+    "ES 643"
+   ],
+   "gold_codes": [
+    "CS 617",
+    "ES 627",
+    "ES 643"
+   ]
+  },
+  {
+   "item_id": "R1-Q0478",
+   "confidence": 0.9978484052136162,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills the other-basket requirement (4 of 4 credits still needed); 2) ES 606 (Computational Neuroscience): a course from another stream's basket that counts as an elective; 3) ES 666 (Computer Vision): a course from another stream's basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R1-Q0495",
+   "confidence": 0.9997797520337488,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 435\"}, {\"rank\": 3, \"course\": \"ES 606\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed); 2) CS 435 (Human-Computer Interaction): fills the other-basket requirement (4 of 4 credits still needed); 3) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0510",
+   "confidence": 0.9967545110111292,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 607\"}, {\"rank\": 2, \"course\": \"CS 613\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 2) CS 613 (Natural Language Processing): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R1-Q0514",
+   "confidence": 0.997170569273003,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 615\"}, {\"rank\": 2, \"course\": \"CS 329\"}, {\"rank\": 3, \"course\": \"CS 431\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 615 (Advanced Networks): an extra course from your own Systems basket that counts as an elective (note: offering unknown); 2) CS 329 (Foundations of AI: Multiagent Systems): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) CS 431 (Computer and Network Security): an extra course from your own Systems basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 787,
+   "precision": 0.3333333333333333,
+   "recall": 0.3333333333333333,
+   "set_f1": 0.3333333333333333,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 329",
+    "CS 431",
+    "CS 615"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R1-Q0539",
+   "confidence": 0.9972598277943703,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 615\"}, {\"rank\": 2, \"course\": \"CS 329\"}, {\"rank\": 3, \"course\": \"CS 431\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 615 (Advanced Networks): an extra course from your own Systems basket that counts as an elective (note: offering unknown); 2) CS 329 (Foundations of AI: Multiagent Systems): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) CS 431 (Computer and Network Security): an extra course from your own Systems basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 787,
+   "precision": 0.3333333333333333,
+   "recall": 0.3333333333333333,
+   "set_f1": 0.3333333333333333,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 329",
+    "CS 431",
+    "CS 615"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R1-Q0575",
+   "confidence": 0.9990244407961689,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 607\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed) (note: offering unknown); 2) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R1-Q0577",
+   "confidence": 0.9936683354222442,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 614\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 614 (Advanced Algorithms): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 2) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) ES 666 (Computer Vision): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 760,
+   "precision": 0.3333333333333333,
+   "recall": 0.3333333333333333,
+   "set_f1": 0.3333333333333333,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 614",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0597",
+   "confidence": 0.9990462296436139,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"EE 648\"}, {\"rank\": 2, \"course\": \"EE 659\"}, {\"rank\": 3, \"course\": \"ES 616\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) EE 648 (Dynamic Behaviour of Electric Machines): fills your courses specified by the discipline (Power Engineering & Control Systems) (5 of 16 credits still needed); 2) EE 659 (Smart Grid): fills your courses specified by the discipline (Power Engineering & Control Systems) (4 of 11 credits still needed); 3) ES 616 (Digital Control Systems): fills your courses specified by the discipline (Power Engineering & Control Systems) (4 of 7 credits still needed). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 832,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ],
+   "gold_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ]
+  },
+  {
+   "item_id": "R2-Q0001",
+   "confidence": 0.9989657736349382,
+   "response": "{\"compulsory_missing\": [\"CS 610\", \"CS 621\"], \"stream_core_missing\": [\"CS 614\", \"CS 619\"], \"total\": {\"earned\": 0, \"min\": 82, \"gap\": 82}, \"justification\": \"Compulsory courses still missing: CS 610 (Algorithms), CS 621 (Ethics of AI). Theory stream core still missing: CS 614 (Advanced Algorithms), CS 619 (CS Theory Toolkit). Own Theory basket: 0 credits earned, minimum 4 (4 to go). Other baskets (AI/ML, Systems): 0 credits earned, minimum 4 (4 to go). Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, Theory core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: aarohan missing, ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, missing stream core, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 904,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 614",
+    "CS 619",
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 614",
+    "CS 619",
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0014",
+   "confidence": 0.9994494216446239,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 0, \"min\": 82, \"gap\": 82}, \"justification\": \"Courses specified by the discipline (Power Engineering & Control Systems): 0 credits earned, minimum 16 (16 to go). Coursework: 0 credits earned, minimum 48 (48 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: aarohan, physical education, writing. Not tracked in the catalog: ai applications. Total: 0 of 82 credits, 82 remaining. Justification: checked your transcript against the MTech-EE coursework track rules (at least 16 credits of courses specified by the discipline (Power Engineering & Control Systems), 48 coursework credits, 82 total credits); open items: aarohan missing, coursework gap, discipline gap, electives gap, own basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 922,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0019",
+   "confidence": 0.997151285264323,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 38, \"min\": 82, \"gap\": 44}, \"justification\": \"Compulsory courses still missing: none. Courses specified by the discipline (Power Engineering & Control Systems): 20 credits earned, minimum 16 (0 to go). Justification: checked your transcript against the MTech-EE thesis track rules (at least 16 credits of courses specified by the discipline (Power Engineering & Control Systems), 42 coursework credits, 82 total credits); open items: coursework gap, electives gap, thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 562,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0048",
+   "confidence": 0.9971559947906579,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 18, \"min\": 82, \"gap\": 64}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). AI/ML stream core still missing: none. Own AI/ML basket: 4 credits earned, minimum 4 (0 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 16 credits earned, minimum 48 (32 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: ai applications, physical education, writing. Total: 18 of 82 credits, 64 remaining. Justification: checked your transcript against the MTech-AI coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, electives gap, missing compulsory, other basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1003,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0059",
+   "confidence": 0.9972416015346687,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [], \"total\": {\"earned\": 14, \"min\": 82, \"gap\": 68}, \"justification\": \"Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 12 credits earned, minimum 32 (20 to go). Thesis: 0 credits earned, minimum 32 (32 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: ai applications, physical education, writing. Total: 14 of 82 credits, 68 remaining. Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 934,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0114",
+   "confidence": 0.9988763288187509,
+   "response": "{\"compulsory_missing\": [\"CS 610\", \"CS 621\"], \"stream_core_missing\": [\"ES 667\", \"ES 678\"], \"total\": {\"earned\": 0, \"min\": 82, \"gap\": 82}, \"justification\": \"Compulsory courses still missing: CS 610 (Algorithms), CS 621 (Ethics of AI). AI/ML stream core still missing: ES 667 (Deep Learning), ES 678 (Machine Learning). Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 0 credits earned, minimum 48 (48 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: aarohan, ai applications, physical education, writing. Total: 0 of 82 credits, 82 remaining. Justification: checked your transcript against the MTech-CSE coursework track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 48 coursework credits, 82 total credits); open items: aarohan missing, ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, missing stream core, other basket gap, own basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1174,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ]
+  },
+  {
+   "item_id": "R2-Q0126",
+   "confidence": 0.999240264564586,
+   "response": "{\"compulsory_missing\": [\"CS 610\", \"CS 621\"], \"stream_core_missing\": [\"ES 667\", \"ES 678\"], \"total\": {\"earned\": 0, \"min\": 82, \"gap\": 82}, \"justification\": \"Compulsory courses still missing: CS 610 (Algorithms), CS 621 (Ethics of AI). AI/ML stream core still missing: ES 667 (Deep Learning), ES 678 (Machine Learning). Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Coursework: 0 credits earned, minimum 32 (32 to go). Thesis: 0 credits earned, minimum 32 (32 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: aarohan, ai applications, physical education, writing. Total: 0 of 82 credits, 82 remaining. Justification: checked your transcript against the MTech-AI thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: aarohan missing, ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, missing stream core, other basket gap, own basket gap, physical education missing, thesis gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1167,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ]
+  },
+  {
+   "item_id": "R2-Q0127",
+   "confidence": 0.9926794921148394,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 34, \"min\": 82, \"gap\": 48}, \"justification\": \"Compulsory courses still missing: none. Courses specified by the discipline (Signal Processing & Machine Learning): 20 credits earned, minimum 16 (0 to go). Coursework: 32 credits earned, minimum 48 (16 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 12 credits earned, minimum 8 (0 to go). Other requirements pending: none. Not tracked in the catalog: ai applications. Total: 34 of 82 credits, 48 remaining. Justification: checked your transcript against the MTech-EE coursework track rules (at least 16 credits of courses specified by the discipline (Signal Processing & Machine Learning), 48 coursework credits, 82 total credits); open items: coursework gap, project gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 827,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0166",
+   "confidence": 0.99323105694679,
+   "response": "{\"compulsory_missing\": [\"CS 621\"], \"stream_core_missing\": [\"ES 666\"], \"total\": {\"earned\": 14, \"min\": 82, \"gap\": 68}, \"justification\": \"Compulsory courses still missing: CS 621 (Ethics of AI). AI/ML stream core still missing: ES 666 (Computer Vision). Own AI/ML basket: 0 credits earned, minimum 4 (4 to go). Other baskets (Systems, Theory): 0 credits earned, minimum 4 (4 to go). Justification: checked your transcript against the MTech-CSE thesis track rules (compulsory courses, AI/ML core, at least 4 own-basket and 4 other-basket credits, 32 coursework credits, 82 total credits); open items: ai applications missing, coursework gap, discipline gap, electives gap, missing compulsory, missing stream core, other basket gap, physical education missing, thesis gap, total gap.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 780,
+   "precision": 0.5,
+   "recall": 1.0,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0196",
+   "confidence": 0.9979294144288766,
+   "response": "{\"compulsory_missing\": [], \"stream_core_missing\": [], \"total\": {\"earned\": 0, \"min\": 82, \"gap\": 82}, \"justification\": \"Compulsory courses still missing: none. Courses specified by the discipline (Power Engineering & Control Systems): 0 credits earned, minimum 16 (16 to go). Coursework: 0 credits earned, minimum 48 (48 to go). Project: 0 credits earned, minimum 16 (16 to go). Electives: 0 credits earned, minimum 8 (8 to go). Other requirements pending: aarohan, physical education, writing. Not tracked in the catalog: ai applications. Total: 0 of 82 credits, 82 remaining. Justification: checked your transcript against the MTech-EE coursework track rules (at least 16 credits of courses specified by the discipline (Power Engineering & Control Systems), 48 coursework credits, 82 total credits); open items: aarohan missing, coursework gap, discipline gap, electives gap, own basket gap, physical education missing, project gap, total gap, writing missing.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 962,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0207",
+   "confidence": 0.9901465070158731,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for ES 404 (Networks and Complex Systems) in 2026-27 Sem-II. Justification: it is not offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx: ES 404 is not listed for 2026-27 Sem-II). Note: it is not on the MTech-CSE course lists, so it counts only as an elective (ee_mtech_site/integrated-circuit-design-technology.html: listed for MTech-ICDT; electives may be inside or outside the discipline (Adv5_NormsforMTechProgramme.pdf p2)).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 570,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0222",
+   "confidence": 0.9991257399308743,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0255",
+   "confidence": 0.9866415683242059,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\"], \"justification\": \"Yes, you can register for EE 651 (CMOS Analog IC Design) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it. Note: no timetable for 2026-27 Sem-II is available yet, so confirm the offering when it is published.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 348,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0270",
+   "confidence": 0.9995806360152331,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0317",
+   "confidence": 0.9978519652077521,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for ES 607 (Foundations of Fluid Dynamics) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx row 288: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 370,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0318",
+   "confidence": 0.9993477862211944,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0333",
+   "confidence": 0.9913972003252649,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for ES 656 (Human-Robot Interaction) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx row 290: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 364,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0334",
+   "confidence": 0.9781413212208515,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for EE 648 (Dynamic Behaviour of Electric Machines) in 2026-27 Sem-II, 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx row 272: listed in 2026-27 Sem-II).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 398,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0342",
+   "confidence": 0.9985970457336193,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 610 (Algorithms) in 2026-27 Sem-II. Justification: it is offered only in odd semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 1. CS 610 (Algorithms) is a compulsory course for all streams (Offered in Odd semester). || Timetable, Sem-I, 2026-27.xlsx row 243: listed in 2026-27 Sem-I). Note: it is not on the MTech-EE course lists, so it counts only as an elective (Revised CSE MTech Course Structure [2025-26].pdf: listed for MTech-CSE, MTech-AI; electives may be inside or outside the discipline (ee_mtech_site/home.html [Curriculum])).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 692,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0348",
+   "confidence": 0.9994090444543386,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_IN_PARITY\"], \"justification\": \"No, you cannot register for CS 621 (Ethics of AI) in 2026-27 Sem-I. Justification: it is offered only in even semesters (Revised CSE MTech Course Structure [2025-26].pdf p1: 2. CS 621 (Ethics of AI) is a compulsory course for all streams (Offered in Even semester).).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 377,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0365",
+   "confidence": 0.9974975751942362,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\", \"OFFERED_IN_TERM\"], \"justification\": \"Yes, you can register for EE 659 (Smart Grid) in 2026-27 Sem-I. Justification: no course plan states an enforceable prerequisite for it; it is offered in 2026-27 Sem-I (Timetable, Sem-I, 2026-27.xlsx row 276: listed in 2026-27 Sem-I).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 351,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0375",
+   "confidence": 0.9992446035083543,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for EE 619 (Special Electrical Machines) in 2026-27 Sem-II. Justification: it is not offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx: EE 619 is not listed for 2026-27 Sem-II). Note: it is not on the MTech-AI course lists, so it counts only as an elective (ee_mtech_site/power-engineering-control-systems.html: listed for MTech-EE; electives may be inside or outside the discipline (Adv5_NormsforMTechProgramme.pdf p2)).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 563,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0376",
+   "confidence": 0.9906842123229972,
+   "response": "{\"eligible\": false, \"unmet_prerequisites\": [], \"reason_codes\": [\"NOT_OFFERED_NEXT_TERM\"], \"justification\": \"No, you cannot register for ES 612 (Artificial Intelligence) in 2026-27 Sem-II. Justification: it is not offered in 2026-27 Sem-II (Timetable, Sem-I, 2026-27.xlsx: ES 612 is not listed for 2026-27 Sem-II).\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 315,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0400",
+   "confidence": 0.9913560741545606,
+   "response": "{\"eligible\": true, \"unmet_prerequisites\": [], \"reason_codes\": [\"NO_PREREQS\"], \"justification\": \"Yes, you can register for ES 604 (Engineering Optimization) in 2026-27 Sem-II. Justification: no course plan states an enforceable prerequisite for it. Note: no timetable for 2026-27 Sem-II is available yet, so confirm the offering when it is published.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 351,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0401",
+   "confidence": 0.9978503230970209,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 607\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed) (note: offering unknown); 2) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0417",
+   "confidence": 0.9925654572976483,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"EE 605\"}, {\"rank\": 2, \"course\": \"EE 609\"}, {\"rank\": 3, \"course\": \"EE 629\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) EE 605 (Digital Image Processing): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective (note: offering unknown); 2) EE 609 (Advanced Signal Processing): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective (note: offering unknown); 3) EE 629 (Power Electronic Converters): an extra course from your courses specified by the discipline (Signal Processing & Machine Learning) that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 951,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "EE 605",
+    "EE 609",
+    "EE 629"
+   ],
+   "gold_codes": [
+    "EE 605",
+    "EE 609",
+    "EE 645"
+   ]
+  },
+  {
+   "item_id": "R2-Q0427",
+   "confidence": 0.9978827757300377,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 607\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed) (note: offering unknown); 2) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0428",
+   "confidence": 0.9990891735989447,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 607\"}, {\"rank\": 2, \"course\": \"CS 615\"}, {\"rank\": 3, \"course\": \"CS 691-XIV\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 2) CS 615 (Advanced Networks): an extra course from your own Systems basket that counts as an elective (note: offering unknown); 3) CS 691-XIV (Special Topics: Usable Privacy and Security): an extra course from your own Systems basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 786,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R2-Q0451",
+   "confidence": 0.9974573209247206,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 607\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed) (note: offering unknown); 2) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0460",
+   "confidence": 0.9927942256326922,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 329\"}, {\"rank\": 3, \"course\": \"CS 435\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed) (note: offering unknown); 2) CS 329 (Foundations of AI: Multiagent Systems): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 3) CS 435 (Human-Computer Interaction): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 773,
+   "precision": 0.3333333333333333,
+   "recall": 0.3333333333333333,
+   "set_f1": 0.3333333333333333,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 329",
+    "CS 435",
+    "CS 613"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0493",
+   "confidence": 0.9996194737404683,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 607\"}, {\"rank\": 2, \"course\": \"CS 615\"}, {\"rank\": 3, \"course\": \"CS 691-XIV\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 2) CS 615 (Advanced Networks): an extra course from your own Systems basket that counts as an elective (note: offering unknown); 3) CS 691-XIV (Special Topics: Usable Privacy and Security): an extra course from your own Systems basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 786,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R2-Q0512",
+   "confidence": 0.9996926519144306,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"CS 435\"}, {\"rank\": 3, \"course\": \"ES 606\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills your own AI/ML basket (4 of 4 credits still needed); 2) CS 435 (Human-Computer Interaction): fills the other-basket requirement (4 of 4 credits still needed); 3) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R2-Q0548",
+   "confidence": 0.9900090034171926,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 618\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 2) ES 606 (Computational Neuroscience): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) ES 666 (Computer Vision): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 618",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R2-Q0558",
+   "confidence": 0.9978484052136162,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills the other-basket requirement (4 of 4 credits still needed); 2) ES 606 (Computational Neuroscience): a course from another stream's basket that counts as an elective; 3) ES 666 (Computer Vision): a course from another stream's basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R2-Q0561",
+   "confidence": 0.9969203927565193,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills the other-basket requirement (4 of 4 credits still needed); 2) ES 606 (Computational Neuroscience): a course from another stream's basket that counts as an elective; 3) ES 666 (Computer Vision): a course from another stream's basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R2-Q0582",
+   "confidence": 0.998673216132825,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 607\"}, {\"rank\": 2, \"course\": \"CS 613\"}, {\"rank\": 3, \"course\": \"CS 618\"}], \"justification\": \"Recommended for 2026-27 Sem-II: 1) CS 607 (Combinatorics in CS): fills the other-basket requirement (4 of 4 credits still needed) (note: offering unknown); 2) CS 613 (Natural Language Processing): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown); 3) CS 618 (Theoretical Foundations of ML): an extra course from your own AI/ML basket that counts as an elective (note: offering unknown). Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0598",
+   "confidence": 0.9990508748476896,
+   "response": "{\"recommendations\": [{\"rank\": 1, \"course\": \"CS 613\"}, {\"rank\": 2, \"course\": \"ES 606\"}, {\"rank\": 3, \"course\": \"ES 666\"}], \"justification\": \"Recommended for 2026-27 Sem-I: 1) CS 613 (Natural Language Processing): fills the other-basket requirement (4 of 4 credits still needed); 2) ES 606 (Computational Neuroscience): a course from another stream's basket that counts as an elective; 3) ES 666 (Computer Vision): a course from another stream's basket that counts as an elective. Justification: each course is eligible (no unmet enforceable prerequisite, not ruled out for that term, not yet taken) and they are ranked own basket first, then other baskets, then open electives.\"}",
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  }
+ ]
+}

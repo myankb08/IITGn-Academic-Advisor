@@ -1,0 +1,61 @@
+{
+ "tolerance": 0.02,
+ "full": {
+  "n": 76,
+  "summary": {
+   "set_f1": 0.0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "exact_match": 0.0,
+   "valid_json": 0.0,
+   "violations": 0.0,
+   "invented_codes": 3.0526315789473686,
+   "invented_rate": 0.23684210526315788,
+   "eligibility_acc": 0.0,
+   "n": 76
+  },
+  "model": {
+   "version": "1",
+   "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+   "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+   "adapter": "release/adapter",
+   "serving": "torch dynamic int8 (nn.Linear), CPU, greedy",
+   "weights_sha256": {
+    "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+   }
+  },
+  "commit": "009626285b41f7811c6aedafaba77634c724d671",
+  "machine": "x86_64",
+  "cpu_count": 20,
+  "python": "3.10.12"
+ },
+ "subset": {
+  "n": 20,
+  "summary": {
+   "set_f1": 0.0,
+   "precision": 0.0,
+   "recall": 0.0,
+   "exact_match": 0.0,
+   "valid_json": 0.0,
+   "violations": 0.0,
+   "invented_codes": 1.75,
+   "invented_rate": 0.2,
+   "eligibility_acc": 0.0,
+   "n": 20
+  },
+  "model": {
+   "version": "1",
+   "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+   "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+   "adapter": "release/adapter",
+   "serving": "torch dynamic int8 (nn.Linear), CPU, greedy",
+   "weights_sha256": {
+    "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+   }
+  },
+  "commit": "009626285b41f7811c6aedafaba77634c724d671",
+  "machine": "x86_64",
+  "cpu_count": 20,
+  "python": "3.10.12"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "n": 10,
+ "concurrency": 2,
+ "hardware": "Intel i9-10900X, docker --cpus 8 --memory 8g",
+ "wall_s": 867.5,
+ "throughput_req_per_min": 0.69,
+ "latency_s": {
+  "p50": 176.38,
+  "p95": 199.63,
+  "mean": 172.01
+ },
+ "server_latency_ms_p50": 176373.0
+}

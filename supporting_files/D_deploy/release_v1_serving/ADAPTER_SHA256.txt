@@ -1,0 +1,2 @@
+f453d1d9069ddaa59969b1687cbfbd445610d64c67692e7ad924aa285af92ffd  release/adapter/adapter_config.json
+d36fd4b69d8e682f906c4a9ee12805d1642519216161983b0b00c387394d11e9  release/adapter/adapter_model.safetensors

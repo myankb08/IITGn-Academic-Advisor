@@ -1,0 +1,1477 @@
+{
+ "model": {
+  "version": "1",
+  "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+  "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "adapter": "release/adapter",
+  "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+  "weights_sha256": {
+   "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+  }
+ },
+ "commit": "009626285b41f7811c6aedafaba77634c724d671",
+ "machine": "x86_64",
+ "cpu_count": 20,
+ "python": "3.10.12",
+ "measured": {
+  "n": 76,
+  "subset": null,
+  "summary": {
+   "set_f1": 0.850877192982456,
+   "precision": 0.982456140350877,
+   "recall": 0.982456140350877,
+   "exact_match": 0.6973684210526315,
+   "valid_json": 1.0,
+   "violations": 0.0,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": 0.6296296296296297,
+   "n": 76
+  },
+  "seconds": 4288.0,
+  "sec_per_item": 56.42
+ },
+ "rows": [
+  {
+   "item_id": "R1-Q0033",
+   "confidence": 0.9978995875944912,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1032,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0109",
+   "confidence": 0.9845081484312872,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0120",
+   "confidence": 0.9893184299704266,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 818,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0124",
+   "confidence": 0.993939765619841,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 808,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0161",
+   "confidence": 0.9882318732525457,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 767,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0174",
+   "confidence": 0.9988529024162215,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1020,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0175",
+   "confidence": 0.9910432265489191,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 611,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0178",
+   "confidence": 0.9976624507601106,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 746,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0179",
+   "confidence": 0.9980833904453725,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 919,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R1-Q0189",
+   "confidence": 0.997107550533237,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 923,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0192",
+   "confidence": 0.9856592807112475,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0197",
+   "confidence": 0.99039402897024,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 718,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0221",
+   "confidence": 0.9971221082884381,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 438,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0256",
+   "confidence": 0.9960018628081966,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 342,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0280",
+   "confidence": 0.9950194414569293,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 340,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0319",
+   "confidence": 0.9883647015535852,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 346,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0320",
+   "confidence": 0.9983110535399705,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 324,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0323",
+   "confidence": 0.992140267255208,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 375,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0341",
+   "confidence": 0.997353376330298,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 397,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0347",
+   "confidence": 0.9921964805475106,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 321,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0361",
+   "confidence": 0.999501521125595,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 430,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0362",
+   "confidence": 0.9958641957577945,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 376,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0364",
+   "confidence": 0.9855225507881857,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 360,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0366",
+   "confidence": 0.9996753714184269,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0390",
+   "confidence": 0.996378914111172,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 555,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R1-Q0404",
+   "confidence": 0.9956919807124976,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 782,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "CS 618",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0421",
+   "confidence": 0.9998350893370506,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0447",
+   "confidence": 0.9998036839009441,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 832,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ],
+   "gold_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ]
+  },
+  {
+   "item_id": "R1-Q0458",
+   "confidence": 0.9993159364928024,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 965,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 604",
+    "EE 619",
+    "EE 629"
+   ],
+   "gold_codes": [
+    "EE 604",
+    "EE 619",
+    "EE 629"
+   ]
+  },
+  {
+   "item_id": "R1-Q0465",
+   "confidence": 0.9984962986983064,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 851,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 639",
+    "EE 664",
+    "ES 657"
+   ],
+   "gold_codes": [
+    "EE 639",
+    "EE 664",
+    "ES 657"
+   ]
+  },
+  {
+   "item_id": "R1-Q0470",
+   "confidence": 0.9910425232377005,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 795,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 627",
+    "ES 643"
+   ],
+   "gold_codes": [
+    "CS 617",
+    "ES 627",
+    "ES 643"
+   ]
+  },
+  {
+   "item_id": "R1-Q0478",
+   "confidence": 0.9997913401049319,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R1-Q0495",
+   "confidence": 0.9998350893370506,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0510",
+   "confidence": 0.9953575541648291,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R1-Q0514",
+   "confidence": 0.9972095628358523,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 431",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R1-Q0539",
+   "confidence": 0.996969198856569,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 803,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "CS 431",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R1-Q0575",
+   "confidence": 0.9996984103325539,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R1-Q0577",
+   "confidence": 0.9973016535330567,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 769,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R1-Q0597",
+   "confidence": 0.9998036839009441,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 832,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ],
+   "gold_codes": [
+    "EE 648",
+    "EE 659",
+    "ES 616"
+   ]
+  },
+  {
+   "item_id": "R2-Q0001",
+   "confidence": 0.9984843607779119,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 904,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 614",
+    "CS 619",
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 614",
+    "CS 619",
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0014",
+   "confidence": 0.9989725159720909,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 922,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0019",
+   "confidence": 0.9855428104654866,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 819,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0048",
+   "confidence": 0.99659095170992,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1003,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0059",
+   "confidence": 0.9977358101960844,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 918,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0114",
+   "confidence": 0.9993249893115762,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1174,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ]
+  },
+  {
+   "item_id": "R2-Q0126",
+   "confidence": 0.9995945417925128,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 1167,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ],
+   "gold_codes": [
+    "CS 610",
+    "CS 621",
+    "ES 667",
+    "ES 678"
+   ]
+  },
+  {
+   "item_id": "R2-Q0127",
+   "confidence": 0.9942406089934941,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 827,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0166",
+   "confidence": 0.9975802368444132,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 747,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 621"
+   ],
+   "gold_codes": [
+    "CS 621"
+   ]
+  },
+  {
+   "item_id": "R2-Q0196",
+   "confidence": 0.997483486897648,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 962,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0207",
+   "confidence": 0.9922688505525074,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 320,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0222",
+   "confidence": 0.9995953991640987,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0255",
+   "confidence": 0.9943196556761089,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 348,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0270",
+   "confidence": 0.9996753714184269,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0317",
+   "confidence": 0.9952726609030197,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 424,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0318",
+   "confidence": 0.9995966052050593,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 630,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0333",
+   "confidence": 0.9962757480960723,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 364,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0334",
+   "confidence": 0.9865657671825202,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 382,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0342",
+   "confidence": 0.9989485302704914,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 692,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0348",
+   "confidence": 0.9996211937929426,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 377,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0365",
+   "confidence": 0.9949020546540301,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 351,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0375",
+   "confidence": 0.997692681433559,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 592,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0376",
+   "confidence": 0.9895880304972464,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 315,
+   "eligible_correct": 1,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0400",
+   "confidence": 0.9931111221266086,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 351,
+   "eligible_correct": 0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 0.0,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [],
+   "gold_codes": []
+  },
+  {
+   "item_id": "R2-Q0401",
+   "confidence": 0.9991488789756423,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0417",
+   "confidence": 0.9955025455074211,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 951,
+   "precision": 0.6666666666666666,
+   "recall": 0.6666666666666666,
+   "set_f1": 0.6666666666666666,
+   "exact_match": 0,
+   "violations": 0,
+   "pred_codes": [
+    "EE 605",
+    "EE 609",
+    "EE 619"
+   ],
+   "gold_codes": [
+    "EE 605",
+    "EE 609",
+    "EE 645"
+   ]
+  },
+  {
+   "item_id": "R2-Q0427",
+   "confidence": 0.9988195241720957,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 758,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0428",
+   "confidence": 0.9991603543945042,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 786,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R2-Q0451",
+   "confidence": 0.9983360569123144,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0460",
+   "confidence": 0.9978252784553119,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0493",
+   "confidence": 0.9993605241281301,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 786,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 615",
+    "CS 691-XIV"
+   ]
+  },
+  {
+   "item_id": "R2-Q0512",
+   "confidence": 0.999896606486268,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 686,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R2-Q0548",
+   "confidence": 0.9968685810050766,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 769,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 618",
+    "ES 606"
+   ]
+  },
+  {
+   "item_id": "R2-Q0558",
+   "confidence": 0.9997913401049319,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R2-Q0561",
+   "confidence": 0.9994213031484914,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 677,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ],
+   "gold_codes": [
+    "CS 613",
+    "ES 606",
+    "ES 666"
+   ]
+  },
+  {
+   "item_id": "R2-Q0582",
+   "confidence": 0.999212668895107,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 770,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ],
+   "gold_codes": [
+    "CS 607",
+    "CS 613",
+    "CS 618"
+   ]
+  },
+  {
+   "item_id": "R2-Q0598",
+   "confidence": 0.9928596953831997,
+   "valid_json": true,
+   "invented_codes": 0,
+   "invented": [],
+   "answer_chars": 695,
+   "precision": 1.0,
+   "recall": 1.0,
+   "set_f1": 1.0,
+   "exact_match": 1,
+   "violations": 0,
+   "pred_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ],
+   "gold_codes": [
+    "CS 435",
+    "CS 613",
+    "ES 606"
+   ]
+  }
+ ]
+}

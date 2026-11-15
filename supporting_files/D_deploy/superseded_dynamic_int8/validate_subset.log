@@ -1,0 +1,40 @@
+Namespace(subset=20, out='/app/out/validation_subset20.json', write_reported=True, reported_out='/app/out/reported_gold.json')
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
+[1/20] R1-Q0033 set_f1=0.00 (51s)
+[2/20] R1-Q0109 set_f1=0.00 (151s)
+[3/20] R1-Q0120 set_f1=0.00 (343s)
+[4/20] R1-Q0124 set_f1=0.00 (462s)
+[5/20] R1-Q0161 set_f1=0.00 (582s)
+[6/20] R1-Q0174 set_f1=0.00 (632s)
+[7/20] R1-Q0175 set_f1=0.00 (750s)
+[8/20] R1-Q0178 set_f1=0.00 (863s)
+[9/20] R1-Q0179 set_f1=0.00 (977s)
+[10/20] R1-Q0189 set_f1=0.00 (1069s)
+[11/20] R1-Q0192 set_f1=0.00 (1097s)
+[12/20] R1-Q0197 set_f1=0.00 (1175s)
+[13/20] R1-Q0221 set_f1=0.00 (1286s)
+[14/20] R1-Q0256 set_f1=0.00 (1334s)
+[15/20] R1-Q0280 set_f1=0.00 (1448s)
+[16/20] R1-Q0319 set_f1=0.00 (1467s)
+[17/20] R1-Q0320 set_f1=0.00 (1586s)
+[18/20] R1-Q0323 set_f1=0.00 (1702s)
+[19/20] R1-Q0341 set_f1=0.00 (1829s)
+[20/20] R1-Q0347 set_f1=0.00 (1917s)
+{
+ "set_f1": 0.0,
+ "precision": 0.0,
+ "recall": 0.0,
+ "exact_match": 0.0,
+ "valid_json": 0.0,
+ "violations": 0.0,
+ "invented_codes": 1.75,
+ "invented_rate": 0.2,
+ "eligibility_acc": 0.0
+}
+saved /app/out/validation_subset20.json; 20 items in 1916.8s

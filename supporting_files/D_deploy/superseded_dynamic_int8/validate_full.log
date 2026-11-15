@@ -1,0 +1,97 @@
+Namespace(subset=None, out='/app/out/validation_full.json', write_reported=True, reported_out='/app/out/reported_gold.json')
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+From v4.47 onwards, when a model cache is to be returned, `generate` will return a `Cache` instance instead by default (as opposed to the legacy tuple of tuples format). If you want to keep returning the legacy format, please set `return_legacy_cache=True`.
+[1/76] R1-Q0033 set_f1=0.00 (374s)
+[2/76] R1-Q0109 set_f1=0.00 (935s)
+[3/76] R1-Q0120 set_f1=0.00 (1050s)
+[4/76] R1-Q0124 set_f1=0.00 (1158s)
+[5/76] R1-Q0161 set_f1=0.00 (1269s)
+[6/76] R1-Q0174 set_f1=0.00 (1324s)
+[7/76] R1-Q0175 set_f1=0.00 (1431s)
+[8/76] R1-Q0178 set_f1=0.00 (1539s)
+[9/76] R1-Q0179 set_f1=0.00 (1651s)
+[10/76] R1-Q0189 set_f1=0.00 (1734s)
+[11/76] R1-Q0192 set_f1=0.00 (1760s)
+[12/76] R1-Q0197 set_f1=0.00 (1834s)
+[13/76] R1-Q0221 set_f1=0.00 (1934s)
+[14/76] R1-Q0256 set_f1=0.00 (1981s)
+[15/76] R1-Q0280 set_f1=0.00 (2087s)
+[16/76] R1-Q0319 set_f1=0.00 (2104s)
+[17/76] R1-Q0320 set_f1=0.00 (2211s)
+[18/76] R1-Q0323 set_f1=0.00 (2315s)
+[19/76] R1-Q0341 set_f1=0.00 (2425s)
+[20/76] R1-Q0347 set_f1=0.00 (2504s)
+[21/76] R1-Q0361 set_f1=0.00 (2539s)
+[22/76] R1-Q0362 set_f1=0.00 (2576s)
+[23/76] R1-Q0364 set_f1=0.00 (2684s)
+[24/76] R1-Q0366 set_f1=0.00 (2755s)
+[25/76] R1-Q0390 set_f1=0.00 (2862s)
+[26/76] R1-Q0404 set_f1=0.00 (2968s)
+[27/76] R1-Q0421 set_f1=0.00 (3071s)
+[28/76] R1-Q0447 set_f1=0.00 (3179s)
+[29/76] R1-Q0458 set_f1=0.00 (3291s)
+[30/76] R1-Q0465 set_f1=0.00 (3313s)
+[31/76] R1-Q0470 set_f1=0.00 (3424s)
+[32/76] R1-Q0478 set_f1=0.00 (3525s)
+[33/76] R1-Q0495 set_f1=0.00 (3628s)
+[34/76] R1-Q0510 set_f1=0.00 (3721s)
+[35/76] R1-Q0514 set_f1=0.00 (3782s)
+[36/76] R1-Q0539 set_f1=0.00 (3893s)
+[37/76] R1-Q0575 set_f1=0.00 (3922s)
+[38/76] R1-Q0577 set_f1=0.00 (3960s)
+[39/76] R1-Q0597 set_f1=0.00 (4073s)
+[40/76] R2-Q0001 set_f1=0.00 (4173s)
+[41/76] R2-Q0014 set_f1=0.00 (4281s)
+[42/76] R2-Q0019 set_f1=0.00 (4304s)
+[43/76] R2-Q0048 set_f1=0.00 (4395s)
+[44/76] R2-Q0059 set_f1=0.00 (4427s)
+[45/76] R2-Q0114 set_f1=0.00 (4448s)
+[46/76] R2-Q0126 set_f1=0.00 (4550s)
+[47/76] R2-Q0127 set_f1=0.00 (4663s)
+[48/76] R2-Q0166 set_f1=0.00 (4714s)
+[49/76] R2-Q0196 set_f1=0.00 (4839s)
+[50/76] R2-Q0207 set_f1=0.00 (4890s)
+[51/76] R2-Q0222 set_f1=0.00 (5036s)
+[52/76] R2-Q0255 set_f1=0.00 (5168s)
+[53/76] R2-Q0270 set_f1=0.00 (5270s)
+[54/76] R2-Q0317 set_f1=0.00 (5295s)
+[55/76] R2-Q0318 set_f1=0.00 (5409s)
+[56/76] R2-Q0333 set_f1=0.00 (5559s)
+[57/76] R2-Q0334 set_f1=0.00 (5724s)
+[58/76] R2-Q0342 set_f1=0.00 (5798s)
+[59/76] R2-Q0348 set_f1=0.00 (5841s)
+[60/76] R2-Q0365 set_f1=0.00 (5965s)
+[61/76] R2-Q0375 set_f1=0.00 (6063s)
+[62/76] R2-Q0376 set_f1=0.00 (6215s)
+[63/76] R2-Q0400 set_f1=0.00 (6353s)
+[64/76] R2-Q0401 set_f1=0.00 (6486s)
+[65/76] R2-Q0417 set_f1=0.00 (6643s)
+[66/76] R2-Q0427 set_f1=0.00 (6710s)
+[67/76] R2-Q0428 set_f1=0.00 (6857s)
+[68/76] R2-Q0451 set_f1=0.00 (6983s)
+[69/76] R2-Q0460 set_f1=0.00 (7154s)
+[70/76] R2-Q0493 set_f1=0.00 (7306s)
+[71/76] R2-Q0512 set_f1=0.00 (7500s)
+[72/76] R2-Q0548 set_f1=0.00 (7686s)
+[73/76] R2-Q0558 set_f1=0.00 (7852s)
+[74/76] R2-Q0561 set_f1=0.00 (8013s)
+[75/76] R2-Q0582 set_f1=0.00 (8169s)
+[76/76] R2-Q0598 set_f1=0.00 (8264s)
+{
+ "set_f1": 0.0,
+ "precision": 0.0,
+ "recall": 0.0,
+ "exact_match": 0.0,
+ "valid_json": 0.0,
+ "violations": 0.0,
+ "invented_codes": 3.0526,
+ "invented_rate": 0.2368,
+ "eligibility_acc": 0.0
+}
+saved /app/out/validation_full.json; 76 items in 8263.8s
+VALIDATE_DONE

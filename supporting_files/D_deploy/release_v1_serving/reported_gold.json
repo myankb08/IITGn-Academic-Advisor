@@ -1,0 +1,61 @@
+{
+ "tolerance": 0.02,
+ "subset": {
+  "n": 5,
+  "summary": {
+   "set_f1": 1.0,
+   "precision": 1.0,
+   "recall": 1.0,
+   "exact_match": 0.2,
+   "valid_json": 1.0,
+   "violations": 0.0,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": null,
+   "n": 5
+  },
+  "model": {
+   "version": "1",
+   "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+   "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+   "adapter": "release/adapter",
+   "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+   "weights_sha256": {
+    "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+   }
+  },
+  "commit": "009626285b41f7811c6aedafaba77634c724d671",
+  "machine": "x86_64",
+  "cpu_count": 20,
+  "python": "3.10.12"
+ },
+ "full": {
+  "n": 76,
+  "summary": {
+   "set_f1": 0.9035087719298245,
+   "precision": 0.982456140350877,
+   "recall": 0.982456140350877,
+   "exact_match": 0.75,
+   "valid_json": 1.0,
+   "violations": 0.0,
+   "invented_codes": 0.0,
+   "invented_rate": 0.0,
+   "eligibility_acc": 0.7777777777777778,
+   "n": 76
+  },
+  "model": {
+   "version": "1",
+   "run_id": "cb7c02b778d342e2b5a30f163ac8ee74",
+   "base": "Qwen/Qwen2.5-1.5B-Instruct@989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+   "adapter": "release/adapter",
+   "serving": "weight-only int8 nn.Linear (per-channel scales), fp32 activations, CPU, greedy",
+   "weights_sha256": {
+    "model.safetensors": "2181feff4cef4a97f65112e457950c8b4f02d3c9de6043f35a41187461b61a88"
+   }
+  },
+  "commit": "009626285b41f7811c6aedafaba77634c724d671",
+  "machine": "x86_64",
+  "cpu_count": 20,
+  "python": "3.10.12"
+ }
+}
