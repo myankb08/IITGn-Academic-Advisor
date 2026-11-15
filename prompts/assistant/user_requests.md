@@ -24,3 +24,27 @@ assistant then gave its sub-agents are in this folder, verbatim, as `agent_*.md`
 | 16 | Record the requests as this per-request summary with output files, instead of full chat transcripts | `prompts/assistant/user_requests.md` |
 | 17 | Rewrite the report in the assignment's format, with its subheadings and diagrams where needed | `agent_G3_report_structure.md`, `reports/report.tex` |
 | 18 | Edits to the AI-assistance appendix by hem436; add the known gold-set limitation | `reports/report.tex`, `HANDOFF_A2.md` (gold set errata) |
+
+# Requests given to Claude Code by hem436 for Assignment 2 (10 to 15 Nov 2026)
+
+Assistant: Claude Code CLI, model claude-opus-5-5, one session (no sub-agent prompts). Same format as above: one line
+per request that changed files, summarised, with its output.
+
+| # | request (summary) | output |
+|---|---|---|
+| 1 | Plan Assignment 2 for Project 4 and build it; run the heavy jobs on the lab machine arka over SSH, in /mnt/zone_C | `docs/A2_PLAN.md`, `params_a2.yaml`, branch `a2` |
+| 2 | Use PyTorch int8 instead of GGUF, because GGUF is not required | `docs/A2_PLAN.md` D9, `src/serve/core.py`, `src/serve/export_model.py` |
+| 3 | Both members commit their own parts | no file change (the assistant made no commits until request 16) |
+| 4 | Deploy the 1.5B 3-epoch run, not the 3B run (both members, val only) | `docs/A2_PLAN.md` D10, registry v1 |
+| 5 | Relabel the already-taken eligibility answers under Adv24 B.1 (D6 option 1), retrain on correct labels, stop round r4 | `src/model/d6.py`, `docs/A2_PLAN.md` D13 to D16, `DATA_CHANGES.md`, `supporting_files/C_eval_a1_labels/` |
+| 6 | Seed check and one final retraining round | `supporting_files/E_retrain/d6r1/`, registry v7 to v10 |
+| 7 | Keep v10 deployed and report the test regression | `docs/A2_PLAN.md` D17, `MODEL_CARD.md` |
+| 8 | Build a rating page for the justification ratings; keep the ratings and correct only the reference to D6 | `src/eval/justification_rating.py`, `supporting_files/C_eval/advisor_v1/justification_rating/` |
+| 9 | Build an error review page for both members | `src/eval/error_sheet.py`, `supporting_files/C_eval/advisor_v1/test/error_sheet.csv` |
+| 10 | Docker image, offline validation, load test, CI, documentation | `Dockerfile`, `docker/`, `src/serve/`, `release/`, `DOCKER.md`, `.github/workflows/ci.yml`, `supporting_files/D_deploy/` |
+| 11 | Replay with drift signals and the one-command retraining loop with the gate | `src/monitor/replay.py`, `src/retrain/`, `supporting_files/E_monitoring/`, `supporting_files/E_retrain/` |
+| 12 | Clean-machine test on a machine with more RAM | `DOCKER.md` (section to fill) |
+| 13 | Draft the report as an editable doc | report doc (exported to `report/report.pdf`) |
+| 14 | Merge both error reviews; check the reviewers' findings (ES 643 is PH 643 in the timetable) | `src/eval/error_review.py`, `error_review/`, `MODEL_CARD.md`, `DATA_CHANGES.md`, `TEST_SET_LOG.md` |
+| 15 | Do the remaining tasks | `supporting_files/F_reproducibility/pytest.txt`, `requirements_freeze_a2.txt`, `dvc push` |
+| 16 | Commit hem436's part and make a package for myankb08 to commit his part | the hem436 commits on `a2`; package outside the repo |
