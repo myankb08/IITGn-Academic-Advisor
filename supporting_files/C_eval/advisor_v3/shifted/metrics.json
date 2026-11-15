@@ -175,7 +175,7 @@
   }
  },
  "paired_vs": {
-  "other": "/mnt/zone_C/hem/cs203_a2/code/supporting_files/C_eval/advisor_v1/shifted/scores.jsonl",
+  "other": "supporting_files/C_eval/advisor_v1/shifted/scores.jsonl",
   "set_f1_diff": 0.13900462962962964,
   "set_f1_diff_ci95": [
    0.1005613425925926,
